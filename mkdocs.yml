@@ -32,3 +32,8 @@ extra:
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 repo_url: https://github.com/Leo11-strive/Leo-s-Notebook
 repo_name: Leo Li's Notebook  
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - pymdownx.snippets
