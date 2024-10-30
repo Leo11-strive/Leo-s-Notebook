@@ -1,7 +1,3 @@
 # Leo Li's Notebook
 
-## > https://github.com/Leo11-strive/Leo-s-Notebook
-
-
-
-
+## > [Leo's Notebook](https://leo11-strive.github.io/Leo-s-Notebook/)
