@@ -37,3 +37,10 @@ markdown_extensions:
   - abbr
   - attr_list
   - pymdownx.snippets
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  

@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Leo Li's Notebook :computer: 
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+*Do not go gentle into that good night*
 
 ## Commands
 
