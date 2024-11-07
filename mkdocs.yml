@@ -40,6 +40,17 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.highlight
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.mark
+
   - toc:
       permalink: true
   - tables
