@@ -4,10 +4,10 @@
 
 ## Links that might be useful
 
-* [CSDIY](csdiy.wiki)
+* [CSDIY](https://csdiy.wiki/)
 * [OI WIKI](https://oi-wiki.org/)
 
 !!! Tips
-This is a personal notebook. The content could be wrong. Just for reference:joy:
-!!!
+    This is a personal notebook. The content could be wrong. Just for reference:joy:
+
 
