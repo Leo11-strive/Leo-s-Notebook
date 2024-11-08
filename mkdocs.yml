@@ -1,10 +1,11 @@
-site_name: My Docs
-
+site_name: Leo Li's Notebook
 theme: 
   name: material
+  logo: ./feather-solid.svg
   palette:
-    primary: cyan
+    primary: custom
     accent: deep purple
+
   font:
     text: Nunito
     code: Source Code Pro
@@ -12,8 +13,21 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.code.copy
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.prefetch
   icon:
     repo: fontawesome/brands/github
+  nav:
+    - Home: index.md
+    - ZJU CS courses:
+        - test.md
+        - Python: python.md
+
 extra:
   analytics: 
     feedback:
@@ -44,6 +58,7 @@ markdown_extensions:
       linenums: true
       anchor_linenums: true
       line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - md_in_html
   - pymdownx.superfences
@@ -60,6 +75,10 @@ markdown_extensions:
       generic: true
   - pymdownx.betterem
 
+      
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.details
 
