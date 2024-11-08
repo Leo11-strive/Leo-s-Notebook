@@ -1,17 +1,13 @@
-# Leo Li's Notebook :computer: 
+# <center>Leo Li's Notebook :computer: </center>
 
-*Do not go gentle into that good night*
+<center>___Do not go gentle into that good night___</center>
 
-## Commands
+## Links that might be useful
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* [CSDIY](csdiy.wiki)
+* [OI WIKI](https://oi-wiki.org/)
 
-## Project layout
+!!! Tips
+This is a personal notebook. The content could be wrong. Just for reference:joy:
+!!!
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
