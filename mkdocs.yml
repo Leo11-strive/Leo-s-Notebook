@@ -59,12 +59,10 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem
-  - pymdownx.blocks.caption
+
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
+
   - pymdownx.tasklist:
       clickable_checkbox: true
   
