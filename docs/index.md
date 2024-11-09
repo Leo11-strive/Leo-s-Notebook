@@ -1,6 +1,7 @@
-# <center>Leo Li's Notebook :computer: </center>
+# NOTEBOOK HOMEPAGE
+!!! Quote "Preface"
 
-<center>___Do not go gentle into that good night___</center>
+    <center>___Do not go gentle into that good night___</center>
 
 ## Links that might be useful
 
@@ -8,6 +9,7 @@
 * [OI WIKI](https://oi-wiki.org/)
 
 !!! Tips
-    This is a personal notebook. The content could be wrong. Just for reference:joy:
+
+    This is a personal notebook. The content might be incorrect. Just for reference.:joy:
 
 

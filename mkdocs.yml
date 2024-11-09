@@ -1,7 +1,7 @@
 site_name: Leo Li's Notebook
 theme: 
   name: material
-  logo: ./feather-solid.svg
+
   palette:
     primary: custom
     accent: deep purple
@@ -20,13 +20,11 @@ theme:
     - navigation.top
     - navigation.instant
     - navigation.instant.prefetch
+    - navigation.tabs
+    - navigation.tabs.sticky
   icon:
     repo: fontawesome/brands/github
-  nav:
-    - Home: index.md
-    - ZJU CS courses:
-        - test.md
-        - Python: python.md
+
 
 extra:
   analytics: 
