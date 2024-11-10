@@ -79,6 +79,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
   - pymdownx.tasklist:
       clickable_checkbox: true
