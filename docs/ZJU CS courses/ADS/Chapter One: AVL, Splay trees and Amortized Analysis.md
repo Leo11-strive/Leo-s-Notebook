@@ -157,10 +157,11 @@ The height varies, hence the time complexity of searching is not guaranteed.
 * **Theorem**: The height of an AVL tree storing $N$ nodes is $O(\ln N)$
 !!! note "Proof"
     
-    * **Iteration**: $h(N) = 1 + h(N-1) + h(N-2)$
+    $n(h)$: the number of nodes in an AVL tree of height $h$
+    * **Iteration**: $n(h) = 1 + n(h-1) + n(h-2)$
         * **Proof**: 
             * **Fibonacci**: $F(N) = F(N-1) + F(N-2)$
             * **$F(N) \approx \frac{1}{\sqrt{5}} \left( \frac{1 + \sqrt{5}}{2} \right)^N$**
-            * **$h(N) = F_{h+3}-1$**
-    * **Conclusion**: $h(N) = O(\ln N)$
+            * **$n(h) = F_{h+3}-1$**
+    * **Conclusion**: $h = O(\ln N)$
 
