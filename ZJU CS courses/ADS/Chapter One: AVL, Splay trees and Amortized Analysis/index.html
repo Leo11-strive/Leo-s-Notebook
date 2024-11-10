@@ -952,18 +952,13 @@ RL: right rotation on the right child, then left rotation on the root.</center> 
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Proof</p>
-<ul>
-<li><strong>Iteration</strong>: <span class="arithmatex">\(h(N) = 1 + h(N-1) + h(N-2)\)</span><ul>
-<li><strong>Proof</strong>: <ul>
-<li><strong>Fibonacci</strong>: <span class="arithmatex">\(F(N) = F(N-1) + F(N-2)\)</span></li>
-<li><strong><span class="arithmatex">\(F(N) \approx \frac{1}{\sqrt{5}} \left( \frac{1 + \sqrt{5}}{2} \right)^N\)</span></strong></li>
-<li><strong><span class="arithmatex">\(h(N) = F_{h+3}-1\)</span></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Conclusion</strong>: <span class="arithmatex">\(h(N) = O(\ln N)\)</span></li>
-</ul>
+<p><span class="arithmatex">\(n(h)\)</span>: the number of nodes in an AVL tree of height <span class="arithmatex">\(h\)</span>
+* <strong>Iteration</strong>: <span class="arithmatex">\(n(h) = 1 + n(h-1) + n(h-2)\)</span>
+    * <strong>Proof</strong>: 
+        * <strong>Fibonacci</strong>: <span class="arithmatex">\(F(N) = F(N-1) + F(N-2)\)</span>
+        * <strong><span class="arithmatex">\(F(N) \approx \frac{1}{\sqrt{5}} \left( \frac{1 + \sqrt{5}}{2} \right)^N\)</span></strong>
+        * <strong><span class="arithmatex">\(n(h) = F_{h+3}-1\)</span></strong>
+* <strong>Conclusion</strong>: <span class="arithmatex">\(h = O(\ln N)\)</span></p>
 </div>
 
 
