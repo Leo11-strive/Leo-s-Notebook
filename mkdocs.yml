@@ -3,14 +3,6 @@ theme:
   name: material
 
   palette:
-    - scheme: slate
-      primary: brown
-      accent: purple
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
-     # Light mode
     - scheme: default
       primary: cyan
       accent: purple
@@ -18,7 +10,12 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
-
+    - scheme: slate
+      primary: brown
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
  
   font:
     text: Sour Gummy
