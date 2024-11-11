@@ -3,11 +3,24 @@ theme:
   name: material
 
   palette:
-    primary: custom
-    accent: deep purple
+     # Light mode
+    - scheme: default
+      primary: cyan
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: brown
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
   font:
-    text: Nunito
+    text: Sour Gummy
     code: Source Code Pro
   features:
     - search.suggest
@@ -24,6 +37,7 @@ theme:
     - navigation.tabs.sticky
   icon:
     repo: fontawesome/brands/github
+    logo: material/library-shelves
 
 
 extra:

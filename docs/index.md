@@ -1,7 +1,7 @@
 # NOTEBOOK HOMEPAGE
 !!! Quote "Preface"
 
-    <center>___Do not go gentle into that good night___</center>
+    <font size=4><center>Do not go gentle into that good night</center></font>
 
 ## Links that might be useful
 
@@ -10,6 +10,6 @@
 
 !!! Tips
 
-    This is a personal notebook. The content might be incorrect. Just for reference.:joy:
+    <center>This is a personal notebook. The content might be incorrect. Just for reference.:joy:</center>
 
 
