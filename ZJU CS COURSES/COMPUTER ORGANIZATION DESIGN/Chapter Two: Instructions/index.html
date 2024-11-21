@@ -963,6 +963,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#synchronization-in-risc-v" class="md-nav__link">
+    Synchronization in RISC-V
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translating-and-staring-a-program" class="md-nav__link">
+    Translating and staring a program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-c-sort-example-to-pull-it-all-together" class="md-nav__link">
+    A C Sort Example To Pull It All Together
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays-versus-pointers" class="md-nav__link">
+    Arrays Versus Pointers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-stuff-mips-instrcuctions" class="md-nav__link">
+    Real Stuff: MIPS Instrcuctions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1205,6 +1240,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#synchronization-in-risc-v" class="md-nav__link">
+    Synchronization in RISC-V
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translating-and-staring-a-program" class="md-nav__link">
+    Translating and staring a program
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-c-sort-example-to-pull-it-all-together" class="md-nav__link">
+    A C Sort Example To Pull It All Together
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays-versus-pointers" class="md-nav__link">
+    Arrays Versus Pointers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-stuff-mips-instrcuctions" class="md-nav__link">
+    Real Stuff: MIPS Instrcuctions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1286,6 +1356,46 @@ When the address is too big, use <code>lui</code>  </li>
 </ul>
 <h2 id="collection-of-instructions">Collection of Instructions<a class="headerlink" href="#collection-of-instructions" title="Permanent link">&para;</a></h2>
 <p><img alt="alt text" src="../image-10.png" />  </p>
+<h2 id="synchronization-in-risc-v">Synchronization in RISC-V<a class="headerlink" href="#synchronization-in-risc-v" title="Permanent link">&para;</a></h2>
+<ul>
+<li>nobody can interrupt the atomic operation <br />
+<img alt="alt text" src="../image-11.png" />
+<code>lr.d</code> and <code>sc.d</code>   </li>
+<li><code>lr.d</code> is used to load the value of the address into the register, thus the CPU remembers the operation lr.d   </li>
+<li><code>sc.d</code> is used to store the value of the register into the address, lr.d and sr.d are a pair of operations, and the CPU will check if the value of the address has been changed during the operation. If it has not been changed, the operation is successful. Ohterwise its not.  </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>r20-&gt;7
+then lr.d s2 (r20)<br />
+s2=7<br />
+CPU remebers the procedure <br />
+sc.d rd (r20) s2<br />
+the value on the (r20) address might be changed because of multi-core structure, when encountered this situation, 1 will be stored in rd(unsuccessful, the value of s2 cannot be stored in that memory).  </p>
+</div>
+<p><img alt="alt text" src="../image-12.png" />
+<strong><em>No interruption is allowed</em></strong><br />
+in cpu, one paticular address need to be locked, so that no other cpu can access it.<br />
+<img alt="alt text" src="../image-13.png" />  </p>
+<h2 id="translating-and-staring-a-program">Translating and staring a program<a class="headerlink" href="#translating-and-staring-a-program" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-14.png" /><br />
+<img alt="alt text" src="../image-15.png" /><br />
+<img alt="alt text" src="../image-16.png" /> <br />
+when learning compiling    <br />
+<strong>.dll</strong> is a dynamic link library, which is a collection of small programs, any of which can be called when needed by a larger program that is running in the computer. The small program that lets the larger program communicate with a specific device such as a printer or scanner is often packaged as a DLL program (usually referred to as a DLL file).<br />
+<img alt="alt text" src="../image-17.png" /><br />
+<em>Starting Java Applications</em><br />
+the virtual machine of Java allows Java to be run on any platform.<br />
+<img alt="alt text" src="../image-18.png" />  </p>
+<h2 id="a-c-sort-example-to-pull-it-all-together">A C Sort Example To Pull It All Together<a class="headerlink" href="#a-c-sort-example-to-pull-it-all-together" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-19.png" /><br />
+<img alt="alt text" src="../image-20.png" />  </p>
+<h2 id="arrays-versus-pointers">Arrays Versus Pointers<a class="headerlink" href="#arrays-versus-pointers" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-21.png" />(comilers are smart enough to optimize the code, to change the array to pointer and vice versa)<br />
+<img alt="alt text" src="../image-22.png" />  </p>
+<h2 id="real-stuff-mips-instrcuctions">Real Stuff: MIPS Instrcuctions<a class="headerlink" href="#real-stuff-mips-instrcuctions" title="Permanent link">&para;</a></h2>
+<p>all 32-bit instructions<br />
+<img alt="alt text" src="../image-23.png" /></p>
 
 
   
