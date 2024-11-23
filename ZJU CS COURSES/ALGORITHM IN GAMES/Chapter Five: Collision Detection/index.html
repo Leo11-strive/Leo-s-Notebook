@@ -12,7 +12,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../Python/">
+        <link rel="next" href="../Chapter%20Four%3A%20Navigational%20Algorithms/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Chapter one:Intro - Leo Li's Notebook</title>
+        <title>Chapter Five: Collision Detection - Leo Li's Notebook</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#digital-image-representation" class="md-skip">
+        <a href="#collision-detection" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter one:Intro
+              Chapter Five: Collision Detection
             
           </span>
         </div>
@@ -836,6 +836,8 @@
                 
   
   
+    
+  
   
     
     
@@ -858,18 +860,18 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ALGORITHM%20IN%20GAMES/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -885,7 +887,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             ALGORITHM IN GAMES
@@ -898,9 +900,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Five%3A%20Collision%20Detection/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter Five: Collision Detection
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -909,6 +929,87 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collision-detection" class="md-nav__link">
+    Collision Detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Collision Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rect-collision-algorithm" class="md-nav__link">
+    Rect Collision Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tyranny-of-numbers" class="md-nav__link">
+    Tyranny of numbers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-all-the-possible-problems" class="md-nav__link">
+    Solving all the possible problems
+  </a>
+  
+    <nav class="md-nav" aria-label="Solving all the possible problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadtreeand-other-sorting-methods" class="md-nav__link">
+    Quadtree(and other sorting methods)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-test" class="md-nav__link">
+    Quick test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolve-collision" class="md-nav__link">
+    Resolve Collision
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -920,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Four%3A%20Navigational%20Algorithms/" class="md-nav__link">
+      <a href="../Chapter%20Four%3A%20Navigational%20Algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Three%3A%20Mazes/" class="md-nav__link">
+      <a href="../Chapter%20Three%3A%20Mazes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Two%3A%20More%20Pygame%2C%20Sprites%20and%20Randomness/" class="md-nav__link">
+      <a href="../Chapter%20Two%3A%20More%20Pygame%2C%20Sprites%20and%20Randomness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20one%3A%20Introductions%2C%20Games%2C%20Architecture%2C%20Engine/" class="md-nav__link">
+      <a href="../Chapter%20one%3A%20Introductions%2C%20Games%2C%20Architecture%2C%20Engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1088,8 +1189,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1104,18 +1203,18 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../DIGITAL%20IMAGE%20PROCESSING/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1131,7 +1230,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             DIGITAL IMAGE PROCESSING
@@ -1144,27 +1243,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Chapter one:Intro
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../DIGITAL%20IMAGE%20PROCESSING/Chapter%20one%3AIntro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,89 +1254,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#digital-image-representation" class="md-nav__link">
-    Digital image representation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-format" class="md-nav__link">
-    Image format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-principle-of-imaging" class="md-nav__link">
-    Basic principle of imaging:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#digital-camera" class="md-nav__link">
-    Digital Camera
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#physicsal-meaning-of-color" class="md-nav__link">
-    Physicsal meaning of color
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#three-primary-colors" class="md-nav__link">
-    Three-primary colors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties-of-color-vision" class="md-nav__link">
-    Properties of color vision
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jpeg-format" class="md-nav__link">
-    JPEG format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jpeg-syntaxjust-for-acknowledgement" class="md-nav__link">
-    JPEG syntax(just for acknowledgement)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1385,64 +1383,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#digital-image-representation" class="md-nav__link">
-    Digital image representation
+  <a href="#collision-detection" class="md-nav__link">
+    Collision Detection
+  </a>
+  
+    <nav class="md-nav" aria-label="Collision Detection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rect-collision-algorithm" class="md-nav__link">
+    Rect Collision Algorithm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tyranny-of-numbers" class="md-nav__link">
+    Tyranny of numbers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solving-all-the-possible-problems" class="md-nav__link">
+    Solving all the possible problems
+  </a>
+  
+    <nav class="md-nav" aria-label="Solving all the possible problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quadtreeand-other-sorting-methods" class="md-nav__link">
+    Quadtree(and other sorting methods)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-test" class="md-nav__link">
+    Quick test
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#image-format" class="md-nav__link">
-    Image format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-principle-of-imaging" class="md-nav__link">
-    Basic principle of imaging:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#digital-camera" class="md-nav__link">
-    Digital Camera
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#physicsal-meaning-of-color" class="md-nav__link">
-    Physicsal meaning of color
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#three-primary-colors" class="md-nav__link">
-    Three-primary colors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties-of-color-vision" class="md-nav__link">
-    Properties of color vision
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jpeg-format" class="md-nav__link">
-    JPEG format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jpeg-syntaxjust-for-acknowledgement" class="md-nav__link">
-    JPEG syntax(just for acknowledgement)
+  <a href="#resolve-collision" class="md-nav__link">
+    Resolve Collision
   </a>
   
 </li>
@@ -1465,211 +1461,77 @@
   
 
 
-  <h1>Chapter one:Intro</h1>
+  <h1>Chapter Five: Collision Detection</h1>
 
-<h2 id="digital-image-representation">Digital image representation<a class="headerlink" href="#digital-image-representation" title="Permanent link">&para;</a></h2>
+<h2 id="collision-detection">Collision Detection<a class="headerlink" href="#collision-detection" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Digital image</strong>: a 2D array or matrix of small elements called <strong>pixels</strong>.  </li>
-<li>Eachpixel in a grayscale image is represented by a byte (8 bits), which can take on 256 different intensity values.   </li>
-<li>A color image is represented by three bytes (24 bits) per pixel, one byte for each of the three primary colors: red, green, and blue.</li>
+<li>Collision detection is a fundamental problem in computer graphics and game development.  </li>
+<li>The problem is to determine whether two objects are intersecting.  </li>
+<li>for each pair of sprites, check wheher <span class="arithmatex">\(p_1 \cap p_2 \eq \emptyset -&gt;\)</span> No collision!!!  </li>
 </ul>
-<details class="tip">
-<summary>Tip</summary>
-<p><center>Another byte called alpha, representing the transparency.RGB are stored in three distinct arrays. The sequence might be different</center>   </p>
-</details>
-<h2 id="image-format">Image format<a class="headerlink" href="#image-format" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Representative format: BMp(windows,mostly without compression), GIF, JPEG(compression with loss), PNG, TIFF, etc.   </li>
-<li>Characteristic of image: pixel based, rectangle region, with information stored  </li>
-<li>
-<p>Encoding method: without compression, with loss, with lossless, etc.  </p>
-</li>
-<li>
-<p><em>BMP format</em>:  </p>
-</li>
-<li>One of the standard formats for storing bit-mapped images on Microsoft Windows systems.  </li>
-<li>sometimes saved as .dib  </li>
-<li>mostly organized in a non-compressed way.  </li>
-<li>
-<p>can be compressed though  </p>
-</li>
-<li>
-<p><em>BMP file structure</em>:  </p>
-</li>
-<li><strong>File header</strong>: 14 bytes, containing information about the type, size, and layout of the file.  </li>
-<li><strong>Info header</strong>: 40 bytes, containing information about the image, such as its width, height, and color depth.  </li>
-<li><strong>Color table</strong>: 0 or 1024 bytes, containing the colors used in the image.  </li>
-<li><strong>Pixel data</strong>: the actual image data. <br />
-<img alt="alt text" src="../image.png" />  </li>
-<li>Palette: a table of colors used by the image.(not used right now, was used to save space(for those monitors with limited color display))   </li>
-<li>image data: color greyscale image(if you want to convert a 24-bit image to a greyscale image,set the R G B data of every pixel to one number)  <br />
-<img alt="alt text" src="../image-1.png" />   </li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><center>bfOffBits stores the offset from beginning of the file to bitmap data, therefore if you don't want to alter the bitmap information header,use this. </center>  </p>
+<h3 id="rect-collision-algorithm">Rect Collision Algorithm<a class="headerlink" href="#rect-collision-algorithm" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-17.png" /><br />
+collidepoint:<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">collidepoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span>  
+</span></code></pre></div></td></tr></table></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><center>The test need to be bi-directional.</center>  </p>
 </div>
-<p><img alt="alt text" src="../image-2.png" /><br />
-<img alt="alt text" src="../image-3.png" /><br />
-* a few things that worth a notice:<br />
-bisize: the bytes of BITMAPINFOHEADER<br />
-biheight: if positive: inverted
-          else: upright<br />
-bibitcount; the number o bits used to store one pixel<br />
-biXPelsPerMeter: the size of pixel(number of pixels per meter)(horizonal)  </p>
-<div class="admonition tip">
-<p class="admonition-title">possible usage in daily life</p>
-<p><center>Embed picture in essays, How much dpi?(shall be elevated to be professional,keep the balance between size and clarity)</center></p>
-</div>
-<p><img alt="alt text" src="../image-4.png" /><br />
-<img alt="alt text" src="../image-5.png" /><br />
-whether it is inverted or not, one shall be cautious<br />
-<img alt="alt text" src="../image-6.png" />  </p>
-<h2 id="basic-principle-of-imaging">Basic principle of imaging:<a class="headerlink" href="#basic-principle-of-imaging" title="Permanent link">&para;</a></h2>
-<p>___imitate an eye__<br />
-<em>what is the suitable size of the aperture?</em><br />
-* too big: 虚化<br />
-* too small: clear yet not bright enough and 衍射 
-* Lens * 
-<img alt="alt text" src="../image-7.png" />
-<img alt="alt text" src="../image-8.png" />
-Both aperture and depth of field can effect the circle of confusion<br />
-Lens Group: f can be changed  </p>
-<h2 id="digital-camera">Digital Camera<a class="headerlink" href="#digital-camera" title="Permanent link">&para;</a></h2>
-<ol>
-<li>CCD: 
-Charge Coupled Device: Now we use CMOS more often
-photodiode: stimulated to release charges, and produces electrical signals  </li>
-</ol>
-<p>Amplifier
-2. AD:<br />
-3. DSP: digital image processor (worth doing) 
-4. Mermory    </p>
-<p><img alt="alt text" src="../image-9.png" /></p>
-<h2 id="physicsal-meaning-of-color">Physicsal meaning of color<a class="headerlink" href="#physicsal-meaning-of-color" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../image-10.png" /><br />
-Dichromatic Reflection Separation: 
-* Specular reflection: mirror reflection<br />
-* Diffuse reflection: scattering reflection    </p>
-<blockquote>
-<p>dealing with the reflection of light, the color of the object is determined by the light source and the object itself.  </p>
-</blockquote>
-<p>Color can be divided into chromatic color and achromatic color(no color).<br />
-* Chromatic color: the color of the object itself.<br />
-<img alt="alt text" src="../image-11.png" />  </p>
-<h2 id="three-primary-colors">Three-primary colors<a class="headerlink" href="#three-primary-colors" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RGB: additive color mixing<br />
-<img alt="alt text" src="../image-12.png" /><br />
-R: 700nm<br />
-G: 546.1nm<br />
-B: 435.8nm<br />
-human eyes can see far more colors than colors generated by normal monitors  </li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><center>Absolute color vision is not precise: human identifies color by visual context(comparing)</center>  </p>
-</div>
-<p><img alt="alt text" src="../image-13.png" />  </p>
-<h2 id="properties-of-color-vision">Properties of color vision<a class="headerlink" href="#properties-of-color-vision" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Perceptive ability:<br />
-<img alt="alt text" src="../image-14.png" /><br />
-different people have different<br />
-Webber's Law: the difference between two colors is proportional to the background.<br />
-<img alt="alt text" src="../image-15.png" /><br />
-<img alt="alt text" src="../image-16.png" /><br />
-Priority: first the hue(色调) changes, saruration(饱和度) changes, then the brightness changes. <br />
-Sensitivity: human eyes are the most sensitive to the lightness changes and have the best resolution,<br />
-which is responsible for the eyes' HDR capacity<br />
-<em>device dependent color space model:</em><br />
-RGB, CMY, YUV, YIQ, YCbCr, HSV, HSL, etc.<br />
-<em>device independent color space model:</em><br />
-CIE XYZ, CIE L<em>a</em>b<em>, CIE L</em>u<em>v</em>, etc.  </li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">Why independent?</p>
-<p><center>the color space model should be independent of the device to convert image data to various devices</center>  </p>
-</div>
-<p><em>RGB color model</em><br />
-<img alt="alt text" src="../image-17.png" />
-* RGB is a subset of CIE primary color space<br />
-* TV, Phones  </p>
-<p><em>CMY color model</em><br />
-<img alt="alt text" src="../image-18.png" /><br />
-* delete the color that is not needed(main idea)<br />
-* printer  </p>
+<p>colliderect:<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">colliderect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rect</span><span class="p">):</span>  
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">rect</span><span class="o">.</span><span class="n">right</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">&gt;</span> <span class="n">rect</span><span class="o">.</span><span class="n">left</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">top</span> <span class="o">&lt;</span> <span class="n">rect</span><span class="o">.</span><span class="n">bottom</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">bottom</span> <span class="o">&gt;</span> <span class="n">rect</span><span class="o">.</span><span class="n">top</span>  
+</span></code></pre></div></td></tr></table></div>
+Problematic indeed: checks too frequently, move-through prolems  </p>
+<h3 id="tyranny-of-numbers">Tyranny of numbers<a class="headerlink" href="#tyranny-of-numbers" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><center>C,M,Y,K(black)to save money while printing</center>  </p>
+<p><center>checking collisions for all pairs of objects is not feasible</center>  </p>
 </div>
-<p>subtractive color mixing(cmy)/ additive color mixing(rgb)  </p>
-<p><em>HSV color model</em><br />
-<img alt="alt text" src="../image-19.png" />  <br />
-Adantage of HSV color model:<br />
+<p><img alt="alt text" src="../image-18.png" />(就像时序下沿时原件的delay)  </p>
+<h2 id="solving-all-the-possible-problems">Solving all the possible problems<a class="headerlink" href="#solving-all-the-possible-problems" title="Permanent link">&para;</a></h2>
+<ul>
+<li>need to look for objects that don't move, and that are allowed to go through other objects  </li>
+<li>distant objects can be ignored  </li>
+<li>objects that are not visible can be ignored(off-screen objects)  </li>
+<li>restricted locations  </li>
+</ul>
+<h3 id="quadtreeand-other-sorting-methods">Quadtree(and other sorting methods)<a class="headerlink" href="#quadtreeand-other-sorting-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A tree data structure in which each internal node has exactly four children.   </li>
+</ul>
+<h2 id="quick-test">Quick test<a class="headerlink" href="#quick-test" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Circle/ Sphere test<br />
+<img alt="alt text" src="../image-19.png" /><br />
+don't use <code>sqrt</code> function, too ecpensive(Numerical Analysis)   </li>
+<li>Bounding Box(a better rectangle)   </li>
+<li>a better collision detection algorithm(don't use corners of the rec)   </li>
+<li>Separating Axis Theorem:  <ul>
+<li>if two convex shapes do not intersect, there exists a line such that the projection of the two shapes onto the line do not overlap.   </li>
+</ul>
+</li>
+<li>Capsule(semicircles: a bounding test for the rec,and a circle test for the circle)  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Book Recommendation</p>
+<p><center>Game Programming: Algorithms and Techniques by Sanjay Madhaven</center>  </p>
+</div>
+<ul>
+<li>Swept Sphere Algorithm(use math to determine whether two moving objects will collide dynamically)<br />
+<span class="arithmatex">\((B\cdotB)t^2+2(A\cdotB)t+A\cdotA-(r_p+r_q)^2=0\)</span>    </li>
+</ul>
+<h2 id="resolve-collision">Resolve Collision<a class="headerlink" href="#resolve-collision" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bounces  </li>
+<li>Elastic Collisions<br />
 <img alt="alt text" src="../image-20.png" /><br />
-more efficient and precise when altering pictures<br />
-<em>CIE XYZ</em><br />
-XYZ follows three-primary color theory<br />
-has direct relationship with RGB monitors<br />
-<em>CIE L</em>a<em>b</em><br />
-<img alt="alt text" src="../image-21.png" /><br />
-<em>CIE YUV</em><br />
-<img alt="alt text" src="../image-22.png" />  </p>
-<h2 id="jpeg-format">JPEG format<a class="headerlink" href="#jpeg-format" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Joint Photographic Experts Group  </li>
-<li>Founded in 1986, presented the first standard in 1992, accepted by ISO in 1994  </li>
-<li>File extension: .jpg, .jpeg, .jpe, .jfif  </li>
-<li>Compression format for static image  </li>
-<li>Lossy compression  </li>
-<li>Encoding based on transformation  <ul>
-<li>DCT(Discrete Cosine Transform)(离散余弦变换，利用信息出现的频率来决定压缩的程度) </li>
+find the touching point<br />
+<span class="arithmatex">\(\vec{v_'}=\vec{v}-2\vec{n}(\vec{v}\cdot\vec{n})\)</span>  </li>
 </ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><center>.jpeg can also be used in video compression, when the background of the video is not moving, the video can be compressed by jpeg.(H264)</center>  </p>
-</div>
-<ul>
-<li>JPEG2000 is baes on wavelet(小波变换，曾与深度学习一般火)  </li>
-<li>Different manipulationd for high-frequency signal and low frequency signal（有点像霍夫曼编码）    </li>
-<li>
-<p>high frequency signal   </p>
-</li>
-<li>
-<p>Compression strategy: set a compression ratio,remove information from high frequency to low frequency  </p>
-</li>
-<li>JPEG advantages:  </li>
-<li>High frequency information occupies much more memmory. Hence, high frequency removal leads to high compression ratio  </li>
-<li>Low frequency information preserves the principle structure and color distribution of object, which is the key factors of an image  </li>
-<li>suitabe for internet based visual media  </li>
-</ul>
-<h2 id="jpeg-syntaxjust-for-acknowledgement">JPEG syntax(just for acknowledgement)<a class="headerlink" href="#jpeg-syntaxjust-for-acknowledgement" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../image-23.png" /><br />
-DQT: DCT changes, quantization to a table(rounding)<br />
-DHT: Huffman coding(a tree or a priority queue or trees)</p>
-<p><img alt="alt text" src="../image-24.png" /><br />
-APP0 Marker<br />
-<img alt="alt text" src="../image-25.png" /><br />
-APP1 Marker: EXIF use APP1 to store meta data<br />
-如背景虚化可以通过光圈大小和焦距<br />
-ISO（感光度）的数值越大，光感度越高，但是噪点也会增加 <br />
-快门速度不能太慢，否则会模糊<br />
-motion blur might occur<br />
-<img alt="alt text" src="../image-26.png" /><br />
-Quantization table: quantize the high frequency region<br />
-<img alt="alt text" src="../image-27.png" /><br />
-<img alt="alt text" src="../image-28.png" /><br />
-DPCM encoding: 
-<img alt="alt text" src="../image-29.png" /><br />
-<img alt="alt text" src="../image-30.png" /><br />
-<img alt="alt text" src="../image-31.png" /><br />
-the evaluation of the quality of the image has its own regulations<br />
-<em>JPEG disadvantage</em><br />
-* Nort for line drawing, text, symbol, icon, etc.<br />
-* its lossy  compression leafs to unavoidable artifacts  </p>
 
 
   
