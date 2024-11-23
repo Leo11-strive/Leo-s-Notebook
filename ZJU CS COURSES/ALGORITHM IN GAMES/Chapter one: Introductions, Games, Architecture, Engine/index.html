@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Chapter%20Two/">
+        <link rel="prev" href="../Chapter%20Two%3A%20More%20Pygame%2C%20Sprites%20and%20Randomness/">
       
       
         <link rel="next" href="../../COMPUTER%20ORGANIZATION%20DESIGN/">
@@ -918,11 +918,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chapter%20Two/" class="md-nav__link">
+      <a href="../Chapter%20Two%3A%20More%20Pygame%2C%20Sprites%20and%20Randomness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapter Two
+    Chapter Two: More Pygame, Sprites and Randomness
   </span>
   
 
@@ -1059,8 +1059,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#draw-module" class="md-nav__link">
+    Draw module
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pygame-images" class="md-nav__link">
+    Pygame Images
+  </a>
   
 </li>
         
@@ -1443,8 +1457,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#draw-module" class="md-nav__link">
+    Draw module
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pygame-images" class="md-nav__link">
+    Pygame Images
+  </a>
   
 </li>
         
@@ -1624,6 +1652,92 @@
 <li>
 <ol>
 <li>2D array of pixels,returned from display.set_mode()  </li>
+</ol>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">The difference between class and module</p>
+<p><center>Classes are blueprints that allow you to create instances with attributes and bound functionality. Classes support inheritance, metaclasses, and descriptors.</center>
+<center>Modules can't do any of this, modules are essentially singleton instances of an internal module class, and all their globals are attributes on the module instance. You can manipulate those attributes as needed (add, remove and update), but take into account that these still form the global namespace for all code defined in that module. </center></p>
+</div>
+<ul>
+<li>
+<ol>
+<li>The display Surface is visible to the user  </li>
+</ol>
+</li>
+<li>
+<ol>
+<li>background surface is copyed to the display surface while rendering  </li>
+</ol>
+</li>
+<li>
+<ol>
+<li>get_at and set_at methods to access pixel values, set colors of it  </li>
+</ol>
+</li>
+</ul>
+<h4 id="draw-module">Draw module<a class="headerlink" href="#draw-module" title="Permanent link">&para;</a></h4>
+<ul>
+<li>surface is a parameter  </li>
+<li>draw.rect(surface, color, rect)  </li>
+<li>draw.circle(surface, color, center, radius)</li>
+<li>draw.line(surface, color, start_pos, end_pos, width)</li>
+<li>draw.arc(surface, color, rect, start_angle, stop_angle, width)<br />
+<code>surface.fill(color)</code>: to fill the entire function  </li>
+<li>draw.polygon(surface,color,points,width=1)  </li>
+<li>Rect object:<blockquote>
+<ul>
+<li>
+<ol>
+<li>x,y,width,height
+<img alt="alt text" src="../image-1.png" />  </li>
+</ol>
+</li>
+</ul>
+</blockquote>
+</li>
+<li>Using rect with draw:  </li>
+</ul>
+<h3 id="pygame-images">Pygame Images<a class="headerlink" href="#pygame-images" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<ol>
+<li>image formats: PNG, JPEG, BMP, GIF, etc  </li>
+</ol>
+</li>
+<li>
+<ol>
+<li>load image: image.load(filename) </li>
+</ol>
+</li>
+<li>
+<ol>
+<li>convert() method to convert image to the same format as the display surface</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>blit() method to draw the image on the display surface</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Blit optimization: blit() is faster than draw(), graphics harware handles the entire BLIT  </li>
+</ol>
+</li>
+<li>
+<ol>
+<li>colorkey</li>
+<li>set_colorkey() method to set the transparent color</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>surface transformation: scale, rotate, flip</li>
+<li>surface.transform.scale(surface, (width, height))</li>
+<li>surface.transform.rotate(surface, angle)</li>
+<li>surface.transform.flip(surface, xbool, ybool)  </li>
 </ol>
 </li>
 </ul>

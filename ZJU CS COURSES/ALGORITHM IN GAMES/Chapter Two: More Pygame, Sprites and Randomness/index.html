@@ -20,7 +20,7 @@
     
     
       
-        <title>Chapter Two - Leo Li's Notebook</title>
+        <title>Chapter Two: More Pygame, Sprites and Randomness - Leo Li's Notebook</title>
       
     
     
@@ -76,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#fonts-and-text-renders" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -108,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter Two
+              Chapter Two: More Pygame, Sprites and Randomness
             
           </span>
         </div>
@@ -920,15 +925,93 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter Two: More Pygame, Sprites and Randomness
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Chapter Two
+    Chapter Two: More Pygame, Sprites and Randomness
   </span>
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonts-and-text-renders" class="md-nav__link">
+    Fonts and text renders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spritesobject-oriented-models" class="md-nav__link">
+    Sprites(Object-Oriented Models)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    Animation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomness" class="md-nav__link">
+    Randomness
+  </a>
+  
+    <nav class="md-nav" aria-label="Randomness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prng-pseudo-random-number-generator" class="md-nav__link">
+    PRNG: Pseudo-Random Number Generator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-distributions" class="md-nav__link">
+    Random distributions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1236,6 +1319,62 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonts-and-text-renders" class="md-nav__link">
+    Fonts and text renders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spritesobject-oriented-models" class="md-nav__link">
+    Sprites(Object-Oriented Models)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    Animation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#randomness" class="md-nav__link">
+    Randomness
+  </a>
+  
+    <nav class="md-nav" aria-label="Randomness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prng-pseudo-random-number-generator" class="md-nav__link">
+    PRNG: Pseudo-Random Number Generator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-distributions" class="md-nav__link">
+    Random distributions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1252,9 +1391,150 @@
   
 
 
-  <h1>Chapter Two</h1>
+  <h1>Chapter Two: More Pygame, Sprites and Randomness</h1>
 
-
+<h2 id="fonts-and-text-renders">Fonts and text renders<a class="headerlink" href="#fonts-and-text-renders" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pygame renders text to a surface with the font module  </li>
+<li>Font module can locate and load a font as a Font object<br />
+How to render text:
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">Font</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;Hello, World&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
+</span></code></pre></div></td></tr></table></div>
+the font.render() method returns a surface with the text rendered on it<br />
+<code>a_font.size()</code>: method returns the size of the text  , a turple of width and height
+<code>a_font.get_height()</code>: method returns the height of the font
+<code>a_font.get_linesize()</code>: method returns the height of a line of text
+<code>a_font.metrics</code>:returns a list with one turple per character in ttext  </li>
+</ul>
+<h2 id="spritesobject-oriented-models">Sprites(Object-Oriented Models)<a class="headerlink" href="#spritesobject-oriented-models" title="Permanent link">&para;</a></h2>
+<p><div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span> <span class="nc">MySprite</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Sprite</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+the usage of sprites:<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">sprite</span> <span class="o">=</span> <span class="n">MySprite</span><span class="p">()</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">sprite_group</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">Group</span><span class="p">()</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">sprite_group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">sprite_group</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">screen</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<code>sprite_group.draw(screen)</code>: method draws all the sprites in the group to the screen
+sprite operations with group:
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">sprite_group</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">sprite_group</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">background</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">sprite_group</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">sprite</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<code>Group.clear(surface, background)</code>: clears the sprites from the screen<br />
+<code>Group.draw(surface)</code>: draws the sprites to the screen<br />
+<img alt="alt text" src="../image-2.png" /><br />
+LayerUpdates class:<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span> <span class="nc">LayerUpdates</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">LayeredUpdates</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">LayeredUpdates</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MySprite</span><span class="p">())</span>
+</span></code></pre></div></td></tr></table></div>
+a group within group<br />
+DirtySprite class:<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span> <span class="nc">DirtySprite</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">DirtySprite</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">DirtySprite</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">get_rect</span><span class="p">()</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">rect</span><span class="o">.</span><span class="n">topleft</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<code>DirtySprite.dirty</code>: attribute to indicate whether the sprite needs to be updated<br />
+<code>DirtySprite.dirty = 1</code>: set the sprite to be updated
+<code>DirtySprite.dirty = 0</code>: set the sprite not to be updated
+LayeredDirty class:<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span> <span class="nc">LayeredDirty</span><span class="p">(</span><span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">LayeredDirty</span><span class="p">):</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>        <span class="n">pygame</span><span class="o">.</span><span class="n">sprite</span><span class="o">.</span><span class="n">LayeredDirty</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">DirtySprite</span><span class="p">())</span>
+</span></code></pre></div></td></tr></table></div>
+<em>Collision Detection</em>:will be discussioned in chapter five  </p>
+<h2 id="animation">Animation<a class="headerlink" href="#animation" title="Permanent link">&para;</a></h2>
+<p><em>Animation</em>: a series of images displayed in rapid succession to create the illusion of movement  </p>
+<div class="admonition question">
+<p class="admonition-title">how to make shure that the animation is smooth?</p>
+<ol>
+<li>slow the game loop down to a consistent number  </li>
+<li>measure the time between frames and adjust the speed of the animation accordingly  </li>
+</ol>
+</div>
+<p>Approach 1: Slowerloop<br />
+a tick() method to control the speed of the game loop<br />
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">tick</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+Approach 2: Measure
+delta value: the time cost of the last frame(game loop)<br />
+delta=clock.tick()<br />
+it will return number of milliseconds 
+since last time</p>
+<h2 id="randomness">Randomness<a class="headerlink" href="#randomness" title="Permanent link">&para;</a></h2>
+<p><em>Randomness</em>: a key element in games
+<code>random.randint(a, b)</code>: returns a random integer between a and b
+<code>random.choice(sequence)</code>: returns a random element from a sequence
+<code>random.shuffle(sequence)</code>: shuffles the sequence in place
+<code>random.seed()</code>: initializes the random number generator
+<em>LCG: Linear Congruential Generator</em>: a simple algorithm to generate random numbers
+<span class="arithmatex">\(X_{n+1}=(aX_n+c)mod m\)</span>
+<span class="arithmatex">\(ex: X_{n+1}=(1664525X_n+1013904223)mod 2^{32}\)</span>
+LCG has a specific period, and the period is the maximum number of random numbers that can be generated before the sequence repeats</p>
+<h3 id="prng-pseudo-random-number-generator">PRNG: Pseudo-Random Number Generator<a class="headerlink" href="#prng-pseudo-random-number-generator" title="Permanent link">&para;</a></h3>
+<p><em>PRNG</em>: a deterministic algorithm that generates a sequence of numbers that approximates the properties of random numbers<br />
+a good PRNG should have a long period, be unpredictable, and have a uniform distribution  </p>
+<h3 id="random-distributions">Random distributions<a class="headerlink" href="#random-distributions" title="Permanent link">&para;</a></h3>
+<p><em>Uniform distribution</em>: each number has an equal chance of being selected<br />
+<em>Normal distribution</em>: a bell-shaped curve with the mean at the center<br />
+<em>Asymmetric distribution</em>: a distribution that is not symmetrical: Dropping the lowest roll, reroll the lowest
+<img alt="alt text" src="../image-3.png" /><br />
+<em>Critical Hit</em>: a game mechanic that allows a player to deal extra damage<br />
+How to construct a critical hit?
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">roll_with_crit</span><span class="p">():</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="n">roll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="k">if</span> <span class="n">roll</span> <span class="o">&lt;</span> <span class="n">crit_threshold</span><span class="p">:</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="k">return</span> <span class="n">roll</span>
+</span></code></pre></div></td></tr></table></div>
+<em>Arbitrary distribution</em>: a distribution that is not uniform, normal, or asymmetric<br />
+use die-size to control the scale</p>
 
 
   
