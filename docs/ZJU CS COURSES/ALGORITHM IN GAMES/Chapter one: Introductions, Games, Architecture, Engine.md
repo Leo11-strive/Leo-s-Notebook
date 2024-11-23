@@ -31,5 +31,17 @@
 * use classes to define objects
 * each object knows its own state, and so is part of the model  
 * each object can draw itself, so is part of the view  
+!!! tip
+    * 1. Model: has references to objects and calls their update methods
+    * 2. View: draw()
+    * 3. Controller: user input  
+
+### Graphics  
+* 1. Engine: graphics algorithms embedded  
+* 2. Colors: RGB, Alpha  
+#### The Surface  
+* 1. 2D array of pixels,returned from display.set_mode()  
+
+
 
 
