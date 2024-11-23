@@ -47,13 +47,15 @@ don't use `sqrt` function, too ecpensive(Numerical Analysis)
     <center>Game Programming: Algorithms and Techniques by Sanjay Madhaven</center>  
 
 * Swept Sphere Algorithm(use math to determine whether two moving objects will collide dynamically)  
-$(B\cdotB)t^2+2(A\cdotB)t+A\cdotA-(r_p+r_q)^2=0$    
+$(B\cdot B)t^2+2(A\cdot B)t+A\cdot A-(r_p+r_q)^2=0$    
 ## Resolve Collision  
 * Bounces  
 * Elastic Collisions  
 ![alt text](image-20.png)  
-find the touching point  
-$\vec{v_'}=\vec{v}-2\vec{n}(\vec{v}\cdot\vec{n})$  
+find the touching point   
+
+$\vec{v_1}=\vec{v}-2\vec{n}(\vec{v} \cdot \vec{n})$ 
+
 
 
 
