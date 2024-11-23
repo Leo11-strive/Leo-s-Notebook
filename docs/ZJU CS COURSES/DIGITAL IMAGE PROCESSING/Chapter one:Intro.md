@@ -137,3 +137,54 @@ has direct relationship with RGB monitors
 ![alt text](image-21.png)  
 *CIE YUV*  
 ![alt text](image-22.png)  
+## JPEG format  
+* Joint Photographic Experts Group  
+  * Founded in 1986, presented the first standard in 1992, accepted by ISO in 1994  
+* File extension: .jpg, .jpeg, .jpe, .jfif  
+* Compression format for static image  
+  * Lossy compression  
+* Encoding based on transformation  
+    * DCT(Discrete Cosine Transform)(离散余弦变换，利用信息出现的频率来决定压缩的程度) 
+!!! note  
+
+    <center>.jpeg can also be used in video compression, when the background of the video is not moving, the video can be compressed by jpeg.(H264)</center>  
+
+* JPEG2000 is baes on wavelet(小波变换，曾与深度学习一般火)  
+* Different manipulationd for high-frequency signal and low frequency signal（有点像霍夫曼编码）    
+* high frequency signal   
+
+* Compression strategy: set a compression ratio,remove information from high frequency to low frequency  
+* JPEG advantages:  
+  * High frequency information occupies much more memmory. Hence, high frequency removal leads to high compression ratio  
+  * Low frequency information preserves the principle structure and color distribution of object, which is the key factors of an image  
+* suitabe for internet based visual media  
+
+
+## JPEG syntax(just for acknowledgement)
+![alt text](image-23.png)  
+DQT: DCT changes, quantization to a table(rounding)  
+DHT: Huffman coding(a tree or a priority queue or trees)
+
+![alt text](image-24.png)  
+APP0 Marker  
+![alt text](image-25.png)  
+APP1 Marker: EXIF use APP1 to store meta data  
+如背景虚化可以通过光圈大小和焦距  
+ISO（感光度）的数值越大，光感度越高，但是噪点也会增加   
+快门速度不能太慢，否则会模糊  
+motion blur might occur  
+![alt text](image-26.png)  
+Quantization table: quantize the high frequency region  
+![alt text](image-27.png)  
+![alt text](image-28.png)  
+DPCM encoding: 
+![alt text](image-29.png)  
+![alt text](image-30.png)  
+![alt text](image-31.png)  
+the evaluation of the quality of the image has its own regulations  
+*JPEG disadvantage*  
+* Nort for line drawing, text, symbol, icon, etc.  
+* its lossy  compression leafs to unavoidable artifacts  
+
+
+
