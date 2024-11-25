@@ -56,6 +56,8 @@ we need only connect the sign bit from the adder output to the least significant
 **operands**  
 
 ![alt text](image-33.png)  
+![alt text](image-34.png)  
+![alt text](image-35.png)  
 
 
 
