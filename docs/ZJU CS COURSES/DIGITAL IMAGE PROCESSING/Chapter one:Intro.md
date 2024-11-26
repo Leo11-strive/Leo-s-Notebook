@@ -185,6 +185,53 @@ the evaluation of the quality of the image has its own regulations
 *JPEG disadvantage*  
 * Nort for line drawing, text, symbol, icon, etc.  
 * its lossy  compression leafs to unavoidable artifacts  
+!!! warning  
+
+    <center>Do not use it in essays</center>  
+
+## TIFF format  
+![alt text](image-32.png)  
+some public rules,and some private sections   
+*characteristic*  
+![alt text](image-33.png)   
+Basic TIFF sturcture:  
+![alt text](image-34.png)  
+mono: greyscale  
+
+## GIF examples  
+Graphics Interchange Format  
+encoding method: LZW  
+![alt text](image-35.png)   
+## Image processing data structure  
+* Matrices
+* Chains  
+### Matrics  
+matics of different resolution  
+![alt text](image-36.png)  
+to calculate the length between two images  
+different rows are different channels  
+### Chains  
+chains are used for description of object borders  
+avoid sparse matrics  
+## Windows APIs for accessing images  
+```s  
+#include <windows.h>  
+```  
+## Matlab image processing toolbox 
+* Image processing toolbox  
+![alt text](image-37.png)  
+***How amazing!!!***  
+* main contents  
+![alt text](image-38.png)  
+## Adobe Photoshop  
+* Function: professional software for image processing  
+## GIMP  
+* Function: open source software for image processing  
+has source code, supporting linux and windows  
+## Shadow magic hands  
+* a photo quality enhancement and personalization software  
+
+
 
 
 
