@@ -99,6 +99,26 @@ the virtual machine of Java allows Java to be run on any platform.
 ## Real Stuff: MIPS Instrcuctions  
 all 32-bit instructions  
 ![alt text](image-23.png)
+the difference:  
+![alt text](image-36.png)  
+reverse version of RISC-V  
+the store instruction is the same as the load instruction  
+not successful in the market:joy:  
+## Real Stuff: The Intel x86 ISA  
+8080: 8-bit  
+8086: 16-bit  
+**Further evolution**:  
+* AMD64(64)  
+regs have 32bits and 64bits  
+Too complex!!!  
+Mac: ARM, 外星科技！！！  
+## Implementing IA-32  
+* All things taught in this course is RV64I  
+There is extentions: M,A,F,D,C    
+## Fallacies  
+* Poerful instruction -> higher performance No!!!  
+* Backward compatibility -> ISA doesn't change No!!!  
+
 
 
 
