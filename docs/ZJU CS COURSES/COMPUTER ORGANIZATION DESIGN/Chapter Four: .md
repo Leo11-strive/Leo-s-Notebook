@@ -69,7 +69,41 @@ remember that the immediate number shall be multiplied by 2 before added back to
 Control 单元有两个  
 **I type**  
 ![alt text](image-52.png)  
-**S type**  
+**S type** (`beq`) 
+![alt text](image-53.png)   
+**SB type**  
+![alt text](image-54.png)  
+!!! tip  
+
+    <center>Bear in mind that immi shall shift left 1 bit</center>  
+
+**Jal/J type**  
+![alt text](image-55.png)  
+**Full datapath**    
+![alt text](image-56.png)  
+## 4.4 A Simple Implementation Scheme  
+* Control: follow datapath usage  
+![alt text](image-57.png)  
+* ALU:  
+![alt text](image-58.png)  
+!!! note  
+
+    <center>ISA determines the complexity of the circuit</center>  
+
+![alt text](image-59.png)  
+除了ALU，其他都可以通过opcode来判断  
+![alt text](image-60.png)  
+X means the signal is not used, not cared  
+![alt text](image-61.png)  
+二级解码：  
+![alt text](image-62.png)  
+![alt text](image-63.png)   
+**Datapath with control**  
+![alt text](image-64.png)  
+
+
+
+
 
 
 
