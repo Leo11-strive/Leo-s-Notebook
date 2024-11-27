@@ -12,13 +12,15 @@
         <link rel="prev" href="../">
       
       
+        <link rel="next" href="../Chapter%20Three%3A%20Arithmetic%20for%20Computers/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.0">
     
     
       
-        <title>Chapter one - Leo Li's Notebook</title>
+        <title>Chapter Four: - Leo Li's Notebook</title>
       
     
     
@@ -74,6 +76,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#computer-organization" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter one
+              Chapter Four: 
             
           </span>
         </div>
@@ -1043,6 +1050,8 @@
                 
   
   
+    
+  
   
     
     
@@ -1061,18 +1070,18 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1088,7 +1097,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             COMPUTER ORGANIZATION DESIGN
@@ -1101,9 +1110,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Four%3A%20/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter Four: 
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1112,6 +1139,156 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#computer-organization" class="md-nav__link">
+    Computer Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    Outline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    4.1 Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruction-execution-overview" class="md-nav__link">
+    Instruction Execution Overview
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-logic-design-convention" class="md-nav__link">
+    4.2 Logic Design Convention
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-building-a-datapath" class="md-nav__link">
+    4.3 Building a Datapath
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Building a Datapath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r-type-0110011" class="md-nav__link">
+    R-type (0110011)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-type-000001100100111100111" class="md-nav__link">
+    I-type (0000011，0010011，1100111)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-type-0100011" class="md-nav__link">
+    S-type (0100011)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sb-type-1100011" class="md-nav__link">
+    SB-type (1100011)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-type-0110111" class="md-nav__link">
+    U-type (0110111)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uj-type-1101111" class="md-nav__link">
+    UJ-type (1101111)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruction-execution-in-risc-v" class="md-nav__link">
+    Instruction execution in RISC-V
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruction execution in RISC-V">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruction-fetch" class="md-nav__link">
+    Instruction Fetch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-a-simple-implementation-scheme" class="md-nav__link">
+    4.4 A Simple Implementation Scheme
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1123,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Three%3A%20Arithmetic%20for%20Computers/" class="md-nav__link">
+      <a href="../Chapter%20Three%3A%20Arithmetic%20for%20Computers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Two%3A%20Instructions/" class="md-nav__link">
+      <a href="../Chapter%20Two%3A%20Instructions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,8 +1450,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1289,18 +1464,18 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../Python/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1316,7 +1491,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -1329,16 +1504,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Python/Chapter%20one/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1515,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1388,6 +1555,144 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#computer-organization" class="md-nav__link">
+    Computer Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    Outline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-introduction" class="md-nav__link">
+    4.1 Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruction-execution-overview" class="md-nav__link">
+    Instruction Execution Overview
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-logic-design-convention" class="md-nav__link">
+    4.2 Logic Design Convention
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-building-a-datapath" class="md-nav__link">
+    4.3 Building a Datapath
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Building a Datapath">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r-type-0110011" class="md-nav__link">
+    R-type (0110011)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-type-000001100100111100111" class="md-nav__link">
+    I-type (0000011，0010011，1100111)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s-type-0100011" class="md-nav__link">
+    S-type (0100011)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sb-type-1100011" class="md-nav__link">
+    SB-type (1100011)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-type-0110111" class="md-nav__link">
+    U-type (0110111)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uj-type-1101111" class="md-nav__link">
+    UJ-type (1101111)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruction-execution-in-risc-v" class="md-nav__link">
+    Instruction execution in RISC-V
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruction execution in RISC-V">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruction-fetch" class="md-nav__link">
+    Instruction Fetch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-a-simple-implementation-scheme" class="md-nav__link">
+    4.4 A Simple Implementation Scheme
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1404,9 +1709,131 @@
   
 
 
-  <h1>Chapter one</h1>
+  <h1>Chapter Four: </h1>
 
-<p>Well....</p>
+<h2 id="computer-organization">Computer Organization<a class="headerlink" href="#computer-organization" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-37.png" /><br />
+The main content is datapath  </p>
+<h2 id="outline">Outline<a class="headerlink" href="#outline" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Intro  </li>
+<li>Logic Design Convention  </li>
+<li>Building a datapath  </li>
+<li>a simple implementation scheme  </li>
+</ul>
+<h2 id="41-introduction">4.1 Introduction<a class="headerlink" href="#41-introduction" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CPU performance factors:  </li>
+<li>
+<p>Instruction count  </p>
+<ul>
+<li>determined by isa and compiler  </li>
+</ul>
+</li>
+<li>
+<p>CPI and clock cycle time  </p>
+<ul>
+<li>determined by CPU hardware  </li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="../image-38.png" />  </p>
+<h3 id="instruction-execution-overview">Instruction Execution Overview<a class="headerlink" href="#instruction-execution-overview" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Instruction execution steps:  </li>
+<li>Fetch instruction from the memory </li>
+<li>Decode instruction and read the  operands from the register file  </li>
+<li>Fetch operands </li>
+<li>Execute operation  </li>
+<li>
+<p>Store result  </p>
+</li>
+<li>
+<p>ALU usage:<br />
+sd, and ld need ALU to calculate the address<br />
+beq need ALU to compare the two operands  </p>
+</li>
+<li>An overview :<br />
+<img alt="alt text" src="../image-39.png" /><br />
+the upper two instructions are jumping instructions  </li>
+</ul>
+<h2 id="control">Control<a class="headerlink" href="#control" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-40.png" />  </p>
+<h2 id="42-logic-design-convention">4.2 Logic Design Convention<a class="headerlink" href="#42-logic-design-convention" title="Permanent link">&para;</a></h2>
+<p><img alt="alt text" src="../image-41.png" /><br />
+Basic combinational logic<br />
+<strong>Sequential Elements</strong><br />
+<img alt="alt text" src="../image-42.png" /><br />
+everything is triggerd by the clock  <br />
+the write signal in control: 使能信号<br />
+<img alt="alt text" src="../image-43.png" /><br />
+时钟周期一定是按照组合逻辑处理速度来决定的 </p>
+<h2 id="43-building-a-datapath">4.3 Building a Datapath<a class="headerlink" href="#43-building-a-datapath" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Datapath<br />
+<img alt="alt text" src="../image-44.png" /><br />
+<img alt="alt text" src="../image-45.png" />  </li>
+</ul>
+<h3 id="r-type-0110011">R-type (0110011)<a class="headerlink" href="#r-type-0110011" title="Permanent link">&para;</a></h3>
+<p><code>lr.d</code>: 做锁，无需实现  </p>
+<h3 id="i-type-000001100100111100111">I-type (0000011，0010011，1100111)<a class="headerlink" href="#i-type-000001100100111100111" title="Permanent link">&para;</a></h3>
+<h3 id="s-type-0100011">S-type (0100011)<a class="headerlink" href="#s-type-0100011" title="Permanent link">&para;</a></h3>
+<h3 id="sb-type-1100011">SB-type (1100011)<a class="headerlink" href="#sb-type-1100011" title="Permanent link">&para;</a></h3>
+<h3 id="u-type-0110111">U-type (0110111)<a class="headerlink" href="#u-type-0110111" title="Permanent link">&para;</a></h3>
+<h3 id="uj-type-1101111">UJ-type (1101111)<a class="headerlink" href="#uj-type-1101111" title="Permanent link">&para;</a></h3>
+<h3 id="instruction-execution-in-risc-v">Instruction execution in RISC-V<a class="headerlink" href="#instruction-execution-in-risc-v" title="Permanent link">&para;</a></h3>
+<p><img alt="alt text" src="../image-46.png" /><br />
+every instruction shall be dealed in this process  </p>
+<h4 id="instruction-fetch">Instruction Fetch<a class="headerlink" href="#instruction-fetch" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PC: Program Counter: PC+4<br />
+<strong>R-Format Instruction</strong>:<br />
+<img alt="alt text" src="../image-47.png" /><br />
+<strong>Load/Store Instruction</strong>:<br />
+<img alt="alt text" src="../image-48.png" /><br />
+ImmGen: 立即数生成单元<br />
+<strong>Branch Instruction</strong>:<br />
+<img alt="alt text" src="../image-49.png" /><br />
+remember that the immediate number shall be multiplied by 2 before added back to PC  <br />
+<strong>Composing the element</strong><br />
+<img alt="alt text" src="../image-50.png" /><br />
+Control 单元有两个<br />
+<strong>I type</strong><br />
+<img alt="alt text" src="../image-52.png" /><br />
+<strong>S type</strong> (<code>beq</code>) 
+<img alt="alt text" src="../image-53.png" /> <br />
+<strong>SB type</strong><br />
+<img alt="alt text" src="../image-54.png" />  </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><center>Bear in mind that immi shall shift left 1 bit</center>  </p>
+</div>
+<p><strong>Jal/J type</strong><br />
+<img alt="alt text" src="../image-55.png" /><br />
+<strong>Full datapath</strong>  <br />
+<img alt="alt text" src="../image-56.png" />  </p>
+<h2 id="44-a-simple-implementation-scheme">4.4 A Simple Implementation Scheme<a class="headerlink" href="#44-a-simple-implementation-scheme" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Control: follow datapath usage<br />
+<img alt="alt text" src="../image-57.png" />  </li>
+<li>ALU:<br />
+<img alt="alt text" src="../image-58.png" />  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><center>ISA determines the complexity of the circuit</center>  </p>
+</div>
+<p><img alt="alt text" src="../image-59.png" /><br />
+除了ALU，其他都可以通过opcode来判断<br />
+<img alt="alt text" src="../image-60.png" /><br />
+X means the signal is not used, not cared<br />
+<img alt="alt text" src="../image-61.png" /><br />
+二级解码：<br />
+<img alt="alt text" src="../image-62.png" /><br />
+<img alt="alt text" src="../image-63.png" /> <br />
+<strong>Datapath with control</strong><br />
+<img alt="alt text" src="../image-64.png" />  </p>
 
 
   
