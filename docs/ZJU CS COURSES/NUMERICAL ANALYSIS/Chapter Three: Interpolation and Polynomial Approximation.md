@@ -1,11 +1,11 @@
 ## 3.1 Interpolation and the Lagrange Polynomial   
 One of the most useful classes of functions mapping the st of real numbers into itself is **algebraic polynomials**.  
-\[P_n(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n\]  
+$P_n(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n$ 
 One reason for their importance is that they uniformly approximate continuous functions.  
 ![alt text](image.png)  
 **Theorem 3.1: (Weiertrass Approximation Theorem**  
-Let \(f\) be a continuous function on the interval \([a, b]\). Then, for every \(\epsilon > 0\), there exists a polynomial \(P(x)\) such that   
-\[|f(x) - P(x)| < \epsilon\], for all \(x \in [a, b]\).  
+Let $f$ be a continuous function on the interval $[a, b]$. Then, for every $\epsilon > 0$, there exists a polynomial $P(x)$ such that   
+$|f(x) - P(x)| < \epsilon$, for all $x \in [a, b]$.  
 **the derivative and indefinite integral of a polynomial are easy to determine**   
 !!! note "The difference between polynomial interpolation and the Taylor polynomials"  
  
