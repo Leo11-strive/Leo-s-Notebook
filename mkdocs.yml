@@ -18,7 +18,7 @@ theme:
         name: Switch to light mode
  
   font:
-    text: Sour Gummy
+    text: Raleway
     code: Source Code Pro
   features:
     - search.suggest
