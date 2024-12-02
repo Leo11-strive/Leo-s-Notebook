@@ -1652,7 +1652,15 @@ The problem of determining a polynomial of degree one that passes through the di
 points (x0, y0) and (x1, y1) is the same as approximating a function f for which f (x0) = y0
 and f (x1) = y1 by means of a first-degree polynomial interpolating, or agreeing with, the
 values of f at the given points. Using this polynomial for approximation within the interval
-given by the endpoints is called polynomial interpolation.  </p>
+given by the endpoints is called polynomial interpolation.    </p>
+<ul>
+<li>The n th Lagrange interpolating polynomial is defined as: <br />
+<strong>Theorem 3.2: (Lagrange Interpolating Polynomial)</strong><br />
+Given n + 1 distinct points <span class="arithmatex">\((x_0, y_0), (x_1, y_1), \cdots, (x_n, y_n)\)</span>, there exists a unique polynomial <span class="arithmatex">\(P_n(x)\)</span> of degree at most n that passes through these points. This polynomial is given by 
+<span class="arithmatex">\(<span class="arithmatex">\(P_n(x) = y_0L_0(x) + y_1L_1(x) + \cdots + y_nL_n(x)\)</span>\)</span><br />
+where the Lagrange basis functions <span class="arithmatex">\(L_k(x)\)</span> are defined by  <br />
+<span class="arithmatex">\(<span class="arithmatex">\(L_k(x) = \frac{(x - x_0)(x - x_1)\cdots(x - x_{k-1})(x - x_{k+1})\cdots(x - x_n)}{(x_k - x_0)(x_k - x_1)\cdots(x_k - x_{k-1})(x_k - x_{k+1})\cdots(x_k - x_n)}\)</span>\)</span>  </li>
+</ul>
 
 
   
