@@ -17,7 +17,15 @@ The problem of determining a polynomial of degree one that passes through the di
 points (x0, y0) and (x1, y1) is the same as approximating a function f for which f (x0) = y0
 and f (x1) = y1 by means of a first-degree polynomial interpolating, or agreeing with, the
 values of f at the given points. Using this polynomial for approximation within the interval
-given by the endpoints is called polynomial interpolation.  
+given by the endpoints is called polynomial interpolation.    
+  
+* The n th Lagrange interpolating polynomial is defined as:   
+**Theorem 3.2: (Lagrange Interpolating Polynomial)**  
+Given n + 1 distinct points $(x_0, y_0), (x_1, y_1), \cdots, (x_n, y_n)$, there exists a unique polynomial $P_n(x)$ of degree at most n that passes through these points. This polynomial is given by 
+$$P_n(x) = y_0L_0(x) + y_1L_1(x) + \cdots + y_nL_n(x)$$  
+where the Lagrange basis functions $L_k(x)$ are defined by    
+$$L_k(x) = \frac{(x - x_0)(x - x_1)\cdots(x - x_{k-1})(x - x_{k+1})\cdots(x - x_n)}{(x_k - x_0)(x_k - x_1)\cdots(x_k - x_{k-1})(x_k - x_{k+1})\cdots(x_k - x_n)}$$  
+
   
 
 
