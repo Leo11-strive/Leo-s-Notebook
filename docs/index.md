@@ -1,7 +1,7 @@
 # NOTEBOOK HOMEPAGE
 !!! Quote "Preface"
 
-    <font size=4><center>Do not go gentle into that good night</center></font>
+    <font size=4><center>There is nothing to be found playing small and settling for a life that less than the one you are capable of living</center></font>
 
 ## Links that might be useful
 
