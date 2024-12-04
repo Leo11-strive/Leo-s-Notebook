@@ -18,7 +18,7 @@ theme:
         name: Switch to light mode
  
   font:
-    text: Chakra Petch
+    text: Merriweather
     code: Source Code Pro
   features:
     - search.suggest
