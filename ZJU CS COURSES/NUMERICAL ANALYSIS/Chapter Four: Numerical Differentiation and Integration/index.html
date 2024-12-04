@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../NUMERICAL%20ANALYSIS/Chapter%20Three%3A%20Interpolation%20and%20Polynomial%20Approximation/">
+        <link rel="prev" href="../Chapter%20Eight%3A%20Approximation%20Theory/">
       
       
-        <link rel="next" href="Chapter%20one/">
+        <link rel="next" href="../Chapter%20Three%3A%20Interpolation%20and%20Polynomial%20Approximation/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
-        <title>DAMN! DAMN! - Leo Li's Notebook</title>
+        <title>Chapter Four: Numerical Differentiation and Integration - Leo Li's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -93,7 +93,7 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#damn-damn" class="md-skip">
+        <a href="#41-numerical-differentiation" class="md-skip">
           Skip to content
         </a>
       
@@ -145,7 +145,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Leo Li&#39;s Notebook" class="md-header__button md-logo" aria-label="Leo Li's Notebook" data-md-component="logo">
+    <a href="../../.." title="Leo Li&#39;s Notebook" class="md-header__button md-logo" aria-label="Leo Li's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 9V1.5h-3V9h-3V1.5h-3V9h-3V1.5H4.65V9H3v1.5h18V9zm0 4.5h-3V21h-3v-7.5h-3V21h-3v-7.5H4.65V21H3v1.5h18V21h-1.5z"/></svg>
@@ -165,7 +165,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DAMN! DAMN!
+              Chapter Four: Numerical Differentiation and Integration
             
           </span>
         </div>
@@ -273,7 +273,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -292,7 +292,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../EXTRA/" class="md-tabs__link">
+        <a href="../../../EXTRA/" class="md-tabs__link">
           
   
     
@@ -312,7 +312,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../OTHER%20ZJU%20COURSES/" class="md-tabs__link">
+        <a href="../../../OTHER%20ZJU%20COURSES/" class="md-tabs__link">
           
   
     
@@ -334,7 +334,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -375,7 +375,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Leo Li&#39;s Notebook" class="md-nav__button md-logo" aria-label="Leo Li's Notebook" data-md-component="logo">
+    <a href="../../.." title="Leo Li&#39;s Notebook" class="md-nav__button md-logo" aria-label="Leo Li's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 9V1.5h-3V9h-3V1.5h-3V9h-3V1.5H4.65V9H3v1.5h18V9zm0 4.5h-3V21h-3v-7.5h-3V21h-3v-7.5H4.65V21H3v1.5h18V21h-1.5z"/></svg>
@@ -405,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +453,7 @@
         
   
   
-    <a href="../../EXTRA/" class="md-nav__link">
+    <a href="../../../EXTRA/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -505,7 +505,7 @@
         
   
   
-    <a href="../../OTHER%20ZJU%20COURSES/" class="md-nav__link">
+    <a href="../../../OTHER%20ZJU%20COURSES/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -573,7 +573,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -640,7 +640,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ADS/" class="md-nav__link ">
+            <a href="../../ADS/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADS/Chapter%20Eleven%3A%20Approximation/" class="md-nav__link">
+      <a href="../../ADS/Chapter%20Eleven%3A%20Approximation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADS/Chapter%20One%3A%20AVL%2C%20Splay%20trees%20and%20Amortized%20Analysis/" class="md-nav__link">
+      <a href="../../ADS/Chapter%20One%3A%20AVL%2C%20Splay%20trees%20and%20Amortized%20Analysis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ADS/Chapter%20Ten%3A%20NP%20Problems/" class="md-nav__link">
+      <a href="../../ADS/Chapter%20Ten%3A%20NP%20Problems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +782,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ALGORITHM%20IN%20GAMES/" class="md-nav__link ">
+            <a href="../../ALGORITHM%20IN%20GAMES/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -815,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ALGORITHM%20IN%20GAMES/Chapter%20Five%3A%20Collision%20Detection/" class="md-nav__link">
+      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Five%3A%20Collision%20Detection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ALGORITHM%20IN%20GAMES/Chapter%20Four%3A%20Navigational%20Algorithms/" class="md-nav__link">
+      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Four%3A%20Navigational%20Algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ALGORITHM%20IN%20GAMES/Chapter%20Three%3A%20Mazes/" class="md-nav__link">
+      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Three%3A%20Mazes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ALGORITHM%20IN%20GAMES/Chapter%20Two%3A%20More%20Pygame%2C%20Sprites%20and%20Randomness/" class="md-nav__link">
+      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20Two%3A%20More%20Pygame%2C%20Sprites%20and%20Randomness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ALGORITHM%20IN%20GAMES/Chapter%20one%3A%20Introductions%2C%20Games%2C%20Architecture%2C%20Engine/" class="md-nav__link">
+      <a href="../../ALGORITHM%20IN%20GAMES/Chapter%20one%3A%20Introductions%2C%20Games%2C%20Architecture%2C%20Engine/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +962,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../COMPUTER%20ORGANIZATION%20DESIGN/" class="md-nav__link ">
+            <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -995,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Four%3A%20/" class="md-nav__link">
+      <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Four%3A%20/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Three%3A%20Arithmetic%20for%20Computers/" class="md-nav__link">
+      <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Three%3A%20Arithmetic%20for%20Computers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1037,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Two%3A%20Instructions/" class="md-nav__link">
+      <a href="../../COMPUTER%20ORGANIZATION%20DESIGN/Chapter%20Two%3A%20Instructions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1098,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../DIGITAL%20IMAGE%20PROCESSING/" class="md-nav__link ">
+            <a href="../../DIGITAL%20IMAGE%20PROCESSING/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1131,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DIGITAL%20IMAGE%20PROCESSING/Chapter%20Two%3A%20Binary%20Image%20and%20Morphological%20Operation/" class="md-nav__link">
+      <a href="../../DIGITAL%20IMAGE%20PROCESSING/Chapter%20Two%3A%20Binary%20Image%20and%20Morphological%20Operation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1152,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DIGITAL%20IMAGE%20PROCESSING/Chapter%20one%3AIntro/" class="md-nav__link">
+      <a href="../../DIGITAL%20IMAGE%20PROCESSING/Chapter%20one%3AIntro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,8 +1178,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1206,16 +1208,16 @@
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../NUMERICAL%20ANALYSIS/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1232,7 +1234,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             NUMERICAL ANALYSIS
@@ -1248,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NUMERICAL%20ANALYSIS/Chapter%20Eight%3A%20Approximation%20Theory/" class="md-nav__link">
+      <a href="../Chapter%20Eight%3A%20Approximation%20Theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,10 +1268,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../NUMERICAL%20ANALYSIS/Chapter%20Four%3A%20Numerical%20Differentiation%20and%20Integration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter Four: Numerical Differentiation and Integration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1278,6 +1298,44 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-numerical-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Numerical Differentiation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-elements-of-numerical-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Elements of Numerical Integration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1290,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../NUMERICAL%20ANALYSIS/Chapter%20Three%3A%20Interpolation%20and%20Polynomial%20Approximation/" class="md-nav__link">
+      <a href="../Chapter%20Three%3A%20Interpolation%20and%20Polynomial%20Approximation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,8 +1374,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1342,16 +1398,16 @@
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../Python/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1362,13 +1418,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4_7" id="__nav_4_7_label" tabindex="">
+              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -1384,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Chapter%20one/" class="md-nav__link">
+      <a href="../../Python/Chapter%20one/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,8 +1488,32 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-numerical-differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Numerical Differentiation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-elements-of-numerical-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Elements of Numerical Integration
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1451,10 +1531,28 @@
   
 
 
-<h1 id="damn-damn">DAMN! DAMN!<a class="headerlink" href="#damn-damn" title="Permanent link">&para;</a></h1>
+  <h1>Chapter Four: Numerical Differentiation and Integration</h1>
+
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 2 个字 :material-clock-time-two-outline: 预计阅读时间不到 1 分钟</p>
+<p>:material-circle-edit-outline: 约 87 个字 :material-image-multiple-outline: 2 张图片 :material-clock-time-two-outline: 预计阅读时间 1 分钟</p>
 </div>
+<h2 id="41-numerical-differentiation"><strong>4.1 Numerical Differentiation</strong><a class="headerlink" href="#41-numerical-differentiation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>forward: <span class="arithmatex">\(f'(x)\approx\frac{f(x+h)-f(x)}{h}\)</span>  </li>
+<li>backward: <span class="arithmatex">\(f'(x)\approx\frac{f(x)-f(x-h)}{h}\)</span>    </li>
+<li>to calculate the differentiation of <span class="arithmatex">\(f(x)\)</span> at <span class="arithmatex">\(x\)</span>, we need a polyminial <span class="arithmatex">\(P(x)\)</span> that passes through the points(at least) <span class="arithmatex">\((x-h,f(x-h)),(x,f(x)),(x+h,f(x+h))\)</span>   </li>
+<li>Therefore, lagrange interpolation can be used<br />
+<img alt="alt text" src="../image-15.png" />  </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Problems might occur</p>
+<p><img alt="alt text" src="../image-16.png" />  </p>
+</div>
+<h2 id="43-elements-of-numerical-integration"><strong>4.3 Elements of Numerical Integration</strong><a class="headerlink" href="#43-elements-of-numerical-integration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Approximate <span class="arithmatex">\(I=\int_{a}^{b}f(x)dx\)</span>  </li>
+<li>we might use the interpolated polyminial to replace <span class="arithmatex">\(f(x)\)</span>  </li>
+</ul>
 
 
 
@@ -1523,7 +1621,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../NUMERICAL%20ANALYSIS/Chapter%20Three%3A%20Interpolation%20and%20Polynomial%20Approximation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter Three: Interpolation and Polynomial Approximation">
+          <a href="../Chapter%20Eight%3A%20Approximation%20Theory/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter Eight: Approximation Theory">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1533,20 +1631,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Chapter Three: Interpolation and Polynomial Approximation
+                Chapter Eight: Approximation Theory
               </div>
             </div>
           </a>
         
         
           
-          <a href="Chapter%20one/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter one">
+          <a href="../Chapter%20Three%3A%20Interpolation%20and%20Polynomial%20Approximation/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter Three: Interpolation and Polynomial Approximation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Chapter one
+                Chapter Three: Interpolation and Polynomial Approximation
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1596,12 +1694,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "search.share", "content.code.copy", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "navigation.tracking", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "search.highlight", "search.share", "content.code.copy", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.tabs", "content.code.annotate", "navigation.indexes", "navigation.top", "toc.follow", "navigation.tracking", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
