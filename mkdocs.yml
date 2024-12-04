@@ -1,4 +1,5 @@
-site_name: Leo Li's Notebook
+site_name: Leo Li's Notebook  
+site_author: Leo Li
 theme: 
   name: material
 
@@ -19,7 +20,7 @@ theme:
  
   font:
     text: Merriweather
-    code: Source Code Pro
+    code: JetBrains Mono
   features:
     - search.suggest
     - search.highlight
@@ -33,27 +34,38 @@ theme:
     - navigation.instant.prefetch
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.tabs # 一级导航在横着的导航栏
+    - content.code.annotate # 可以在代码块中增添点击展示的注释，参见 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
+    # - navigation.tracking # 地址栏中的 URL 会随当前位置变化为对应小节的 URL
+    - navigation.indexes # 将 index 页面直接附到小节名上
+    - navigation.top # 回到顶部按钮
+    # - navigation.sections # 二级导航是粗体
+    # - navigation.expand # 导航默认展开
+    - toc.follow # toc 跟随
+    # - toc.integrate # 文档 toc 集成到总目录中 
   icon:
     repo: fontawesome/brands/github
     logo: material/library-shelves
+  extra:
+    analytics: 
+      feedback:
+        title: Was this page helpful?
+        ratings:
+          - icon: material/emoticon-happy-outline
+            name: This page was helpful
+            data: 1
+            note: >-
+              Thanks for your feedback!
+          - icon: material/emoticon-sad-outline
+            name: This page could be improved
+            data: 0
+            note: >- 
+              Thanks for your feedback! Help us improve this page by
+              using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
 
-extra:
-  analytics: 
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >-
-            Thanks for your feedback!
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+
 repo_url: https://github.com/Leo11-strive/Leo-s-Notebook
 repo_name: Leo Li's Notebook  
 markdown_extensions:
@@ -104,5 +116,26 @@ markdown_extensions:
   - tables
 extra_javascript:
   - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js  
+extra:
+  analytics:
+    provider: google
+    property: G-4P08GMSPJM
+    feedback:
+      title: BOOST ME UP!
+      ratings:
+        - icon: fontawesome/regular/hand-back-fist
+          name: BOOST ME UP！
+          data: 1
+          note: >-
+            <center> 难道说……你愿意给我加一颗星吗！🫣 </center>
+
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Leo11-stivebuil
+      name: Github
+ 
+copyright: 'Copyright &copy 2024 Leo Li'
+      
   
