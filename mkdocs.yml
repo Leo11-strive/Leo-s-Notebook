@@ -82,6 +82,10 @@ nav:
       - Instructions: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Two.md  
       - Arithmetic: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Three.md  
       - The Processor: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Four.md  
+    - DIGITAL IMAGE PROCESSING:  
+      - ZJU CS COURSES/DIGITAL IMAGE PROCESSING/index.md  
+      - Introduction: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chapter_One.md  
+      - Binary Image Processing: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chapter_Two.md
     - NUMERICAL ANALYSIS:  
       - ZJU CS COURSES/NUMERICAL ANALYSIS/index.md  
       - Approximation Theory: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Eight.md  
