@@ -1,4 +1,5 @@
-comments: true
+comments: true  
+template: home.html
 # NOTEBOOK HOMEPAGE
 !!! Quote "Preface"
 
