@@ -1,3 +1,4 @@
+comments: true
 # NOTEBOOK HOMEPAGE
 !!! Quote "Preface"
 
