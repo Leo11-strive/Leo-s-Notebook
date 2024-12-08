@@ -35,7 +35,6 @@ theme:
     - navigation.top
     - navigation.instant
     - navigation.instant.prefetch
-    - navigation.tabs
     - navigation.tabs.sticky
     - navigation.tabs # 一级导航在横着的导航栏
     - content.code.annotate # 可以在代码块中增添点击展示的注释，参见 https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations
@@ -78,8 +77,41 @@ theme:
 
 
 
-
-
+nav:  
+  - HOME: index.md  
+  - ZJU CS COURSES:  
+    - ZJU CS COURSES/index.md  
+    - ADVANCED DATA STRUCTURE AND ALGORITHMS:  
+      - ZJU CS COURSES/ADS/index.md
+      - AVL, Splay Trees and Amortized Analysis: ZJU CS COURSES/ADS/Chapter_One.md
+      - NP Problems: ZJU CS COURSES/ADS/Chapter_Ten.md
+      - Approximation: ZJU CS COURSES/ADS/Chapter_Eleven.md
+    - ALGORITHM IN GAMES:  
+      - ZJU CS COURSES/ALGORITHM IN GAMES/index.md
+      - Introduction: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_One.md  
+      - Pygame: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Two.md  
+      - Mazes Algorithms: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Three.md  
+      - Navigation Algorithms: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Four.md  
+      - Collision Detection: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Five.md    
+    - COMPUTER ORGANIZATION DESIGH:  
+      - ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/index.md  
+      - Instructions: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Two.md  
+      - Arithmetic: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Three.md  
+      - The Processor: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Four.md  
+    - NUMERICAL ANALYSIS:  
+      - ZJU CS COURSES/NUMERICAL ANALYSIS/index.md  
+      - Approximation Theory: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Eight.md  
+      - Interpolation: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Three.md  
+      - Numerical Differentation and Integration: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Four.md  
+  - EXTRA CS COURSES:  
+    - EXTRA/index.md  
+    - MACHINE LEARNING:  
+      - EXTRA/MACHINE LEARNING/index.md  
+      - Intro: EXTRA/MACHINE LEARNING/Week_One.md  
+    - GAMES 101:  
+      - EXTRA/GAMES101/index.md
+      - Introduction: EXTRA/GAMES101/Course_One.md
+    
 repo_url: https://github.com/Leo11-strive/Leo-s-Notebook
 repo_name: Leo Li's Notebook  
 markdown_extensions:
@@ -126,7 +158,7 @@ markdown_extensions:
   
   - toc:
       permalink: true
-      title: On this page
+      title: Navigator
   - tables
 extra_javascript:
   - javascripts/mathjax.js
