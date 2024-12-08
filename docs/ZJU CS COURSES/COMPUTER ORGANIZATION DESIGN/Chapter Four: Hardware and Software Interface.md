@@ -7,18 +7,281 @@ The main content is datapath
 * Building a datapath  
 * a simple implementation scheme  
 ## 4.1 Introduction  
-* CPU performance factors:  
-   * Instruction count  
-    * determined by isa and compiler  
+* CPU performance factors:    
+  * Instruction count  
+    * determined by ISA and compiler  
 
    * CPI and clock cycle time  
     * determined by CPU hardware  
 
-![alt text](image-38.png)  
+
 ### Instruction Execution Overview  
-* Instruction execution steps:  
-   * Fetch instruction from the memory 
-   * Decode instruction and read the  operands from the register file  
+* First two steps are identical for all instructions:  
+> Fetch instruction from the memory   
+> Decode instruction and read the  operands from the register file   
+* Next step is deterined by instruction class  
+> Memory reference, Arithmetic-logical, branches  
+* Depending on instruction class  
+> ALU calculation(memory address load/store), result generate, different control(branches)  
+> access memory  
+> have a control over PC  
+**Overview**  
+![alt text](image-65.png)  
+## 4.2 Logic Design Convention  
+* Information are encoded in binary to make the information conveyed less sensitive, hence more resilient to noise  
+> One wire per bit, multi-bit encoded on multi-wire buses  
+> combinational curcuits perform data processing  
+> sequential circuits store state  
+**Sequential Elements**  
+* register: stores data in circuit  
+> when clk changes from 0 to one, update with delay  
+> a write control shall be implemented in regs->Update only when write control is `1`  
+**Clocking Methodology**  
+* Combinational logic transforms data during clock cycles  
+> its longest delay determines the clock period   
+## 4.3 Building a Datapath  
+* Datapath:  
+> elements that process data and addresses in the CPU  
+**basic procedure**  
+![alt text](image-66.png)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    * Fetch operands 
    * Execute operation  
    * Store result  
@@ -100,11 +363,5 @@ X means the signal is not used, not cared
 ![alt text](image-63.png)   
 **Datapath with control**  
 ![alt text](image-64.png)  
-
-
-
-
-
-
 
 

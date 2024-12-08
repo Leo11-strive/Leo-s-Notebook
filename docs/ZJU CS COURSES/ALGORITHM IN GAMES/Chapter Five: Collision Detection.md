@@ -1,3 +1,5 @@
+comments: true
+
 ## Collision Detection  
 * Collision detection is a fundamental problem in computer graphics and game development.  
 * The problem is to determine whether two objects are intersecting.  
