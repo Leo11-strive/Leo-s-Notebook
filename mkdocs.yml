@@ -156,7 +156,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Leo11-stive/Leo-s-Notebook
-      name: Github
+      name: Github  
+    - icon: fontawesome/solid/envelope
+      link: mailto:leobestli61@gmail.com
  
 copyright: 'Copyright &copy 2024 Leo Li'
       
