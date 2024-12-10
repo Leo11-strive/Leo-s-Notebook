@@ -1168,13 +1168,13 @@
 <div class="tabbed-block">
 <div class="admonition note">
 <p class="admonition-title">Register File with Read Ports</p>
-<p><img alt="alt text" src="image-73.png" />  </p>
+<p><img alt="alt text" src="../image-73.png" />  </p>
 </div>
 </div>
 <div class="tabbed-block">
 <div class="admonition note">
 <p class="admonition-title">Register File with Write Ports</p>
-<p><img alt="alt text" src="image-74.png" />  </p>
+<p><img alt="alt text" src="../image-74.png" />  </p>
 </div>
 </div>
 <div class="tabbed-block">
@@ -1189,7 +1189,7 @@
 <h2 id="specifying-sequential-logic-in-verilog">Specifying Sequential Logic in Verilog<a class="headerlink" href="#specifying-sequential-logic-in-verilog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Specifying a clock:  <blockquote>
-<p>A clock is not a predefined object in Verilog; instead, we generate a clock by using the Verilog notation <span class="arithmatex">\(#n\)</span> before a statement; this causes a delay of n simulation time steps before the execution of the statement. In most Verilog simulators, it is also possible to generate a clock as an external input, allowing the user to specify at simulation time the number of clock cycles during which to run a simulation.
+<p>A clock is not a predefined object in Verilog; instead, we generate a clock by using the Verilog notation #n before a statement; this causes a delay of n simulation time steps before the execution of the statement. In most Verilog simulators, it is also possible to generate a clock as an external input, allowing the user to specify at simulation time the number of clock cycles during which to run a simulation.
 <div class="language-verilog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Verilog</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">   </span><span class="kt">reg</span><span class="w"> </span><span class="n">clock</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="k">always</span><span class="w"> </span><span class="p">#</span><span class="mh">1</span><span class="w"> </span><span class="n">clock</span><span class="o">=~</span><span class="n">clock</span><span class="p">;</span><span class="w">  </span>
