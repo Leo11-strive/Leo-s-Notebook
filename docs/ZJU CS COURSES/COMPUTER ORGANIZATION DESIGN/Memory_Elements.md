@@ -66,7 +66,7 @@
 -------------------------------------  
 ## Specifying Sequential Logic in Verilog  
 * Specifying a clock:  
-> A clock is not a predefined object in Verilog; instead, we generate a clock by using the Verilog notation $#n$ before a statement; this causes a delay of n simulation time steps before the execution of the statement. In most Verilog simulators, it is also possible to generate a clock as an external input, allowing the user to specify at simulation time the number of clock cycles during which to run a simulation.
+> A clock is not a predefined object in Verilog; instead, we generate a clock by using the Verilog notation #n before a statement; this causes a delay of n simulation time steps before the execution of the statement. In most Verilog simulators, it is also possible to generate a clock as an external input, allowing the user to specify at simulation time the number of clock cycles during which to run a simulation.
 ```verilog  
    reg clock;
    always #1 clock=~clock;  
