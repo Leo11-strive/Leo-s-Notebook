@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../Chpater_One/">
+        <link rel="prev" href="../Chapter_Eleven/">
       
       
-        <link rel="next" href="../../NUMERICAL%20ANALYSIS/">
+        <link rel="next" href="../../ALGORITHM%20IN%20GAMES/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Binary Image Processing - Leo Li's Notebook</title>
+        <title>Local Search - Leo Li's Notebook</title>
       
     
     
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#binary-image" class="md-skip">
+        <a href="#intro" class="md-skip">
           Skip to content
         </a>
       
@@ -163,7 +163,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary Image Processing
+              Local Search
             
           </span>
         </div>
@@ -466,6 +466,8 @@
                 
   
   
+    
+  
   
   
     
@@ -490,29 +492,202 @@
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../../ADS/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     ADVANCED DATA STRUCTURE AND ALGORITHMS
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            ADVANCED DATA STRUCTURE AND ALGORITHMS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter_One/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AVL, Splay Trees and Amortized Analysis
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter_Ten/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NP Problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter_Eleven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Local Search
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Local Search
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Navigator">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Navigator
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#framework-of-local-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Framework of Local Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neighbor-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighbor Relation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvement
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -641,8 +816,6 @@
                 
   
   
-    
-  
   
   
     
@@ -663,157 +836,29 @@
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+  
+  
+    <a href="../../DIGITAL%20IMAGE%20PROCESSING/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     DIGITAL IMAGE PROCESSING
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_5">
-            <span class="md-nav__icon md-icon"></span>
-            DIGITAL IMAGE PROCESSING
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Chpater_One/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Binary Image Processing
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Binary Image Processing
-  </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Navigator">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Navigator
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#binary-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Binary image
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Binary image">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#acquisiton-of-binary-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acquisiton of binary image
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generalization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generalization
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -961,33 +1006,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#binary-image" class="md-nav__link">
+  <a href="#intro" class="md-nav__link">
     <span class="md-ellipsis">
-      Binary image
+      Intro
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Binary image">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#acquisiton-of-binary-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acquisiton of binary image
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#generalization" class="md-nav__link">
+  <a href="#framework-of-local-search" class="md-nav__link">
     <span class="md-ellipsis">
-      Generalization
+      Framework of Local Search
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neighbor-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neighbor Relation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improvement
     </span>
   </a>
   
@@ -1011,40 +1059,51 @@
   
 
 
-  <h1>Binary Image Processing</h1>
+  <h1>Local Search</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 194 个字 :fontawesome-solid-code: 12 行代码 :material-image-multiple-outline: 4 张图片 :material-clock-time-two-outline: 预计阅读时间 2 分钟</p>
+<p>:material-circle-edit-outline: 约 138 个字 :fontawesome-solid-code: 10 行代码 :material-image-multiple-outline: 2 张图片 :material-clock-time-two-outline: 预计阅读时间 2 分钟</p>
 </div>
-<h2 id="binary-image">Binary image<a class="headerlink" href="#binary-image" title="Permanent link">&para;</a></h2>
+<h2 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Binary image:  <ul>
-<li>0: black  </li>
-<li>1: white (255)  </li>
+<li>Solve problem approximately  </li>
+<li>aim at a local optimal</li>
 </ul>
+<hr />
+<h2 id="framework-of-local-search">Framework of Local Search<a class="headerlink" href="#framework-of-local-search" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Local:  <blockquote>
+<p>Define neighborhoods in the feasible set<br />
+A local optimum is the best solution in a neighbourhood  </p>
+</blockquote>
+</li>
+<li>Search  <blockquote>
+<p>Start with a feasible solution and search a better one within the neighbourhood<br />
+A local optimum is achieved if no improvement is possible  </p>
+</blockquote>
 </li>
 </ul>
-<p><strong>advantages</strong><br />
- * less memory<br />
- * easy to process<br />
- * can sometimes be applied on grayscale image<br />
- * more cheap </p>
-<p><strong>disadvantage</strong><br />
-* application field is limited<br />
-* cannot be applied on D data<br />
-* less expressive force, fial to express the color and gray level of the image  </p>
-<h3 id="acquisiton-of-binary-image">Acquisiton of binary image<a class="headerlink" href="#acquisiton-of-binary-image" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="neighbor-relation">Neighbor Relation<a class="headerlink" href="#neighbor-relation" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Thresholding</strong>:<br />
-<span class="arithmatex">\(I(x,y)=0 if I(x,y)&lt;Threshold\)</span><br />
-<span class="arithmatex">\(I(x,y)=255 if I(x,y)&gt;=Threshold\)</span>  </li>
+<li><span class="arithmatex">\(S ~ S'\)</span>: <span class="arithmatex">\(S'\)</span> is a neighbouring solution of <span class="arithmatex">\(S\)</span>-&gt;<span class="arithmatex">\(S'\)</span> can be obtained by a small modification of <span class="arithmatex">\(S\)</span>.  </li>
+<li><span class="arithmatex">\(N(S)\)</span>: neighborhood of <span class="arithmatex">\(S\)</span> -&gt; the set <span class="arithmatex">\({S':S~S'}\)</span>  <blockquote>
+<ul>
+<li>Famous implementation: Gradient Decent  </li>
 </ul>
-<div class="admonition qustion">
-<p class="admonition-title">How to find a good threshold?</p>
-<p><center>大津算法</center><br />
-<img alt="alt text" src="../image-39.png" />  </p>
-</div>
-<p><div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+</blockquote>
+</li>
+</ul>
+<details class="example">
+<summary>The Vertex Cover Problem</summary>
+<p><img alt="alt text" src="../image-18.png" />  </p>
+</details>
+<hr />
+<h2 id="improvement">Improvement<a class="headerlink" href="#improvement" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>The Metropolis Algorithm<br />
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1053,40 +1112,36 @@
 <span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="n">img</span><span class="p">=</span><span class="nb">imread</span><span class="p">(</span><span class="s">&#39;INPUT_FILE.bmp&#39;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">gray_img</span><span class="p">=</span><span class="nb">rgb2gray</span><span class="p">(</span><span class="n">img</span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">binary_img</span><span class="p">=</span><span class="n">imbinarize</span><span class="p">(</span><span class="n">gray_img</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nb">imshow</span><span class="p">(</span><span class="n">gray_img</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Grayscale Image&#39;</span><span class="p">);</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nb">imshow</span><span class="p">(</span><span class="n">binary_img</span><span class="p">);</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;Binarized Image&#39;</span><span class="p">);</span>
-</span></code></pre></div></td></tr></table></div>
-Try to find a suitable threshold to minimize the variances within the foreground and background, while maximize the variance between them.<br />
-<span class="arithmatex">\(N_{Fgrd}\)</span>: the number of pixels in the foreground<br />
-<span class="arithmatex">\(N_{Bgrd}\)</span>: the number of pixels in the background<br />
-<span class="arithmatex">\(\sigma_{Fgrd}^2\)</span>: the variance of the foreground<br />
-<span class="arithmatex">\(\sigma_{Bgrd}^2\)</span>: the variance of the background<br />
-<span class="arithmatex">\(\sigma_{within}^2\)</span>: the variance within the foreground and background<br />
-<span class="arithmatex">\(\mu_{Fgrd}\)</span>: the mean of the foreground<br />
-<span class="arithmatex">\(\mu_{Bgrd}\)</span>: the mean of the background<br />
-<strong>Simplified formula</strong>:<br />
-<img alt="alt text" src="../image-40.png" /><br />
-<span class="arithmatex">\(\sigma_{between}=w_b*w_f*(\mu_{Fgrd}-\mu_{Bgrd})^2\)</span> (use findmax loop to find the maximum value of <span class="arithmatex">\(\sigma_{between}\)</span>)<br />
-<strong>Otsu's method</strong>: embedded in matlab 
-<div class="language-matlab highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">    </span><span class="n">threshold</span><span class="p">=</span><span class="n">graythresh</span><span class="p">(</span><span class="n">gray_img</span><span class="p">);</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">binary_img</span><span class="p">=</span><span class="n">imbinarize</span><span class="p">(</span><span class="n">gray_img</span><span class="p">,</span><span class="n">threshold</span><span class="p">);</span>
-</span></code></pre></div></td></tr></table></div>
-<img alt="alt text" src="../image-41.png" />      </p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p><center>Numerical Analysis can bew imoplemented to find the optimal threshold</center>  </p>
-</div>
-<h2 id="generalization">Generalization<a class="headerlink" href="#generalization" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../image-42.png" />  </p>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">   </span><span class="nt">Solution</span><span class="w"> </span><span class="nt">Type</span><span class="w"> </span><span class="nt">Metropolis</span><span class="o">(</span><span class="nt">SolutionType</span><span class="w"> </span><span class="nt">S</span><span class="o">,</span><span class="w"> </span><span class="nt">double</span><span class="w"> </span><span class="nt">T</span><span class="o">)</span><span class="w">  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">   </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">       </span><span class="err">SolutionType</span><span class="w"> </span><span class="err">S&#39;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">RandomNeighbor(S)</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">       </span><span class="err">if</span><span class="w"> </span><span class="err">(f(S&#39;)</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">f(S))</span><span class="w">  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">           </span><span class="err">return</span><span class="w"> </span><span class="err">S&#39;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">       </span><span class="err">else</span><span class="w"> </span><span class="err">if</span><span class="w"> </span><span class="err">(Random(0,1)</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">exp((f(S)</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">f(S&#39;))/T))</span><span class="w">  </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">           </span><span class="err">return</span><span class="w"> </span><span class="err">S&#39;</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">       </span><span class="err">else</span><span class="w">  </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">           </span><span class="err">return</span><span class="w"> </span><span class="err">S</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">   </span><span class="p">}</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+<blockquote>
+<p>But it might bounce back and forth between several solutions(therefore customize the temperature)  </p>
+</blockquote>
+</li>
+<li>
+<p>Simulated Annealing   </p>
+<blockquote>
+<ul>
+<li><span class="arithmatex">\(T\)</span> is a decreasing function of time  </li>
+<li><span class="arithmatex">\(T = T_0 \times \alpha^t\)</span>   </li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<details class="example">
+<summary>Hopfield Neural Network</summary>
+<p><img alt="alt text" src="../image-19.png" />  </p>
+</details>
+<p><strong>General simple implementation, yet difficult to quantify its result</strong></p>
 
 
 
@@ -1155,7 +1210,7 @@ Try to find a suitable threshold to minimize the variances within the foreground
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Chpater_One/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
+          <a href="../Chapter_Eleven/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Approximation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1165,20 +1220,20 @@ Try to find a suitable threshold to minimize the variances within the foreground
                 Previous
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Approximation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../NUMERICAL%20ANALYSIS/" class="md-footer__link md-footer__link--next" aria-label="Next: Numerical Analysis">
+          <a href="../../ALGORITHM%20IN%20GAMES/" class="md-footer__link md-footer__link--next" aria-label="Next: ALGORITHM IN GAMES">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Numerical Analysis
+                ALGORITHM IN GAMES
               </div>
             </div>
             <div class="md-footer__button md-icon">
