@@ -43,6 +43,10 @@
 
 
 
+## 4.5 An Overview of Pipeling  
+* **Pipelining**:  
+> An implementation technique in which multiple instructions are overlapped in execution, much like an assembly line.  
+
 
 
 
