@@ -1,6 +1,7 @@
 site_name: Leo Li's Notebook  
 site_author: Leo Li
 theme: 
+
   name: material
   custom_dir: overrides
   palette:
@@ -187,7 +188,10 @@ extra:
       name: Github  
     - icon: fontawesome/solid/envelope
       link: mailto:leobestli61@gmail.com
- 
+
+
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/lxngxun345978
 copyright: 'Copyright &copy 2024 Leo Li'
       
 plugins:
