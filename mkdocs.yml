@@ -197,4 +197,5 @@ copyright: 'Copyright &copy 2024 Leo Li'
 plugins:
   - statistics:
       words_per_minute: 100  
-  - search
+  - search  
+  - social
