@@ -87,6 +87,7 @@ nav:
       - Verilog: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Verilog.md   
       - Clock: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Clock.md
       - Memory Elements: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Memory_Elements.md
+      - Supplement for Exception: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Exception.md
     - DIGITAL IMAGE PROCESSING:  
       - ZJU CS COURSES/DIGITAL IMAGE PROCESSING/index.md  
       - Introduction: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chpater_One.md  
@@ -97,6 +98,7 @@ nav:
       - Interpolation: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Three.md  
       - Numerical Differentation and Integration: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Four.md  
       - Direct Methods For Sovling Linear Systems: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Six.md
+      - Initial-Value Problems for Ordinary Differential Equations: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Five.md
   - EXTRA CS COURSES:  
     - EXTRA/index.md  
     - MACHINE LEARNING:  
