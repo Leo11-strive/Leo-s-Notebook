@@ -18,6 +18,132 @@
       --gold-accent: #D4AF37;
       --transition-speed: 0.3s;
     }
+    .profile-section {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: cardFloat 6s ease-in-out infinite;
+    }
+    @keyframes cardFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: var(--primary-color);
+      z-index: 0;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      background: var(--bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: var(--primary-color);
+      animation: profilePulse 4s ease-in-out infinite;
+    }
+    @keyframes profilePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .profile-name {
+      font-size: 1.8rem;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .profile-title {
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .profile-bio {
+      color: var(--text-color);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 50px;
+      background: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background: var(--primary-color);
+    }
+
+    .social-link::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      transition: transform 0.5s ease-out;
+    }
+
+    .social-link:hover::after {
+      transform: translate(-50%, -50%) scale(2);
+    }
+
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
 
     /* Modern scrollbar */
     ::-webkit-scrollbar {
@@ -59,6 +185,18 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 3rem;
+      animation: gradientFlow 15s ease infinite;
+    }
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .hero-section::before {
@@ -226,6 +364,29 @@
       border: 1px solid transparent;
       position: relative;
       overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      top: 0;
+      left: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    .card:hover::after {
+      opacity: 1;
     }
 
     .card::before {
@@ -286,7 +447,26 @@
       text-decoration: none;
       border: 1px solid transparent;
       font-weight: 500;
+      animation: tagAppear 0.5s ease-out backwards;
     }
+
+    @keyframes tagAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card .tag:nth-child(1) { animation-delay: 0.1s; }
+    .card .tag:nth-child(2) { animation-delay: 0.2s; }
+    .card .tag:nth-child(3) { animation-delay: 0.3s; }
+    .card .tag:nth-child(4) { animation-delay: 0.4s; }
+    .card .tag:nth-child(5) { animation-delay: 0.5s; }
+
 
     .tag:hover {
       background: white;
@@ -357,6 +537,34 @@
       <h1 class="hero-title">Leo Li's Notebook</h1>
       <p class="hero-subtitle">Exploring the Depths of Knowledge</p>
     </div>
+
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-image">👨‍💻</div>
+        <h2 class="profile-name">Leo Li</h2>
+        <p class="profile-title">Computer Science Student @ ZJU</p>
+        <p class="profile-bio">
+          Passionate about exploring the intersection of computer science, mathematics, and innovation. 
+          Currently focusing on advanced algorithms, machine learning, and computer graphics.
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/leo11-strive" class="social-link" target="_blank">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            GitHub
+          </a>
+          <a href="mailto:leobestli61@gmail.com" class="social-link">
+            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email
+          </a>
+          
+        </div>
+      </div>
+    </section>
 
 
 
