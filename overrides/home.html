@@ -1,0 +1,411 @@
+{% extends "main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>
+    /* Core layout modifications */
+    .md-header{position:initial}
+    .md-main__inner{margin:0}
+    .md-content{display:none}
+    @media screen and (min-width:60em){.md-sidebar--secondary{display:none}}
+    @media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+
+    /* Custom properties */
+    :root {
+      --primary-color: #5D4037;
+      --accent-color: #8D6E63;
+      --bg-color: #EFEBE9;
+      --text-color: #3E2723;
+      --gold-accent: #D4AF37;
+      --transition-speed: 0.3s;
+    }
+
+    /* Modern scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-color);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 4px;
+    }
+
+    /* Container styling */
+    .mdx-container {
+      background-color: var(--bg-color);
+      min-height: calc(100vh - 120px);
+      position: relative;
+      z-index: 1;
+      background-image: 
+        radial-gradient(circle at 25px 25px, var(--accent-color) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, var(--accent-color) 2%, transparent 0%);
+      background-size: 100px 100px;
+      animation: backgroundFade 10s infinite alternate;
+    }
+
+    @keyframes backgroundFade {
+      0% { background-color: var(--bg-color); }
+      100% { background-color: #F5F5F5; }
+    }
+
+    /* Hero section */
+    .hero-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--primary-color);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+      background-size: 60px 60px;
+      animation: heroPattern 60s linear infinite;
+    }
+
+    @keyframes heroPattern {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .hero-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold-accent);
+      transform: scaleX(0);
+      transition: transform var(--transition-speed) ease;
+    }
+
+    .hero-title:hover::after {
+      transform: scaleX(1);
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      opacity: 0.9;
+      font-style: italic;
+      margin-top: 1rem;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Search bar */
+    .search-container {
+      max-width: 600px;
+      margin: -1.5rem auto 2rem;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all var(--transition-speed) ease;
+      font-size: 1.1rem;
+    }
+
+    .search-bar:focus {
+      outline: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+
+    /* Quotes section */
+    .quotes-section {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+    }
+
+    .quotes-title {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .quotes-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold-accent);
+    }
+
+    .quote-container {
+      position: relative;
+      padding: 2rem;
+      border-left: 4px solid var(--gold-accent);
+      margin: 1.5rem 0;
+      background: rgba(93, 64, 55, 0.05);
+      border-radius: 0 20px 20px 0;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .quote-container:hover {
+      transform: translateX(10px) translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      color: var(--text-color);
+    }
+
+    .quote-author {
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    /* Content grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      transition: all var(--transition-speed) ease;
+      border: 1px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent-color);
+      transform: scaleX(0);
+      transition: transform var(--transition-speed) ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-accent);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card h2 {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .card h2::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold-accent);
+    }
+
+    .card p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: var(--text-color);
+    }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      margin: 0.3rem;
+      transition: all var(--transition-speed) ease;
+      text-decoration: none;
+      border: 1px solid transparent;
+      font-weight: 500;
+    }
+
+    .tag:hover {
+      background: white;
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Quick actions */
+    .quick-actions {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 1000;
+    }
+
+    .action-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .action-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .content-grid {
+        padding: 0 1rem;
+      }
+      
+      .quote {
+        font-size: 1rem;
+      }
+      
+      .quick-actions {
+        bottom: 1rem;
+        right: 1rem;
+      }
+    }
+  </style>
+
+  <section class="mdx-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1 class="hero-title">Leo Li's Notebook</h1>
+      <p class="hero-subtitle">Exploring the Depths of Knowledge</p>
+    </div>
+
+
+
+    <!-- Quotes Section -->
+    <section class="quotes-section">
+      <h2 class="quotes-title">Words of Motivation</h2>
+      <div class="quote-container">
+        <p class="quote">"There is nothing to be found playing small and settling for a life that less than the one you are capable of living"</p>
+        <p class="quote-author">- Nelson Mandela</p>
+      </div>
+      <div class="quote-container">
+        <p class="quote">"Science is not only compatible with spirituality; it is a profound source of spirituality."</p>
+        <p class="quote-author">- Carl Sagan</p>
+      </div>
+      <div class="quote-container">
+        <p class="quote">"The beauty of mathematics only shows itself to more patient followers."</p>
+        <p class="quote-author">- Maryam Mirzakhani</p>
+      </div>
+    </section>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+    
+      <div class="card">
+        <h2>ZJU CS COURSES</h2>
+        <p>Dive into the fundimental beauty of computer science</p>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/ADS/' | url }}" class="tag">ADS</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/ALGORITHM%20IN%20GAMES/' | url }}" class="tag">Algorithm in Games</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/COMPUTER%20ORGANIZATION%20DESIGN/' | url }}" class="tag">Computer Organization Design</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/DIGITAL%20IMAGE%20PROCESSING/' | url }}" class="tag">Digital Image Processing</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/NUMERICAL%20ANALYSIS/' | url }}" class="tag">Numerical Analysis</a>
+      </div>
+
+    
+      <div class="card">
+        <h2>EXTRA</h2>
+        <p>Courses online for self-learning</p>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/EXTRA/MACHINE%20LEARNING/' | url }}" class="tag">Machine Learning</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/EXTRA/GAMES101/' | url }}" class="tag">Games 101</a>
+
+      </div>
+
+      
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <a href="#" class="action-button" title="Back to top">↑</a>
+      <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/' | url }}" class="action-button" title="Search">🔍</a>
+    </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

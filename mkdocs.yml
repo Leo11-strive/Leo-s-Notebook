@@ -198,4 +198,3 @@ plugins:
   - statistics:
       words_per_minute: 100  
   - search  
-  - social

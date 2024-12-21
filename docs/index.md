@@ -1,3 +1,8 @@
+---  
+template: home.html  
+---
+
+
 comments: true  
 
 # NOTEBOOK HOMEPAGE
