@@ -364,8 +364,12 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      animation: cardFloat 6s ease-in-out infinite;
     }
-
+    @keyframes cardFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
     .profile-card::before {
       content: '';
       position: absolute;
@@ -380,6 +384,9 @@
     .profile-image {
       width: 150px;
       height: 150px;
+     
+    
+
       border-radius: 50%;
       border: 5px solid white;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -392,6 +399,11 @@
       justify-content: center;
       font-size: 4rem;
       color: var(--primary-color);
+      animation: profilePulse 4s ease-in-out infinite;
+    }
+    @keyframes profilePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     .profile-name {
@@ -433,12 +445,31 @@
       text-decoration: none;
       transition: all var(--transition-speed) ease;
       font-weight: 500;
+      position: relative;
+      overflow: hidden;
     }
 
     .social-link:hover {
       transform: translateY(-3px);
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       background: var(--primary-color);
+    }
+
+    .social-link::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 50%;
+      transition: transform 0.5s ease-out;
+    }
+
+    .social-link:hover::after {
+      transform: translate(-50%, -50%) scale(2);
     }
 
     .social-icon {
@@ -486,6 +517,18 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 3rem;
+      animation: gradientFlow 15s ease infinite;
+    }
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .hero-section::before {
@@ -653,6 +696,29 @@
       border: 1px solid transparent;
       position: relative;
       overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      top: 0;
+      left: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    .card:hover::after {
+      opacity: 1;
     }
 
     .card::before {
@@ -713,7 +779,26 @@
       text-decoration: none;
       border: 1px solid transparent;
       font-weight: 500;
+      animation: tagAppear 0.5s ease-out backwards;
     }
+
+    @keyframes tagAppear {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card .tag:nth-child(1) { animation-delay: 0.1s; }
+    .card .tag:nth-child(2) { animation-delay: 0.2s; }
+    .card .tag:nth-child(3) { animation-delay: 0.3s; }
+    .card .tag:nth-child(4) { animation-delay: 0.4s; }
+    .card .tag:nth-child(5) { animation-delay: 0.5s; }
+
 
     .tag:hover {
       background: white;
@@ -787,7 +872,9 @@
 
     <section class="profile-section">
       <div class="profile-card">
-        <div class="profile-image">👨‍💻</div>
+        <div class="profile-image">
+          🤓
+        </div>
         <h2 class="profile-name">Leo Li</h2>
         <p class="profile-title">Computer Science Student @ ZJU</p>
         <p class="profile-bio">
