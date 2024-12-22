@@ -622,20 +622,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="NP class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#turing-machine" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-formal-language-framework" class="md-nav__link">
     <span class="md-ellipsis">
-      Turing Machine
+      A Formal-Language Framework
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1042,20 +1036,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="NP class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#turing-machine" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-formal-language-framework" class="md-nav__link">
     <span class="md-ellipsis">
-      Turing Machine
+      A Formal-Language Framework
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1080,7 +1068,7 @@
   <h1>NP Problems</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 420 个字 :material-image-multiple-outline: 13 张图片 :material-clock-time-two-outline: 预计阅读时间 4 分钟</p>
+<p>:material-circle-edit-outline: 约 479 个字 :material-image-multiple-outline: 7 张图片 :material-clock-time-two-outline: 预计阅读时间 5 分钟</p>
 </div>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1092,61 +1080,98 @@
 </ul>
 <h2 id="easy-and-hard">Easy and Hard<a class="headerlink" href="#easy-and-hard" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Easy: Polynomial time(the easiest: <span class="arithmatex">\(O(N)\)</span>, for we have to read the input)<br />
-<img alt="alt text" src="../image-2.png" /><br />
-Loop(p), the p here is the loop detecting function<br />
-if(P(f(p))==1): implies whether f(p) is a infinite loop function  </li>
+<li>Easy: Polynomial time(the easiest: <span class="arithmatex">\(O(N)\)</span>, for we have to read the input) </li>
 </ul>
+<blockquote>
+<p>Loop(p), the p here is the loop detecting function if(P(f(p))==1): implies whether f(p) is a infinite loop function    <br />
+* Hard: undecidable problems  <br />
+* <strong>Turing Machine</strong>:<br />
+* Deterministic Turing machine: executes one instruction at each point each time, based on the current state and the symbol under the tape head.<br />
+* Non-deterministic Turing machine: free to choose its next step from a finite set, and clever enough to choose the solution-direct step.<br />
+* which can be simply indicated as NTM knows the answer at the very first, therefore it only needs to verify the answer.<br />
+* <strong>Hamilton cycle problem</strong>: to check whether it is a NP problem, we only need to assume that there is a solution, and ask ourselves: does this simple circuit include all the vertices? And this process can be done in <span class="arithmatex">\(O(V)\)</span> time.  <br />
+However we need to realize that not all decidiable problems are NP. Try whether a graph does not have a Hamilton cycle.<br />
+* <strong>the basic relationship</strong>: <span class="arithmatex">\(P \leq NP\)</span>  </p>
+</blockquote>
 <h2 id="np-class">NP class<a class="headerlink" href="#np-class" title="Permanent link">&para;</a></h2>
-<h3 id="turing-machine"><a href="http:\www.turing.org.uk">Turing Machine</a><a class="headerlink" href="#turing-machine" title="Permanent link">&para;</a></h3>
 <ul>
-<li>A Turing machine is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules.    </li>
-<li>The machine operates on an infinite memory tape divided into discrete cells.  </li>
-<li>Controlled by a finite set of states, one of which is the start state.    </li>
+<li>
+<p><strong>NP-Complete problem</strong>: an NP-complete problem has the property that any problem in NP can be polybomially reduced to it. (reduced is the proper definition, but I personally prefer the word "transformed") If we can solve an NPC,  all NP problems can be solved. (Personal understanding, NPC is a one way result, you can assume that every problem that can be transformed polynomially from NPC is NPC, yet that is not the case with "to") 
+!!! "Eample"  </p>
+<p>Suppose we already knew the Hamilton cycle problem is NPC, prove the TSP problem is NPC too.<br />
+<strong>The graph has a hamilton cycle if and only if the complete graph generated from the previous graph has a TSP path with <span class="arithmatex">\(K&lt;=\sum W_{edge_i}\)</span>, where <span class="arithmatex">\(W_{edge_i}\)</span> is the weight of the edge in the original graph.</strong>  </p>
+</li>
+<li>
+<p><strong>SAT</strong>: the satisfiability problem, which is the first problem to be proved NPC. Describe the problem as follows:  </p>
+<blockquote>
+<ul>
+<li>Given a boolean formula, is there a way to assign the boolean variables to make the formula true?  </li>
 </ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="a-formal-language-framework">A Formal-Language Framework<a class="headerlink" href="#a-formal-language-framework" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Abstact Problem</strong>: A binary relation on a set <span class="arithmatex">\(I\)</span> of problem instances and a set if <span class="arithmatex">\(S\)</span> of problem solutions.   </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"> Formal Language Thery</label><label for="__tabbed_1_2">Decide and Accept</label><label for="__tabbed_1_3">Verify and Certificate</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="admonition note">
-<p class="admonition-title">implication of Turing machine</p>
-<p><center>assuming that the mathematician has infinite time, energy, paper and pen, and is completely dedicated to the work</center>  </p>
+<p class="admonition-title">Formal-language Theory</p>
+<p><img alt="alt text" src="../image-20.png" />   </p>
 </div>
-<p><img alt="alt text" src="../image-3.png" /><br />
-Deterministic Turing machine:<br />
-executes one instrcution at each point in time, and the next instruction is determined by the current state and the symbol under the tape head.(sequential, 正向)<br />
-Non-deterministic Turing machine:<br />
-free to choose its next step from afinite set, and clever enough to choose the solution-direct step(类似于提前知道答案只需要验证就好)<br />
-NP: Non-deterministic Polynomial time<br />
-* A problem is in NP if its solution can be verified in polynomial time.  </p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><center>Hamilton cycle: Given a graph and a path, we can verify whether the path visits every vertex exactly once in polynomial time.</center>  </p>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title"> Decide and Accept</p>
+<p><img alt="alt text" src="../image-21.png" />  </p>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Verify and Certificate</p>
+<p><img alt="alt text" src="../image-22.png" />  </p>
+</div>
+</div>
+</div>
 </div>
 <ul>
-<li><span class="arithmatex">\(P \subseteq NP\)</span>   </li>
-<li>An NP-complete problem has the property that any problem in NP can be polynomially reduced to it.<br />
-<strong>The process of reduction</strong>:<br />
-<img alt="alt text" src="../image-4.png" /><br />
-<strong>The first problem to be proved NP-complete</strong>:<br />
-<img alt="alt text" src="../image-5.png" /> <br />
-<img alt="alt text" src="../image-6.png" /><br />
-<img alt="alt text" src="../image-7.png" /><br />
-<img alt="alt text" src="../image-8.png" />   </li>
-<li>a verification algorithm is a two-argument algorithm A, one is input string and the other is a binary certificate string.<br />
-whether <span class="arithmatex">\(A(x, c)= 1\)</span>  </li>
-<li>The language verified by a verification algorithm A is <span class="arithmatex">\(L = \{x \in \{ 0,1\}_* | \exists c \in \{ 0, 1 \}_*, A(x, c) = 1\}\)</span>  </li>
+<li><strong><span class="arithmatex">\(co-NP\)</span></strong>: if the complement of a problem is in NP, then the problem is in <span class="arithmatex">\(co-NP\)</span>.  </li>
+<li><strong>relationship</strong>: <span class="arithmatex">\(P \subseteq NP \cap co-NP\)</span>   </li>
 </ul>
-<p><img alt="alt text" src="../image-9.png" />  </p>
-<div class="admonition warning">
-<p class="admonition-title">Beware</p>
-<p><img alt="alt text" src="../image-10.png" />  </p>
-</div>
-<p><img alt="alt text" src="../image-11.png" /><br />
-<span class="arithmatex">\(f\)</span> is a reduction functiion,  and the polynomial-time algorithm F that computes <span class="arithmatex">\(f\)</span> is called a reduction algorithm.<br />
-* <span class="arithmatex">\(L_1 \leq_p L_2\)</span> means that <span class="arithmatex">\(L_1\)</span> is polynomial-time reducible to <span class="arithmatex">\(L_2\)</span>.  </p>
+<div class="admonition tip">
+<p class="admonition-title">Usage Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">The Precise Definition of NPC</label><label for="__tabbed_2_2">Example Problem</label><label for="__tabbed_2_3">Answer: Proof of NP</label><label for="__tabbed_2_4">Answer: Proof of NPC</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><img alt="alt text" src="../image-12.png" />  </p>
+<p><img alt="alt text" src="../image-23.png" />   </p>
 </div>
-<p><img alt="alt text" src="../image-13.png" /><br />
-<img alt="alt text" src="../image-14.png" />   </p>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><img alt="alt text" src="../image-24.png" />   </p>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><img alt="alt text" src="../image-25.png" />  </p>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><img alt="alt text" src="../image-26.png" />  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr />
 
 
 
