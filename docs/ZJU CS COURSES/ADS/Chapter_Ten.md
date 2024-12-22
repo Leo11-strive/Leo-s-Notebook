@@ -5,57 +5,80 @@
 * Single-source shortest path problem: Find the shortest path from a vertex to all other vertices.($P$)  
 * Single-source unweighted longest path problem: Find the longest path from a vertex to all other vertices.($NP$)  
 ## Easy and Hard  
-* Easy: Polynomial time(the easiest: $O(N)$, for we have to read the input)  
-![alt text](image-2.png)  
-Loop(p), the p here is the loop detecting function  
-if(P(f(p))==1): implies whether f(p) is a infinite loop function  
+* Easy: Polynomial time(the easiest: $O(N)$, for we have to read the input) 
+ 
+
+> Loop(p), the p here is the loop detecting function if(P(f(p))==1): implies whether f(p) is a infinite loop function      
+* Hard: undecidable problems    
+* **Turing Machine**:  
+> * Deterministic Turing machine: executes one instruction at each point each time, based on the current state and the symbol under the tape head.  
+> * Non-deterministic Turing machine: free to choose its next step from a finite set, and clever enough to choose the solution-direct step.  
+> * which can be simply indicated as NTM knows the answer at the very first, therefore it only needs to verify the answer.  
+* **Hamilton cycle problem**: to check whether it is a NP problem, we only need to assume that there is a solution, and ask ourselves: does this simple circuit include all the vertices? And this process can be done in $O(V)$ time.    
+> However we need to realize that not all decidiable problems are NP. Try whether a graph does not have a Hamilton cycle.  
+* **the basic relationship**: $P \leq NP$  
+
+
+
 ## NP class  
-### [Turing Machine](http:\\www.turing.org.uk)  
-* A Turing machine is a mathematical model of computation that defines an abstract machine, which manipulates symbols on a strip of tape according to a table of rules.    
-* The machine operates on an infinite memory tape divided into discrete cells.  
-* Controlled by a finite set of states, one of which is the start state.    
-!!! note "implication of Turing machine"  
+* **NP-Complete problem**: an NP-complete problem has the property that any problem in NP can be polybomially reduced to it. (reduced is the proper definition, but I personally prefer the word "transformed") If we can solve an NPC,  all NP problems can be solved. (Personal understanding, NPC is a one way result, you can assume that every problem that can be transformed polynomially from NPC is NPC, yet that is not the case with "to") 
+!!! "Eample"  
 
-    <center>assuming that the mathematician has infinite time, energy, paper and pen, and is completely dedicated to the work</center>  
+     Suppose we already knew the Hamilton cycle problem is NPC, prove the TSP problem is NPC too.  
+     **The graph has a hamilton cycle if and only if the complete graph generated from the previous graph has a TSP path with $K<=\sum W_{edge_i}$, where $W_{edge_i}$ is the weight of the edge in the original graph.**  
 
-![alt text](image-3.png)  
-Deterministic Turing machine:  
-executes one instrcution at each point in time, and the next instruction is determined by the current state and the symbol under the tape head.(sequential, 正向)  
-Non-deterministic Turing machine:  
-free to choose its next step from afinite set, and clever enough to choose the solution-direct step(类似于提前知道答案只需要验证就好)  
-NP: Non-deterministic Polynomial time  
-* A problem is in NP if its solution can be verified in polynomial time.  
-!!! example  
+* **SAT**: the satisfiability problem, which is the first problem to be proved NPC. Describe the problem as follows:  
+> * Given a boolean formula, is there a way to assign the boolean variables to make the formula true?  
 
-    <center>Hamilton cycle: Given a graph and a path, we can verify whether the path visits every vertex exactly once in polynomial time.</center>  
-          
-* $P \subseteq NP$   
-* An NP-complete problem has the property that any problem in NP can be polynomially reduced to it.  
-**The process of reduction**:  
-![alt text](image-4.png)  
-**The first problem to be proved NP-complete**:  
-![alt text](image-5.png)   
-![alt text](image-6.png)  
-![alt text](image-7.png)  
-![alt text](image-8.png)   
-* a verification algorithm is a two-argument algorithm A, one is input string and the other is a binary certificate string.  
-whether $A(x, c)= 1$  
-* The language verified by a verification algorithm A is $L = \{x \in \{ 0,1\}_* | \exists c \in \{ 0, 1 \}_*, A(x, c) = 1\}$  
+## A Formal-Language Framework  
+* **Abstact Problem**: A binary relation on a set $I$ of problem instances and a set if $S$ of problem solutions.   
+=== " Formal Language Thery"
+    !!! note  "Formal-language Theory"   
 
-![alt text](image-9.png)  
-!!! Warning "Beware"  
+        ![alt text](image-20.png)   
 
-    ![alt text](image-10.png)  
+=== "Decide and Accept"  
+    !!! note " Decide and Accept"  
 
-![alt text](image-11.png)  
-$f$ is a reduction functiion,  and the polynomial-time algorithm F that computes $f$ is called a reduction algorithm.  
-* $L_1 \leq_p L_2$ means that $L_1$ is polynomial-time reducible to $L_2$.  
-!!! note  
+        ![alt text](image-21.png)  
 
-    ![alt text](image-12.png)  
+=== "Verify and Certificate"    
+    !!! note "Verify and Certificate"  
 
-![alt text](image-13.png)  
-![alt text](image-14.png)   
+        ![alt text](image-22.png)  
+
+* **$co-NP$**: if the complement of a problem is in NP, then the problem is in $co-NP$.  
+* **relationship**: $P \subseteq NP \cap co-NP$   
+!!! tip "Usage Example" 
+    === "The Precise Definition of NPC"
+        !!! note  
+
+            ![alt text](image-23.png)   
+
+    === "Example Problem"  
+        !!! note  
+
+            ![alt text](image-24.png)   
+
+    === "Answer: Proof of NP"   
+        !!! note  
+
+            ![alt text](image-25.png)  
+
+    === "Answer: Proof of NPC"  
+        !!! note   
+
+            ![alt text](image-26.png)  
+
+----------------------------------------------
+
+
+
+
+
+
+
+    
  
 
 
