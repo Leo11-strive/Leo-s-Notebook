@@ -655,6 +655,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#final-comclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Comclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bin-packing_1" class="md-nav__link">
     <span class="md-ellipsis">
       Bin Packing
@@ -1090,6 +1099,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#final-comclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Comclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bin-packing_1" class="md-nav__link">
     <span class="md-ellipsis">
       Bin Packing
@@ -1152,7 +1170,7 @@
   <h1>Approximation</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 519 个字 :fontawesome-solid-code: 15 行代码 :material-image-multiple-outline: 11 张图片 :material-clock-time-two-outline: 预计阅读时间 5 分钟</p>
+<p>:material-circle-edit-outline: 约 699 个字 :fontawesome-solid-code: 37 行代码 :material-image-multiple-outline: 13 张图片 :material-clock-time-two-outline: 预计阅读时间 7 分钟</p>
 </div>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1248,6 +1266,84 @@ Yet mostly, we find near-optimal solutions in polynomial time. -&gt;   </p>
 <p class="admonition-title">Qustion</p>
 <p><img alt="alt text" src="../image-34.png" />  </p>
 </div>
+<ul>
+<li>
+<p><strong>Greedy Solution</strong>:  </p>
+<blockquote>
+<p>Put the first center at the best possible location for a single center, then keep adding centers , with each center reducing the largest covering radius locally.<br />
+Yet obviously, it can be arbitrary bad. When <span class="arithmatex">\(K=2\)</span>, and there are two groups, huge distance between, and no distance within, boom!  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Greedy Solution Enhanced</strong>:  </p>
+<blockquote>
+<p>What if we already knows a boundary in advance? What if we know or assume that <span class="arithmatex">\(r(C^*) \leq r\)</span>, where <span class="arithmatex">\(C^*\)</span> is the optimal solution set?<br />
+Let's focused on the number <span class="arithmatex">\(2r\)</span>, if we can find a set of sites that the distance between them is larger than <span class="arithmatex">\(2r\)</span>, then even if we put a center in the middle, the covering radius will still be larger than <span class="arithmatex">\(r\)</span>.</p>
+</blockquote>
+</li>
+</ul>
+<p><div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">   </span><span class="nt">Centers</span><span class="w">  </span><span class="nt">Greedy-2r</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">Sites</span><span class="w"> </span><span class="nt">S</span><span class="o">[</span><span class="w"> </span><span class="o">],</span><span class="w"> </span><span class="nt">int</span><span class="w"> </span><span class="nt">n</span><span class="o">,</span><span class="w"> </span><span class="nt">int</span><span class="w"> </span><span class="nt">K</span><span class="o">,</span><span class="w"> </span><span class="nt">double</span><span class="w"> </span><span class="nt">r</span><span class="w"> </span><span class="o">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">   </span><span class="p">{</span><span class="w">   </span><span class="err">Sites</span><span class="w">  </span><span class="err">S’[</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">S[</span><span class="w"> </span><span class="err">]</span><span class="p">;</span><span class="w"> </span><span class="c">/* S’ is the set of the remaining sites */</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">       </span><span class="err">Centers</span><span class="w">  </span><span class="err">C[</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">$\emptyset$</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">       </span><span class="err">while</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">S’[</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="err">!=</span><span class="w"> </span><span class="err">$\emptyset$)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">           </span><span class="err">Select</span><span class="w"> </span><span class="err">any</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">S’</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">it</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">C</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">           </span><span class="err">Delete</span><span class="w"> </span><span class="err">all</span><span class="w"> </span><span class="err">s’</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">S’</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">are</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">dist(s’,</span><span class="w"> </span><span class="err">s)</span><span class="w"> </span><span class="err"></span><span class="w"> </span><span class="err">2r</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">       </span><span class="p">}</span><span class="w"> </span><span class="c">/* end-while */</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">       </span><span class="err">if</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">|C|</span><span class="w"> </span><span class="err">\leqK</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="err">return</span><span class="w"> </span><span class="err">C</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">       </span><span class="err">else</span><span class="w"> </span><span class="err">ERROR(No</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">K</span><span class="w"> </span><span class="err">centers</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">covering</span><span class="w"> </span><span class="err">radius</span><span class="w"> </span><span class="err">at</span><span class="w"> </span><span class="err">most</span><span class="w"> </span><span class="err">r)</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">   </span><span class="p">}</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+* <strong>Therom</strong>:  </p>
+<blockquote>
+<p>Suppose the algorithm selects more than K centers, the covering radius is <span class="arithmatex">\(r(C*) &gt; r\)</span>.  <br />
+The algorithm returns a set C of K centers such that <span class="arithmatex">\(r(C) \leq 2r(C*)\)</span> where C* is an optimal set of K centers.  </p>
+</blockquote>
+<ul>
+<li><strong>Greedy Enhanced with Approximation Ratio of 2</strong>:<br />
+==="Algorithm Demonstration" 
+    !!! tip "Algorithm Demonstration"  <div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>![alt text](image-35.png)
+</code></pre></div></td></tr></table></div>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">seoducode</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">    </span><span class="nt">Centers</span><span class="w">  </span><span class="nt">Greedy-Kcenter</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="nt">Sites</span><span class="w"> </span><span class="nt">S</span><span class="o">[</span><span class="w"> </span><span class="o">],</span><span class="w"> </span><span class="nt">int</span><span class="w"> </span><span class="nt">n</span><span class="o">,</span><span class="w"> </span><span class="nt">int</span><span class="w"> </span><span class="nt">K</span><span class="w"> </span><span class="o">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="p">{</span><span class="w">   </span><span class="err">Centers</span><span class="w">  </span><span class="err">C[</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">$\emptyset$</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="err">Select</span><span class="w"> </span><span class="err">any</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">S</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">it</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">C</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="err">while</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">|C|</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">K</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">            </span><span class="err">Select</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="err">from</span><span class="w"> </span><span class="err">S</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">maximum</span><span class="w"> </span><span class="err">dist(s,</span><span class="w"> </span><span class="err">C)</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="err">Add</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="err">it</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">C</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c">/* end-while */</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="err">return</span><span class="w"> </span><span class="err">C</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="final-comclusion">Final Comclusion<a class="headerlink" href="#final-comclusion" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><img alt="alt text" src="../image-36.png" /></p>
+</div>
 <p><span class="arithmatex">\(\rho (n) = max(\frac{C(A)}{C(OPT),\frac{C(OPT)}{C(A)}}\)</span><br />
 If an algorithm achieves an approximation ratio of <span class="arithmatex">\(\rho (n)\)</span>, we call it a <span class="arithmatex">\(\rho (n)\)</span>-approximation algorithm.<br />
 <strong>Approximaion Scheme</strong><br />
@@ -1261,38 +1357,38 @@ A polynomial-time algorithm that, for any <span class="arithmatex">\(\epsilon &g
 </div>
 <h2 id="bin-packing_1">Bin Packing<a class="headerlink" href="#bin-packing_1" title="Permanent link">&para;</a></h2>
 <p><strong>FirstFit</strong> seudo code:<br />
-<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">for</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">item</span><span class="w"> </span><span class="nt">i</span><span class="w">  </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">for</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">bin</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="nt">if</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">fits</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">            </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">            </span><span class="nt">break</span><span class="w">  </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">if</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">not</span><span class="w"> </span><span class="nt">placed</span><span class="w">  </span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="nt">create</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">for</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">item</span><span class="w"> </span><span class="nt">i</span><span class="w">  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">for</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">bin</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="nt">if</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">fits</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">            </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="nt">break</span><span class="w">  </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">if</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">is</span><span class="w"> </span><span class="nt">not</span><span class="w"> </span><span class="nt">placed</span><span class="w">  </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="nt">create</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
 </span></code></pre></div></td></tr></table></div>
 <img alt="alt text" src="../image-15.png" /> <br />
 the ratio is 1.7<br />
 <strong>BestFit</strong> seudo code:<br />
-<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">for</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">item</span><span class="w"> </span><span class="nt">i</span><span class="w">  </span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">find</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">bin</span><span class="w"> </span><span class="nt">j</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">smallest</span><span class="w"> </span><span class="nt">room</span><span class="w"> </span><span class="nt">that</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">fits</span><span class="w"> </span><span class="nt">in</span><span class="w">  </span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">if</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">fits</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">else</span><span class="w">  </span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nt">create</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">for</span><span class="w"> </span><span class="nt">each</span><span class="w"> </span><span class="nt">item</span><span class="w"> </span><span class="nt">i</span><span class="w">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nt">find</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">bin</span><span class="w"> </span><span class="nt">j</span><span class="w"> </span><span class="nt">with</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">smallest</span><span class="w"> </span><span class="nt">room</span><span class="w"> </span><span class="nt">that</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">fits</span><span class="w"> </span><span class="nt">in</span><span class="w">  </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">if</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">fits</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">j</span><span class="w">  </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nt">else</span><span class="w">  </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="nt">create</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="nt">place</span><span class="w"> </span><span class="nt">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nt">the</span><span class="w"> </span><span class="nt">new</span><span class="w"> </span><span class="nt">bin</span><span class="w">  </span>
 </span></code></pre></div></td></tr></table></div>
 the ratio is approximately 1.7 too  </p>
 <div class="admonition note">
