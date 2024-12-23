@@ -8,12 +8,13 @@
 * Easy: Polynomial time(the easiest: $O(N)$, for we have to read the input) 
  
 
-> Loop(p), the p here is the loop detecting function if(P(f(p))==1): implies whether f(p) is a infinite loop function      
+> Loop(p), the p here is the loop detecting function if(P(f(p))==1): implies whether f(p) is a infinite loop function    
+
 * Hard: undecidable problems    
 * **Turing Machine**:  
-> * Deterministic Turing machine: executes one instruction at each point each time, based on the current state and the symbol under the tape head.  
-> * Non-deterministic Turing machine: free to choose its next step from a finite set, and clever enough to choose the solution-direct step.  
-> * which can be simply indicated as NTM knows the answer at the very first, therefore it only needs to verify the answer.  
+>    Deterministic Turing machine: executes one instruction at each point each time, based on the current state and the symbol under the tape head.  
+> Non-deterministic Turing machine: free to choose its next step from a finite set, and clever enough to choose the solution-direct step.  
+> which can be simply indicated as NTM knows the answer at the very first, therefore it only needs to verify the answer.  
 * **Hamilton cycle problem**: to check whether it is a NP problem, we only need to assume that there is a solution, and ask ourselves: does this simple circuit include all the vertices? And this process can be done in $O(V)$ time.    
 > However we need to realize that not all decidiable problems are NP. Try whether a graph does not have a Hamilton cycle.  
 * **the basic relationship**: $P \leq NP$  
@@ -21,10 +22,11 @@
 
 
 ## NP class  
-* **NP-Complete problem**: an NP-complete problem has the property that any problem in NP can be polybomially reduced to it. (reduced is the proper definition, but I personally prefer the word "transformed") If we can solve an NPC,  all NP problems can be solved. (Personal understanding, NPC is a one way result, you can assume that every problem that can be transformed polynomially from NPC is NPC, yet that is not the case with "to") 
-!!! "Eample"  
+* **NP-Complete problem**: an NP-complete problem has the property that any problem in NP can be polybomially reduced to it. (reduced is the proper definition, but I personally prefer the word "transformed") If we can solve an NPC,  all NP problems can be solved. (Personal understanding, NPC is a one way result, you can assume that every problem that can be transformed polynomially from NPC is NPC, yet that is not the case with "to")   
 
-     Suppose we already knew the Hamilton cycle problem is NPC, prove the TSP problem is NPC too.  
+!!! Example 
+
+     <center>Suppose we already knew the Hamilton cycle problem is NPC, prove the TSP problem is NPC too. </center>
      **The graph has a hamilton cycle if and only if the complete graph generated from the previous graph has a TSP path with $K<=\sum W_{edge_i}$, where $W_{edge_i}$ is the weight of the edge in the original graph.**  
 
 * **SAT**: the satisfiability problem, which is the first problem to be proved NPC. Describe the problem as follows:  
