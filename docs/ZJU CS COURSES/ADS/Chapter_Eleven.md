@@ -63,9 +63,63 @@
 
     ![alt text](image-34.png)  
 
+* **Greedy Solution**:  
+> Put the first center at the best possible location for a single center, then keep adding centers , with each center reducing the largest covering radius locally.  
+> Yet obviously, it can be arbitrary bad. When $K=2$, and there are two groups, huge distance between, and no distance within, boom!  
+  
+* **Greedy Solution Enhanced**:  
+> What if we already knows a boundary in advance? What if we know or assume that $r(C^*) \leq r$, where $C^*$ is the optimal solution set?  
+> Let's focused on the number $2r$, if we can find a set of sites that the distance between them is larger than $2r$, then even if we put a center in the middle, the covering radius will still be larger than $r$.
+
+```less  
+
+   Centers  Greedy-2r ( Sites S[ ], int n, int K, double r )
+   {   Sites  S’[ ] = S[ ]; /* S’ is the set of the remaining sites */
+       Centers  C[ ] = $\emptyset$;
+       while ( S’[ ] != $\emptyset$) {
+           Select any s from S’ and add it to C;
+           Delete all s’ from S’ that are at dist(s’, s)  2r;
+       } /* end-while */
+       if ( |C| \leqK ) return C;
+       else ERROR(No set of K centers with covering radius at most r);
+   }  
+
+```    
+* **Therom**:  
+> Suppose the algorithm selects more than K centers, the covering radius is $r(C*) > r$.    
+>The algorithm returns a set C of K centers such that $r(C) \leq 2r(C*)$ where C* is an optimal set of K centers.  
+
+  
+
+* **Greedy Enhanced with Approximation Ratio of 2**:  
+==="Algorithm Demonstration" 
+    !!! tip "Algorithm Demonstration"  
+
+        ![alt text](image-35.png)   
+
+=== "seoducode"  
+    ``` less  
+
+        Centers  Greedy-Kcenter ( Sites S[ ], int n, int K )
+        {   Centers  C[ ] = $\emptyset$;
+            Select any s from S and add it to C;
+            while ( |C| < K ) {
+                Select s from S with maximum dist(s, C);
+                Add s it to C;
+            } /* end-while */
+            return C;
+        } 
+    ```  
+
+---------------------------------------------------------  
+## Final Comclusion  
+!!! note  
+
+    ![alt text](image-36.png)
 
 
- 
+
+   
 
 
 
