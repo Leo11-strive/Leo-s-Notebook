@@ -73,7 +73,8 @@ nav:
       - NP Problems: ZJU CS COURSES/ADS/Chapter_Ten.md
       - Approximation: ZJU CS COURSES/ADS/Chapter_Eleven.md
       - Local Search: ZJU CS COURSES/ADS/Chapter_Twelve.md
-      - Parallel Algorithm: ZJU CS COURSES/ADS/Chapter_Fourteen.md
+      - Parallel Algorithm: ZJU CS COURSES/ADS/Chapter_Fourteen.md  
+      - External Sorting: ZJU CS COURSES/ADS/Chapter_Fifteen.md
     - ALGORITHM IN GAMES:  
       - ZJU CS COURSES/ALGORITHM IN GAMES/index.md
       - Introduction: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_One.md  

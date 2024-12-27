@@ -61,5 +61,12 @@ $\sigma_{between}=w_b*w_f*(\mu_{Fgrd}-\mu_{Bgrd})^2$ (use findmax loop to find t
 
 
 
+## Weber's law  
+* **Weber's law**:  
+> $\frac{\Delta I}{I}=k$   
+> $\Delta I$: the smallest difference that can be perceived by human eyes  
+> $I$: the intensity of the light  
+> $k$: constant, between 0.01 and 0.02  
+  
 
 
