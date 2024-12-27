@@ -483,6 +483,8 @@
       
         
       
+        
+      
     
     
       
@@ -835,6 +837,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#risc-v-privileged" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V Privileged
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-and-status-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control and Status Registers
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1058,6 +1078,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#risc-v-privileged" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V Privileged
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-and-status-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control and Status Registers
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1079,16 +1117,31 @@
   <h1>Supplement for Exception</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 51 个字 :material-clock-time-two-outline: 预计阅读时间 1 分钟</p>
+<p>:material-circle-edit-outline: 约 107 个字 :material-clock-time-two-outline: 预计阅读时间 1 分钟</p>
 </div>
 <h2 id="cpu-within-exception">CPU within Exception<a class="headerlink" href="#cpu-within-exception" title="Permanent link">&para;</a></h2>
 <ul>
 <li>execute a new function when an exception occurs  </li>
 <li>CPU don't need to save time for unexpected events  </li>
-<li><code>bne</code>, <code>beq</code> will cause a diiferent operation in PC  </li>
+<li><code>bne</code>, <code>beq</code> will cause a diffferent operation in PC  </li>
 <li>but sometimes the hardware will urge the CPU to do something unexpected  </li>
 <li>within the processor: Expection  </li>
 <li>from outside the processor: Interrupt  </li>
+<li><strong>What must the processor do</strong>: <blockquote>
+<p>A predefined process routine  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="risc-v-privileged">RISC-V Privileged<a class="headerlink" href="#risc-v-privileged" title="Permanent link">&para;</a></h2>
+<ul>
+<li>CPU: user operation, many regs cannot be accessed, only access to ports provided by operating system  </li>
+<li>Monitoring: Operating System (S) </li>
+<li>Machine Mode: highest privilege, having access to everything  </li>
+</ul>
+<h2 id="control-and-status-registers">Control and Status Registers<a class="headerlink" href="#control-and-status-registers" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Environment call(ecall) MEPC-&gt;&amp;ecall(exception, interrupt is PC+4)</li>
+<li>Breakpoint (ebreak)  MEPC-&gt;&amp;ebreak  </li>
 </ul>
 
 
