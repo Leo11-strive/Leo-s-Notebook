@@ -39,9 +39,62 @@
 > * $T$ is a decreasing function of time  
 > * $T = T_0 \times \alpha^t$   
 
-??? Example "Hopfield Neural Network"
+## Hopfield Neural Network
+!!! Example "Problem Description"  
+    
+    ![alt text](image-46.png)  
 
-    ![alt text](image-19.png)  
+* **State-flipping Algorithm**:  
+``` less  
 
-**General simple implementation, yet difficult to quantify its result**
+    ConfigType State_flipping()  
+    {
+        Start from an arbitrary configuration S;
+        whie(!IsStable(S))
+        {
+            u=GetUnsatisfied(S);  
+            S[u] = -S[u];
+        }
+        return S;
+    }
+```  
+    
+* **Claim**: The state-flipping algorithm terminates at a stable configuration after at most $W=\sum_e|w_e|$ iterations.  
+* **Proof**:  
+> Every time we flip a state, the $\fai(S)=\sum_{e is good}|w_e|$ by at least 1, thus $\fai(S)$ is non-negative and bounded by $W$.    
+
+## Maximum Cut Problem  
+!!! Example  "Problem Description"  
+
+    ![alt text](image-47.png)  
+
+* **Claim**: Let (A, B) be a local optimal partition and let (A*, B*) be a global optimal partition. Then $w(A, B) \beq \frac{2}{1}w(A^*, B^*)$   
+
+!!! tip "Proof"  
+
+    ![alt text](image-49.png)   
+  
+* Try to use the "local optiaml partition" as a tool.     
+
+* **Limited Executed Time**:    
+=== "Big-improvement-flip"  
+
+    !!! note  
+
+        ![alt text](image-51.png)    
+
+=== "K-L heuristic"  
+
+    !!! note  
+
+        ![alt text](image-52.png)
+
+
+
+
+
+
+
+
+    
 
