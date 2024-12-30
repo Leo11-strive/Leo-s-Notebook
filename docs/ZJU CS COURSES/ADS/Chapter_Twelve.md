@@ -61,7 +61,7 @@
     
 * **Claim**: The state-flipping algorithm terminates at a stable configuration after at most $W=\sum_e|w_e|$ iterations.  
 * **Proof**:  
-> Every time we flip a state, the $\fai(S)=\sum_{e is good}|w_e|$ by at least 1, thus $\fai(S)$ is non-negative and bounded by $W$.    
+> Every time we flip a state, the $\phi(S)=\sum_{e is good}|w_e|$ by at least 1, thus $\phi(S)$ is non-negative and bounded by $W$.    
 
 ## Maximum Cut Problem  
 !!! Example  "Problem Description"  
