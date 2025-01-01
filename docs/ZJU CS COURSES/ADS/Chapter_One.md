@@ -167,3 +167,25 @@ The height varies, hence the time complexity of searching is not guaranteed.
             * **$n(h) = F_{h+3}-1$**
     * **Conclusion**: $h = O(\ln N)$
 
+## Splay Trees  
+* **Definition**:  
+> Any M consecutive tree operations starting from an empty tree take at most $O(MlogN)$ time.  
+  
+!!! note "illustration"  
+
+    ![alt text](image-74.png)  
+
+
+## Amortized Analysis    
+* **Aggregate analysis**:  
+> Basically , worst case average  
+* **Accounting method**:  
+> When an operation’s amortized cost $c_i^'$ exceeds its actual cost  $c_i$, we assign the difference to specific objects in the data structure as credit. Credit can help pay for later operations whose amortized cost is less than their actual cost.   
+* **Potential method**:  
+> The potential method is a way to determine the amortized cost of an operation  
+> $c_i^' = c_i + \Phi(D_i) - \Phi(D_{i-1})$  
+> $\sum_{i=1}^{n}c_i^' = \sum_{i=1}^{n}c_i + \Phi(D_n) - \Phi(D_0)$  
+> The main purpose is to use $\Phi(D_i)$ to eliminate some unknown factors in the actual cost of the operation.  
+
+
+
