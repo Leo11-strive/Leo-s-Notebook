@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../Chapter_Six/">
       
       
-        <link rel="next" href="../Chapter_Ten/">
+        <link rel="next" href="../../ALGORITHM%20IN%20GAMES/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>AVL, Splay Trees and Amortized Analysis - Leo Li's Notebook</title>
+        <title>Binomial Queue - Leo Li's Notebook</title>
       
     
     
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-avl-tree" class="md-skip">
+        <a href="#structure" class="md-skip">
           Skip to content
         </a>
       
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AVL, Splay Trees and Amortized Analysis
+              Binomial Queue
             
           </span>
         </div>
@@ -544,28 +544,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    AVL, Splay Trees and Amortized Analysis
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Chapter_One/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,83 +556,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="Navigator">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Navigator
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-avl-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. AVL tree
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. AVL tree">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-definition" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1. Definition
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.1. Definition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rotation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-insert" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2. Insert
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-height-of-avl-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3. Height of AVL tree
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -849,10 +754,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Chapter_Five/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Binomial Queue
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -861,6 +784,62 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Navigator">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Navigator
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1194,59 +1173,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-avl-tree" class="md-nav__link">
+  <a href="#structure" class="md-nav__link">
     <span class="md-ellipsis">
-      1. AVL tree
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. AVL tree">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-definition" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1. Definition
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.1. Definition">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rotation
+      Structure
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-insert" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2. Insert
+      Operations
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#13-height-of-avl-tree" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3. Height of AVL tree
+      Implementation
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof
+    </span>
+  </a>
   
 </li>
       
@@ -1268,138 +1226,91 @@
   
 
 
-  <h1>AVL, Splay Trees and Amortized Analysis</h1>
+  <h1>Binomial Queue</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 568 个字 :fontawesome-solid-code: 64 行代码 :material-image-multiple-outline: 1 张图片 :material-clock-time-two-outline: 预计阅读时间 6 分钟</p>
+<p>:material-circle-edit-outline: 约 157 个字 :fontawesome-solid-code: 84 行代码 :material-image-multiple-outline: 4 张图片 :material-clock-time-two-outline: 预计阅读时间 3 分钟</p>
 </div>
-<h2 id="1-avl-tree">1. AVL tree<a class="headerlink" href="#1-avl-tree" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Intro</p>
+<h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Target: Speed up searching(insertion &amp;&amp; deletion)</strong></li>
-<li><strong>Basic tool: <code>BST</code></strong>  </li>
-<li><strong>Problem: Unbalanced tree</strong>: <br />
-<em>Although <span class="arithmatex">\(T_p = O(\text{height})\)</span>, but the height can be as bad as <span class="arithmatex">\(O(N)\)</span></em> </li>
+<li><strong>Definition</strong>:  <blockquote>
+<p>A binomial queue is not a heap-ordered tree, but rather a collection of heap-ordered trees, known as a forest.  Each heap-ordered tree is a binomial tree.<br />
+A priority queue of any size can be uniquely represented by a collection of binomial trees.  </p>
+</blockquote>
+</li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../image-67.png" />  </p>
 </div>
-<p>Normal <code>BST</code> can be skewed to a linked list,
-which is not good for searching at all, thus one has absolute no control over the height of the tree.      </p>
-<p><img alt="alt text" src="../image-1.png" />  </p>
-<p>The height varies, hence the time complexity of searching is not guaranteed.</p>
-<h3 id="11-definition">1.1. Definition<a class="headerlink" href="#11-definition" title="Permanent link">&para;</a></h3>
+<h2 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h2>
 <ul>
-<li>An empty binary tree is height balanced.  If <span class="arithmatex">\(T\)</span> is a nonempty binary tree with <span class="arithmatex">\(T_L\)</span> and <span class="arithmatex">\(T_R\)</span> as its left and right subtrees, then <span class="arithmatex">\(T\)</span> is height balanced iff<ul>
-<li><span class="arithmatex">\(T_L\)</span> and <span class="arithmatex">\(T_R\)</span> are height balanced</li>
-<li><span class="arithmatex">\(|h_L - h_R| \leq 1\)</span>, where  <span class="arithmatex">\(h_L\)</span> and <span class="arithmatex">\(h_R\)</span> are the heights of <span class="arithmatex">\(T_L\)</span> and <span class="arithmatex">\(T_R\)</span> , respectively.</li>
-</ul>
+<li>
+<p><strong>Findmin</strong>:  </p>
+<blockquote>
+<p>The minimum key is in one of the roots. There are at most <span class="arithmatex">\(\lceil log_2N \rceil\)</span> roots, hence the time complexity is <span class="arithmatex">\(O(logN)\)</span>.(Can be stored and updated in constant time)  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Merge</strong>:  </p>
+<blockquote>
+<p>Must keep the trees in the binomial queue sorted by height.
+<span class="arithmatex">\(T_p=O(logN)\)</span>  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Insert</strong>:  </p>
+<blockquote>
+<p>If the smallest nonexistent binomial tree is Bi , then <span class="arithmatex">\(T_p=Const·(i+1)\)</span>. Performing N Inserts on an initially empty binomial queue will take O(N) worst-case time.  Hence the average time is constant.  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>DeleteMin</strong>:  </p>
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><center><strong>Balance factor</strong>: <span class="arithmatex">\(BF(node) = h_L - h_R\)</span>  </p>
-<p><strong>In AVL tree</strong>, <span class="arithmatex">\(BF(node) \in \{-1, 0, 1\}\)</span></center> </p>
+<p class="admonition-title">illustration</p>
+<p><img alt="alt text" src="../image-68.png" />   </p>
 </div>
-<h4 id="rotation">Rotation<a class="headerlink" href="#rotation" title="Permanent link">&para;</a></h4>
-<div class="admonition tip">
-<p class="admonition-title">Be Ware</p>
-<p><center>Since the tree was constructed through dynamic insertion, <span class="arithmatex">\(BF\)</span> is updated bottom-up. <br />
-Every time a rotation complete, <span class="arithmatex">\(BF\)</span> needs to be updated.</center></p>
-</div>
-<ul>
-<li>
-<p><strong>Single rotation</strong>:   <span class="arithmatex">\(|BF(node)| &gt; 1\)</span></p>
-<ul>
-<li><strong>LL rotation</strong>: <ul>
-<li><strong>Target</strong>: <span class="arithmatex">\(BF(node)=2\)</span> </li>
-<li><strong>Condition</strong>: <span class="arithmatex">\(BF(node-&gt;left) = 1\)</span> </li>
-<li><strong>Operation</strong>: <ul>
-<li><strong>Step 1</strong>: <span class="arithmatex">\(node-&gt;left\)</span> becomes the new root</li>
-<li><strong>Step 2</strong>: <span class="arithmatex">\(node\)</span> becomes the right child of the new root</li>
-<li><strong>Step 3</strong>: <span class="arithmatex">\(node-&gt;left\)</span>'s right child becomes the left child of <span class="arithmatex">\(node\)</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Right rotation</strong>: <ul>
-<li><strong>Target</strong>: <span class="arithmatex">\(BF(node) = -2\)</span> </li>
-<li><strong>Condition</strong>: <span class="arithmatex">\(BF(node-&gt;right) = -1\)</span> </li>
-<li><strong>Operation</strong>: <ul>
-<li><strong>Step 1</strong>: <span class="arithmatex">\(node-&gt;right\)</span> becomes the new root</li>
-<li><strong>Step 2</strong>: <span class="arithmatex">\(node\)</span> becomes the left child of the new root</li>
-<li><strong>Step 3</strong>: <span class="arithmatex">\(node-&gt;right\)</span>'s left child becomes the right child of <span class="arithmatex">\(node\)</span>  </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Double rotation</strong>: <span class="arithmatex">\(|BF(node)| &gt; 1\)</span></p>
-<ul>
-<li><strong>LR rotation</strong>: <ul>
-<li><strong>Target</strong>: <span class="arithmatex">\(BF(node) = 2\)</span> </li>
-<li><strong>Condition</strong>: <span class="arithmatex">\(BF(node-&gt;left) = -1\)</span> </li>
-<li><strong>Operation</strong>: <ul>
-<li><strong>Step 1</strong>: <span class="arithmatex">\(node-&gt;left\)</span>'s right child becomes the new root</li>
-<li><strong>Step 2</strong>: <span class="arithmatex">\(node-&gt;left\)</span>'s right child's left child becomes the right child of <span class="arithmatex">\(node-&gt;left\)</span></li>
-<li><strong>Step 3</strong>: <span class="arithmatex">\(node-&gt;left\)</span>'s right child's right child becomes the left child of <span class="arithmatex">\(node\)</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>RL rotation</strong>: <ul>
-<li><strong>Target</strong>: <span class="arithmatex">\(BF(node) = -2\)</span> </li>
-<li><strong>Condition</strong>: <span class="arithmatex">\(BF(node-&gt;right) = 1\)</span> </li>
-<li><strong>Operation</strong>: <ul>
-<li><strong>Step 1</strong>: <span class="arithmatex">\(node-&gt;right\)</span>'s left child becomes the new root</li>
-<li><strong>Step 2</strong>: <span class="arithmatex">\(node-&gt;right\)</span>'s left child's right child becomes the left child of <span class="arithmatex">\(node-&gt;right\)</span></li>
-<li><strong>Step 3</strong>: <span class="arithmatex">\(node-&gt;right\)</span>'s left child's left child becomes the right child of <span class="arithmatex">\(node\)</span>   </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">While construct</p>
-<p><center>Double rotation is a combination of two single rotations.<br />
-LR: left rotation on the left child, then right rotation on the root.<br />
-RL: right rotation on the right child, then left rotation on the root.</center>  </p>
-</div>
-<h3 id="12-insert">1.2. Insert<a class="headerlink" href="#12-insert" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Step 1</strong>: Insert the node as in a normal BST</li>
-<li><strong>Step 2</strong>: Update the balance factor of the ancestors of the inserted node</li>
-<li><strong>Step 3</strong>: If the balance factor of any node is not in <span class="arithmatex">\(\{-1, 0, 1\}\)</span>, do the rotation</li>
-</ul>
-<div class="admonition abstract">
-<p class="admonition-title"><span class="arithmatex">\(BF\)</span> update</p>
-<p><strong><em><center>Considering the fact that <span class="arithmatex">\(BF\)</span> is calculated by substracting the height of left tree and right tree, to make <span class="arithmatex">\(BF\)</span> update more suitable for recusion, keep a height field instead.</center></em></strong></p>
-</div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fetching Height</label><label for="__tabbed_1_2">Insertion</label><label for="__tabbed_1_3">Single Rotate</label><label for="__tabbed_1_4">Double Rotate</label></div>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">typestruct</label><label for="__tabbed_1_2">Merge</label><label for="__tabbed_1_3">DeleteMin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nf">Height</span><span class="p">(</span><span class="w"> </span><span class="n">Position</span><span class="w"> </span><span class="n">P</span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">else</span><span class="w">  </span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">P</span><span class="o">-&gt;</span><span class="n">Height</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span><span class="w">  </span>
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">   </span><span class="nt">typedef</span><span class="w"> </span><span class="nt">struct</span><span class="w"> </span><span class="nt">BinNode</span><span class="w"> </span><span class="o">*</span><span class="nt">Position</span><span class="o">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">   </span><span class="nt">typedef</span><span class="w"> </span><span class="nt">struct</span><span class="w"> </span><span class="nt">Collection</span><span class="w"> </span><span class="o">*</span><span class="nt">BinQueue</span><span class="o">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">   </span><span class="nt">typedef</span><span class="w"> </span><span class="nt">struct</span><span class="w"> </span><span class="nt">BinNode</span><span class="w"> </span><span class="o">*</span><span class="nt">BinTree</span><span class="o">;</span><span class="w">  </span><span class="c">/* missing from p.176 */</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">   </span><span class="nt">struct</span><span class="w"> </span><span class="nt">BinNode</span><span class="w"> </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">   </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="err">ElementType</span><span class="w">     </span><span class="err">Element</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="err">Position</span><span class="w">        </span><span class="err">LeftChild</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="err">Position</span><span class="w">        </span><span class="err">NextSibling</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="o">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">   </span><span class="nt">struct</span><span class="w"> </span><span class="nt">Collection</span><span class="w"> </span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">   </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="err">int</span><span class="w">         </span><span class="err">CurrentSize</span><span class="p">;</span><span class="w">  </span><span class="c">/* total number of nodes */</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="err">BinTree</span><span class="w"> </span><span class="err">TheTrees[</span><span class="w"> </span><span class="err">MaxTrees</span><span class="w"> </span><span class="err">]</span><span class="p">;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="o">;</span><span class="w">  </span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -1433,45 +1344,47 @@ RL: right rotation on the right child, then left rotation on the root.</center> 
 <span class="normal"><a href="#__codelineno-1-32">32</a></span>
 <span class="normal"><a href="#__codelineno-1-33">33</a></span>
 <span class="normal"><a href="#__codelineno-1-34">34</a></span>
-<span class="normal"><a href="#__codelineno-1-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">AvlTree</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nf">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">ElementType</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">AvlTree</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">AvlNode</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">            </span><span class="n">FatalError</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Out of space!!!&quot;</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="k">else</span><span class="w">  </span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">            </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">            </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="p">}</span><span class="w">  </span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">                </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingleRotateWithLeft</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">            </span><span class="k">else</span><span class="w">  </span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">                </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DoubleRotateWithLeft</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Insert</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="o">-&gt;</span><span class="n">Element</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">                </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingleRotateWithRight</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">            </span><span class="k">else</span><span class="w">  </span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">                </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DoubleRotateWithRight</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Max</span><span class="p">(</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">T</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="p">}</span><span class="w">  </span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="w">   </span><span class="nt">BinTree</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="nt">CombineTrees</span><span class="o">(</span><span class="w"> </span><span class="nt">BinTree</span><span class="w"> </span><span class="nt">T1</span><span class="o">,</span><span class="w"> </span><span class="nt">BinTree</span><span class="w"> </span><span class="nt">T2</span><span class="w"> </span><span class="o">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">   </span><span class="p">{</span><span class="w">  </span><span class="c">/* merge equal-sized T1 and T2 */</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="err">if</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">T1-&gt;Element</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">T2-&gt;Element</span><span class="w"> </span><span class="err">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="c">/* attach the larger one to the smaller one */</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="err">return</span><span class="w"> </span><span class="err">CombineTrees(</span><span class="w"> </span><span class="err">T2,</span><span class="w"> </span><span class="err">T1</span><span class="w"> </span><span class="err">)</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="c">/* insert T2 to the front of the children list of T1 */</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="err">T2-&gt;NextSibling</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">T1-&gt;LeftChild</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="err">T1-&gt;LeftChild</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">T2</span><span class="p">;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="err">return</span><span class="w"> </span><span class="err">T1</span><span class="p">;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">   </span><span class="p">}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">   </span><span class="nt">BinQueue</span><span class="w">  </span><span class="nt">Merge</span><span class="o">(</span><span class="w"> </span><span class="nt">BinQueue</span><span class="w"> </span><span class="nt">H1</span><span class="o">,</span><span class="w"> </span><span class="nt">BinQueue</span><span class="w"> </span><span class="nt">H2</span><span class="w"> </span><span class="o">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">   </span><span class="p">{</span><span class="w">    </span><span class="err">BinTree</span><span class="w"> </span><span class="err">T1,</span><span class="w"> </span><span class="err">T2,</span><span class="w"> </span><span class="err">Carry</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w">   </span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="err">int</span><span class="w"> </span><span class="err">i,</span><span class="w"> </span><span class="err">j</span><span class="p">;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="err">if</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">H1-&gt;CurrentSize</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">H2-&gt;</span><span class="w"> </span><span class="err">CurrentSize</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="err">Capacity</span><span class="w"> </span><span class="err">)</span><span class="w">  </span><span class="err">ErrorMessage()</span><span class="p">;</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="err">H1-&gt;CurrentSize</span><span class="w"> </span><span class="err">+=</span><span class="w"> </span><span class="err">H2-&gt;</span><span class="w"> </span><span class="err">CurrentSize</span><span class="p">;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="err">for</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">i=0,</span><span class="w"> </span><span class="err">j=1</span><span class="p">;</span><span class="w"> </span><span class="err">j&lt;=</span><span class="w"> </span><span class="err">H1-&gt;CurrentSize</span><span class="p">;</span><span class="w"> </span><span class="err">i++,</span><span class="w"> </span><span class="err">j*=2</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="err">T1</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">H1-&gt;TheTrees[i]</span><span class="p">;</span><span class="w"> </span><span class="err">T2</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">H2-&gt;TheTrees[i]</span><span class="p">;</span><span class="w"> </span><span class="c">/*current trees */</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="err">switch(</span><span class="w"> </span><span class="err">4*!!Carry</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">2*!!T2</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">!!T1</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">0:</span><span class="w"> </span><span class="c">/* 000 */</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">1:</span><span class="w"> </span><span class="c">/* 001 */</span><span class="w">  </span><span class="err">break</span><span class="p">;</span><span class="w">   </span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">2:</span><span class="w"> </span><span class="c">/* 010 */</span><span class="w">  </span><span class="err">H1-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">T2</span><span class="p">;</span><span class="w"> </span><span class="err">H2-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w"> </span><span class="err">break</span><span class="p">;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">4:</span><span class="w"> </span><span class="c">/* 100 */</span><span class="w">  </span><span class="err">H1-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">Carry</span><span class="p">;</span><span class="w"> </span><span class="err">Carry</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w"> </span><span class="err">break</span><span class="p">;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">3:</span><span class="w"> </span><span class="c">/* 011 */</span><span class="w">  </span><span class="err">Carry</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">CombineTrees(</span><span class="w"> </span><span class="err">T1,</span><span class="w"> </span><span class="err">T2</span><span class="w"> </span><span class="err">)</span><span class="p">;</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">                        </span><span class="err">H1-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">H2-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w"> </span><span class="err">break</span><span class="p">;</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">5:</span><span class="w"> </span><span class="c">/* 101 */</span><span class="w">  </span><span class="err">Carry</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">CombineTrees(</span><span class="w"> </span><span class="err">T1,</span><span class="w"> </span><span class="err">Carry</span><span class="w"> </span><span class="err">)</span><span class="p">;</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">                        </span><span class="err">H1-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w"> </span><span class="err">break</span><span class="p">;</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">6:</span><span class="w"> </span><span class="c">/* 110 */</span><span class="w">  </span><span class="err">Carry</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">CombineTrees(</span><span class="w"> </span><span class="err">T2,</span><span class="w"> </span><span class="err">Carry</span><span class="w"> </span><span class="err">)</span><span class="p">;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">                        </span><span class="err">H2-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w"> </span><span class="err">break</span><span class="p">;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">        </span><span class="err">case</span><span class="w"> </span><span class="err">7:</span><span class="w"> </span><span class="c">/* 111 */</span><span class="w">  </span><span class="err">H1-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">Carry</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">                        </span><span class="err">Carry</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">CombineTrees(</span><span class="w"> </span><span class="err">T1,</span><span class="w"> </span><span class="err">T2</span><span class="w"> </span><span class="err">)</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">                        </span><span class="err">H2-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w"> </span><span class="err">break</span><span class="p">;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="c">/* end switch */</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c">/* end for-loop */</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">    </span><span class="err">return</span><span class="w"> </span><span class="err">H1</span><span class="p">;</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">   </span><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<div class="language-less highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">LessCss</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -1484,59 +1397,59 @@ RL: right rotation on the right child, then left rotation on the root.</center> 
 <span class="normal"><a href="#__codelineno-2-11">11</a></span>
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Position</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nf">SingleRotateWithLeft</span><span class="p">(</span><span class="w"> </span><span class="n">Position</span><span class="w"> </span><span class="n">K2</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">Position</span><span class="w"> </span><span class="n">K1</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">K1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K2</span><span class="o">-&gt;</span><span class="n">Left</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="n">K2</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K1</span><span class="o">-&gt;</span><span class="n">Right</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="n">K1</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K2</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">K2</span><span class="o">-&gt;</span><span class="n">Height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Max</span><span class="p">(</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">K2</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">K2</span><span class="o">-&gt;</span><span class="n">Right</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="n">K1</span><span class="o">-&gt;</span><span class="n">Height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Max</span><span class="p">(</span><span class="w"> </span><span class="n">Height</span><span class="p">(</span><span class="w"> </span><span class="n">K1</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">K2</span><span class="o">-&gt;</span><span class="n">Height</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">K1</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span><span class="w">  </span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="w">   </span><span class="nt">ElementType</span><span class="w">  </span><span class="nt">DeleteMin</span><span class="o">(</span><span class="w"> </span><span class="nt">BinQueue</span><span class="w"> </span><span class="nt">H</span><span class="w"> </span><span class="o">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">   </span><span class="p">{</span><span class="w">    </span><span class="err">BinQueue</span><span class="w"> </span><span class="err">DeletedQueue</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="err">Position</span><span class="w"> </span><span class="err">DeletedTree,</span><span class="w"> </span><span class="err">OldRoot</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="err">ElementType</span><span class="w"> </span><span class="err">MinItem</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">Infinity</span><span class="p">;</span><span class="w">  </span><span class="c">/* the minimum item to be returned */</span><span class="w">  </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="err">int</span><span class="w"> </span><span class="err">i,</span><span class="w"> </span><span class="err">j,</span><span class="w"> </span><span class="err">MinTree</span><span class="p">;</span><span class="w"> </span><span class="c">/* MinTree is the index of the tree with the minimum item */</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="err">if</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">IsEmpty(</span><span class="w"> </span><span class="err">H</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="err">)</span><span class="w">  </span><span class="p">{</span><span class="w">  </span><span class="err">PrintErrorMessage()</span><span class="p">;</span><span class="w">  </span><span class="err">return</span><span class="w"> </span><span class="err">–Infinity</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="err">for</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">i</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">0</span><span class="p">;</span><span class="w"> </span><span class="err">i</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">MaxTrees</span><span class="p">;</span><span class="w"> </span><span class="err">i++)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c">/* Step 1: find the minimum item */</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="err">if(</span><span class="w"> </span><span class="err">H-&gt;TheTrees[i]</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"> </span><span class="err">H-&gt;TheTrees[i]-&gt;Element</span><span class="w"> </span><span class="err">&lt;</span><span class="w"> </span><span class="err">MinItem</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="err">MinItem</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">H-&gt;TheTrees[i]-&gt;Element</span><span class="p">;</span><span class="w">  </span><span class="err">MinTree</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">i</span><span class="p">;</span><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c">/* end if */</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c">/* end for-i-loop */</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="err">DeletedTree</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">H-&gt;TheTrees[</span><span class="w"> </span><span class="err">MinTree</span><span class="w"> </span><span class="err">]</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="err">H-&gt;TheTrees[</span><span class="w"> </span><span class="err">MinTree</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span><span class="w">   </span><span class="c">/* Step 2: remove the MinTree from H =&gt; H’ */</span><span class="w"> </span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="err">OldRoot</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DeletedTree</span><span class="p">;</span><span class="w">   </span><span class="c">/* Step 3.1: remove the root */</span><span class="w"> </span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="err">DeletedTree</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DeletedTree-&gt;LeftChild</span><span class="p">;</span><span class="w">   </span><span class="err">free(OldRoot)</span><span class="p">;</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="err">DeletedQueue</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">Initialize()</span><span class="p">;</span><span class="w">   </span><span class="c">/* Step 3.2: create H” */</span><span class="w"> </span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="err">DeletedQueue-&gt;CurrentSize</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">1&lt;&lt;MinTree</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="err">1</span><span class="p">;</span><span class="w">  </span><span class="c">/* 2MinTree – 1 */</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="err">for</span><span class="w"> </span><span class="err">(</span><span class="w"> </span><span class="err">j</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">MinTree</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="err">1</span><span class="p">;</span><span class="w"> </span><span class="err">j</span><span class="w"> </span><span class="err">&gt;=</span><span class="w"> </span><span class="err">0</span><span class="p">;</span><span class="w"> </span><span class="err">j</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="err">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="err">DeletedQueue-&gt;TheTrees[j]</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DeletedTree</span><span class="p">;</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="err">DeletedTree</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DeletedTree-&gt;NextSibling</span><span class="p">;</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="err">DeletedQueue-&gt;TheTrees[j]-&gt;NextSibling</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">NULL</span><span class="p">;</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c">/* end for-j-loop */</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="err">H-&gt;CurrentSize</span><span class="w">  </span><span class="err">–</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">DeletedQueue-&gt;CurrentSize</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">1</span><span class="p">;</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="err">H</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">Merge(</span><span class="w"> </span><span class="err">H,</span><span class="w"> </span><span class="err">DeletedQueue</span><span class="w"> </span><span class="err">)</span><span class="p">;</span><span class="w"> </span><span class="c">/* Step 4: merge H’ and H” */</span><span class="w"> </span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="err">return</span><span class="w"> </span><span class="err">MinItem</span><span class="p">;</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">   </span><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
-<div class="tabbed-block">
-<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="n">Position</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nf">DoubleRotateWithLeft</span><span class="p">(</span><span class="w"> </span><span class="n">Position</span><span class="w"> </span><span class="n">K3</span><span class="w"> </span><span class="p">)</span><span class="w">  </span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">K3</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingleRotateWithRight</span><span class="p">(</span><span class="w"> </span><span class="n">K3</span><span class="o">-&gt;</span><span class="n">Left</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">SingleRotateWithLeft</span><span class="p">(</span><span class="w"> </span><span class="n">K3</span><span class="w"> </span><span class="p">);</span><span class="w">  </span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span><span class="w">  </span>
-</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
-</div>
-<h3 id="13-height-of-avl-tree">1.3. Height of AVL tree<a class="headerlink" href="#13-height-of-avl-tree" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="proof">Proof<a class="headerlink" href="#proof" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Theorem</strong>: The height of an AVL tree storing <span class="arithmatex">\(N\)</span> nodes is <span class="arithmatex">\(O(\ln N)\)</span></li>
+<li><strong>Claim</strong>: A binomial queue of N elements can be built by N successive insertions in O(N) time.    </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Proof</p>
-<p><strong><em><center><span class="arithmatex">\(n(h)\)</span>: the number of nodes in an AVL tree of height <span class="arithmatex">\(h\)</span></center></em></strong> </p>
-<ul>
-<li><strong>Iteration</strong>: <span class="arithmatex">\(n(h) = 1 + n(h-1) + n(h-2)\)</span><ul>
-<li><strong>Proof</strong>: <ul>
-<li><strong>Fibonacci</strong>: <span class="arithmatex">\(F(N) = F(N-1) + F(N-2)\)</span></li>
-<li><strong><span class="arithmatex">\(F(N) \approx \frac{1}{\sqrt{5}} \left( \frac{1 + \sqrt{5}}{2} \right)^N\)</span></strong></li>
-<li><strong><span class="arithmatex">\(n(h) = F_{h+3}-1\)</span></strong></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Conclusion</strong>: <span class="arithmatex">\(h = O(\ln N)\)</span></li>
-</ul>
+<p><img alt="alt text" src="../image-69.png" /><br />
+<img alt="alt text" src="../image-70.png" /></p>
 </div>
 
 
@@ -1606,7 +1519,7 @@ RL: right rotation on the right child, then left rotation on the root.</center> 
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Advanced data structures and algorithms">
+          <a href="../Chapter_Six/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Backtracking">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1616,20 +1529,20 @@ RL: right rotation on the right child, then left rotation on the root.</center> 
                 Previous
               </span>
               <div class="md-ellipsis">
-                Advanced data structures and algorithms
+                Backtracking
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Chapter_Ten/" class="md-footer__link md-footer__link--next" aria-label="Next: NP Problems">
+          <a href="../../ALGORITHM%20IN%20GAMES/" class="md-footer__link md-footer__link--next" aria-label="Next: ALGORITHM IN GAMES">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                NP Problems
+                ALGORITHM IN GAMES
               </div>
             </div>
             <div class="md-footer__button md-icon">
