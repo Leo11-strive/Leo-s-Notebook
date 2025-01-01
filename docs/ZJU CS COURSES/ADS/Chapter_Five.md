@@ -137,7 +137,9 @@
 !!! note "Proof"   
 
     ![alt text](image-69.png)  
-    ![alt text](image-70.png)
+    ![alt text](image-70.png)  
+
+
 
        
 

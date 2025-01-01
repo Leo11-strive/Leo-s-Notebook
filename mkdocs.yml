@@ -79,7 +79,8 @@ nav:
       - Dynamic Programming: ZJU CS COURSES/ADS/Chapter_Eight.md
       - Divide and Conquer: ZJU CS COURSES/ADS/Chapter_Seven.md
       - Backtracking: ZJU CS COURSES/ADS/Chapter_Six.md
-      - Binomial Queue: ZJU CS COURSES/ADS/Chapter_Five.md
+      - Binomial Queue: ZJU CS COURSES/ADS/Chapter_Five.md  
+      - Leftist Heaps and Skewed Heaps: ZJU CS COURSES/ADS/Chapter_Four.md
     - ALGORITHM IN GAMES:  
       - ZJU CS COURSES/ALGORITHM IN GAMES/index.md
       - Introduction: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_One.md  
