@@ -649,6 +649,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#splay-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay Trees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amortized-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amortized Analysis
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1273,6 +1291,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#splay-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splay Trees
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amortized-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amortized Analysis
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1294,7 +1330,7 @@
   <h1>AVL, Splay Trees and Amortized Analysis</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 568 个字 :fontawesome-solid-code: 64 行代码 :material-image-multiple-outline: 1 张图片 :material-clock-time-two-outline: 预计阅读时间 6 分钟</p>
+<p>:material-circle-edit-outline: 约 705 个字 :fontawesome-solid-code: 64 行代码 :material-image-multiple-outline: 2 张图片 :material-clock-time-two-outline: 预计阅读时间 8 分钟</p>
 </div>
 <h2 id="1-avl-tree">1. AVL tree<a class="headerlink" href="#1-avl-tree" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
@@ -1561,6 +1597,35 @@ RL: right rotation on the right child, then left rotation on the root.</center> 
 <li><strong>Conclusion</strong>: <span class="arithmatex">\(h = O(\ln N)\)</span></li>
 </ul>
 </div>
+<h2 id="splay-trees">Splay Trees<a class="headerlink" href="#splay-trees" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Definition</strong>:  <blockquote>
+<p>Any M consecutive tree operations starting from an empty tree take at most <span class="arithmatex">\(O(MlogN)\)</span> time.  </p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">illustration</p>
+<p><img alt="alt text" src="../image-74.png" />  </p>
+</div>
+<h2 id="amortized-analysis">Amortized Analysis<a class="headerlink" href="#amortized-analysis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Aggregate analysis</strong>:  <blockquote>
+<p>Basically , worst case average  </p>
+</blockquote>
+</li>
+<li><strong>Accounting method</strong>:  <blockquote>
+<p>When an operation’s amortized cost <span class="arithmatex">\(c_i^'\)</span> exceeds its actual cost  <span class="arithmatex">\(c_i\)</span>, we assign the difference to specific objects in the data structure as credit. Credit can help pay for later operations whose amortized cost is less than their actual cost.   </p>
+</blockquote>
+</li>
+<li><strong>Potential method</strong>:  <blockquote>
+<p>The potential method is a way to determine the amortized cost of an operation<br />
+<span class="arithmatex">\(c_i^' = c_i + \Phi(D_i) - \Phi(D_{i-1})\)</span><br />
+<span class="arithmatex">\(\sum_{i=1}^{n}c_i^' = \sum_{i=1}^{n}c_i + \Phi(D_n) - \Phi(D_0)\)</span><br />
+The main purpose is to use <span class="arithmatex">\(\Phi(D_i)\)</span> to eliminate some unknown factors in the actual cost of the operation.  </p>
+</blockquote>
+</li>
+</ul>
 
 
 
