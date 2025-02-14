@@ -110,7 +110,10 @@ nav:
       - Interpolation: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Three.md  
       - Numerical Differentation and Integration: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Four.md  
       - Direct Methods For Sovling Linear Systems: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Six.md
-      - Initial-Value Problems for Ordinary Differential Equations: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Five.md
+      - Initial-Value Problems for Ordinary Differential Equations: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Five.md  
+    - OBJECT ORIENTED PROGRAMMING IN CPP:  
+      - ZJU CS COURSES/OOP/index.md  
+      - Class One: ZJU CS COURSES/OOP/Class_One.md
   - EXTRA CS COURSES:  
     - EXTRA/index.md  
     - MACHINE LEARNING:  
