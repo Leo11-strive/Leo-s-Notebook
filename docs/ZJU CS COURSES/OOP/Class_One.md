@@ -1,5 +1,36 @@
-## Intro  
-* The first programme  
+## Intro    
+* Buzzword  
+> encapsulation  封装
+> inheritance 继承  
+> polymorphism 多态  
+> overriding 覆盖  
+> interface 接口  
+> cohesion 内聚  
+> coupling 耦合  
+> collection classes 容器类  
+> template 模板  
+> responsibility-driven design 责任驱动设计   
+   
+* Book reference: Thinking in C++    
+
+* The C language  
+> Efficient programs  
+> direct access to machine  
+> flexible   
+  
+  
+* C++ improvements  
+> data abstraction  
+> access control  
+> initialization & cleanup  
+> function overloading  
+> stream for I/O    
+
+  
+
+
+
+* The first program   
 ``` c++  
 
     #include <iostream>  
@@ -13,7 +44,9 @@
 ```    
 * iostream is a header file name without a .h suffix. iostream.h happens to exist, yet it is an outdated version  
 * `<<`: inserter  
-* `cin >> variable`: extractor  
+* `cin >> variable`: extractor    
+* use `;` to connnect the shell commands  
+
 
 ## Format output  
 * `#include <iomanip>`: manipulators are special functions that can be included in the I/O statement to alter the format parameters of a stream.  

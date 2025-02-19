@@ -114,7 +114,10 @@ nav:
     - OBJECT ORIENTED PROGRAMMING IN CPP:  
       - ZJU CS COURSES/OOP/index.md  
       - Class One: ZJU CS COURSES/OOP/Class_One.md
-      - Class Two: ZJU CS COURSES/OOP/Class_Two.md
+      - Class Two: ZJU CS COURSES/OOP/Class_Two.md  
+    - COMPUTER ARCHITECTURE:  
+      - ZJU CS COURSES/COMPUTER ARCHITECTURE/index.md  
+      - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md
   - EXTRA CS COURSES:  
     - EXTRA/index.md  
     - MACHINE LEARNING:  
