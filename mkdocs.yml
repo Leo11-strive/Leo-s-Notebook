@@ -117,7 +117,11 @@ nav:
       - Class Two: ZJU CS COURSES/OOP/Class_Two.md  
     - COMPUTER ARCHITECTURE:  
       - ZJU CS COURSES/COMPUTER ARCHITECTURE/index.md  
-      - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md
+      - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md  
+    - DATABASE SYSTEMS:  
+      - ZJU CS COURSES/DATABASE SYSTEMS/index.md  
+      - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md
+
   - EXTRA CS COURSES:  
     - EXTRA/index.md  
     - MACHINE LEARNING:  
