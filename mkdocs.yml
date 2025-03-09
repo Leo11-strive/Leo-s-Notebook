@@ -120,7 +120,12 @@ nav:
       - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md  
     - DATABASE SYSTEMS:  
       - ZJU CS COURSES/DATABASE SYSTEMS/index.md  
-      - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md
+      - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md  
+    - COMPUTER GRAPHICS:  
+      - ZJU CS COURSES/COMPUTER GRAPHICS/index.md  
+      - Introduction: ZJU CS COURSES/COMPUTER GRAPHICS/Class_One.md  
+      - Class Two: ZJU CS COURSES/COMPUTER GRAPHICS/Class_Two.md  
+      - OpenGL: ZJU CS COURSES/COMPUTER GRAPHICS/OpenGL.md
 
   - EXTRA CS COURSES:  
     - EXTRA/index.md  
