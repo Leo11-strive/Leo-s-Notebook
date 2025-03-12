@@ -312,12 +312,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../EXTRA/" class="md-tabs__link">
+        <a href="../../../self_learning/" class="md-tabs__link">
           
   
     
   
-  EXTRA CS COURSES
+  SELF LEARNING
 
         </a>
       </li>
@@ -1085,6 +1085,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#322-basic-schema-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Basic Schema Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-basic-structure-of-sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Basic Structure of SQL Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Basic Structure of SQL Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-queries-on-a-single-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 Queries on a Single Relation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-queries-on-multiple-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 Queries on Multiple Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification of the Database
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1185,8 +1236,6 @@
       
         
       
-        
-      
     
     
       
@@ -1203,11 +1252,11 @@
         
   
   
-    <a href="../../../EXTRA/" class="md-nav__link">
+    <a href="../../../self_learning/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    EXTRA CS COURSES
+    SELF LEARNING
     
   </span>
   
@@ -1279,6 +1328,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#322-basic-schema-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Basic Schema Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-basic-structure-of-sql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Basic Structure of SQL Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Basic Structure of SQL Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-queries-on-a-single-relation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 Queries on a Single Relation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-queries-on-multiple-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 Queries on Multiple Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modification of the Database
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1305,7 +1405,7 @@
 
 <h1 id="introduction-to-sql">Introduction to SQL<a class="headerlink" href="#introduction-to-sql" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 326 个字 :material-clock-time-two-outline: 预计阅读时间 3 分钟</p>
+<p>:material-circle-edit-outline: 约 1279 个字 :fontawesome-solid-code: 94 行代码 :material-clock-time-two-outline: 预计阅读时间 14 分钟</p>
 </div>
 <ul>
 <li><strong>SQL</strong> : define the structure of the data, modify data in the database, and specify security constraints.</li>
@@ -1364,6 +1464,474 @@ modify tuples in the database.  </li>
 <p class="admonition-title">Note</p>
 <p><center>As a result, even if the same value “Avi” is stored in the attributes A and B above, a comparison A=B may return false. It is recommended to always use the varchar type instead of the char type to avoid these problems.<center>  </p>
 </div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><center>SQL also provides the nvarchar type to store multilingual data using the Unicode representation. However, many databases allow Unicode (in the UTF-8 representation) to be stored even in varchar types.<center>  </p>
+</div>
+<h3 id="322-basic-schema-definition">3.2.2 Basic Schema Definition<a class="headerlink" href="#322-basic-schema-definition" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>create table</strong>: We define an SQL relation by using the create table command.  </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">code</p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">department</span><span class="w">  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">   </span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">dept_name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w">  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">building</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span><span class="w">  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="n">budget</span><span class="w"> </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="w">  </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">primary</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">   </span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<ul>
+<li><strong>integrity constraints</strong>:  <ul>
+<li><em>primary key</em>: the primary -key attributes</li>
+<li><em>foreign key + references</em>:  Some
+  database systems, including MySQL, require an alternative syntax, “foreign key (dept name) references department(dept name)”, where the referenced attributes in the referenced table are listed explicitly.    </li>
+<li><em>not null</em>: <code>&lt;attribute&gt; &lt;type&gt; not null</code> he constraint excludes the null value from the domain of that attribute.   </li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p><center>SQL prevents any update to the database that violates an integrity constraint. If violates, SQL flags an error and prevents the update.<center>  </p>
+</div>
+<ul>
+<li><strong><code>drop table</code></strong>: delete a relation</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Comparison</p>
+<p><center> <code>drop table r</code> deletes the whole schema, including all tuples in the relation r. <code>delete from r</code> deletes all the tuples, yet retains relation r<center>  </p>
+</div>
+<ul>
+<li><strong><code>alter table</code></strong>: add attributes to an existing relation. All tuples in the relation are assigned null as the value for the new attribute. <code>alter table r add A D;</code> A is the name of the attribute to be added, and D is the type of the added attribute. Thus, <code>alter table r drop A;</code> deletes attribute A from relation r. To be aware, many database systems do not support dropping of attributes.  </li>
+</ul>
+<hr />
+<h2 id="33-basic-structure-of-sql-queries">3.3 Basic Structure of SQL Queries<a class="headerlink" href="#33-basic-structure-of-sql-queries" title="Permanent link">&para;</a></h2>
+<p><strong>The basic structure of an SQL query consists of three clauses: select, from, and where. A query takes as its input the relations listed in the from clause, operates on them as specified in the where and select clauses, and then produces a relation as the result.</strong>  </p>
+<h3 id="331-queries-on-a-single-relation">3.3.1 Queries on a Single Relation<a class="headerlink" href="#331-queries-on-a-single-relation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>select distinct</strong>: In practice, duplicate elimination is time-consuming. Therefore, SQL allows duplicates in database relations as well as in the results of SQL expressions.1 Thus, the preceding SQL query lists each department name once for every tuple in which it appears in the instructor relation.  </li>
+<li>
+<p><strong>select all</strong>: SQL allows us to use the keyword all to specify explicitly that duplicates are not removed  </p>
+</li>
+<li>
+<p>The select clause may also contain arithmetic expressions involving the operators <code>+</code>,<code>−</code>, <code>∗</code>, and <code>/</code> operating on constants or attributes of tuples.  </p>
+</li>
+<li>
+<p><strong>where</strong>: SQL allows the use of the logical connectives and, or, and not in the where clause.
+The operands of the logical connectives can be expressions involving the comparison
+operators &lt;, &lt;=, &gt;, &gt;=, =, and &lt;&gt;. SQL allows us to use the comparison operators
+to compare strings and arithmetic expressions, as well as special types, such as date types.  </p>
+</li>
+</ul>
+<h3 id="332-queries-on-multiple-relations">3.3.2 Queries on Multiple Relations<a class="headerlink" href="#332-queries-on-multiple-relations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Natural Join</strong>:  <br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">course_id</span><span class="w">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">natural</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">teaches</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<span class="arithmatex">\(instructor \bowtie teaches\)</span>    </p>
+<blockquote>
+<p>Danger in natural join<br />
+natural join may provide more constraints </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Rename</strong>:   </p>
+<blockquote>
+<p>the <code>as</code> clause  </p>
+</blockquote>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">as in select</label><label for="__tabbed_2_2">as in from</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">select</span><span class="w"> </span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span><span class="o">/</span><span class="mi">12</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">monthly_salary</span><span class="w">  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">name</span><span class="w">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instuctor</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">S</span><span class="w">  </span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">salary</span><span class="o">&gt;</span><span class="n">S</span><span class="p">.</span><span class="n">salary</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">dept_name</span><span class="o">=</span><span class="s1">&#39;Comp. Sci.&#39;</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<p><strong>Keyword as is optional and may be omitted.</strong>  </p>
+<blockquote>
+<p>instructor as T = instructor T  <br />
+Keyword as must be omitted in Oracle  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>string operations</strong>  </p>
+<blockquote>
+<p>SQL includes a string-matching operator for comparisons on character strings.  The operator “like” uses patterns that are described using two special characters:
+   * <code>%</code>: matches any substring of zero or more characters.<br />
+   * <code>_</code>: matches any single character.  </p>
+</blockquote>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">example</label><label for="__tabbed_3_2">when we want to match the character % or _</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w">    </span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;%dar%&#39;</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w">  </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">&#39;%\%%&#39;</span><span class="w"> </span><span class="k">escape</span><span class="w"> </span><span class="s1">&#39;\&#39;</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Ordering the display of tuples</strong>:  </li>
+<li><strong>order by</strong>: in alphabetical order  </li>
+</ul>
+<p><div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w">  </span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+   * We may specify desc for descending order or asc for ascending order, for each attribute; ascending order is the default. <code>order by name desc</code><br />
+   * can sort on multiple attributes  <br />
+<code>order by dept_name, name</code>    </p>
+<ul>
+<li>
+<p><strong>Specific where clause predicates</strong>  </p>
+<blockquote>
+<p><strong>between</strong><br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w"> </span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">where</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">90000</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">100000</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+tuple comparison<br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">course_id</span><span class="w">  </span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="p">,</span><span class="w"> </span><span class="n">teaches</span><span class="w">  </span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">instructor</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">dept_name</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">teaches</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Biology&#39;</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+</blockquote>
+</li>
+<li>
+<p><strong>set operations</strong>  </p>
+<blockquote>
+<p><strong>union</strong><br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">sem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">Fall</span><span class="err">’</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="p">)</span><span class="w"> </span><span class="k">union</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">sem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">‘</span><span class="n">Spring</span><span class="err">’</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2010</span><span class="p">)</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<strong>intersect</strong><br />
+<strong>except</strong><br />
+Each of the above operations automatically eliminates duplicates</p>
+</blockquote>
+</li>
+<li>
+<p>To retain all duplicates use the corresponding multiset versions union all, intersect all and except all.  </p>
+</li>
+<li>
+<p><strong>Null Values</strong>:  </p>
+<blockquote>
+<ul>
+<li>It is possible for tuples to have a null value, denoted by null, for some of their attributes</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>
+<p>The result of any arithmetic expression involving null is null</p>
+</li>
+<li>
+<p>The predicate  is null can be used to check for null values.</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>(unknown or true) = true, (unknown or false) = unknown, (unknown or unknown) = unknown</strong>  </li>
+<li><strong>(unknown and true) = unknown, (unknown and false) = false, (unknown and unknown) = unknown</strong>  </li>
+<li><strong>(not unknown) = unknown</strong>  </li>
+<li><code>P is unknown</code> evaluates to true if predicate P evaluates to unknown.  </li>
+<li>
+<p>Result of where clause predicate is treated as false if it evaluates to unknown  </p>
+</li>
+<li>
+<p><strong>Aggregate Functions</strong>:  </p>
+<blockquote>
+<p><strong>group by</strong><br />
+<strong>having</strong>: after group by  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>NULL</strong>:  </p>
+<blockquote>
+<p>all aggregate operations except count(*) ignore tuples with null values on the aggregated attribute.  </p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>What if collection has only null values?<br />
+* count(*) returns 0 
+* all other aggregates return null   </p>
+</blockquote>
+<ul>
+<li><strong>Nested Subqueries</strong>:   </li>
+</ul>
+<blockquote>
+<ul>
+<li>A subquery is a select-from-where expression that is nested within another query.  <br />
+<strong>in</strong>:<br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">course_id</span><span class="w">  </span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w">  </span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Fall&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">course_id</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Spring&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2010</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>some</strong>:  </li>
+</ul>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w">  </span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">where</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">some</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Biology&#39;</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<blockquote>
+<p>=some is equivalent to the keyword in <br />
+yet not some is not equalvalent to not in  </p>
+</blockquote>
+<ul>
+<li>
+<p><strong>all</strong>:<br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w">  </span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">where</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">all</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Biology&#39;</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+<blockquote>
+<p>salary of the instructor is greater than all the salaries of instructors in the Biology department.<br />
+*!all is equalvalent to !in    </p>
+</blockquote>
+</li>
+<li>
+<p><strong>test for empty relations</strong>  </p>
+<blockquote>
+<ul>
+<li><strong>exists</strong>:<br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">advisor</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">advisor</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">instructor</span><span class="p">.</span><span class="n">ID</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+in a nested subquery, an attribute can be fetched from the outer query.  <br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">course_id</span><span class="w">  </span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">S</span><span class="w">  </span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="o">=</span><span class="s1">&#39;Fall&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="o">=</span><span class="mi">2009</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">semester</span><span class="o">=</span><span class="s1">&#39;Spring&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">year</span><span class="o">=</span><span class="mi">2010</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">course_id</span><span class="o">=</span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>nstructor.ID  and S.course_id  are attributes that are not in the relation of the subquery, they are called correlation variables     </li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><strong>not exists to realize division</strong><br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">select</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">name</span><span class="w">  </span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">from</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">S</span><span class="w">  </span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">where</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">exists</span><span class="p">((</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="o">=</span><span class="s1">&#39;Biology&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">except</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">course_id</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="p">));</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>test for absence of duplicate tuples</strong><br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">select</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span><span class="w">  </span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">from</span><span class="w"> </span><span class="n">course</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">T</span><span class="w">  </span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">where</span><span class="w"> </span><span class="k">unique</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">course_id</span><span class="w">  </span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="k">from</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">R</span><span class="w">  </span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="k">where</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="n">course_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">course_id</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">R</span><span class="p">.</span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2009</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+<blockquote>
+<p>evaluates to 'true' on an empty set  </p>
+</blockquote>
+</li>
+<li>
+<p><strong>subqueries in the from clause</strong><br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="n">avg_salary</span><span class="w">  </span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">from</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_salary</span><span class="w">  </span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">      </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">      </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">dept_name</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="k">where</span><span class="w"> </span><span class="n">avg_salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">42000</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>with clause</strong>:  </p>
+<blockquote>
+<p>The with clause provides a way of defining a temporary view whose definition is available only to the query in which the with clause occurs. </p>
+</blockquote>
+</li>
+</ul>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">with</span><span class="w"> </span><span class="n">max_budget</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">budget</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">)</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="n">max_budget</span><span class="w">  </span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="k">where</span><span class="w"> </span><span class="n">department</span><span class="p">.</span><span class="n">budget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max_budget_value</span><span class="p">;</span><span class="w">   </span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><strong>complex queries using with clause</strong>:<br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">with</span><span class="w"> </span><span class="n">dept_total</span><span class="p">(</span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">  </span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">dept_name</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="n">dept_total_avg</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w">  </span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dept_total</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="w">  </span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="k">from</span><span class="w"> </span><span class="n">dept_total</span><span class="p">,</span><span class="w"> </span><span class="n">dept_total_avg</span><span class="w">  </span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="k">where</span><span class="w"> </span><span class="n">dept_total</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">dept_total_avg</span><span class="p">.</span><span class="n">value</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>scalar subquery</strong>:<br />
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">select</span><span class="w"> </span><span class="n">dept_name</span><span class="w">  </span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="w">  </span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="k">where</span><span class="w"> </span><span class="n">budget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">max</span><span class="p">(</span><span class="n">budget</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">department</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></p>
+</li>
+</ul>
+<h3 id="modification-of-the-database">Modification of the Database<a class="headerlink" href="#modification-of-the-database" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>deletion</strong>:  </li>
+</ul>
+<blockquote>
+<p>delete from<br />
+delete from instructor where dept_name='Finance';  </p>
+</blockquote>
+<ul>
+<li><strong>insert one row</strong>:  </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">add a new tuple</label><label for="__tabbed_4_2">add a new tuple to student with tot_creds set to null</label><label for="__tabbed_4_3">add all instructors to the instructor table</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">course</span><span class="w">  </span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="k">values</span><span class="p">(</span><span class="s1">&#39;CS-437&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Database Systems&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Comp. Sci.&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">student</span><span class="w">  </span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="k">values</span><span class="p">(</span><span class="s1">&#39;3003&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Green&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Finance&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">instructor_temp</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+* The select from where statement is evaluated fully before any of its results are inserted into the relation  </p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>updates</strong>  </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">set</label><label for="__tabbed_5_2">set multiple attributes</label><label for="__tabbed_5_3">case</label><label for="__tabbed_5_4">updates with scalar subqueries</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">update</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="k">set</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">10</span><span class="w">  </span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Physics&#39;</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">update</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="k">set</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Finance&#39;</span><span class="w">  </span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="k">where</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Physics&#39;</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="k">update</span><span class="w"> </span><span class="n">instructor</span><span class="w">  </span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="k">set</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">case</span><span class="w">  </span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">                </span><span class="k">when</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100000</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">10</span><span class="w">  </span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">                </span><span class="k">else</span><span class="w"> </span><span class="n">salary</span><span class="o">*</span><span class="mi">1</span><span class="p">.</span><span class="mi">03</span><span class="w"> </span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">             </span><span class="k">end</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="k">update</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="n">S</span><span class="w">  </span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">  </span><span class="k">set</span><span class="w"> </span><span class="n">tot_cred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">select</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">credits</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">                  </span><span class="k">from</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="k">natural</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">course</span><span class="w"> </span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">                  </span><span class="k">where</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">ID</span><span class="o">=</span><span class="n">takes</span><span class="p">.</span><span class="n">ID</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">takes</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">takes</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>

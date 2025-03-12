@@ -18,7 +18,7 @@
     
     
       
-        <title>Notes - Leo Li's Notebook</title>
+        <title>Gcc - Leo Li's Notebook</title>
       
     
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lecture-3-control" class="md-skip">
+        <a href="#gcc" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notes
+              Gcc
             
           </span>
         </div>
@@ -286,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ZJU%20CS%20COURSES/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -306,12 +306,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../self_learning/" class="md-tabs__link">
           
   
     
   
-  EXTRA CS COURSES
+  SELF LEARNING
 
         </a>
       </li>
@@ -431,7 +431,7 @@
         
   
   
-    <a href="../../../ZJU%20CS%20COURSES/" class="md-nav__link">
+    <a href="../../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -466,8 +466,6 @@
       
         
       
-        
-      
     
     
       
@@ -484,11 +482,11 @@
         
   
   
-    <a href="../../" class="md-nav__link">
+    <a href="../../../self_learning/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    EXTRA CS COURSES
+    SELF LEARNING
     
   </span>
   
@@ -531,9 +529,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lecture-3-control" class="md-nav__link">
+  <a href="#gcc" class="md-nav__link">
     <span class="md-ellipsis">
-      Lecture 3: Control
+      gcc
     </span>
   </a>
   
@@ -558,49 +556,15 @@
   
 
 
-  <h1>Notes</h1>
+  <h1>Gcc</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 38 个字 :fontawesome-solid-code: 16 行代码 :material-clock-time-two-outline: 预计阅读时间 1 分钟</p>
+<p>:material-circle-edit-outline: 约 18 个字 :material-clock-time-two-outline: 预计阅读时间不到 1 分钟</p>
 </div>
-<h2 id="lecture-3-control">Lecture 3: Control<a class="headerlink" href="#lecture-3-control" title="Permanent link">&para;</a></h2>
+<h2 id="gcc">gcc<a class="headerlink" href="#gcc" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong>doctest</strong>: a way to test your code by writing examples in the docstring of the function.<br />
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>  
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the square of x.  </span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="sd">    &gt;&gt;&gt; square(3)  </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sd">    9  </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">    &gt;&gt;&gt; square(2)  </span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">    4  </span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sd">    &quot;&quot;&quot;</span>  
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>  
-</span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>doctest<span class="w"> </span>-v<span class="w"> </span>file.py<span class="w">  </span>
-</span></code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>default arguments</strong>:<br />
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>  
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>  
-</span></code></pre></div></td></tr></table></div></p>
-</li>
-</ul>
-<blockquote>
-<p>indicates that if the argument y is not transmitted, it will be 3.  </p>
-</blockquote>
-<ul>
-<li><strong>change text to interactive codes</strong>:<br />
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w">    </span>python3<span class="w"> </span>-i<span class="w"> </span>file.py<span class="w">  </span>
-</span></code></pre></div></td></tr></table></div></li>
+<li><code>--save-temps</code> to save the intermediate files while compiling  </li>
+<li><code>gcc -c</code> to compile without linking, generating .o files.  </li>
 </ul>
 
 

@@ -18,7 +18,7 @@
     
     
       
-        <title>Pytorch101 - Leo Li's Notebook</title>
+        <title>Make - Leo Li's Notebook</title>
       
     
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tensor-index" class="md-skip">
+        <a href="#how-to-write-a-makefile" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pytorch101
+              Make
             
           </span>
         </div>
@@ -286,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ZJU%20CS%20COURSES/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -306,12 +306,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../self_learning/" class="md-tabs__link">
           
   
     
   
-  EXTRA CS COURSES
+  SELF LEARNING
 
         </a>
       </li>
@@ -431,7 +431,7 @@
         
   
   
-    <a href="../../../ZJU%20CS%20COURSES/" class="md-nav__link">
+    <a href="../../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -466,8 +466,6 @@
       
         
       
-        
-      
     
     
       
@@ -484,11 +482,11 @@
         
   
   
-    <a href="../../" class="md-nav__link">
+    <a href="../../../self_learning/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    EXTRA CS COURSES
+    SELF LEARNING
     
   </span>
   
@@ -531,9 +529,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tensor-index" class="md-nav__link">
+  <a href="#how-to-write-a-makefile" class="md-nav__link">
     <span class="md-ellipsis">
-      Tensor Index
+      How to write a Makefile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fake-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      fake targets
     </span>
   </a>
   
@@ -558,138 +565,113 @@
   
 
 
-  <h1>Pytorch101</h1>
+  <h1>Make</h1>
 
-<h2 id="tensor-index">Tensor Index<a class="headerlink" href="#tensor-index" title="Permanent link">&para;</a></h2>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p>:material-circle-edit-outline: 约 147 个字 :fontawesome-solid-code: 31 行代码 :material-clock-time-two-outline: 预计阅读时间 2 分钟</p>
+</div>
+<h2 id="how-to-write-a-makefile">How to write a Makefile<a class="headerlink" href="#how-to-write-a-makefile" title="Permanent link">&para;</a></h2>
 <ul>
-<li>the same with lists while indexing   </li>
 <li>
-<p>using an integer will reduce the rank by one, and using a length-one slice will keep the same rank.<br />
-<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]])</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Original tensor&#39;</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">row_r1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>    <span class="c1"># Rank 1 view of the second row of a</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">row_r2</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># Rank 2 view of the second row of a</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Two ways of accessing a single row:&#39;</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">row_r1</span><span class="p">,</span> <span class="n">row_r1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">row_r2</span><span class="p">,</span> <span class="n">row_r2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># We can make the same distinction when accessing columns:</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="o">&lt;</span><span class="n">div</span> <span class="n">markdown</span><span class="o">=</span><span class="s2">&quot;1&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;margin-top: -30px; font-size: 0.75em; opacity: 0.7;&quot;</span><span class="o">&gt;</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">:</span><span class="n">material</span><span class="o">-</span><span class="n">circle</span><span class="o">-</span><span class="n">edit</span><span class="o">-</span><span class="n">outline</span><span class="p">:</span> <span class="n">约</span> <span class="mi">62</span> <span class="n">个字</span> <span class="p">:</span><span class="n">fontawesome</span><span class="o">-</span><span class="n">solid</span><span class="o">-</span><span class="n">code</span><span class="p">:</span> <span class="mi">63</span> <span class="n">行代码</span> <span class="p">:</span><span class="n">material</span><span class="o">-</span><span class="n">clock</span><span class="o">-</span><span class="n">time</span><span class="o">-</span><span class="n">two</span><span class="o">-</span><span class="n">outline</span><span class="p">:</span> <span class="n">预计阅读时间</span> <span class="mi">1</span> <span class="n">分钟</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="n">col_r1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">col_r2</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Two ways of accessing a single column:&#39;</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">col_r1</span><span class="p">,</span> <span class="n">col_r1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">col_r2</span><span class="p">,</span> <span class="n">col_r2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>   
-</span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Original<span class="w"> </span>tensor
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>tensor<span class="o">([[</span><span class="w"> </span><span class="m">1</span>,<span class="w">  </span><span class="m">2</span>,<span class="w">  </span><span class="m">3</span>,<span class="w">  </span><span class="m">4</span><span class="o">]</span>,
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="m">5</span>,<span class="w">  </span><span class="m">6</span>,<span class="w">  </span><span class="m">7</span>,<span class="w">  </span><span class="m">8</span><span class="o">]</span>,
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">10</span>,<span class="w"> </span><span class="m">11</span>,<span class="w"> </span><span class="m">12</span><span class="o">]])</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>Two<span class="w"> </span>ways<span class="w"> </span>of<span class="w"> </span>accessing<span class="w"> </span>a<span class="w"> </span>single<span class="w"> </span>row:
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>tensor<span class="o">([</span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="m">8</span><span class="o">])</span><span class="w"> </span>torch.Size<span class="o">([</span><span class="m">4</span><span class="o">])</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>tensor<span class="o">([[</span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="m">8</span><span class="o">]])</span><span class="w"> </span>torch.Size<span class="o">([</span><span class="m">1</span>,<span class="w"> </span><span class="m">4</span><span class="o">])</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>Two<span class="w"> </span>ways<span class="w"> </span>of<span class="w"> </span>accessing<span class="w"> </span>a<span class="w"> </span>single<span class="w"> </span>column:
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>tensor<span class="o">([</span><span class="w"> </span><span class="m">2</span>,<span class="w">  </span><span class="m">6</span>,<span class="w"> </span><span class="m">10</span><span class="o">])</span><span class="w"> </span>torch.Size<span class="o">([</span><span class="m">3</span><span class="o">])</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>tensor<span class="o">([[</span><span class="w"> </span><span class="m">2</span><span class="o">]</span>,
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="m">6</span><span class="o">]</span>,
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="o">[</span><span class="m">10</span><span class="o">]])</span><span class="w"> </span>torch.Size<span class="o">([</span><span class="m">3</span>,<span class="w"> </span><span class="m">1</span><span class="o">])</span><span class="w">  </span>
-</span></code></pre></div></td></tr></table></div></p>
+<p>sum: objective + main.o+ sum.o  </p>
 </li>
 <li>
-<p>Slicing a tensor returns a view into the same data, so modifying it will also modify the original tensor. To avoid this, you can use the clone() method to make a copy of a tensor.  </p>
+<p>gcc main.o sum.o -o sum     </p>
+</li>
+<li>
+<p>main.o: main.c  sum.h   </p>
+<p>gcc -c main.c //-c only compile without linking </p>
 </li>
 </ul>
-<p><div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># Create a tensor, a slice, and a clone of a slice</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:]</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Before mutating:&#39;</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># a[0, 1] and b[0] point to the same element</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>     <span class="c1"># b[1] and a[0, 2] point to the same element</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">40</span>     <span class="c1"># c is a clone, so it has its own data</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">After mutating:&#39;</span><span class="p">)</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div>
-<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Before<span class="w"> </span>mutating:
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>tensor<span class="o">([[</span><span class="m">1</span>,<span class="w"> </span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">]</span>,
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="o">[</span><span class="m">5</span>,<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="m">8</span><span class="o">]])</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>tensor<span class="o">([</span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">])</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>tensor<span class="o">([</span><span class="m">2</span>,<span class="w"> </span><span class="m">3</span>,<span class="w"> </span><span class="m">4</span><span class="o">])</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>After<span class="w"> </span>mutating:
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>tensor<span class="o">([[</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">20</span>,<span class="w"> </span><span class="m">30</span>,<span class="w">  </span><span class="m">4</span><span class="o">]</span>,
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="m">5</span>,<span class="w">  </span><span class="m">6</span>,<span class="w">  </span><span class="m">7</span>,<span class="w">  </span><span class="m">8</span><span class="o">]])</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>tensor<span class="o">([</span><span class="m">20</span>,<span class="w"> </span><span class="m">30</span>,<span class="w">  </span><span class="m">4</span><span class="o">])</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>tensor<span class="o">([</span><span class="w"> </span><span class="m">2</span>,<span class="w">  </span><span class="m">3</span>,<span class="w"> </span><span class="m">40</span><span class="o">])</span><span class="w">  </span>
+<p>sum.o: sum.c sum.h  </p>
+<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>gcc -c sum.c
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p>make file only compiles necessary files.  </p>
+</li>
+<li>
+<p>a simpler version<br />
+<div class="language-makefile highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nf">sum</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>.<span class="n">o</span> <span class="n">sum</span>.<span class="n">o</span>  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span>gcc<span class="w"> </span>main.o<span class="w"> </span>sum.o<span class="w"> </span>-o<span class="w"> </span>sum<span class="w">  </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nf">main.o</span><span class="o">:</span><span class="n">sum</span>.<span class="n">h</span>  
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nv">sum.o</span><span class="o">=</span>sum.h<span class="w">  </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nf">%.o</span><span class="o">:</span>%.<span class="n">c</span>  
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span>gcc<span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w">  </span>//universally<span class="w"> </span>compile<span class="w"> </span>all<span class="w"> </span>.c<span class="w"> </span>files
 </span></code></pre></div></td></tr></table></div></p>
+</li>
+<li><code>$&lt;</code> is the first prerequisite, $ is variable. <br />
+<div class="language-makefile highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">OBJS</span><span class="o">=</span>main.o<span class="w"> </span>sum.o<span class="w">  </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nf">sum</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">OBJS</span><span class="k">)</span>  
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span>gcc<span class="w"> </span><span class="k">$(</span>OBJS<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span>sum<span class="w">  </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nf">$(OBJS)</span><span class="o">:</span><span class="w"> </span><span class="n">sum</span>.<span class="n">h</span>  
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nf">%.o</span><span class="o">:</span>%.<span class="n">c</span>  
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span>gcc<span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-makefile highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nv">OBJS</span><span class="o">=</span>main.o<span class="w"> </span>sum.o<span class="w">  </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nf">sum</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">OBJS</span><span class="k">)</span> 
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Linking </span>$<span class="s2">^ to </span><span class="nv">$@</span><span class="s2">&quot;</span><span class="w"> </span>//@<span class="w"> </span>not<span class="w"> </span>to<span class="w"> </span>show<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span>gcc<span class="w"> </span>$^<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span>//<span class="w"> </span><span class="nv">$@</span><span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>target<span class="w"> </span>file,<span class="w"> </span>$^<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>prerequisites.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nf">$(OBJS)</span><span class="o">:</span><span class="w"> </span><span class="n">sum</span>.<span class="n">h</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nf">%.o</span><span class="o">:</span>%.<span class="n">c</span>    
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span>gcc<span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-makefile highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nf">clean</span><span class="o">:</span><span class="w">  </span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span>sum<span class="w"> </span><span class="k">$(</span>OBJS<span class="k">)</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div></li>
+<li><code>make clean</code> to clean the files.  </li>
+<li><code>-Wall</code> to show all warnings.  </li>
+</ul>
+<h2 id="fake-targets">fake targets<a class="headerlink" href="#fake-targets" title="Permanent link">&para;</a></h2>
+<ul>
+<li>'clean' is a fake target. </li>
+<li>make will find the first target to compile  </li>
+</ul>
+<div class="language-makefile highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Makefile</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nv">OBJS</span><span class="o">=</span>main.o<span class="w"> </span>sum.o
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nf">all</span><span class="o">:</span><span class="w"> </span><span class="n">sum</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nf">sum</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">OBJS</span><span class="k">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span>gcc<span class="w"> </span>$^<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nf">$(OBJS)</span><span class="o">:</span><span class="w"> </span><span class="n">sum</span>.<span class="n">h</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nf">%.o</span><span class="o">:</span>%.<span class="n">c</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span>gcc<span class="w"> </span>-c<span class="w"> </span>$&lt;
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nf">clean</span><span class="o">:</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span>sum<span class="w"> </span><span class="k">$(</span>OBJS<span class="k">)</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>the '%.h' file can be omitted, but to make the '.h' program recompile when changed, it is necessary to add the '.h' file.</li>
+<li>run the program by <code>make</code> is also feasible.   </li>
+<li><code>$ARGS$</code>: make ARGS="1 2 3" can do input    </li>
+<li>通过宏改变程序中参数    </li>
+<li>'-MMD' in gcc, to generate the dependency file automatically, generate the '.d' file, with dependencies inside it  </li>
+<li>'-include DEPS=$(OBJS:.o=.d)' to include the '.d' file    </li>
+</ul>
 
 
 
