@@ -120,22 +120,20 @@ nav:
       - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md  
     - DATABASE SYSTEMS:  
       - ZJU CS COURSES/DATABASE SYSTEMS/index.md  
-      - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md  
+      - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md    
+      - Relational Algebra: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Two.md  
+      - Introduction to SQL: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Three.md
     - COMPUTER GRAPHICS:  
       - ZJU CS COURSES/COMPUTER GRAPHICS/index.md  
       - Introduction: ZJU CS COURSES/COMPUTER GRAPHICS/Class_One.md  
       - Class Two: ZJU CS COURSES/COMPUTER GRAPHICS/Class_Two.md  
       - OpenGL: ZJU CS COURSES/COMPUTER GRAPHICS/OpenGL.md
 
-  - EXTRA CS COURSES:  
-    - EXTRA/index.md  
-    - MACHINE LEARNING:  
-      - EXTRA/MACHINE LEARNING/index.md  
-      - Intro: EXTRA/MACHINE LEARNING/Week_One.md  
-    - GAMES 101:  
-      - EXTRA/GAMES101/index.md
-      - Introduction: EXTRA/GAMES101/Course_One.md
-    
+  - SELF LEARNING:    
+    - self_learning/index.md
+    - DEEP LEARNING FOR COMPUTER VISION:   
+      - self_learning/DEEP LEARNING FOR COMPUTER VISION/index.md  
+      - Convolutional Networks: self_learning/DEEP LEARNING FOR COMPUTER VISION/Lecture_7.md
 repo_url: https://github.com/Leo11-strive/Leo-s-Notebook
 repo_name: Leo Li's Notebook  
 markdown_extensions:
