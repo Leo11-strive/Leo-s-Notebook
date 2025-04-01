@@ -365,6 +365,78 @@ glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 ```cpp  
 glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);  
 ```  
+  
+## Shaders   
+
+* Shaders always begin with a version declaration, followed by a list of input and output variables, uniforms and its main function. Each shader's entry point is at its main function where we process any input variables and output the results in its output variables.   
+
+``` cpp    
+#version version_number
+in type in_variable_name;
+in type in_variable_name;
+
+out type out_variable_name;
+  
+uniform type uniform_name;
+  
+void main()
+{
+  // process input(s) and do some weird graphics stuff
+  ...
+  // output processed stuff to output variable
+  out_variable_name = weird_stuff_we_processed;
+}  
+```  
+  
+* **vertex attributes**:  
+   
+* When we're talking specifically about the vertex shader each input variable is also known as a vertex attribute. There is a maximum number of vertex attributes we're allowed to declare limited by the hardware. OpenGL guarantees there are always at least 16 4-component vertex attributes available, but some hardware may allow for more which you can retrieve by querying GL_MAX_VERTEX_ATTRIBS  
+
+```cpp    
+int nrAttributes;
+glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
+std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;  
+```  
+  
+### Types  
+
+* GLSL has most of the default basic types we know from languages like C: int, float, double, uint and bool.  
+* vectors and matrices  
+  
+### Vectors   
+
+* A vector in GLSL is a 2,3 or 4 component container for any of the basic types just mentioned.    
+
+> * vecn: the default vector of n floats.
+> * bvecn: a vector of n booleans.
+> * ivecn: a vector of n integers.
+> * uvecn: a vector of n unsigned integers.
+> * dvecn: a vector of n double components.  
+  
+* Components of a vector can be accessed via vec.x where x is the first component of the vector. You can use .x, .y, .z and .w to access their first, second, third and fourth component respectively. GLSL also allows you to use rgba for colors or stpq for texture coordinates, accessing the same components.   
+
+* **swizzling**   
+
+```cpp  
+vec2 someVec;  
+vec4 differentVec = someVec.xyxx;  
+vec3 anotherVec = differentVec.zyw;    
+vec4 otherVec = someVec.xxxx + anotherVec.yxzy;    
+```  
+
+``` cpp  
+vec2 vect = vec2(0.5, 0.7);
+vec4 result = vec4(vect, 0.0, 0.0);
+vec4 otherResult = vec4(result.xyz, 1.0);  
+```  
+
+### Ins and Outs  
+
+* Shaders are nice little programs on their own, but they are part of a whole and for that reason we want to have inputs and outputs on the individual shaders so that we can move stuff around. GLSL defined the in and out keywords specifically for that purpose. Each shader can specify inputs and outputs using those keywords and wherever an output variable matches with an input variable of the next shader stage they're passed along.  
+
+
+
+
 
 
 
