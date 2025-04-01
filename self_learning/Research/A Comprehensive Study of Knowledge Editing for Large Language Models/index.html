@@ -11,8 +11,6 @@
       
       
       
-        <link rel="prev" href="../">
-      
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Convolutional Networks - Leo Li's Notebook</title>
+        <title>A Comprehensive Study of Knowledge Editing for Large Language Models - Leo Li's Notebook</title>
       
     
     
@@ -126,11 +124,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#convolutional-networks" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -160,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Convolutional Networks
+              A Comprehensive Study of Knowledge Editing for Large Language Models
             
           </span>
         </div>
@@ -304,12 +297,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -459,8 +450,6 @@
       
   
   
-    
-  
   
   
     
@@ -475,25 +464,21 @@
     
     
       
-        
-        
-      
       
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
+  
+  
+    <a href="../../" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     SELF LEARNING
@@ -501,127 +486,12 @@
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            SELF LEARNING
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
       
-        
-          
-        
+        <span class="md-nav__icon md-icon"></span>
       
-        
-      
-    
-    
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    DEEP LEARNING FOR COMPUTER VISION
-    
-  </span>
+    </a>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            DEEP LEARNING FOR COMPUTER VISION
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Convolutional Networks
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -646,8 +516,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -666,10 +534,126 @@
   
 
 
-<h1 id="convolutional-networks">Convolutional Networks<a class="headerlink" href="#convolutional-networks" title="Permanent link">&para;</a></h1>
+  <h1>A Comprehensive Study of Knowledge Editing for Large Language Models</h1>
+
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 2 个字 :material-clock-time-two-outline: 预计阅读时间不到 1 分钟</p>
+<p>:material-circle-edit-outline: 约 1390 个字 :material-clock-time-two-outline: 预计阅读时间 14 分钟</p>
 </div>
+<p>这篇论文《A Comprehensive Study of Knowledge Editing for Large Language Models》对大语言模型 (LLMs) 的知识编辑进行了深入研究，包括定义问题、分类方法、实验评估、以及潜在应用。以下是详细的总结，确保顶尖计算机学院学生读后不需要再查阅原文。</p>
+<p>⸻</p>
+<ol>
+<li>研究背景与动机</li>
+</ol>
+<p>1.1 语言模型的知识存储问题</p>
+<p>LLMs 具备强大的文本理解和生成能力，但存在以下挑战：
+    •   知识滞后：世界知识不断更新，而 LLMs 训练时固定的知识无法动态更新。
+    •   计算成本高昂：重新训练或微调整个模型成本巨大。
+    •   错误与偏见：LLMs 可能存储错误知识或偏见，需要后续修正。</p>
+<p>1.2 知识编辑的目标</p>
+<p>知识编辑是一种轻量级、高效的方法，旨在：
+    1.  局部调整模型的知识，避免全模型重训练。
+    2.  保持模型整体性能，避免对无关知识产生负面影响。
+    3.  适应动态世界，通过增、删、改模型内部知识，提高实用性。</p>
+<p>⸻</p>
+<ol>
+<li>知识编辑的定义与任务分类</li>
+</ol>
+<p>论文定义了知识编辑任务，并根据认知科学理论提出了三阶段框架：</p>
+<p>任务类型    目标  公式表达
+知识插入 (Insertion)    增加新知识   \theta{\prime} = F(\theta, {\emptyset} \to {k})
+知识修改 (Modification) 更新已有知识  \theta{\prime} = F(\theta, {k} \to {k{\prime}})
+知识删除 (Erasure)  移除特定知识  \theta{\prime} = F(\theta, {k} \to {\emptyset})</p>
+<p>三阶段学习框架：
+    1.  识别阶段 (Recognition)：使用外部知识增强模型输入。
+    2.  关联阶段 (Association)：将新知识嵌入模型中。
+    3.  掌握阶段 (Mastery)：直接编辑模型内部参数。</p>
+<p>⸻</p>
+<ol>
+<li>知识编辑的方法分类</li>
+</ol>
+<p>论文基于模型的修改方式，将知识编辑方法分为三类。</p>
+<p>3.1 识别阶段：依赖外部知识</p>
+<p>模型不直接存储知识，而是借助外部存储（如检索数据库）：
+    •   SERAC：使用额外的模型存储知识，并通过分类器决定是否使用修改后的版本。
+    •   IKE：检索与目标知识类似的示例，帮助 LLMs 理解新知识。</p>
+<p>优缺点：
+✔ 计算量小，不改变模型参数
+✖ 依赖外部数据，可能导致知识冲突或检索错误</p>
+<p>⸻</p>
+<p>3.2 关联阶段：嵌入知识到模型</p>
+<p>直接在 LLMs 内部增加新的知识表示：
+    •   T-Patcher / CaliNet：修改 Transformer 中前馈网络 (FFN) 的一部分，添加新知识。
+    •   REMEDI：用一个额外的神经网络处理模型中实体的表示。
+    •   LoRA / MELO：使用低秩适配器 (Low-Rank Adaptation) 进行参数高效微调。</p>
+<p>优缺点：
+✔ 修改范围局部化，可保留模型原有性能
+✖ 可能引发知识冲突，影响模型一致性</p>
+<p>⸻</p>
+<p>3.3 掌握阶段：直接修改模型参数</p>
+<p>直接定位并编辑 LLMs 存储知识的位置：
+    •   MEND / MALMEN：使用元学习 (Meta-Learning) 训练一个超网络来计算参数变化。
+    •   ROME / MEMIT：通过因果分析 (Causal Tracing) 找到 FFN 层存储的知识，并直接修改权重。
+    •   PMET / BIRD：进一步优化参数更新方式，以减少副作用。</p>
+<p>优缺点：
+✔ 彻底改变知识，效果持久
+✖ 计算成本较高，可能影响非目标知识</p>
+<p>⸻</p>
+<ol>
+<li>评测基准：KnowEdit</li>
+</ol>
+<p>论文提出了 KnowEdit 作为知识编辑的评测框架，包含六个数据集：
+    1.  知识插入：WikiDatarecent
+    2.  知识修改：ZsRE, WikiBio, WikiDatacounterfact, Convsent
+    3.  知识删除：Sanitation</p>
+<p>评测指标：
+    •   编辑成功率 (Edit Success)：修改是否生效
+    •   可迁移性 (Portability)：修改是否影响相关知识
+    •   局部性 (Locality)：是否避免不必要的修改
+    •   流畅性 (Fluency)：修改后模型生成能力是否受损</p>
+<p>⸻</p>
+<ol>
+<li>实验结果</li>
+</ol>
+<p>论文在 LLaMA2-7B-Chat 上测试了多种方法，主要结论：
+    1.  FT-M (局部微调) 效果最佳，但计算成本较高。
+    2.  SERAC 适用于知识插入和修改，但生成质量略低。
+    3.  MEND 兼顾编辑成功率、局部性和流畅性，表现均衡。
+    4.  ROME / MEMIT 在知识删除任务上效果较好，但对非目标知识的影响较大。</p>
+<p>详细实验结果（部分）：</p>
+<p>方法  WikiDatarecent (插入) ZsRE (修改)   Sanitation (删除)
+SERAC   98.68%  99.67%  0.00%
+MEND    95.75%  96.74%  0.00%
+ROME    97.18%  96.77%  85.00%
+MEMIT   97.05%  95.37%  48.75%
+FT-M    100.00% 99.98%  75.00%</p>
+<p>⸻</p>
+<ol>
+<li>知识编辑的应用</li>
+</ol>
+<p>论文讨论了知识编辑的四个主要应用场景：
+    1.  高效机器学习：减少 LLMs 训练成本，提高适应性。
+    2.  AI 生成内容 (AIGC)：动态调整模型知识，提高创作能力。
+    3.  可信 AI：修正 LLMs 的错误知识，减少偏见和有害内容。
+    4.  人机交互 (HCI)：实现个性化 AI 代理，增强用户体验。</p>
+<p>⸻</p>
+<ol>
+<li>结论与未来方向<ol>
+<li>知识编辑技术使 LLMs 更加灵活和高效，能够适应动态知识环境。</li>
+<li>现有方法仍存在局限，如知识冲突、计算成本和副作用控制问题。</li>
+<li>未来研究方向：
+•   更精确的知识定位方法
+•   低计算成本的编辑技术
+•   结合多种方法，提高编辑效果</li>
+</ol>
+</li>
+</ol>
+<p>⸻</p>
+<p>总结</p>
+<p>这篇论文系统地研究了 LLMs 的知识编辑问题，提出了新的分类方法、评测基准和实验分析。主要贡献包括：
+    1.  定义知识编辑任务，并基于认知理论提出三阶段框架。
+    2.  对现有方法进行分类，详细分析其优缺点。
+    3.  提出 KnowEdit 评测基准，并进行系统实验。
+    4.  探讨知识编辑的实际应用与未来发展方向。</p>
 
 
 
@@ -733,28 +717,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deep Learning For Computer Vision">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Deep Learning For Computer Vision
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

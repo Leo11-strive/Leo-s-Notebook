@@ -1259,6 +1259,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shaders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shaders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ins-and-outs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ins and Outs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1510,6 +1552,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shaders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shaders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ins-and-outs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ins and Outs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1532,7 +1616,7 @@
   <h1>OpenGL</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 1900 个字 :fontawesome-solid-code: 168 行代码 :material-image-multiple-outline: 1 张图片 :material-clock-time-two-outline: 预计阅读时间 21 分钟</p>
+<p>:material-circle-edit-outline: 约 2226 个字 :fontawesome-solid-code: 193 行代码 :material-image-multiple-outline: 1 张图片 :material-clock-time-two-outline: 预计阅读时间 25 分钟</p>
 </div>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2044,6 +2128,98 @@ The glShaderSource function takes the shader object to compile to as its first a
 </span></code></pre></div></td></tr></table></div>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">glPolygonMode</span><span class="p">(</span><span class="n">GL_FRONT_AND_BACK</span><span class="p">,</span><span class="w"> </span><span class="n">GL_FILL</span><span class="p">);</span><span class="w">  </span>
 </span></code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="shaders">Shaders<a class="headerlink" href="#shaders" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Shaders always begin with a version declaration, followed by a list of input and output variables, uniforms and its main function. Each shader's entry point is at its main function where we process any input variables and output the results in its output variables.   </li>
+</ul>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-37-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-37-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-37-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-37-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-37-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-37-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-37-10">10</a></span>
+<span class="normal"><a href="#__codelineno-37-11">11</a></span>
+<span class="normal"><a href="#__codelineno-37-12">12</a></span>
+<span class="normal"><a href="#__codelineno-37-13">13</a></span>
+<span class="normal"><a href="#__codelineno-37-14">14</a></span>
+<span class="normal"><a href="#__codelineno-37-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="cp">#version version_number</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="n">in</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">in_variable_name</span><span class="p">;</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="n">in</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">in_variable_name</span><span class="p">;</span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4"></a>
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="n">out</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">out_variable_name</span><span class="p">;</span>
+</span><span id="__span-37-6"><a id="__codelineno-37-6" name="__codelineno-37-6"></a>
+</span><span id="__span-37-7"><a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="n">uniform</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">uniform_name</span><span class="p">;</span>
+</span><span id="__span-37-8"><a id="__codelineno-37-8" name="__codelineno-37-8"></a>
+</span><span id="__span-37-9"><a id="__codelineno-37-9" name="__codelineno-37-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+</span><span id="__span-37-10"><a id="__codelineno-37-10" name="__codelineno-37-10"></a><span class="p">{</span>
+</span><span id="__span-37-11"><a id="__codelineno-37-11" name="__codelineno-37-11"></a><span class="w">  </span><span class="c1">// process input(s) and do some weird graphics stuff</span>
+</span><span id="__span-37-12"><a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="w">  </span><span class="p">...</span>
+</span><span id="__span-37-13"><a id="__codelineno-37-13" name="__codelineno-37-13"></a><span class="w">  </span><span class="c1">// output processed stuff to output variable</span>
+</span><span id="__span-37-14"><a id="__codelineno-37-14" name="__codelineno-37-14"></a><span class="w">  </span><span class="n">out_variable_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weird_stuff_we_processed</span><span class="p">;</span>
+</span><span id="__span-37-15"><a id="__codelineno-37-15" name="__codelineno-37-15"></a><span class="p">}</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p><strong>vertex attributes</strong>:  </p>
+</li>
+<li>
+<p>When we're talking specifically about the vertex shader each input variable is also known as a vertex attribute. There is a maximum number of vertex attributes we're allowed to declare limited by the hardware. OpenGL guarantees there are always at least 16 4-component vertex attributes available, but some hardware may allow for more which you can retrieve by querying GL_MAX_VERTEX_ATTRIBS  </p>
+</li>
+</ul>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">nrAttributes</span><span class="p">;</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="n">glGetIntegerv</span><span class="p">(</span><span class="n">GL_MAX_VERTEX_ATTRIBS</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">nrAttributes</span><span class="p">);</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Maximum nr of vertex attributes supported: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">nrAttributes</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GLSL has most of the default basic types we know from languages like C: int, float, double, uint and bool.  </li>
+<li>vectors and matrices  </li>
+</ul>
+<h3 id="vectors">Vectors<a class="headerlink" href="#vectors" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A vector in GLSL is a 2,3 or 4 component container for any of the basic types just mentioned.    </li>
+</ul>
+<blockquote>
+<ul>
+<li>vecn: the default vector of n floats.</li>
+<li>bvecn: a vector of n booleans.</li>
+<li>ivecn: a vector of n integers.</li>
+<li>uvecn: a vector of n unsigned integers.</li>
+<li>dvecn: a vector of n double components.  </li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>Components of a vector can be accessed via vec.x where x is the first component of the vector. You can use .x, .y, .z and .w to access their first, second, third and fourth component respectively. GLSL also allows you to use rgba for colors or stpq for texture coordinates, accessing the same components.   </p>
+</li>
+<li>
+<p><strong>swizzling</strong>   </p>
+</li>
+</ul>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span>
+<span class="normal"><a href="#__codelineno-39-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="n">vec2</span><span class="w"> </span><span class="n">someVec</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="n">vec4</span><span class="w"> </span><span class="n">differentVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">someVec</span><span class="p">.</span><span class="n">xyxx</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="n">vec3</span><span class="w"> </span><span class="n">anotherVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">differentVec</span><span class="p">.</span><span class="n">zyw</span><span class="p">;</span><span class="w">    </span>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="n">vec4</span><span class="w"> </span><span class="n">otherVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">someVec</span><span class="p">.</span><span class="n">xxxx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">anotherVec</span><span class="p">.</span><span class="n">yxzy</span><span class="p">;</span><span class="w">    </span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="n">vec2</span><span class="w"> </span><span class="n">vect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.7</span><span class="p">);</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="n">vec4</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec4</span><span class="p">(</span><span class="n">vect</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">);</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="n">vec4</span><span class="w"> </span><span class="n">otherResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec4</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">xyz</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="ins-and-outs">Ins and Outs<a class="headerlink" href="#ins-and-outs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Shaders are nice little programs on their own, but they are part of a whole and for that reason we want to have inputs and outputs on the individual shaders so that we can move stuff around. GLSL defined the in and out keywords specifically for that purpose. Each shader can specify inputs and outputs using those keywords and wherever an output variable matches with an input variable of the next shader stage they're passed along.  </li>
 </ul>
 
 

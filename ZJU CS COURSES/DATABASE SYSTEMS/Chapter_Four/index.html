@@ -572,6 +572,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#integrity-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrity Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrity Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referential-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referential Integrity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-check-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complex Check Clauses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      User-Defined Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#large-object-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      large-object types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revoking-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revoking Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    <span class="md-ellipsis">
+      role
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -593,26 +671,26 @@
 
 <h1 id="intermediate-sql">Intermediate SQL<a class="headerlink" href="#intermediate-sql" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 165 个字 :fontawesome-solid-code: 15 行代码 :material-clock-time-two-outline: 预计阅读时间 2 分钟</p>
+<p>:material-circle-edit-outline: 约 272 个字 :fontawesome-solid-code: 32 行代码 :material-clock-time-two-outline: 预计阅读时间 3 分钟</p>
 </div>
 <h2 id="join-expressions">Join Expressions<a class="headerlink" href="#join-expressions" title="Permanent link">&para;</a></h2>
 <h3 id="join-relations">Join Relations<a class="headerlink" href="#join-relations" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Join type</strong>:    </li>
+<li><strong>Join type</strong>:</li>
 </ul>
 <blockquote>
 <ul>
-<li>defines how tuples in each relation that do not match any tuple in the other relation (based on the join condition) are treated.   </li>
+<li>defines how tuples in each relation that do not match any tuple in the other relation (based on the join condition) are treated.</li>
 </ul>
 </blockquote>
 <ul>
-<li><strong>join condition</strong>:  <blockquote>
+<li><strong>join condition</strong>:</li>
+</ul>
+<blockquote>
 <ul>
-<li>defines which tuples in the two relations match, and what attributes are present in the result of the join.   </li>
+<li>defines which tuples in the two relations match, and what attributes are present in the result of the join.</li>
 </ul>
 </blockquote>
-</li>
-</ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">course natural right outer join prereq</label><label for="__tabbed_1_2">course natural full outer join prereq</label><label for="__tabbed_1_3">course full outer join prereq using (couse_id)</label><label for="__tabbed_1_4">course inner join prereq on course.course_id = prereq.course_id</label><label for="__tabbed_1_5">course left outer join prereq on course.course_id = prereq.course_id</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -667,8 +745,12 @@
 </span></code></pre></div></td></tr></table></div>
 <blockquote>
 <ul>
-<li>then we can use it  </li>
-<li>views can be defined by other views  </li>
+<li>
+<p>then we can use it</p>
+</li>
+<li>
+<p>views can be defined by other views  </p>
+</li>
 <li>updates of a view  </li>
 <li>Most SQL implementations allow updates only on simple views </li>
 </ul>
@@ -685,6 +767,82 @@
 <li><strong>index creation</strong>:   </li>
 </ul>
 <div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">create</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="n">idx_course_id</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">course</span><span class="p">(</span><span class="n">course_id</span><span class="p">);</span><span class="w">  </span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="integrity-constraints">Integrity Constraints<a class="headerlink" href="#integrity-constraints" title="Permanent link">&para;</a></h2>
+<ul>
+<li>not null</li>
+</ul>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">name</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">budget</span><span class="w"> </span><span class="nb">numeric</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>primary key</li>
+<li>unique</li>
+</ul>
+<blockquote>
+<p>form a candidate key, permit nulls, unlike primary key</p>
+</blockquote>
+<ul>
+<li>check(p)</li>
+</ul>
+<blockquote>
+<p>where P is a predicate. Specifies a predicate P that must be satisfied by every tuple in a relation.</p>
+</blockquote>
+<h3 id="referential-integrity">Referential Integrity<a class="headerlink" href="#referential-integrity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cascade</li>
+</ul>
+<blockquote>
+<ul>
+<li>delete cascade: delete all tuples in the referencing relation</li>
+<li>update cascade: update all foreign keys in the referencing relation</li>
+</ul>
+</blockquote>
+<h3 id="complex-check-clauses">Complex Check Clauses<a class="headerlink" href="#complex-check-clauses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>subquery in check clause not supported by pretty much any database</li>
+</ul>
+<h3 id="user-defined-types">User-Defined Types<a class="headerlink" href="#user-defined-types" title="Permanent link">&para;</a></h3>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">create</span><span class="w"> </span><span class="n">tyoe</span><span class="w"> </span><span class="n">Dollars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nb">numeric</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">final</span><span class="p">;</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>domains</strong>:</li>
+</ul>
+<blockquote>
+<p>a type with constraints</p>
+</blockquote>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">create</span><span class="w"> </span><span class="k">domain</span><span class="w"> </span><span class="n">degree_level</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">constraint</span><span class="w"> </span><span class="n">degree_level_constaint</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">check</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Bachelors&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Masters&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Doctorate&#39;</span><span class="p">));</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="large-object-types">large-object types<a class="headerlink" href="#large-object-types" title="Permanent link">&para;</a></h3>
+<h3 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>grant</strong>:</li>
+</ul>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">grant</span><span class="w"> </span><span class="o">&lt;</span><span class="n">privilege</span><span class="w"> </span><span class="n">list</span><span class="o">&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">on</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="k">to</span><span class="w"> </span><span class="o">&lt;</span><span class="k">user</span><span class="w"> </span><span class="n">list</span><span class="o">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="revoking-authorization">Revoking Authorization<a class="headerlink" href="#revoking-authorization" title="Permanent link">&para;</a></h3>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">revoke</span><span class="w"> </span><span class="o">&lt;</span><span class="n">privilege</span><span class="w"> </span><span class="n">list</span><span class="o">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">on</span><span class="w"> </span><span class="o">&lt;</span><span class="n">relation</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">name</span><span class="o">&gt;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">from</span><span class="w"> </span><span class="o">&lt;</span><span class="k">user</span><span class="w"> </span><span class="n">list</span><span class="o">&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="role">role<a class="headerlink" href="#role" title="Permanent link">&para;</a></h3>
+<ul>
+<li>a role is a way to distinguish among users as far as what these users can access/update in the database</li>
+</ul>
+<div class="language-sql highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">SQL</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">create</span><span class="w"> </span><span class="k">role</span><span class="w"> </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">grant</span><span class="w"> </span><span class="o">&lt;</span><span class="k">role</span><span class="o">&gt;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="o">&lt;</span><span class="n">users</span><span class="o">&gt;</span>
 </span></code></pre></div></td></tr></table></div>
 
 
