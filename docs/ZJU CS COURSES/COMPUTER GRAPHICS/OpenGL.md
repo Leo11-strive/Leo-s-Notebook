@@ -435,6 +435,50 @@ vec4 otherResult = vec4(result.xyz, 1.0);
 * Shaders are nice little programs on their own, but they are part of a whole and for that reason we want to have inputs and outputs on the individual shaders so that we can move stuff around. GLSL defined the in and out keywords specifically for that purpose. Each shader can specify inputs and outputs using those keywords and wherever an output variable matches with an input variable of the next shader stage they're passed along.  
 
 
+* *Uniform*:
+
+> A uniform is a global variable that is declared with the uniform keyword. Uniforms are used to pass data from the CPU to the GPU and are read-only in the shader. They are set once per draw call and can be used to pass data such as transformation matrices, colors, or any other data that needs to be consistent across all vertices or fragments.  
+
+```cpp
+float timeValue = glfwGetTime();
+float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
+int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+glUseProgram(shaderProgram);
+glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+```
+
+*Note that finding the uniform location does not require you to use the shader program first, but updating a uniform does require you to first use the program (by calling glUseProgram), because it sets the uniform on the currently active shader program.*
+
+```cpp
+while(!glfwWindowShouldClose(window))
+{
+    // input
+    processInput(window);
+
+    // render
+    // clear the colorbuffer
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    // be sure to activate the shader
+    glUseProgram(shaderProgram);
+  
+    // update the uniform color
+    float timeValue = glfwGetTime();
+    float greenValue = sin(timeValue) / 2.0f + 0.5f;
+    int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+    glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+
+    // now render the triangle
+    glBindVertexArray(VAO);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+  
+    // swap buffers and poll IO events
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+}
+```
+
 
 
 
