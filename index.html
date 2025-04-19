@@ -330,6 +330,7 @@
           
         
       
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     /* Core layout modifications */
     .md-header{position:initial}
@@ -338,197 +339,78 @@
     @media screen and (min-width:60em){.md-sidebar--secondary{display:none}}
     @media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
 
-    /* Custom properties */
+    /* Enhanced custom properties */
     :root {
-      --primary-color: #5D4037;
-      --accent-color: #8D6E63;
-      --bg-color: #EFEBE9;
-      --text-color: #3E2723;
+      --primary-color: #2C3E50;
+      --secondary-color: #34495E;
+      --accent-color: #E67E22;
+      --bg-color: #F8F9FA;
+      --text-color: #2C3E50;
+      --card-bg: #FFFFFF;
       --gold-accent: #D4AF37;
-      --transition-speed: 0.3s;
-    }
-    .profile-section {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 2rem;
+      --transition-speed: 0.4s;
+      --font-primary: 'Playfair Display', serif;
+      --font-secondary: 'Source Sans Pro', sans-serif;
     }
 
-    .profile-card {
-      background: white;
-      border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      animation: cardFloat 6s ease-in-out infinite;
-    }
-    @keyframes cardFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .profile-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      background: var(--primary-color);
-      z-index: 0;
-    }
-
-    .profile-image {
-      width: 150px;
-      height: 150px;
-     
-    
-
-      border-radius: 50%;
-      border: 5px solid white;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
-      background: var(--bg-color);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      color: var(--primary-color);
-      animation: profilePulse 4s ease-in-out infinite;
-    }
-    @keyframes profilePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    .profile-name {
-      font-size: 1.8rem;
+    body {
+      font-family: var(--font-secondary);
+      background-color: var(--bg-color);
       color: var(--text-color);
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-
-    .profile-title {
-      font-size: 1.1rem;
-      color: var(--accent-color);
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    .profile-bio {
-      color: var(--text-color);
-      margin-bottom: 2rem;
-      line-height: 1.6;
-      max-width: 600px;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.4rem;
-      border-radius: 50px;
-      background: var(--accent-color);
-      color: white;
-      text-decoration: none;
-      transition: all var(--transition-speed) ease;
-      font-weight: 500;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .social-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      background: var(--primary-color);
-    }
-
-    .social-link::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      transform: translate(-50%, -50%) scale(0);
-      border-radius: 50%;
-      transition: transform 0.5s ease-out;
-    }
-
-    .social-link:hover::after {
-      transform: translate(-50%, -50%) scale(2);
-    }
-
-    .social-icon {
-      width: 20px;
-      height: 20px;
     }
 
     /* Modern scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
     }
     ::-webkit-scrollbar-track {
-      background: var(--bg-color);
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
     }
     ::-webkit-scrollbar-thumb {
-      background: var(--accent-color);
-      border-radius: 4px;
+      background: linear-gradient(45deg, var(--accent-color), var(--gold-accent));
+      border-radius: 5px;
+      border: 2px solid var(--bg-color);
     }
 
-    /* Container styling */
+    /* Enhanced Container */
     .mdx-container {
-      background-color: var(--bg-color);
+      background: linear-gradient(135deg, #F8F9FA 0%, #ECF0F1 100%);
       min-height: calc(100vh - 120px);
       position: relative;
       z-index: 1;
-      background-image: 
-        radial-gradient(circle at 25px 25px, var(--accent-color) 2%, transparent 0%),
-        radial-gradient(circle at 75px 75px, var(--accent-color) 2%, transparent 0%);
-      background-size: 100px 100px;
-      animation: backgroundFade 10s infinite alternate;
+      overflow: hidden;
     }
 
-    @keyframes backgroundFade {
-      0% { background-color: var(--bg-color); }
-      100% { background-color: #F5F5F5; }
+    .mdx-container::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: 
+        radial-gradient(circle at 30% 20%, rgba(230, 126, 34, 0.1) 0%, transparent 25%),
+        radial-gradient(circle at 70% 80%, rgba(52, 73, 94, 0.1) 0%, transparent 25%);
+      animation: backgroundAnimation 20s linear infinite;
     }
 
-    /* Hero section */
+    @keyframes backgroundAnimation {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Advanced Hero section */
     .hero-section {
       text-align: center;
-      padding: 4rem 2rem;
-      background: var(--primary-color);
+      padding: 8rem 2rem 6rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
       position: relative;
       overflow: hidden;
       margin-bottom: 3rem;
-      animation: gradientFlow 15s ease infinite;
-    }
-    @keyframes gradientFlow {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 
     .hero-section::before {
@@ -540,23 +422,35 @@
       bottom: 0;
       background: 
         linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
-      background-size: 60px 60px;
-      animation: heroPattern 60s linear infinite;
+        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
+      background-size: 40px 40px;
+      animation: heroPattern 20s linear infinite;
+      opacity: 0.3;
     }
 
     @keyframes heroPattern {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 0; }
+      0% { background-position: 0 0, 20px 0, 20px -20px, 0 20px; }
+      100% { background-position: 40px 40px, 60px 40px, 60px 20px, 40px 60px; }
     }
 
     .hero-title {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-family: var(--font-primary);
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
       position: relative;
       display: inline-block;
       z-index: 1;
+      animation: titleAppear 1.5s ease-out;
+    }
+
+    @keyframes titleAppear {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .hero-title::after {
@@ -565,10 +459,10 @@
       bottom: -10px;
       left: 0;
       right: 0;
-      height: 3px;
-      background: var(--gold-accent);
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
       transform: scaleX(0);
-      transition: transform var(--transition-speed) ease;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .hero-title:hover::after {
@@ -576,68 +470,192 @@
     }
 
     .hero-subtitle {
-      font-size: 1.4rem;
+      font-family: var(--font-secondary);
+      font-size: 1.6rem;
       opacity: 0.9;
       font-style: italic;
-      margin-top: 1rem;
-      animation: fadeInUp 1s ease-out;
+      margin-top: 1.5rem;
+      animation: subtitleAppear 1.5s ease-out 0.3s both;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes subtitleAppear {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 0.9; transform: translateY(0); }
     }
 
-    /* Search bar */
-    .search-container {
-      max-width: 600px;
-      margin: -1.5rem auto 2rem;
-      padding: 0 1rem;
+    /* Enhanced Profile section */
+    .profile-section {
+      max-width: 1400px;
+      margin: -6rem auto 4rem;
+      padding: 0 2rem;
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
-    .search-bar {
-      width: 100%;
-      padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 50px;
-      background: white;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: all var(--transition-speed) ease;
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: 25px;
+      padding: 3rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(0);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 160px;
+      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      z-index: 0;
+      transition: height 0.6s ease;
+    }
+
+    .profile-card:hover::before {
+      height: 180px;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: white;
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .profile-image:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+    }
+
+    .profile-name {
+      font-family: var(--font-primary);
+      font-size: 2.5rem;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .profile-title {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .profile-bio {
+      color: var(--text-color);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      max-width: 700px;
       font-size: 1.1rem;
     }
 
-    .search-bar:focus {
-      outline: none;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      transform: translateY(-2px);
+    /* Enhanced Social links */
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    /* Quotes section */
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      color: white;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .social-link:hover::before {
+      left: 100%;
+    }
+
+    .social-link:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Enhanced Quotes section */
     .quotes-section {
-      background: white;
-      border-radius: 20px;
-      padding: 2.5rem;
-      margin: 2rem auto;
+      background: var(--card-bg);
+      border-radius: 25px;
+      padding: 4rem;
+      margin: 4rem auto;
       max-width: 1200px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quotes-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(230,126,34,0.05) 0%, transparent 70%);
+      animation: rotateGradient 15s linear infinite;
+    }
+
+    @keyframes rotateGradient {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .quotes-title {
+      font-family: var(--font-primary);
       color: var(--primary-color);
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       position: relative;
       display: inline-block;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 2.5rem;
     }
 
     .quotes-title::after {
@@ -646,79 +664,65 @@
       bottom: -10px;
       left: 0;
       right: 0;
-      height: 2px;
-      background: var(--gold-accent);
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--gold-accent));
+      border-radius: 3px;
     }
 
     .quote-container {
       position: relative;
-      padding: 2rem;
-      border-left: 4px solid var(--gold-accent);
-      margin: 1.5rem 0;
-      background: rgba(93, 64, 55, 0.05);
-      border-radius: 0 20px 20px 0;
-      transition: all var(--transition-speed) ease;
+      padding: 2.5rem;
+      border-left: 5px solid transparent;
+      margin: 2rem 0;
+      background: rgba(52, 73, 94, 0.02);
+      border-radius: 0 25px 25px 0;
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border-left-color: var(--gold-accent);
     }
 
     .quote-container:hover {
-      transform: translateX(10px) translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transform: translateX(15px) translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-left-color: var(--accent-color);
+      background: rgba(52, 73, 94, 0.05);
     }
 
     .quote {
-      font-size: 1.2rem;
+      font-family: var(--font-primary);
+      font-size: 1.3rem;
       font-style: italic;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       color: var(--text-color);
+      line-height: 1.8;
     }
 
     .quote-author {
       font-weight: 600;
       color: var(--accent-color);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* Content grid */
+    /* Enhanced Content grid */
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2.5rem;
       max-width: 1200px;
-      margin: 2rem auto;
+      margin: 4rem auto;
       padding: 0 2rem;
     }
 
     .card {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
-      transition: all var(--transition-speed) ease;
+      background: var(--card-bg);
+      border-radius: 25px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
       border: 1px solid transparent;
       position: relative;
       overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .card::after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      top: 0;
-      left: 0;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.02);
-    }
-
-    .card:hover::after {
-      opacity: 1;
     }
 
     .card::before {
@@ -727,25 +731,28 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: var(--accent-color);
+      height: 5px;
+      background: linear-gradient(90deg, var(--accent-color), var(--gold-accent));
       transform: scaleX(0);
-      transition: transform var(--transition-speed) ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold-accent);
+      transform-origin: left;
+      transition: transform 0.5s ease;
     }
 
     .card:hover::before {
       transform: scaleX(1);
     }
 
+    .card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      border-color: rgba(230, 126, 34, 0.2);
+    }
+
     .card h2 {
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      font-family: var(--font-primary);
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
       position: relative;
       display: inline-block;
     }
@@ -753,158 +760,199 @@
     .card h2::after {
       content: '';
       position: absolute;
-      bottom: -5px;
+      bottom: -8px;
       left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--gold-accent);
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--gold-accent));
+      border-radius: 3px;
     }
 
     .card p {
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-      color: var(--text-color);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      color: #555;
+      font-size: 1.1rem;
     }
 
-    /* Tags */
+    /* Enhanced Tags */
     .tag {
       display: inline-block;
-      background: var(--accent-color);
+      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
       color: white;
-      padding: 0.5rem 1.2rem;
+      padding: 0.6rem 1.4rem;
       border-radius: 50px;
       font-size: 0.9rem;
-      margin: 0.3rem;
-      transition: all var(--transition-speed) ease;
+      margin: 0.4rem;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       text-decoration: none;
-      border: 1px solid transparent;
-      font-weight: 500;
-      animation: tagAppear 0.5s ease-out backwards;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
     }
 
-    @keyframes tagAppear {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .tag::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: 0.5s;
     }
 
-    .card .tag:nth-child(1) { animation-delay: 0.1s; }
-    .card .tag:nth-child(2) { animation-delay: 0.2s; }
-    .card .tag:nth-child(3) { animation-delay: 0.3s; }
-    .card .tag:nth-child(4) { animation-delay: 0.4s; }
-    .card .tag:nth-child(5) { animation-delay: 0.5s; }
-
+    .tag:hover::before {
+      left: 100%;
+    }
 
     .tag:hover {
-      background: white;
-      color: var(--accent-color);
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
     }
 
-    /* Quick actions */
+    /* Enhanced Quick actions */
     .quick-actions {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
+      bottom: 3rem;
+      right: 3rem;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.2rem;
       z-index: 1000;
     }
 
     .action-button {
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background: var(--primary-color);
+      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all var(--transition-speed) ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      font-size: 1.4rem;
     }
 
     .action-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
-    /* Responsive design */
+    /* Advanced animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    /* Custom cursor effects */
+    body {
+      cursor: crosshair;
+    }
+
+    a, button, .action-button {
+      cursor: pointer;
+    }
+
+    /* Enhanced Responsive design */
     @media screen and (max-width: 768px) {
+      .hero-section {
+        padding: 6rem 1.5rem 4rem;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      }
+      
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
       
       .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
       
       .content-grid {
+        grid-template-columns: 1fr;
         padding: 0 1rem;
       }
       
       .quote {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       
       .quick-actions {
-        bottom: 1rem;
-        right: 1rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
       }
+    }
+
+    /* Special effects and interactions */
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .neumorphic {
+      background: #e0e0e0;
+      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    }
+
+    /* Particles background effect */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .particles span {
+      position: absolute;
+      display: block;
+      pointer-events: none;
+      animation: particle-float 15s infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes particle-float {
+      0% { transform: translateY(100vh) scale(0); }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(-10vh) scale(1); }
     }
   </style>
 
   <section class="mdx-container">
-    <!-- Hero Section -->
+    <!-- Enhanced Hero Section -->
     <div class="hero-section">
-      <h1 class="hero-title">Leo Li's Notebook</h1>
-      <p class="hero-subtitle">Exploring the Depths of Knowledge</p>
+      <h1 class="hero-title">Leo Li's Digital Notebook</h1>
+      <p class="hero-subtitle">A Journey Through Knowledge, Innovation, and Discovery</p>
     </div>
 
-    <!--<section class="profile-section">
-      <div class="profile-card">
-        <div class="profile-image">
-          
-        </div>
-        <h2 class="profile-name">Leo Li</h2>
-        <p class="profile-title">Computer Science Student @ ZJU</p>
-        <p class="profile-bio">
-          Passionate about exploring the intersection of computer science, mathematics, and innovation. 
-          Currently focusing on advanced algorithms, machine learning, and computer graphics.
-        </p>
-        <div class="social-links">
-          <a href="https://github.com/leo11-strive" class="social-link" target="_blank">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-            GitHub
-          </a>
-          <a href="mailto:leobestli61@gmail.com" class="social-link">
-            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            Email
-          </a>
-          
-        </div>
-      </div>
-    </section> -->
+    <!-- Particles background -->
+    <div class="particles">
+      <span style="left: 10%; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; animation-delay: 0s;"></span>
+      <span style="left: 20%; width: 15px; height: 15px; background: var(--gold-accent); border-radius: 50%; animation-delay: 2s;"></span>
+      <span style="left: 30%; width: 8px; height: 8px; background: var(--primary-color); border-radius: 50%; animation-delay: 4s;"></span>
+      <span style="left: 40%; width: 12px; height: 12px; background: var(--accent-color); border-radius: 50%; animation-delay: 1s;"></span>
+      <span style="left: 50%; width: 18px; height: 18px; background: var(--gold-accent); border-radius: 50%; animation-delay: 3s;"></span>
+      <span style="left: 60%; width: 7px; height: 7px; background: var(--primary-color); border-radius: 50%; animation-delay: 5s;"></span>
+      <span style="left: 70%; width: 14px; height: 14px; background: var(--accent-color); border-radius: 50%; animation-delay: 2.5s;"></span>
+      <span style="left: 80%; width: 9px; height: 9px; background: var(--gold-accent); border-radius: 50%; animation-delay: 4.5s;"></span>
+      <span style="left: 90%; width: 11px; height: 11px; background: var(--primary-color); border-radius: 50%; animation-delay: 1.5s;"></span>
+    </div>
 
-
-
-    <!-- Quotes Section -->
+    <!-- Enhanced Quotes Section -->
     <section class="quotes-section">
-      <h2 class="quotes-title">Words of Motivation</h2>
+      <h2 class="quotes-title">Words That Inspire</h2>
       <div class="quote-container">
         <p class="quote">"There is nothing to be found playing small and settling for a life that less than the one you are capable of living"</p>
         <p class="quote-author">- Nelson Mandela</p>
@@ -920,40 +968,65 @@
           And the seventh time when she sang a song of praise, and deemed it a virtue."</p>
         <p class="quote-author">- Kahlil Gibran</p>
       </div>
-      
     </section>
 
-    <!-- Content Grid -->
+    <!-- Enhanced Content Grid -->
     <div class="content-grid">
-    
       <div class="card">
         <h2>ZJU CS COURSES</h2>
-        <p>Dive into the fundimental beauty of computer science</p>
+        <p>Dive into the fundamental beauty of computer science through my academic journey at Zhejiang University</p>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/ADS/" class="tag">ADS</a>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/ALGORITHM%20IN%20GAMES/" class="tag">Algorithm in Games</a>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/COMPUTER%20ORGANIZATION%20DESIGN/" class="tag">Computer Organization Design</a>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/DIGITAL%20IMAGE%20PROCESSING/" class="tag">Digital Image Processing</a>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/NUMERICAL%20ANALYSIS/" class="tag">Numerical Analysis</a>  
-        <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/OOP/" class="tag">Object Oriented Programming In CPP</a>  
+        <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/OOP/" class="tag">Object Oriented Programming In C++</a>  
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/COMPUTER%20ARCHITECTURE/" class="tag">Computer Architecture</a>  
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/DATABASE%20SYSTEMS/" class="tag">Database Systems</a>
       </div>
 
-    
       <div class="card">
         <h2>SELF LEARNING</h2>
-        <p>LEARN AND EXPLORE</p>
+        <p>Continuous learning beyond the classroom - exploring cutting-edge technologies and concepts</p>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/self_learning/DEEP%20LEARNING%20FOR%20COMPUTER%20VISION/" class="tag">Deep Learning For Computer Vision</a>
-
       </div>
+    </div>
 
-      
-    <!-- Quick Actions -->
+    <!-- Enhanced Quick Actions -->
     <div class="quick-actions">
       <a href="#" class="action-button" title="Back to top">↑</a>
       <a href="https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/" class="action-button" title="Search">🔍</a>
     </div>
   </section>
+
+  <!-- Add smooth scroll behavior -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add scroll-based animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card, .quote-container').forEach(element => {
+      observer.observe(element);
+    });
+  </script>
 
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">

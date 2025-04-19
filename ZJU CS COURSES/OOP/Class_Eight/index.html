@@ -18,7 +18,7 @@
     
     
       
-        <title>Essay Reading - Leo Li's Notebook</title>
+        <title>Inheritance - Leo Li's Notebook</title>
       
     
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#essay-reading" class="md-skip">
+        <a href="#inheritance" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Essay Reading
+              Inheritance
             
           </span>
         </div>
@@ -286,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ZJU%20CS%20COURSES/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -306,7 +306,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../self_learning/" class="md-tabs__link">
           
   
     
@@ -431,7 +431,7 @@
         
   
   
-    <a href="../../../ZJU%20CS%20COURSES/" class="md-nav__link">
+    <a href="../../" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -482,7 +482,7 @@
         
   
   
-    <a href="../../" class="md-nav__link">
+    <a href="../../../self_learning/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -531,53 +531,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#3dgs" class="md-nav__link">
+  <a href="#composition-vs-inheritance" class="md-nav__link">
     <span class="md-ellipsis">
-      3DGS:
+      composition vs inheritance
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3dgs_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      3DGS
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3DGS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      渲染
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      分块
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alpha-blending" class="md-nav__link">
-    <span class="md-ellipsis">
-      排序 &amp; Alpha blending
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -600,77 +558,19 @@
   
 
 
-<h1 id="essay-reading">Essay Reading<a class="headerlink" href="#essay-reading" title="Permanent link">&para;</a></h1>
+<h1 id="inheritance">Inheritance<a class="headerlink" href="#inheritance" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 1265 个字 :material-image-multiple-outline: 3 张图片 :material-clock-time-two-outline: 预计阅读时间 13 分钟</p>
+<p>:material-circle-edit-outline: 约 23 个字 :material-clock-time-two-outline: 预计阅读时间不到 1 分钟</p>
 </div>
-<h2 id="3dgs">3DGS:<a class="headerlink" href="#3dgs" title="Permanent link">&para;</a></h2>
+<h2 id="composition-vs-inheritance">composition vs inheritance<a class="headerlink" href="#composition-vs-inheritance" title="Permanent link">&para;</a></h2>
 <ul>
-<li>preknowledge</li>
+<li>
+<p>composition: reuse, is a relationship "has a"</p>
+</li>
+<li>
+<p>inheritance: clone a class and extend it, is a relationship "is a"</p>
+</li>
 </ul>
-<blockquote>
-<ul>
-<li>NERF: 通过多角度的照片view，通过position encoding，处理位置的高频信息，输入位置和摄像机角度，输出颜色和density，同时在模型训练好之后，通过类似ray tracing的方法，为每个ray上的点采样，从而得到某一方向上的点的信息。做体渲染，因为其可微分</li>
-<li><span class="arithmatex">\(C(\mathbf{r}) = \int_{t_n}^{t_f} T(t) \sigma (\mathbf{r}(t)) \mathbf{c} (\mathbf{r}(t), \mathbf{d}) dt, \quad \text{where} \quad T(t) = \exp \left( - \int_{t_n}^{t} \sigma (\mathbf{r}(s)) ds \right)\)</span></li>
-<li>把射线分成N个小区间加权</li>
-<li>一个粗糙网络（Coares）一个精细网络（Fine）。粗糙网络是在均匀采样得到比较少<span class="arithmatex">\((N_c)\)</span>的点进行渲染并训练的网络，用来输出进行采样概率估计。然后用<span class="arithmatex">\(\omega_{i}\)</span>的概率分布采样，训练精细网络。</li>
-</ul>
-</blockquote>
-<div class="admonition note neural network architecture of nerf">
-<p class="admonition-title">Note</p>
-<p><img alt="alt text" src="../Screenshot%202025-03-20%20at%2015.26.59.png" /></p>
-<ul>
-<li>把坐标<span class="arithmatex">\((x,y,z)\)</span>映射出60维的向量，输入到全连接网络得到密度 <span class="arithmatex">\(\sigma\)</span>；视角<span class="arithmatex">\((\theta, \phi)\)</span>映射得到的24维向量和<span class="arithmatex">\(\phi\)</span>的前一层输出特征拼接在一起，经过两层MLP得到RGB值。值得注意的是，为了加强坐标信信，坐标的信息会在网络中间再输入一次。这里的网络结构设计体现了，密度和视角无关，颜色和视角相关。</li>
-</ul>
-</div>
-<ul>
-<li><strong>3DGS</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li>3DGS 是在离散和连续间的一个平衡：在高斯球内部是连续的、可微的；在整个空间中，每个高斯球又是离散的</li>
-<li>NeRF中的噪声在随机采样，蒙特卡洛积分，网络拟和优化时会产生</li>
-<li>3DGS辐射场</li>
-<li>三维高斯分布：用来表征3D点
-<span class="arithmatex">\(L_{3DGS}(x,y,z,\theta,\phi)=\sum_{i=1}G(x, y, z, \mu_i, \sigma_i) \cdot c_i(\theta,  \phi)\)</span></li>
-<li><span class="arithmatex">\(c_i(\theta, \phi)\)</span>是一个球谐函数，表示不同视角下的颜色</li>
-<li>球谐函数</li>
-<li>real-time rendering</li>
-<li>初始化操作
-<span class="arithmatex">\(\sigma\)</span>是正定矩阵，所以<span class="arithmatex">\(RSS^TR^T\)</span>来初始化
-ågradient descent 把梯度传到下一层
-由于放缩变换都是沿着坐标轴，所以只需要一个3D向量，旋转则用四元数表达</li>
-<li>以高斯概率分布构建三维模型</li>
-<li>Splattiing</li>
-</ul>
-</blockquote>
-<h2 id="3dgs_1">3DGS<a class="headerlink" href="#3dgs_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>论文中，三维高斯体的属性有其中心（位置）<span class="arithmatex">\(\mu\)</span>、不透明度<span class="arithmatex">\(\alpha\)</span>、三维协方差矩阵（表示缩放程度）和颜色<span class="arithmatex">\(c\)</span>。<span class="arithmatex">\(c(\theta, \phi)\)</span> 用球谐函数表示，以呈现视角依赖的外观。所有属性都是可学习的，并通过反向传播进行优化。</li>
-</ul>
-<p>论文给出了初始化方法是使用放缩变换<span class="arithmatex">\(S\)</span>和旋转变换<span class="arithmatex">\(R\)</span>组合得到<span class="arithmatex">\(\sum\)</span>：
-<span class="arithmatex">\(\sum=RSS^TR^T\)</span>,由于放缩变换都是沿着坐标轴，所以只需要一个3D向量<span class="arithmatex">\(s\)</span>，旋转则用四元数<span class="arithmatex">\(q\)</span>表达。机器学习通常使用梯度下降对参数进行优化，但直接优化 <span class="arithmatex">\(\sum\)</span>难以保证半正定，所以论文的方法是继续将梯度传递到<span class="arithmatex">\(s,q\)</span>进行优化。</p>
-<div class="admonition note">
-<p class="admonition-title">illustration of splatting</p>
-<p><img alt="" src="https://picx.zhimg.com/v2-8868e432debfcb06ccab795d879d2f41_r.jpg" /></p>
-</div>
-<h3 id="_1">渲染<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>预处理：在这一步骤中，3D 高斯的参数（协方差、位置、不透明度、球谐函数）被优化，以适应给定的图像序列和视角。这一步骤可以使用梯度下降或其他优化算法来实现，目标是最小化重建误差。此外，还可以使用自适应密度控制（ADC）来调整 3D 高斯的数量和分布，以达到最佳的渲染效果。</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><img alt="" src="../image.png" /></p>
-</div>
-<h3 id="_2">分块<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>在处理图像时，为了减少对每个像素进行高斯运算的计算成本，论文采用了一种不同的方法：它不是在像素级别进行精确计算，而是将精度降低到了更宏观的图块级别。这个过程首先涉及将整个图像划分成多个不重叠的小块，这些在原始的研究论文中被形象地称为“砖块”。按照原始论文的建议，每个砖块包括 <span class="arithmatex">\(16\times16\)</span> 个像素。</p>
-<p>接下来，会进一步识别出哪些砖块与特定的高斯投影相交。考虑到一个高斯投影可能会覆盖多个砖块，一种有效的处理方式是复制这个东西，并为每个复制出的高斯分配一个唯一的标识符，即与之相交的 Tile 的 ID。这样，每个砖块都与一个或多个高斯相关联，这些高斯标识了该砖块在图像中的位置和重要性。通过这种方式，3DGS 
-能够在图像中高效地处理和渲染高斯投影，同时保持较低的计算成本。</p>
-<h3 id="alpha-blending">排序 &amp; Alpha blending<a class="headerlink" href="#alpha-blending" title="Permanent link">&para;</a></h3>
-<ul>
-<li>给定像素位置 <span class="arithmatex">\(x\)</span>，通过视图变换 <span class="arithmatex">\(W\)</span>，可以计算与所有重叠高斯体的距离，即这些高斯体的深度，形成高斯体的排序列表 <span class="arithmatex">\(N\)</span>。然后，进行Alpha Blending，也就是混合 alpha 合成来计算整体图像的最终颜色：</li>
-</ul>
-<p>$ C=\sum_{i\in N} c_i \alpha_i^' \prod_{j=1}^{i-1} (1-\alpha_j^')$</p>
 
 
 
