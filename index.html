@@ -686,6 +686,26 @@
       border-radius: 2px;
     }
 
+    /* Apple-style Quotes Section Enhancements */
+    .apple-quotes-section {
+      background: #fff;
+      padding: 8rem 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .section-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.5rem;
+      color: #86868b;
+      margin-top: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.005em;
+    }
+
     /* Professional Cards */
     .cards-grid {
       display: grid;
@@ -793,76 +813,190 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Quotes Section with Carousel */
+    /* Apple-style Quotes Section */
     .quotes-carousel {
       position: relative;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      overflow: hidden;
-      padding: 2rem;
+      padding: 4rem 2rem;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
     }
 
     .quote-item {
-      opacity: 0;
-      visibility: hidden;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
+      width: 90%;
+      max-width: 1000px;
       text-align: center;
-      transition: all 0.5s ease;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1.2s cubic-bezier(0.32, 0, 0.67, 0);
+      z-index: 1;
     }
 
     .quote-item.active {
       opacity: 1;
       visibility: visible;
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: translate(0, 0);
+      z-index: 2;
+    }
+
+    .quote-item.next {
+      opacity: 0;
+      transform: translate(-50%, -50%) translateX(100px);
+      visibility: visible;
+    }
+
+    .quote-item.prev {
+      opacity: 0;
+      transform: translate(-50%, -50%) translateX(-100px);
+      visibility: visible;
     }
 
     .quote-text {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-style: italic;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 2.25rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+      color: #1d1d1f;
+      letter-spacing: -0.005em;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      white-space: pre-line;
+    }
+
+    /* Special styling for the longer Gibran quote */
+    .quote-item:nth-child(2) .quote-text {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      text-align: left;
+      padding: 0 4rem;
+      max-width: 800px;
+    }
+
+    @media (max-width: 1024px) {
+      .quote-item:nth-child(2) .quote-text {
+        font-size: 1.375rem;
+        padding: 0 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .quote-item:nth-child(2) .quote-text {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .quote-item:nth-child(2) .quote-text {
+        font-size: 1.125rem;
+        padding: 0 0.5rem;
+      }
+    }
+
+    /* Quote marks for visual enhancement */
+    .quote-item .quote-text {
+      position: relative;
+    }
+
+    .quote-text::before {
+      content: '"';
+      position: absolute;
+      left: -3rem;
+      top: -1.5rem;
+      font-size: 4rem;
+      color: rgba(26, 54, 93, 0.08);
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+
+    .quote-text::after {
+      content: '"';
+      position: absolute;
+      right: -3rem;
+      bottom: -2.5rem;
+      font-size: 4rem;
+      color: rgba(26, 54, 93, 0.08);
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .quote-text::before,
+      .quote-text::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .quote-text {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .quote-text {
+        font-size: 1.5rem;
+      }
     }
 
     .quote-author {
-      font-weight: 600;
-      color: var(--accent-gradient);
-      font-size: 1.2rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 500;
+      color: #86868b;
+      font-size: 1.125rem;
+      letter-spacing: 0.007em;
+      margin-top: 2rem;
     }
 
-    .carousel-nav {
+    /* Apple-style navigation dots */
+    .carousel-dots {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.3);
-      color: #fff;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      align-items: center;
-      justify-content: center;
+      gap: 0.75rem;
+      z-index: 3;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d2d2d7;
       cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .carousel-nav:hover {
-      background: rgba(0, 0, 0, 0.6);
+    .dot.active {
+      background: #1d1d1f;
+      width: 20px;
+      border-radius: 4px;
     }
 
-    .carousel-prev {
-      left: 0;
+    /* Gradient overlay for longer quotes */
+    .quote-item.active .quote-text {
+      animation: fadeInText 1.2s ease-out;
     }
 
-    .carousel-next {
-      right: 0;
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Footer */
@@ -1154,23 +1288,39 @@
   </section>
 
   <!-- Quotes Section -->
-  <section id="quotes" class="content-section">
-    <h2 class="section-title">Words That Inspire</h2>
+  <section id="quotes" class="content-section apple-quotes-section">
+    <div class="section-header">
+      <h2 class="section-title">Words That Inspire</h2>
+      <p class="section-subtitle">Reflections that guide my journey</p>
+    </div>
     <div class="quotes-carousel">
       <div class="quote-item active">
-        <div class="quote-text">"There is nothing to be found playing small and settling for a life that less than the one you are capable of living"</div>
-        <div class="quote-author">- Nelson Mandela</div>
+        <div class="quote-text">"There is nothing to be found playing small and settling for a life that is less than the one you are capable of living."</div>
+        <div class="quote-author">Nelson Mandela</div>
       </div>
       <div class="quote-item">
-        <div class="quote-text">"Seven times have I despised my soul:
-          The first time when I saw her being meek that she might attain height..."</div>
-        <div class="quote-author">- Kahlil Gibran</div>
+        <div class="quote-text">
+          Seven times have I despised my soul:<br><br>
+          
+          The first time when I saw her being meek that she might attain height.<br><br>
+          
+          The second time when I saw her limping before the crippled.<br><br>
+          
+          The third time when she was given to choose between the hard and the easy, and she chose the easy.<br><br>
+          
+          The fourth time when she committed a wrong, and comforted herself that others also commit wrong.<br><br>
+          
+          The fifth time when she forbore for weakness, and attributed her patience to strength.<br><br>
+          
+          The sixth time when she despised the ugliness of a face, and knew not that it was one of her own masks.<br><br>
+          
+          And the seventh time when she sang a song of praise, and deemed it a virtue.
+        </div>
+        <div class="quote-author">Kahlil Gibran</div>
       </div>
-      <div class="carousel-nav carousel-prev">
-        <i class="fas fa-chevron-left"></i>
-      </div>
-      <div class="carousel-nav carousel-next">
-        <i class="fas fa-chevron-right"></i>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
       </div>
     </div>
   </section>
@@ -1290,31 +1440,66 @@
       observer.observe(card);
     });
 
-    // Quotes carousel
-    let currentQuote = 0;
+    // Apple-style Quotes carousel
     const quotes = document.querySelectorAll('.quote-item');
-    const totalQuotes = quotes.length;
+    const dots = document.querySelectorAll('.dot');
+    let currentQuote = 0;
+    let isTransitioning = false;
 
-    function showQuote(index) {
-      quotes.forEach(quote => quote.classList.remove('active'));
-      quotes[index].classList.add('active');
+    function updateQuotes(newIndex) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      // Remove all classes
+      quotes.forEach(quote => {
+        quote.classList.remove('active', 'next', 'prev');
+      });
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      // Set new active quote
+      quotes[currentQuote].classList.add('prev');
+      quotes[newIndex].classList.add('active');
+      dots[newIndex].classList.add('active');
+
+      currentQuote = newIndex;
+
+      // Allow for next transition
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 1200);
     }
 
-    document.querySelector('.carousel-prev').addEventListener('click', () => {
-      currentQuote = (currentQuote - 1 + totalQuotes) % totalQuotes;
-      showQuote(currentQuote);
-    });
-
-    document.querySelector('.carousel-next').addEventListener('click', () => {
-      currentQuote = (currentQuote + 1) % totalQuotes;
-      showQuote(currentQuote);
-    });
-
     // Auto-rotate quotes
-    setInterval(() => {
-      currentQuote = (currentQuote + 1) % totalQuotes;
-      showQuote(currentQuote);
-    }, 6000);
+    let quoteAutoRotate = setInterval(() => {
+      const nextIndex = (currentQuote + 1) % quotes.length;
+      updateQuotes(nextIndex);
+    }, 8000);
+
+    // Pause auto-rotation on hover
+    const quotesSection = document.querySelector('.quotes-carousel');
+    quotesSection.addEventListener('mouseenter', () => {
+      clearInterval(quoteAutoRotate);
+    });
+
+    quotesSection.addEventListener('mouseleave', () => {
+      quoteAutoRotate = setInterval(() => {
+        const nextIndex = (currentQuote + 1) % quotes.length;
+        updateQuotes(nextIndex);
+      }, 8000);
+    });
+
+    // Click handlers for dots
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        if (index !== currentQuote) {
+          updateQuotes(index);
+        }
+      });
+    });
+
+    // Initialize
+    quotes[currentQuote].classList.add('active');
+    dots[currentQuote].classList.add('active');
   </script>
 
       <main class="md-main" data-md-component="main">
