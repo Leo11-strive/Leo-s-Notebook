@@ -18,7 +18,7 @@
     
     
       
-        <title>Chapter Seven - Leo Li's Notebook</title>
+        <title>Chapter Three: ILP - Leo Li's Notebook</title>
       
     
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#functional-dependencies" class="md-skip">
+        <a href="#review-of-pipeline-hazards" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter Seven
+              Chapter Three: ILP
             
           </span>
         </div>
@@ -529,37 +529,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functional-dependencies" class="md-nav__link">
+  <a href="#review-of-pipeline-hazards" class="md-nav__link">
     <span class="md-ellipsis">
-      Functional Dependencies
+      Review of Pipeline Hazards
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Functional Dependencies">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipelining-some-of-the-fp-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipelining some of the FP units
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipelining some of the FP units">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#uses-of-attribute-closure" class="md-nav__link">
+  <a href="#stalls-arising-from-raw-hazards" class="md-nav__link">
     <span class="md-ellipsis">
-      Uses of Attribute Closure
+      Stalls arising from RAW hazards
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#canonical-cover" class="md-nav__link">
+  <a href="#solving-waw-hazards" class="md-nav__link">
     <span class="md-ellipsis">
-      Canonical Cover正则覆盖
+      Solving WAW hazards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solving WAW hazards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-for-waw-hazards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for WAW hazards
     </span>
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#extraneous-attributes" class="md-nav__link">
+  <a href="#the-mips-r4000-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      Extraneous Attributes无关属性
+      The MIPS R4000 Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ilp" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is ILP?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lecture-for-ilp-software-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lecture for ILP: Software approaches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Scheduling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Scheduling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoreboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoreboarding
     </span>
   </a>
   
@@ -589,101 +655,122 @@
   
 
 
-  <h1>Chapter Seven</h1>
+  <h1>Chapter Three: ILP</h1>
 
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 229 个字 :material-image-multiple-outline: 4 张图片 :material-clock-time-two-outline: 预计阅读时间 2 分钟</p>
+<p>:material-circle-edit-outline: 约 241 个字 :material-image-multiple-outline: 3 张图片 :material-clock-time-two-outline: 预计阅读时间 2 分钟</p>
 </div>
-<h2 id="functional-dependencies">Functional Dependencies<a class="headerlink" href="#functional-dependencies" title="Permanent link">&para;</a></h2>
+<h2 id="review-of-pipeline-hazards">Review of Pipeline Hazards<a class="headerlink" href="#review-of-pipeline-hazards" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Structural Hazards</li>
+<li>Occur when two or more instructions require the same hardware resource at the same time.</li>
 <li>
-<p>K is a superkey of relation R if and only if K-&gt;R</p>
+<p>Example: Two instructions trying to access the same memory location simultaneously.</p>
 </li>
 <li>
-<p>candidate key</p>
+<p>Data Hazards</p>
+<ul>
+<li>Occur when an instruction depends on the result of a previous instruction that has not yet completed.</li>
+<li>Types:<ul>
+<li>Read After Write (RAW): An instruction reads a value before it is written by a previous instruction.</li>
+<li>Write After Read (WAR): An instruction writes a value before it is read by a previous instruction.</li>
+<li>Write After Write (WAW): Two instructions write to the same location, and the order of writes matters.</li>
+</ul>
 </li>
 </ul>
-<blockquote>
-<p>K-&gt;R
-for no proper subset K' of K, K'-&gt;R is true</p>
-</blockquote>
-<ul>
-<li>
-<p>a bad relationship: exist an attribute A in R such that K-&gt;attribute yet K is not i n a superkey of R</p>
 </li>
 <li>
-<p>trivial functional dependency:</p>
+<p>Control Hazards</p>
 </li>
 </ul>
-<blockquote>
-<p>K-&gt;A is trivial if A is a subset of K</p>
-</blockquote>
-<ul>
-<li>
-<p>Closure</p>
-<blockquote>
-<p>The closure of a set of attributes K with respect to a set of functional dependencies F, denoted by F+, is the set of all attributes that are functionally determined by K under F.
-<strong>A-&gt;b, b-&gt;c, then A-&gt;c is a functional dependency in F+</strong></p>
-</blockquote>
-</li>
-<li>
-<p>公理系统</p>
-</li>
-</ul>
-<blockquote>
-<ol>
-<li>reflexivity: 
-   if Y is a subset of X, then X-&gt;Y</li>
-<li>augmentation:
-   if X-&gt;Y, then XZ-&gt;YZ for any Z</li>
-<li>transitivity:
-   if X-&gt;Y and Y-&gt;Z, then X-&gt;Z</li>
-</ol>
-</blockquote>
+<h2 id="pipelining-some-of-the-fp-units">Pipelining some of the FP units<a class="headerlink" href="#pipelining-some-of-the-fp-units" title="Permanent link">&para;</a></h2>
 <div class="admonition tip">
-<p class="admonition-title">Example</p>
-<p><img alt="alt text" src="../image.png" />
-* ab-&gt;cb is equal to av-&gt;c</p>
+<p class="admonition-title">Terminology</p>
+<p><img alt="alt text" src="../image.png" /></p>
 </div>
+<ul>
+<li>
+<p>unpipelined structure, structural hazard may occur</p>
+</li>
+<li>
+<p>use delay counting while implemented on verilog in labs</p>
+</li>
+<li>
+<p>data hazards and exceptions</p>
+</li>
+</ul>
+<h3 id="stalls-arising-from-raw-hazards">Stalls arising from RAW hazards<a class="headerlink" href="#stalls-arising-from-raw-hazards" title="Permanent link">&para;</a></h3>
+<ul>
+<li>load stall</li>
+<li>stall because of previous stalls(sequential issue)</li>
+</ul>
+<h3 id="solving-waw-hazards">Solving WAW hazards<a class="headerlink" href="#solving-waw-hazards" title="Permanent link">&para;</a></h3>
+<ul>
+<li>stall until the previous instruction has written its result(WB)</li>
+<li>do not WB the previous instruction</li>
+</ul>
+<h4 id="check-for-waw-hazards">Check for WAW hazards<a class="headerlink" href="#check-for-waw-hazards" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
-<p class="admonition-title"><span class="arithmatex">\(A^+\)</span></p>
-<ul>
-<li><span class="arithmatex">\(A^+\)</span> is the closure of A with respect to F, the attributes it can determine</li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">pseoducode</p>
+<p class="admonition-title">Check for Hazards</p>
 <p><img alt="alt text" src="../image-1.png" /></p>
 </div>
+<h3 id="the-mips-r4000-pipeline">The MIPS R4000 Pipeline<a class="headerlink" href="#the-mips-r4000-pipeline" title="Permanent link">&para;</a></h3>
 <ul>
-<li>其实本质上就是一个有向图</li>
+<li>use instruction manipulation</li>
 </ul>
-<h3 id="uses-of-attribute-closure">Uses of Attribute Closure<a class="headerlink" href="#uses-of-attribute-closure" title="Permanent link">&para;</a></h3>
+<h2 id="what-is-ilp">What is ILP?<a class="headerlink" href="#what-is-ilp" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>testing superkey</p>
+<p>Basic Block is quite small</p>
 </li>
 <li>
-<p>testing function dependencies</p>
+<p>reduce CPI</p>
 </li>
 <li>
-<p>compute closure of F</p>
+<p>Hardware-based dynamic approaches</p>
+</li>
+<li>
+<p>compiler based</p>
+</li>
+<li>
+<p>loop-level parallelism</p>
 </li>
 </ul>
 <blockquote>
-<p>compute the closure of all the subset of F
-compute the subset of the determinants of all the subset of F</p>
+<p>vector based instructions(GPU is the way)</p>
+<p>dynamic branch</p>
 </blockquote>
-<h3 id="canonical-cover">Canonical Cover正则覆盖<a class="headerlink" href="#canonical-cover" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Explanation and Definition</p>
-<p><img alt="alt text" src="../image-3.png" /></p>
-</div>
-<h3 id="extraneous-attributes">Extraneous Attributes无关属性<a class="headerlink" href="#extraneous-attributes" title="Permanent link">&para;</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Explanation and Definition</p>
+<ul>
+<li>name dependence</li>
+</ul>
+<blockquote>
+<p>renaming</p>
+</blockquote>
+<ul>
+<li>true dependency</li>
+</ul>
+<h2 id="lecture-for-ilp-software-approaches">Lecture for ILP: Software approaches<a class="headerlink" href="#lecture-for-ilp-software-approaches" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Content</p>
 <p><img alt="alt text" src="../image-2.png" /></p>
 </div>
+<h2 id="dynamic-scheduling">Dynamic Scheduling<a class="headerlink" href="#dynamic-scheduling" title="Permanent link">&para;</a></h2>
+<ul>
+<li>issue and read operand: should be separated</li>
+</ul>
+<h3 id="scoreboarding">Scoreboarding<a class="headerlink" href="#scoreboarding" title="Permanent link">&para;</a></h3>
+<ul>
+<li>in-order issue</li>
+<li>
+<p>out-of-order completion</p>
+</li>
+<li>
+<p>Pipeline stages with scoreboard:</p>
+</li>
+</ul>
+<blockquote>
+<p>IF, IS, RO, EX, WB</p>
+</blockquote>
 
 
 
