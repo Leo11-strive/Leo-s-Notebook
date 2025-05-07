@@ -91,6 +91,123 @@
 
 > IF, IS, RO, EX, WB
 
+=== "Concept"
+
+    !!! tip "Scoreboard Basic Concept"
+
+        ![alt text](image-3.png)
+
+
+=== "More specific"
+
+    !!! tip "More Specific"
+
+        ![alt text](image-3.png)
+        
+
+
+### Limitations of Scoreboard
+
+* size of issue queue
+
+* WAR and WAW
+
+### Tomasulo's Algorithm
+
+* Common Data Pass:
+
+* Op, Vj(Value of Operands), Vk, Qj(reservation station code), Qk, A, Busy
+
+!!! note "Basic Operation"
+
+    ![alt text](image-4.png)
+
+
+* overlap iterations of loop(when load, etc)
+
+* non-precise interrupts
+
+!!! note
+
+    ![alt text](image-5.png)
+
+
+### What about Precise Interrupts?
+
+* reordered buffer
+
+### Explicit Register Renaming
+
+* renaming physical registers
+
+* precise interrupts: 
+
+> future file: when ensured that the instruction is no interrupts thus needed writng, the written process can be done
+
+> history file: store in the physical register, yet the previous, or old register will be preserved
+
+
+## Dynamic Hardware Prediction
+
+### One bit Branch-Prediction Buffer
+
+> take the previous "whether jump"
+
+### Two bit Branch Prediction
+
+> a state machine or a counter
+
+> but 1 0 1 0 1 0 is not as efficient as one-bit buffer
+
+### Generalize the 2-bit predictor to the n-bit predictor
+
+!!! note
+
+    ![alt text](image-6.png)
+
+
+
+### Correlating Branch Prediction(m,n)
+
+* m-bit history register($2^m$ situations)
+
+* n-bit saturating counter
+
+
+### Tournament Predictors
+
+* global and local predictors work together
+
+!!! note
+ 
+    ![alt text](image-7.png)
+
+
+
+### Gshare
+
+!!! note 
+
+    ![alt text](image-8.png)
+
+
+### Branch Target Buffer
+
+* store whether jump and the address
+
+!!! note
+
+    ![alt text](image-9.png)
+
+### Integrated Instruction Fetch
+
+* fetch and branch-predict
+
+### Return Address Predictor
+
+
+
+
 
 
 

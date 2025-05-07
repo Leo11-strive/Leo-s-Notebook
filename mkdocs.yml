@@ -4,6 +4,7 @@ theme:
 
   name: material
   custom_dir: overrides
+  language: zh
   palette:
  # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -23,7 +24,7 @@ theme:
         name: 切换至夜间模式
  
   font:
-    text: Merriweather
+    text: LXGW WenKai Mono
     code: JetBrains Mono
   features:
      # - header.autohide #自动隐藏头栏
@@ -223,3 +224,5 @@ plugins:
   - statistics:
       words_per_minute: 100  
   - search  
+  - roamlinks
+  - pub-obsidian
