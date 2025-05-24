@@ -124,3 +124,42 @@ graph TD
 
 ##### T Flip-Flop
 
+* Connect the J and K inputs together
+
+```mermaid
+graph TD
+    A[T Flip-Flop] --> B[T]
+    A --> C[CLK]
+    B --> D[Q]
+    C --> D
+    D --> E[Q']
+    E --> F[Q]
+    F --> G[Q']
+    G --> H[Q]
+```
+
+* The difference between fil-flops and latches is that flip-flops are edge-triggered, while latches are level-triggered.
+
+#### Basic Description of Flip-Flops
+
+##### State Table
+
+##### State Diagram
+
+!!! note
+
+    ![alt text](image.png)
+
+
+##### Equivalent State Definitions
+
+* 相同的状态可以合并
+   * how to define the same state: same output procedure
+
+!!! note
+
+    ![alt text](image-1.png)
+
+
+
+
