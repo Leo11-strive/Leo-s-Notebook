@@ -22,6 +22,22 @@
 * (A): Load si into memory and build an in-memory
 hash index on it using the join attribute. This hash index uses a different hash function than the earlier one h.
 
+* Read the tuples in ri from the disk one by one.
+For each tuple tr locate each matching tuple ts in si using the in-memory hash index. Output the concatenation of their attributes.
 
-## Sort-Merge Join Algorithm
+**Relation s is called the build input and r is called the probe input.**
+
+
+* The value n and the hash function h is chosen such that each si should fit in memory.
+
+* Typically n is chosen as $n = \lceil \frac{b_s}{M} \rceil \mul f$ where f is a “fudge factor”, typically around 1.2
+
+* The probe relation partitions ri need not fit in memory
+
+
+* Recursive partitioning required if number of partitions n is greater than
+number of pages M of memory.
+
+
+
 
