@@ -9,23 +9,23 @@ theme:
  # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent:  teal
+      primary: blue grey
+      accent:  amber
       toggle:
         icon: material/brightness-4
         name: 切换至日间模式
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: brown
-      accent: orange
+      primary: teal
+      accent: amber
       toggle:
         icon: material/brightness-7
         name: 切换至夜间模式
  
   font:
-    text: Merriweather
-    code: JetBrains Mono
+    text: LXGW WenKai Mono
+    code: LXGW WenKai Mono
   features:
      # - header.autohide #自动隐藏头栏
     # - announce.dismiss # 公告栏
@@ -43,6 +43,7 @@ theme:
     - toc.follow # toc 跟随
     - content.code.annotate # 代码行号
     - content.code.copy # 代码复制
+    - search.share # 分享搜索结果
   logo: ./logo.png
   icon:
     repo: fontawesome/brands/github
@@ -62,8 +63,6 @@ theme:
       quote: octicons/quote-16
   favicon: img/favicon.ico
 
-
-
 nav:  
   - HOME: index.md  
   - ZJU CS COURSES:  
@@ -71,19 +70,19 @@ nav:
     - ADVANCED DATA STRUCTURE AND ALGORITHMS:  
       - ZJU CS COURSES/ADS/index.md
       - AVL, Splay Trees and Amortized Analysis: ZJU CS COURSES/ADS/Chapter_One.md
+      - Red-Black Trees and B+ Trees: ZJU CS COURSES/ADS/Chapter_Two.md  
+      - Inverted File Index: ZJU CS COURSES/ADS/Chapter_Three.md
+      - Leftist Heaps and Skewed Heaps: ZJU CS COURSES/ADS/Chapter_Four.md
+      - Binomial Queue: ZJU CS COURSES/ADS/Chapter_Five.md  
+      - Backtracking: ZJU CS COURSES/ADS/Chapter_Six.md
+      - Divide and Conquer: ZJU CS COURSES/ADS/Chapter_Seven.md
+      - Dynamic Programming: ZJU CS COURSES/ADS/Chapter_Eight.md
+      - Greedy Algorithms: ZJU CS COURSES/ADS/Chapter_Nine.md
       - NP Problems: ZJU CS COURSES/ADS/Chapter_Ten.md
       - Approximation: ZJU CS COURSES/ADS/Chapter_Eleven.md
       - Local Search: ZJU CS COURSES/ADS/Chapter_Twelve.md
       - Parallel Algorithm: ZJU CS COURSES/ADS/Chapter_Fourteen.md  
       - External Sorting: ZJU CS COURSES/ADS/Chapter_Fifteen.md
-      - Greedy Algorithms: ZJU CS COURSES/ADS/Chapter_Nine.md
-      - Dynamic Programming: ZJU CS COURSES/ADS/Chapter_Eight.md
-      - Divide and Conquer: ZJU CS COURSES/ADS/Chapter_Seven.md
-      - Backtracking: ZJU CS COURSES/ADS/Chapter_Six.md
-      - Binomial Queue: ZJU CS COURSES/ADS/Chapter_Five.md  
-      - Leftist Heaps and Skewed Heaps: ZJU CS COURSES/ADS/Chapter_Four.md
-      - Red-Black Trees and B+ Trees: ZJU CS COURSES/ADS/Chapter_Two.md  
-      - Inverted File Index: ZJU CS COURSES/ADS/Chapter_Three.md
     - ALGORITHM IN GAMES:  
       - ZJU CS COURSES/ALGORITHM IN GAMES/index.md
       - Introduction: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_One.md  
@@ -103,7 +102,7 @@ nav:
       - Supplement for Exception: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Exception.md
     - DIGITAL IMAGE PROCESSING:  
       - ZJU CS COURSES/DIGITAL IMAGE PROCESSING/index.md  
-      - Introduction: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chpater_One.md  
+      - Introduction: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chapter_One.md  
       - Binary Image Processing: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chapter_Two.md
     - NUMERICAL ANALYSIS:  
       - ZJU CS COURSES/NUMERICAL ANALYSIS/index.md  
@@ -159,6 +158,8 @@ nav:
     - DEEP LEARNING FOR COMPUTER VISION:   
       - self_learning/DEEP LEARNING FOR COMPUTER VISION/index.md  
       - Convolutional Networks: self_learning/DEEP LEARNING FOR COMPUTER VISION/Lecture_7.md
+    - RESEARCH:
+      - self_learning/Research/index.md
 repo_url: https://github.com/Leo11-strive/Leo-s-Notebook
 repo_name: Leo Li's Notebook  
 markdown_extensions:
@@ -182,36 +183,24 @@ markdown_extensions:
   - pymdownx.tasklist
   - pymdownx.tilde
   - pymdownx.caret
-  - pymdownx.highlight
   - pymdownx.keys
   - pymdownx.smartsymbols
   - pymdownx.mark
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem
-
-      
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-
   - pymdownx.tasklist:
       clickable_checkbox: true
-  
   - toc:
       permalink: true
       title: Navigator
   - tables
 extra_javascript:
   - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js   
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   
 
