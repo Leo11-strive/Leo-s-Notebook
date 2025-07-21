@@ -18,7 +18,7 @@
     
     
       
-        <title>Chapter Three: ILP - Leo Li's Notebook</title>
+        <title>Lecture Six: Policy Gradient Methods - Leo Li's Notebook</title>
       
     
     
@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#review-of-pipeline-hazards" class="md-skip">
+        <a href="#lecture-six-policy-gradient-methods" class="md-skip">
           Skip to content
         </a>
       
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter Three: ILP
+              Lecture Six: Policy Gradient Methods
             
           </span>
         </div>
@@ -541,6 +541,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -549,242 +551,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#review-of-pipeline-hazards" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Review of Pipeline Hazards
+      课程回顾
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pipelining-some-of-the-fp-units" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pipelining some of the FP units
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Pipelining some of the FP units">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stalls-arising-from-raw-hazards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stalls arising from RAW hazards
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solving-waw-hazards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solving WAW hazards
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Solving WAW hazards">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#check-for-waw-hazards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check for WAW hazards
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-mips-r4000-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      The MIPS R4000 Pipeline
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-ilp" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is ILP?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-for-ilp-software-approaches" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lecture for ILP: Software approaches
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-scheduling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Scheduling
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dynamic Scheduling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scoreboarding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scoreboarding
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limitations-of-scoreboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Limitations of Scoreboard
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tomasulos-algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tomasulo's Algorithm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-about-precise-interrupts" class="md-nav__link">
-    <span class="md-ellipsis">
-      What about Precise Interrupts?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#explicit-register-renaming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Explicit Register Renaming
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-hardware-prediction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dynamic Hardware Prediction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dynamic Hardware Prediction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#one-bit-branch-prediction-buffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      One bit Branch-Prediction Buffer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#two-bit-branch-prediction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Two bit Branch Prediction
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generalize-the-2-bit-predictor-to-the-n-bit-predictor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generalize the 2-bit predictor to the n-bit predictor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#correlating-branch-predictionmn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Correlating Branch Prediction(m,n)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tournament-predictors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tournament Predictors
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gshare" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gshare
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branch-target-buffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Branch Target Buffer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integrated-instruction-fetch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integrated Instruction Fetch
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#return-address-predictor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Return Address Predictor
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -807,239 +578,37 @@
   
 
 
-  <h1>Chapter Three: ILP</h1>
-
+<h1 id="lecture-six-policy-gradient-methods">Lecture Six: Policy Gradient Methods<a class="headerlink" href="#lecture-six-policy-gradient-methods" title="Permanent link">&para;</a></h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p>:material-circle-edit-outline: 约 441 个字 :material-image-multiple-outline: 11 张图片 :material-clock-time-two-outline: 预计阅读时间 4 分钟</p>
+<p>:material-circle-edit-outline: 约 110 个字 :material-clock-time-two-outline: 预计阅读时间 1 分钟</p>
 </div>
-<h2 id="review-of-pipeline-hazards">Review of Pipeline Hazards<a class="headerlink" href="#review-of-pipeline-hazards" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Structural Hazards</li>
-<li>Occur when two or more instructions require the same hardware resource at the same time.</li>
-<li>
-<p>Example: Two instructions trying to access the same memory location simultaneously.</p>
-</li>
-<li>
-<p>Data Hazards</p>
-<ul>
-<li>Occur when an instruction depends on the result of a previous instruction that has not yet completed.</li>
-<li>Types:<ul>
-<li>Read After Write (RAW): An instruction reads a value before it is written by a previous instruction.</li>
-<li>Write After Read (WAR): An instruction writes a value before it is read by a previous instruction.</li>
-<li>Write After Write (WAW): Two instructions write to the same location, and the order of writes matters.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Control Hazards</p>
-</li>
-</ul>
-<h2 id="pipelining-some-of-the-fp-units">Pipelining some of the FP units<a class="headerlink" href="#pipelining-some-of-the-fp-units" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Terminology</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image.png" /></p>
-</div>
+<h2 id="_1">课程回顾<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>unpipelined structure, structural hazard may occur</p>
-</li>
-<li>
-<p>use delay counting while implemented on verilog in labs</p>
-</li>
-<li>
-<p>data hazards and exceptions</p>
-</li>
-</ul>
-<h3 id="stalls-arising-from-raw-hazards">Stalls arising from RAW hazards<a class="headerlink" href="#stalls-arising-from-raw-hazards" title="Permanent link">&para;</a></h3>
-<ul>
-<li>load stall</li>
-<li>stall because of previous stalls(sequential issue)</li>
-</ul>
-<h3 id="solving-waw-hazards">Solving WAW hazards<a class="headerlink" href="#solving-waw-hazards" title="Permanent link">&para;</a></h3>
-<ul>
-<li>stall until the previous instruction has written its result(WB)</li>
-<li>do not WB the previous instruction</li>
-</ul>
-<h4 id="check-for-waw-hazards">Check for WAW hazards<a class="headerlink" href="#check-for-waw-hazards" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p class="admonition-title">Check for Hazards</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-1.png" /></p>
-</div>
-<h3 id="the-mips-r4000-pipeline">The MIPS R4000 Pipeline<a class="headerlink" href="#the-mips-r4000-pipeline" title="Permanent link">&para;</a></h3>
-<ul>
-<li>use instruction manipulation</li>
-</ul>
-<h2 id="what-is-ilp">What is ILP?<a class="headerlink" href="#what-is-ilp" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Basic Block is quite small</p>
-</li>
-<li>
-<p>reduce CPI</p>
-</li>
-<li>
-<p>Hardware-based dynamic approaches</p>
-</li>
-<li>
-<p>compiler based</p>
-</li>
-<li>
-<p>loop-level parallelism</p>
-</li>
-</ul>
+<p>蒙特卡洛方法：</p>
 <blockquote>
-<p>vector based instructions(GPU is the way)</p>
-<p>dynamic branch</p>
+<p><span class="arithmatex">\(V(s_t)=V(s_t)+\alpha\left[G_t-V(s_t)\right]\)</span></p>
 </blockquote>
-<ul>
-<li>name dependence</li>
-</ul>
+</li>
+<li>
+<p>时序差分方法：</p>
 <blockquote>
-<p>renaming</p>
+<p><span class="arithmatex">\(V(s_t)=V(s_t)+\alpha\left[R_{t+1}+\gammaV(s_{t+1})-V(s_t)\right]\)</span></p>
 </blockquote>
-<ul>
-<li>true dependency</li>
-</ul>
-<h2 id="lecture-for-ilp-software-approaches">Lecture for ILP: Software approaches<a class="headerlink" href="#lecture-for-ilp-software-approaches" title="Permanent link">&para;</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Content</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-2.png" /></p>
-</div>
-<h2 id="dynamic-scheduling">Dynamic Scheduling<a class="headerlink" href="#dynamic-scheduling" title="Permanent link">&para;</a></h2>
-<ul>
-<li>issue and read operand: should be separated</li>
-</ul>
-<h3 id="scoreboarding">Scoreboarding<a class="headerlink" href="#scoreboarding" title="Permanent link">&para;</a></h3>
-<ul>
-<li>in-order issue</li>
-<li>
-<p>out-of-order completion</p>
 </li>
 <li>
-<p>Pipeline stages with scoreboard:</p>
-</li>
-</ul>
+<p>SARSA方法：</p>
 <blockquote>
-<p>IF, IS, RO, EX, WB</p>
+<p><span class="arithmatex">\(Q(s_t,a_t)=Q(s_t,a_t)+\alpha\left[R_{t+1}+\gamma Q(s_{t+1},a_{t+1})-Q(s_t,a_t)\right]\)</span></p>
 </blockquote>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Concept</label><label for="__tabbed_1_2">More specific</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="admonition tip">
-<p class="admonition-title">Scoreboard Basic Concept</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-3.png" /></p>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="admonition tip">
-<p class="admonition-title">More Specific</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-3.png" /></p>
-</div>
-</div>
-</div>
-</div>
-<h3 id="limitations-of-scoreboard">Limitations of Scoreboard<a class="headerlink" href="#limitations-of-scoreboard" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>size of issue queue</p>
 </li>
 <li>
-<p>WAR and WAW</p>
-</li>
-</ul>
-<h3 id="tomasulos-algorithm">Tomasulo's Algorithm<a class="headerlink" href="#tomasulos-algorithm" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Common Data Pass:</p>
-</li>
-<li>
-<p>Op, Vj(Value of Operands), Vk, Qj(reservation station code), Qk, A, Busy</p>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Basic Operation</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-4.png" /></p>
-</div>
-<ul>
-<li>
-<p>overlap iterations of loop(when load, etc)</p>
-</li>
-<li>
-<p>non-precise interrupts</p>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-5.png" /></p>
-</div>
-<h3 id="what-about-precise-interrupts">What about Precise Interrupts?<a class="headerlink" href="#what-about-precise-interrupts" title="Permanent link">&para;</a></h3>
-<ul>
-<li>reordered buffer</li>
-</ul>
-<h3 id="explicit-register-renaming">Explicit Register Renaming<a class="headerlink" href="#explicit-register-renaming" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>renaming physical registers</p>
-</li>
-<li>
-<p>precise interrupts: </p>
-</li>
-</ul>
+<p>Q-learning方法：</p>
 <blockquote>
-<p>future file: when ensured that the instruction is no interrupts thus needed writng, the written process can be done</p>
-<p>history file: store in the physical register, yet the previous, or old register will be preserved</p>
+<p><span class="arithmatex">\(Q(s_t,a_t)=Q(s_t,a_t)+\alpha\left[R_{t+1}+\gamma \max_{a'}Q(s_{t+1},a')-Q(s_t,a_t)\right]\)</span></p>
 </blockquote>
-<h2 id="dynamic-hardware-prediction">Dynamic Hardware Prediction<a class="headerlink" href="#dynamic-hardware-prediction" title="Permanent link">&para;</a></h2>
-<h3 id="one-bit-branch-prediction-buffer">One bit Branch-Prediction Buffer<a class="headerlink" href="#one-bit-branch-prediction-buffer" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>take the previous "whether jump"</p>
-</blockquote>
-<h3 id="two-bit-branch-prediction">Two bit Branch Prediction<a class="headerlink" href="#two-bit-branch-prediction" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>a state machine or a counter</p>
-<p>but 1 0 1 0 1 0 is not as efficient as one-bit buffer</p>
-</blockquote>
-<h3 id="generalize-the-2-bit-predictor-to-the-n-bit-predictor">Generalize the 2-bit predictor to the n-bit predictor<a class="headerlink" href="#generalize-the-2-bit-predictor-to-the-n-bit-predictor" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-6.png" /></p>
-</div>
-<h3 id="correlating-branch-predictionmn">Correlating Branch Prediction(m,n)<a class="headerlink" href="#correlating-branch-predictionmn" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>m-bit history register(<span class="arithmatex">\(2^m\)</span> situations)</p>
-</li>
-<li>
-<p>n-bit saturating counter</p>
 </li>
 </ul>
-<h3 id="tournament-predictors">Tournament Predictors<a class="headerlink" href="#tournament-predictors" title="Permanent link">&para;</a></h3>
-<ul>
-<li>global and local predictors work together</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-7.png" /></p>
-</div>
-<h3 id="gshare">Gshare<a class="headerlink" href="#gshare" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-8.png" /></p>
-</div>
-<h3 id="branch-target-buffer">Branch Target Buffer<a class="headerlink" href="#branch-target-buffer" title="Permanent link">&para;</a></h3>
-<ul>
-<li>store whether jump and the address</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><img alt="alt text" loading="lazy" src="../../DIGITAL%20IMAGE%20PROCESSING/image-9.png" /></p>
-</div>
-<h3 id="integrated-instruction-fetch">Integrated Instruction Fetch<a class="headerlink" href="#integrated-instruction-fetch" title="Permanent link">&para;</a></h3>
-<ul>
-<li>fetch and branch-predict</li>
-</ul>
-<h3 id="return-address-predictor">Return Address Predictor<a class="headerlink" href="#return-address-predictor" title="Permanent link">&para;</a></h3>
 
 
 
