@@ -92,7 +92,7 @@ nav:
       - Navigation Algorithms: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Four.md  
       - Collision Detection: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Five.md      
       
-    - COMPUTER ORGANIZATION DESIGH:  
+    - COMPUTER ORGANIZATION DESIGN:  
       - ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/index.md  
       - Instructions: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Two.md  
       - Arithmetic: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Three.md  
@@ -116,14 +116,38 @@ nav:
       - ZJU CS COURSES/OOP/index.md  
       - Class One: ZJU CS COURSES/OOP/Class_One.md
       - Class Two: ZJU CS COURSES/OOP/Class_Two.md  
+      - Class Three: ZJU CS COURSES/OOP/Class_Three.md
+      - Class Four: ZJU CS COURSES/OOP/Class_Four.md
+      - Class Five: ZJU CS COURSES/OOP/Class_Five.md
+      - Class Six: ZJU CS COURSES/OOP/Class_Six.md
+      - Class Eight: ZJU CS COURSES/OOP/Class_Eight.md
+      - Class Nine: ZJU CS COURSES/OOP/Class_Nine.md
+      - Class Ten: ZJU CS COURSES/OOP/Class_Ten.md
+      - GCC: ZJU CS COURSES/OOP/gcc.md
+      - Make: ZJU CS COURSES/OOP/Make.md
+
     - COMPUTER ARCHITECTURE:  
       - ZJU CS COURSES/COMPUTER ARCHITECTURE/index.md  
-      - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md  
+      - Pipelining: ZJU CS COURSES/COMPUTER ARCHITECTURE/Pipeline_Review_Advanced.md 
+      - Exceptions: ZJU CS COURSES/COMPUTER ARCHITECTURE/Exceptions_Review.md 
+      - ILP: ZJU CS COURSES/COMPUTER ARCHITECTURE/Chapter_Three_ILP.md
+      - Memory Hierarchy: ZJU CS COURSES/COMPUTER ARCHITECTURE/Chapter_two.md
     - DATABASE SYSTEMS:  
       - ZJU CS COURSES/DATABASE SYSTEMS/index.md  
       - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md    
       - Relational Algebra: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Two.md  
       - Introduction to SQL: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Three.md
+      - Chapter Four: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Four.md
+      - Chapter Five: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Five.md
+      - Chapter Seven: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Seven.md
+      - Chapter Eight: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Eight.md
+      - Chapter Twelve: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Twelve.md
+      - Chapter Thirteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Thirteen.md
+      - Chapter Fourteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Fourteen.md
+      - Chapter Fifteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Fifteen.md
+      - Chapter Sixteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Sixteen.md
+      
+
     - COMPUTER GRAPHICS:  
       - ZJU CS COURSES/COMPUTER GRAPHICS/index.md  
       - Introduction: ZJU CS COURSES/COMPUTER GRAPHICS/Class_One.md  
