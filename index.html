@@ -82,8 +82,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Merriweather";--md-code-font:"JetBrains Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+Mono:300,300i,400,400i,700,700i%7CLXGW+WenKai+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai Mono";--md-code-font:"LXGW WenKai Mono"}</style>
       
     
     
@@ -122,13 +122,18 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-my-digital-notebook" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -172,7 +177,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="amber"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -182,7 +187,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -215,6 +220,11 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
@@ -338,7 +348,6 @@
           
         
       
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     /* Core layout modifications */
     .md-header{position:initial}
@@ -347,246 +356,176 @@
     @media screen and (min-width:60em){.md-sidebar--secondary{display:none}}
     @media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
 
-    /* Enhanced custom properties */
+    /* Material Design inspired custom properties */
     :root {
-      --primary-color: #2C3E50;
-      --secondary-color: #34495E;
-      --accent-color: #E67E22;
-      --bg-color: #F8F9FA;
-      --text-color: #2C3E50;
+      --primary-color: #009688; /* teal */
+      --primary-dark: #00695C;
+      --secondary-color: #607D8B; /* blue grey */
+      --accent-color: #FFC107; /* amber */
+      --bg-color: #FAFAFA;
+      --text-color: #212121;
+      --text-secondary: #757575;
       --card-bg: #FFFFFF;
-      --gold-accent: #D4AF37;
-      --transition-speed: 0.4s;
-      --font-primary: 'Playfair Display', serif;
-      --font-secondary: 'Source Sans Pro', sans-serif;
+      --surface-color: #F5F5F5;
+      --border-color: #E0E0E0;
+      --transition-speed: 0.3s;
+      --font-primary: 'LXGW WenKai Mono', monospace;
+      --font-secondary: 'LXGW WenKai Mono', monospace;
+      --elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --elevation-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      --elevation-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    /* Dark mode support */
+    [data-md-color-scheme="slate"] {
+      --primary-color: #607D8B; /* blue grey */
+      --primary-dark: #455A64;
+      --secondary-color: #009688;
+      --accent-color: #FFC107;
+      --bg-color: #121212;
+      --text-color: #FFFFFF;
+      --text-secondary: #B0B0B0;
+      --card-bg: #1E1E1E;
+      --surface-color: #2D2D2D;
+      --border-color: #404040;
     }
 
     body {
       font-family: var(--font-secondary);
       background-color: var(--bg-color);
       color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color var(--transition-speed), color var(--transition-speed);
     }
 
-    /* Modern scrollbar */
+    /* Material Design scrollbar */
     ::-webkit-scrollbar {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.05);
-      border-radius: 5px;
+      background: var(--surface-color);
+      border-radius: 4px;
     }
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(45deg, var(--accent-color), var(--gold-accent));
-      border-radius: 5px;
-      border: 2px solid var(--bg-color);
+      background: var(--primary-color);
+      border-radius: 4px;
+      border: 1px solid var(--surface-color);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
     }
 
-    /* Enhanced Container */
+    /* Container with Material Design styling */
     .mdx-container {
-      background: linear-gradient(135deg, #F8F9FA 0%, #ECF0F1 100%);
-      min-height: calc(100vh - 120px);
+      background: var(--bg-color);
+      min-height: calc(100vh - 64px);
       position: relative;
       z-index: 1;
-      overflow: hidden;
+      transition: background-color var(--transition-speed);
     }
 
-    .mdx-container::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background: 
-        radial-gradient(circle at 30% 20%, rgba(230, 126, 34, 0.1) 0%, transparent 25%),
-        radial-gradient(circle at 70% 80%, rgba(52, 73, 94, 0.1) 0%, transparent 25%);
-      animation: backgroundAnimation 20s linear infinite;
-    }
-
-    @keyframes backgroundAnimation {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    /* Advanced Hero section */
+    /* Material Design Hero section */
     .hero-section {
       text-align: center;
-      padding: 8rem 2rem 6rem;
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      padding: 4rem 2rem 3rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
       color: white;
       position: relative;
-      overflow: hidden;
-      margin-bottom: 3rem;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
-
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.1) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.1) 75%);
-      background-size: 40px 40px;
-      animation: heroPattern 20s linear infinite;
-      opacity: 0.3;
-    }
-
-    @keyframes heroPattern {
-      0% { background-position: 0 0, 20px 0, 20px -20px, 0 20px; }
-      100% { background-position: 40px 40px, 60px 40px, 60px 20px, 40px 60px; }
+      margin-bottom: 2rem;
     }
 
     .hero-title {
       font-family: var(--font-primary);
-      font-size: 4.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      letter-spacing: 2px;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
       position: relative;
-      display: inline-block;
       z-index: 1;
-      animation: titleAppear 1.5s ease-out;
-    }
-
-    @keyframes titleAppear {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
-      transform: scaleX(0);
-      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-
-    .hero-title:hover::after {
-      transform: scaleX(1);
     }
 
     .hero-subtitle {
       font-family: var(--font-secondary);
-      font-size: 1.6rem;
+      font-size: 1.125rem;
       opacity: 0.9;
-      font-style: italic;
-      margin-top: 1.5rem;
-      animation: subtitleAppear 1.5s ease-out 0.3s both;
+      margin-top: 0.5rem;
+      font-weight: 400;
     }
 
-    @keyframes subtitleAppear {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 0.9; transform: translateY(0); }
-    }
-
-    /* Enhanced Profile section */
+    /* Material Design Profile section */
     .profile-section {
-      max-width: 1400px;
-      margin: -6rem auto 4rem;
-      padding: 0 2rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
       position: relative;
-      z-index: 3;
+      z-index: 2;
     }
 
     .profile-card {
       background: var(--card-bg);
-      border-radius: 25px;
-      padding: 3rem;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: var(--elevation-2);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       position: relative;
-      overflow: hidden;
-      transform: translateY(0);
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: box-shadow var(--transition-speed);
     }
 
     .profile-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    }
-
-    .profile-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 160px;
-      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
-      z-index: 0;
-      transition: height 0.6s ease;
-    }
-
-    .profile-card:hover::before {
-      height: 180px;
+      box-shadow: var(--elevation-3);
     }
 
     .profile-image {
-      width: 180px;
-      height: 180px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      border: 5px solid white;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-      margin-bottom: 2rem;
-      position: relative;
-      z-index: 1;
-      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      border: 3px solid var(--primary-color);
+      box-shadow: var(--elevation-1);
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 5rem;
+      font-size: 3rem;
       color: white;
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform var(--transition-speed);
     }
 
     .profile-image:hover {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      transform: scale(1.05);
     }
 
     .profile-name {
       font-family: var(--font-primary);
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       color: var(--text-color);
       margin-bottom: 0.5rem;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .profile-title {
-      font-size: 1.2rem;
-      color: var(--accent-color);
-      margin-bottom: 2rem;
-      font-weight: 600;
-      letter-spacing: 1px;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
     .profile-bio {
-      color: var(--text-color);
-      margin-bottom: 2.5rem;
-      line-height: 1.8;
-      max-width: 700px;
-      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      font-size: 0.9375rem;
     }
 
-    /* Enhanced Social links */
+    /* Material Design Social links */
     .social-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -594,295 +533,172 @@
     .social-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-      padding: 0.8rem 1.6rem;
-      border-radius: 50px;
-      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      background: var(--primary-color);
       color: white;
       text-decoration: none;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      font-weight: 600;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .social-link::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: 0.5s;
-    }
-
-    .social-link:hover::before {
-      left: 100%;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      font-weight: 500;
+      font-size: 0.875rem;
     }
 
     .social-link:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background: var(--primary-dark);
+      transform: translateY(-2px);
     }
 
-    /* Enhanced Quotes section */
+    /* Material Design Quotes section */
     .quotes-section {
       background: var(--card-bg);
-      border-radius: 25px;
-      padding: 4rem;
-      margin: 4rem auto;
-      max-width: 1200px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quotes-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(230,126,34,0.05) 0%, transparent 70%);
-      animation: rotateGradient 15s linear infinite;
-    }
-
-    @keyframes rotateGradient {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      box-shadow: var(--elevation-1);
     }
 
     .quotes-title {
       font-family: var(--font-primary);
-      color: var(--primary-color);
+      color: var(--text-color);
       text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-      display: inline-block;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 2.5rem;
-    }
-
-    .quotes-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-color), var(--gold-accent));
-      border-radius: 3px;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
     }
 
     .quote-container {
       position: relative;
-      padding: 2.5rem;
-      border-left: 5px solid transparent;
-      margin: 2rem 0;
-      background: rgba(52, 73, 94, 0.02);
-      border-radius: 0 25px 25px 0;
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      border-left-color: var(--gold-accent);
+      padding: 1.5rem;
+      border-left: 4px solid var(--primary-color);
+      margin: 1.5rem 0;
+      background: var(--surface-color);
+      border-radius: 0 4px 4px 0;
+      transition: background-color var(--transition-speed);
     }
 
     .quote-container:hover {
-      transform: translateX(15px) translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      border-left-color: var(--accent-color);
-      background: rgba(52, 73, 94, 0.05);
+      background: var(--border-color);
     }
 
     .quote {
       font-family: var(--font-primary);
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-style: italic;
       margin-bottom: 1rem;
       color: var(--text-color);
-      line-height: 1.8;
+      line-height: 1.6;
     }
 
     .quote-author {
-      font-weight: 600;
-      color: var(--accent-color);
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-weight: 500;
+      color: var(--primary-color);
+      font-size: 0.875rem;
     }
 
-    /* Enhanced Content grid */
+    /* Material Design Content grid */
     .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2.5rem;
-      max-width: 1200px;
-      margin: 4rem auto;
-      padding: 0 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
     .card {
       background: var(--card-bg);
-      border-radius: 25px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-      border: 1px solid transparent;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--accent-color), var(--gold-accent));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.5s ease;
-    }
-
-    .card:hover::before {
-      transform: scaleX(1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--elevation-1);
+      transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+      border: 1px solid var(--border-color);
     }
 
     .card:hover {
-      transform: translateY(-15px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      border-color: rgba(230, 126, 34, 0.2);
+      box-shadow: var(--elevation-2);
+      transform: translateY(-4px);
     }
 
     .card h2 {
       font-family: var(--font-primary);
-      color: var(--secondary-color);
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    .card h2::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 40px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-color), var(--gold-accent));
-      border-radius: 3px;
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      font-size: 1.375rem;
+      font-weight: 500;
     }
 
     .card p {
-      margin-bottom: 2rem;
-      line-height: 1.8;
-      color: #555;
-      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
     }
 
-    /* Enhanced Tags */
+    /* Material Design Tags */
     .tag {
       display: inline-block;
-      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      background: var(--primary-color);
       color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 50px;
-      font-size: 0.9rem;
-      margin: 0.4rem;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      padding: 0.375rem 0.75rem;
+      border-radius: 16px;
+      font-size: 0.75rem;
+      margin: 0.25rem;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
       text-decoration: none;
-      font-weight: 600;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .tag::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: 0.5s;
-    }
-
-    .tag:hover::before {
-      left: 100%;
+      font-weight: 500;
     }
 
     .tag:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      background: var(--primary-dark);
+      transform: translateY(-1px);
     }
 
-    /* Enhanced Quick actions */
+    /* Material Design Quick actions */
     .quick-actions {
       position: fixed;
-      bottom: 3rem;
-      right: 3rem;
+      bottom: 2rem;
+      right: 2rem;
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
+      gap: 0.75rem;
       z-index: 1000;
     }
 
     .action-button {
-      width: 60px;
-      height: 60px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-color), var(--gold-accent));
+      background: var(--accent-color);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      font-size: 1.4rem;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      box-shadow: var(--elevation-2);
+      font-size: 1.125rem;
+      text-decoration: none;
     }
 
     .action-button:hover {
-      transform: translateY(-5px) scale(1.1);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transform: scale(1.1);
+      background: #FFB300;
     }
 
-    /* Advanced animations */
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0); }
-      50% { transform: translateY(-10px) rotate(2deg); }
-    }
-
-    @keyframes shimmer {
-      0% { background-position: -1000px 0; }
-      100% { background-position: 1000px 0; }
-    }
-
-    /* Custom cursor effects */
-    body {
-      cursor: crosshair;
-    }
-
-    a, button, .action-button {
-      cursor: pointer;
-    }
-
-    /* Enhanced Responsive design */
+    /* Responsive design */
     @media screen and (max-width: 768px) {
       .hero-section {
-        padding: 6rem 1.5rem 4rem;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        padding: 3rem 1rem 2rem;
       }
       
       .hero-title {
-        font-size: 3rem;
+        font-size: 2rem;
       }
       
       .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
       
       .content-grid {
@@ -890,51 +706,23 @@
         padding: 0 1rem;
       }
       
+      .profile-card {
+        padding: 1.5rem;
+      }
+      
+      .quotes-section {
+        padding: 1.5rem;
+        margin: 1.5rem;
+      }
+      
       .quote {
-        font-size: 1.1rem;
+        font-size: 0.9375rem;
       }
       
       .quick-actions {
-        bottom: 1.5rem;
-        right: 1.5rem;
+        bottom: 1rem;
+        right: 1rem;
       }
-    }
-
-    /* Special effects and interactions */
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .neumorphic {
-      background: #e0e0e0;
-      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    }
-
-    /* Particles background effect */
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0;
-    }
-
-    .particles span {
-      position: absolute;
-      display: block;
-      pointer-events: none;
-      animation: particle-float 15s infinite;
-      opacity: 0.4;
-    }
-
-    @keyframes particle-float {
-      0% { transform: translateY(100vh) scale(0); }
-      50% { opacity: 0.8; }
-      100% { transform: translateY(-10vh) scale(1); }
     }
   </style>
 
@@ -945,20 +733,24 @@
       <p class="hero-subtitle">A Journey Through Knowledge, Innovation, and Discovery</p>
     </div>
 
-    <!-- Particles background -->
-    <div class="particles">
-      <span style="left: 10%; width: 10px; height: 10px; background: var(--accent-color); border-radius: 50%; animation-delay: 0s;"></span>
-      <span style="left: 20%; width: 15px; height: 15px; background: var(--gold-accent); border-radius: 50%; animation-delay: 2s;"></span>
-      <span style="left: 30%; width: 8px; height: 8px; background: var(--primary-color); border-radius: 50%; animation-delay: 4s;"></span>
-      <span style="left: 40%; width: 12px; height: 12px; background: var(--accent-color); border-radius: 50%; animation-delay: 1s;"></span>
-      <span style="left: 50%; width: 18px; height: 18px; background: var(--gold-accent); border-radius: 50%; animation-delay: 3s;"></span>
-      <span style="left: 60%; width: 7px; height: 7px; background: var(--primary-color); border-radius: 50%; animation-delay: 5s;"></span>
-      <span style="left: 70%; width: 14px; height: 14px; background: var(--accent-color); border-radius: 50%; animation-delay: 2.5s;"></span>
-      <span style="left: 80%; width: 9px; height: 9px; background: var(--gold-accent); border-radius: 50%; animation-delay: 4.5s;"></span>
-      <span style="left: 90%; width: 11px; height: 11px; background: var(--primary-color); border-radius: 50%; animation-delay: 1.5s;"></span>
-    </div>
+    <!-- Enhanced Profile Section -->
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-image">LL</div>
+        <h2 class="profile-name">Leo Li</h2>
+        <p class="profile-title">Computer Science Student at Zhejiang University</p>
+        <p class="profile-bio">
+          Welcome to my digital notebook. Here, I document my journey through the fascinating world of computer science, from foundational theories to cutting-edge research. This space is a reflection of my passion for learning and my dedication to mastering the craft of software development.
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/Leo11-strive" class="social-link" target="_blank">GitHub</a>
+          <a href="mailto:leobestli61@gmail.com" class="social-link">Email</a>
+          <a href="https://x.com/lxngxun345978" class="social-link" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Enhanced Quotes Section -->
+    <!-- Material Design Quotes Section -->
     <section class="quotes-section">
       <h2 class="quotes-title">Words That Inspire</h2>
       <div class="quote-container">
@@ -997,6 +789,7 @@
         <h2>SELF LEARNING</h2>
         <p>Continuous learning beyond the classroom - exploring cutting-edge technologies and concepts</p>
         <a href="https://leo11-strive.github.io/Leo-s-Notebook/self_learning/DEEP%20LEARNING%20FOR%20COMPUTER%20VISION/" class="tag">Deep Learning For Computer Vision</a>
+        <a href="https://leo11-strive.github.io/Leo-s-Notebook/self_learning/Research/" class="tag">Research</a>
       </div>
     </div>
 
@@ -1007,32 +800,18 @@
     </div>
   </section>
 
-  <!-- Add smooth scroll behavior -->
+  <!-- Smooth scroll behavior -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Add scroll-based animations
-    const observerOptions = {
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
         }
       });
-    }, observerOptions);
-
-    document.querySelectorAll('.card, .quote-container').forEach(element => {
-      observer.observe(element);
     });
   </script>
 
@@ -1086,6 +865,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="." class="md-nav__link md-nav__link--active">
@@ -1189,6 +970,8 @@
       
         
       
+        
+      
     
     
     
@@ -1247,6 +1030,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1281,18 +1066,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tracking", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "content.code.annotate", "content.code.copy"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tracking", "navigation.path", "navigation.prune", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "toc.follow", "content.code.annotate", "content.code.copy", "search.share"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
