@@ -1,0 +1,222 @@
+site_name: Leo Li's Notebook  
+site_author: Leo Li
+theme: 
+
+  name: material
+  custom_dir: overrides
+  language: en
+  palette:
+ # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent:  amber
+      toggle:
+        icon: material/brightness-4
+        name: 切换至日间模式
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: 切换至夜间模式
+ 
+  font:
+    text: LXGW WenKai Mono
+    code: LXGW WenKai Mono
+  features:
+     # - header.autohide #自动隐藏头栏
+    # - announce.dismiss # 公告栏
+    # - navigation.instant #这玩意跟公式爆了
+    - navigation.tracking # 在url中使用标题定位锚点
+    - navigation.path # 显示当前路径
+    - navigation.prune # 侧边栏自动折叠
+    - navigation.tabs # 顶部显示导航顶层nav（也就是第一个节点）
+    # - navigation.tabs.sticky # 滚动是隐藏顶部nav，需要配合navigation.tabs使用
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+    - navigation.top # 一键回顶部
+    - navigation.footer # 底部导航
+    - search.highlight # 搜索高亮
+    - search.suggest # 搜索建议
+    - toc.follow # toc 跟随
+    - content.code.annotate # 代码行号
+    - content.code.copy # 代码复制
+    - search.share # 分享搜索结果
+  logo: ./logo.png
+  icon:
+    repo: fontawesome/brands/github
+    
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  favicon: img/favicon.ico
+
+nav:  
+  - HOME: index.md  
+  - ZJU CS COURSES:  
+    - ZJU CS COURSES/index.md  
+    - ADVANCED DATA STRUCTURE AND ALGORITHMS:  
+      - ZJU CS COURSES/ADS/index.md
+      - AVL, Splay Trees and Amortized Analysis: ZJU CS COURSES/ADS/Chapter_One.md
+      - Red-Black Trees and B+ Trees: ZJU CS COURSES/ADS/Chapter_Two.md  
+      - Inverted File Index: ZJU CS COURSES/ADS/Chapter_Three.md
+      - Leftist Heaps and Skewed Heaps: ZJU CS COURSES/ADS/Chapter_Four.md
+      - Binomial Queue: ZJU CS COURSES/ADS/Chapter_Five.md  
+      - Backtracking: ZJU CS COURSES/ADS/Chapter_Six.md
+      - Divide and Conquer: ZJU CS COURSES/ADS/Chapter_Seven.md
+      - Dynamic Programming: ZJU CS COURSES/ADS/Chapter_Eight.md
+      - Greedy Algorithms: ZJU CS COURSES/ADS/Chapter_Nine.md
+      - NP Problems: ZJU CS COURSES/ADS/Chapter_Ten.md
+      - Approximation: ZJU CS COURSES/ADS/Chapter_Eleven.md
+      - Local Search: ZJU CS COURSES/ADS/Chapter_Twelve.md
+      - Parallel Algorithm: ZJU CS COURSES/ADS/Chapter_Fourteen.md  
+      - External Sorting: ZJU CS COURSES/ADS/Chapter_Fifteen.md
+    - ALGORITHM IN GAMES:  
+      - ZJU CS COURSES/ALGORITHM IN GAMES/index.md
+      - Introduction: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_One.md  
+      - Pygame: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Two.md  
+      - Mazes Algorithms: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Three.md  
+      - Navigation Algorithms: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Four.md  
+      - Collision Detection: ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Five.md      
+      
+    - COMPUTER ORGANIZATION DESIGN:  
+      - ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/index.md  
+      - Instructions: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Two.md  
+      - Arithmetic: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Three.md  
+      - The Processor: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Chapter_Four.md  
+      - Verilog: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Verilog.md   
+      - Memory Elements: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Memory_Elements.md
+      - Supplement for Exception: ZJU CS COURSES/COMPUTER ORGANIZATION DESIGN/Exception.md
+    - DIGITAL IMAGE PROCESSING:  
+      - ZJU CS COURSES/DIGITAL IMAGE PROCESSING/index.md  
+      - Introduction: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chapter_One.md  
+      - Binary Image Processing: ZJU CS COURSES/DIGITAL IMAGE PROCESSING/Chapter_Two.md
+    - NUMERICAL ANALYSIS:  
+      - ZJU CS COURSES/NUMERICAL ANALYSIS/index.md  
+      - Interpolation: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Three.md  
+      - Initial-Value Problems for Ordinary Differential Equations: ZJU CS COURSES/NUMERICAL ANALYSIS/Chapter_Five.md  
+    - OBJECT ORIENTED PROGRAMMING IN CPP:  
+      - ZJU CS COURSES/OOP/index.md  
+      - Class One: ZJU CS COURSES/OOP/Class_One.md
+      - Class Two: ZJU CS COURSES/OOP/Class_Two.md  
+      - Class Three: ZJU CS COURSES/OOP/Class_Three.md
+      - Class Four: ZJU CS COURSES/OOP/Class_Four.md
+      - Class Ten: ZJU CS COURSES/OOP/Class_Ten.md
+      - Make: ZJU CS COURSES/OOP/Make.md
+
+    - COMPUTER ARCHITECTURE:  
+      - ZJU CS COURSES/COMPUTER ARCHITECTURE/index.md  
+      - ILP: ZJU CS COURSES/COMPUTER ARCHITECTURE/Chapter_Three_ILP.md
+  # Removed Memory Hierarchy (missing file Chapter_two.md)
+    - DATABASE SYSTEMS:  
+      - ZJU CS COURSES/DATABASE SYSTEMS/index.md  
+      - Introduction: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_One.md    
+  # Removed Relational Algebra (missing file)
+      - Introduction to SQL: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Three.md
+      - Chapter Four: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Four.md
+      - Chapter Five: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Five.md
+      - Chapter Seven: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Seven.md
+      - Chapter Twelve: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Twelve.md
+      - Chapter Thirteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Thirteen.md
+      - Chapter Fourteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Fourteen.md
+      - Chapter Fifteen: ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Fifteen.md
+      
+
+    - COMPUTER GRAPHICS:  
+      - ZJU CS COURSES/COMPUTER GRAPHICS/index.md  
+      - OpenGL: ZJU CS COURSES/COMPUTER GRAPHICS/OpenGL.md
+
+  - SELF LEARNING:    
+    - self_learning/index.md
+  # Removed DEEP LEARNING FOR COMPUTER VISION and RESEARCH sections (missing files)
+repo_url: https://github.com/Leo11-strive/Leo-s-Notebook
+repo_name: Leo Li's Notebook  
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+  - def_list
+  - footnotes
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.magiclink
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - pymdownx.mark
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+  - toc:
+      permalink: true
+      title: Navigator
+  - tables
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   
+
+extra_css:  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+extra:
+  analytics:
+    provider: google
+    property: G-4P08GMSPJM
+    feedback:
+      title: BOOST ME UP!
+      ratings:
+        - icon: fontawesome/regular/hand-back-fist
+          name: BOOST ME UP！
+          data: 1
+          note: >-
+            <center> 难道说……你愿意给我加一颗星吗！🫣 </center>
+
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Leo11-strive/Leo-s-Notebook
+      name: Github  
+    - icon: fontawesome/solid/envelope
+      link: mailto:leobestli61@gmail.com
+
+
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/lxngxun345978
+copyright: 'Copyright &copy 2024 Leo Li'
+      
+plugins:
+  - statistics:
+      words_per_minute: 100  
+  - search  
+  - roamlinks
+  

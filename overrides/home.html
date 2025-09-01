@@ -1,0 +1,470 @@
+{% extends "main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>
+    /* Core layout modifications */
+    .md-header{position:initial}
+    .md-main__inner{margin:0}
+    .md-content{display:none}
+    @media screen and (min-width:60em){.md-sidebar--secondary{display:none}}
+    @media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+
+    /* Material Design inspired custom properties */
+    :root {
+      --primary-color: #009688; /* teal */
+      --primary-dark: #00695C;
+      --secondary-color: #607D8B; /* blue grey */
+      --accent-color: #FFC107; /* amber */
+      --bg-color: #FAFAFA;
+      --text-color: #212121;
+      --text-secondary: #757575;
+      --card-bg: #FFFFFF;
+      --surface-color: #F5F5F5;
+      --border-color: #E0E0E0;
+      --transition-speed: 0.3s;
+      --font-primary: 'LXGW WenKai Mono', monospace;
+      --font-secondary: 'LXGW WenKai Mono', monospace;
+      --elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --elevation-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      --elevation-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    /* Dark mode support */
+    [data-md-color-scheme="slate"] {
+      --primary-color: #607D8B; /* blue grey */
+      --primary-dark: #455A64;
+      --secondary-color: #009688;
+      --accent-color: #FFC107;
+      --bg-color: #121212;
+      --text-color: #FFFFFF;
+      --text-secondary: #B0B0B0;
+      --card-bg: #1E1E1E;
+      --surface-color: #2D2D2D;
+      --border-color: #404040;
+    }
+
+    body {
+      font-family: var(--font-secondary);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color var(--transition-speed), color var(--transition-speed);
+    }
+
+    /* Material Design scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--surface-color);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+      border: 1px solid var(--surface-color);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Container with Material Design styling */
+    .mdx-container {
+      background: var(--bg-color);
+      min-height: calc(100vh - 64px);
+      position: relative;
+      z-index: 1;
+      transition: background-color var(--transition-speed);
+    }
+
+    /* Material Design Hero section */
+    .hero-section {
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+      color: white;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-primary);
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-secondary);
+      font-size: 1.125rem;
+      opacity: 0.9;
+      margin-top: 0.5rem;
+      font-weight: 400;
+    }
+
+    /* Material Design Profile section */
+    .profile-section {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: var(--elevation-2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: box-shadow var(--transition-speed);
+    }
+
+    .profile-card:hover {
+      box-shadow: var(--elevation-3);
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--primary-color);
+      box-shadow: var(--elevation-1);
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      transition: transform var(--transition-speed);
+    }
+
+    .profile-image:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-name {
+      font-family: var(--font-primary);
+      font-size: 1.75rem;
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .profile-title {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .profile-bio {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      font-size: 0.9375rem;
+    }
+
+    /* Material Design Social links */
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+
+    .social-link:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Material Design Quotes section */
+    .quotes-section {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      box-shadow: var(--elevation-1);
+    }
+
+    .quotes-title {
+      font-family: var(--font-primary);
+      color: var(--text-color);
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .quote-container {
+      position: relative;
+      padding: 1.5rem;
+      border-left: 4px solid var(--primary-color);
+      margin: 1.5rem 0;
+      background: var(--surface-color);
+      border-radius: 0 4px 4px 0;
+      transition: background-color var(--transition-speed);
+    }
+
+    .quote-container:hover {
+      background: var(--border-color);
+    }
+
+    .quote {
+      font-family: var(--font-primary);
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .quote-author {
+      font-weight: 500;
+      color: var(--primary-color);
+      font-size: 0.875rem;
+    }
+
+    /* Material Design Content grid */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--elevation-1);
+      transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+      border: 1px solid var(--border-color);
+    }
+
+    .card:hover {
+      box-shadow: var(--elevation-2);
+      transform: translateY(-4px);
+    }
+
+    .card h2 {
+      font-family: var(--font-primary);
+      color: var(--text-color);
+      margin-bottom: 1rem;
+      font-size: 1.375rem;
+      font-weight: 500;
+    }
+
+    .card p {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+    }
+
+    /* Material Design Tags */
+    .tag {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 0.375rem 0.75rem;
+      border-radius: 16px;
+      font-size: 0.75rem;
+      margin: 0.25rem;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .tag:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Material Design Quick actions */
+    .quick-actions {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      z-index: 1000;
+    }
+
+    .action-button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      box-shadow: var(--elevation-2);
+      font-size: 1.125rem;
+      text-decoration: none;
+    }
+
+    .action-button:hover {
+      transform: scale(1.1);
+      background: #FFB300;
+    }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+      .hero-section {
+        padding: 3rem 1rem 2rem;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .content-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+      }
+      
+      .profile-card {
+        padding: 1.5rem;
+      }
+      
+      .quotes-section {
+        padding: 1.5rem;
+        margin: 1.5rem;
+      }
+      
+      .quote {
+        font-size: 0.9375rem;
+      }
+      
+      .quick-actions {
+        bottom: 1rem;
+        right: 1rem;
+      }
+    }
+  </style>
+
+  <section class="mdx-container">
+    <!-- Enhanced Hero Section -->
+    <div class="hero-section">
+      <h1 class="hero-title">Leo Li's Digital Notebook</h1>
+      <p class="hero-subtitle">A Journey Through Knowledge, Innovation, and Discovery</p>
+    </div>
+
+    <!-- Enhanced Profile Section -->
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-image">LL</div>
+        <h2 class="profile-name">Leo Li</h2>
+        <p class="profile-title">Computer Science Student at Zhejiang University</p>
+        <p class="profile-bio">
+          Welcome to my digital notebook. Here, I document my journey through the fascinating world of computer science, from foundational theories to cutting-edge research. This space is a reflection of my passion for learning and my dedication to mastering the craft of computer science.
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/Leo11-strive" class="social-link" target="_blank">GitHub</a>
+          <a href="mailto:leobestli61@gmail.com" class="social-link">Email</a>
+          <a href="https://x.com/lxngxun345978" class="social-link" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Material Design Quotes Section -->
+    <section class="quotes-section">
+      <h2 class="quotes-title">Words That Inspire</h2>
+      <div class="quote-container">
+        <p class="quote">"There is nothing to be found playing small and settling for a life that less than the one you are capable of living"</p>
+        <p class="quote-author">- Nelson Mandela</p>
+      </div>
+      <div class="quote-container">
+        <p class="quote">"Seven times have I despised my soul:
+          The first time when I saw her being meek that she might attain height.
+          The second time when I saw her limping before the crippled.
+          The third time when she was given to choose between the hard and the easy, and she chose the easy.
+          The fourth time when she committed a wrong, and comforted herself that others also commit wrong.
+          The fifth time when she forbore for weakness, and attributed her patience to strength.
+          The sixth time when she despised the ugliness of a face, and knew not that it was one of her own masks.
+          And the seventh time when she sang a song of praise, and deemed it a virtue."</p>
+        <p class="quote-author">- Kahlil Gibran</p>
+      </div>
+    </section>
+
+    <!-- Enhanced Content Grid -->
+    <div class="content-grid">
+      <div class="card">
+        <h2>ZJU CS COURSES</h2>
+        <p>Dive into the fundamental beauty of computer science through my academic journey at Zhejiang University</p>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/ADS/' | url }}" class="tag">ADS</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/ALGORITHM%20IN%20GAMES/' | url }}" class="tag">Algorithm in Games</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/COMPUTER%20ORGANIZATION%20DESIGN/' | url }}" class="tag">Computer Organization Design</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/DIGITAL%20IMAGE%20PROCESSING/' | url }}" class="tag">Digital Image Processing</a>
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/NUMERICAL%20ANALYSIS/' | url }}" class="tag">Numerical Analysis</a>  
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/OOP/' | url }}" class="tag">Object Oriented Programming In C++</a>  
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/COMPUTER%20ARCHITECTURE/' | url }}" class="tag">Computer Architecture</a>  
+        <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/DATABASE%20SYSTEMS/' | url }}" class="tag">Database Systems</a>
+      </div>
+
+      <div class="card">
+        <h2>SELF LEARNING</h2>
+        <p>Continuous learning beyond the classroom - exploring cutting-edge technologies and concepts</p>
+      
+    </div>
+
+    <!-- Enhanced Quick Actions -->
+    <div class="quick-actions">
+      <a href="#" class="action-button" title="Back to top">↑</a>
+      <a href="{{ 'https://leo11-strive.github.io/Leo-s-Notebook/ZJU%20CS%20COURSES/' | url }}" class="action-button" title="Search">🔍</a>
+    </div>
+  </section>
+
+  <!-- Smooth scroll behavior -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}
