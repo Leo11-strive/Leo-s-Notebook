@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "report.md",
+                "file": "ZJU CS COURSES/ADS/Chapter_Eleven.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "report"
+              "title": "Chapter_Eleven"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1410209a3e9108e",
@@ -160,17 +161,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "810893512d27b62b",
+  "active": "825e990291f150c1",
   "lastOpenFiles": [
+    "ZJU CS COURSES/ADS/Chapter_Eight.md",
+    "image-1.png",
+    "image.png",
     "report.md",
     "logo.png",
     "未命名.canvas",
@@ -181,12 +187,9 @@
     "ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Fifteen.md",
     "ZJU CS COURSES/DATABASE SYSTEMS/image-6.png",
     "ZJU CS COURSES/DATABASE SYSTEMS/image-6 2.png",
-    "image-1.png",
-    "image.png",
     "ZJU CS COURSES/OOP/Class_Ten.md",
     "ZJU CS COURSES/COMPUTER ARCHITECTURE/Chapter_Three: ILP.md",
     "ZJU CS COURSES/ADS/Chapter_Eleven.md",
-    "ZJU CS COURSES/ADS/Chapter_Eight.md",
     "Users.md",
     "未命名.md",
     "未命名 1.md",
