@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f616e9a15e338faf",
+        "id": "fe6bc17aa40c1336",
         "type": "tabs",
         "children": [
           {
-            "id": "78d0669637c958af",
+            "id": "bcbc08414957c048",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "3D Gaussian Splatting"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1410209a3e9108e",
@@ -167,8 +172,38 @@
       "slides-extended:Show slide preview": false
     }
   },
-  "active": "78d0669637c958af",
+  "active": "bcbc08414957c048",
   "lastOpenFiles": [
+    "image-77.png",
+    "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
+    "BS/CS571 Web Dev Basics 1.md",
+    "image-76.png",
+    "image-75.png",
+    "image-74.png",
+    "image-73.png",
+    "image-72.png",
+    "BS",
+    "BS/CS571 Web Basics One.md",
+    "BS",
+    "未命名 3.base",
+    "未命名 2.base",
+    "image-71.png",
+    "image-70.png",
+    "image-69.png",
+    "image-68.png",
+    "image-67.png",
+    "OPERATING SYSTEM/Chapter Two Operating System Structures.md",
+    "OPERATING SYSTEM/Chapter One Introduction.md",
+    "RESEARCH/Paper Reading/3DGS",
+    "OPERATING SYSTEM",
+    "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
+    "COMPUTER NETWORK/Chapter 1 Introduction.md",
+    "COMPUTER NETWORK",
+    "COMPUTER VISION/Chapter Two Image Formation.md",
+    "未命名.base",
+    "未命名 1.base",
+    "COMPUTER VISION/Chapter One Linear Algebra.md",
+    "COMPUTER VISION",
     "ZJU CS COURSES/ADS/Chapter_Twelve.md",
     "trial.md",
     "演讲稿v2.md",
@@ -176,27 +211,16 @@
     "ZJU CS COURSES/ADS/Chapter_Ten.md",
     "ZJU CS COURSES/ADS/Chapter_Eight.md",
     "report.md",
-    "logo.png",
     "未命名.canvas",
     "未命名 1.canvas",
     "DAILY SCHEDULE/Schedule for 2025 SUMMER.md",
     "ZJU CS COURSES/ESSAY READING/3DGS.md",
-    "DAILY SCHEDULE",
     "ZJU CS COURSES/DATABASE SYSTEMS/Chapter_Fifteen.md",
-    "ZJU CS COURSES/DATABASE SYSTEMS/image-6.png",
-    "ZJU CS COURSES/DATABASE SYSTEMS/image-6 2.png",
-    "image-1.png",
-    "image.png",
     "ZJU CS COURSES/OOP/Class_Ten.md",
     "ZJU CS COURSES/COMPUTER ARCHITECTURE/Chapter_Three: ILP.md",
     "ZJU CS COURSES/ADS/Chapter_Eleven.md",
     "Users.md",
     "未命名.md",
-    "未命名 1.md",
-    "Excalidraw/Drawing 2025-04-27 15.17.52.excalidraw.md",
-    "Excalidraw",
-    "Welcome.md",
-    "Excalidraw/Drawing 2025-04-27 14.53.52.excalidraw.md",
-    "Excalidraw/Drawing 2025-04-27 14.40.04.excalidraw.md"
+    "未命名 1.md"
   ]
 }
