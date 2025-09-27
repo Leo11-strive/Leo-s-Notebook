@@ -1,10 +1,12 @@
 [
-  "obsidian-excalidraw-plugin",
-  "editing-toolbar",
-  "better-export-pdf",
+  "remotely-save",
+  "custom-font-loader",
+  "obsidian-admonition",
+  "obsidian-banners",
   "easy-typing-obsidian",
+  "editing-toolbar",
+  "obsidian-excalidraw-plugin",
   "image-converter",
   "obsidian-mindmap-nextgen",
-  "obsidian-style-settings",
-  "obsidian-banners"
+  "obsidian-style-settings"
 ]

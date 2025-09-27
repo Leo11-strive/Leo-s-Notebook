@@ -27,5 +27,6 @@
   "zen@@win-window-brightness": 1,
   "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-sublime",
   "Blue-Topaz-Codebox-Highlight@@font-weight-inline-code": "light",
-  "Blue-Topaz-Codebox-Highlight@@muted-code-activeline-bg": false
+  "Blue-Topaz-Codebox-Highlight@@muted-code-activeline-bg": false,
+  "blue-topaz-theme@@font-family-change-to-default": true
 }
