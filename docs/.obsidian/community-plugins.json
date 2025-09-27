@@ -1,11 +1,18 @@
 [
-  "obsidian-excalidraw-plugin",
-  "editing-toolbar",
-  "better-export-pdf",
+  "remotely-save",
+  "custom-font-loader",
+  "obsidian-admonition",
+  "obsidian-banners",
   "easy-typing-obsidian",
+  "editing-toolbar",
+  "obsidian-excalidraw-plugin",
   "image-converter",
   "obsidian-mindmap-nextgen",
+<<<<<<< HEAD
   "obsidian-style-settings",
   "obsidian-banners",
   "slides-extended"
+=======
+  "obsidian-style-settings"
+>>>>>>> ubuntu
 ]

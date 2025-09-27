@@ -1,4 +1,4 @@
-## [Pygame](https://www.pygame.org/docs/)  
+•#• [Pygame](https://www.pygame.org/docs/)  
 * Wraps SDL  
 ### Modules  
 ![alt text](image.png)  

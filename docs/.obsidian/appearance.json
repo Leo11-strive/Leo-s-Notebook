@@ -3,6 +3,8 @@
   "translucency": true,
   "interfaceFontFamily": "LXGW WenKai Mono",
   "textFontFamily": "LXGW WenKai Mono",
-  "accentColor": "",
-  "monospaceFontFamily": "LXGW WenKai Mono"
+  "accentColor": "#7de8cd",
+  "monospaceFontFamily": "Source Code Pro",
+  "baseFontSize": 14,
+  "theme": "obsidian"
 }

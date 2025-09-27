@@ -1,6 +1,10 @@
 {
   "pdfExportSettings": {
+<<<<<<< HEAD
     "includeName": false,
+=======
+    "includeName": true,
+>>>>>>> ubuntu
     "pageSize": "Letter",
     "landscape": false,
     "margin": "0",

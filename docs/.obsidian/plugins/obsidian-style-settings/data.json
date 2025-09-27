@@ -21,5 +21,12 @@
   "blue-topaz-theme@@blur-depth": 10,
   "blue-topaz-theme@@font-family-folder-file-title": "Sans', 'Noto Sans CJK', 'Source Sans Pro', 'Segoe",
   "Blue-Topaz-Codebox-Highlight@@letter-space-code": 0,
-  "Blue-Topaz-Codebox-Highlight@@code-box-style-option": "codebox-frosted-glass"
+  "Blue-Topaz-Codebox-Highlight@@code-box-style-option": "codebox-frosted-glass",
+  "zen@@win-window-opacity": 0.38,
+  "zen@@win-translucent-off": false,
+  "zen@@win-window-brightness": 1,
+  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-sublime",
+  "Blue-Topaz-Codebox-Highlight@@font-weight-inline-code": "light",
+  "Blue-Topaz-Codebox-Highlight@@muted-code-activeline-bg": false,
+  "blue-topaz-theme@@font-family-change-to-default": true
 }

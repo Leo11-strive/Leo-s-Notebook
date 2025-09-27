@@ -72,8 +72,7 @@
 > Let's focused on the number $2r$, if we can find a set of sites that the distance between them is larger than $2r$, then even if we put a center in the middle, the covering radius will still be larger than $r$.
 
 ```less  
-
-   Centers  Greedy-2r ( Sites S[ ], int n, int K, double r )
+Centers  Greedy-2r ( Sites S[ ], int n, int K, double r )
    {   Sites  S’[ ] = S[ ]; /* S’ is the set of the remaining sites */
        Centers  C[ ] = $\emptyset$;
        while ( S’[ ] != $\emptyset$) {
@@ -83,7 +82,6 @@
        if ( |C| \leqK ) return C;
        else ERROR(No set of K centers with covering radius at most r);
    }  
-
 ```   
 
 *  **Therom**:  
