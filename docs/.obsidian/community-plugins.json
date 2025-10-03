@@ -1,18 +1,14 @@
 [
-  "remotely-save",
-  "custom-font-loader",
-  "obsidian-admonition",
-  "obsidian-banners",
-  "easy-typing-obsidian",
-  "editing-toolbar",
-  "obsidian-excalidraw-plugin",
-  "image-converter",
-  "obsidian-mindmap-nextgen",
-<<<<<<< HEAD
   "obsidian-style-settings",
+  "slides-extended",
+  "remotely-save",
+  "obsidian-mindmap-nextgen",
+  "image-converter",
+  "obsidian-excalidraw-plugin",
+  "editing-toolbar",
+  "easy-typing-obsidian",
+  "custom-font-loader",
+  "better-export-pdf",
   "obsidian-banners",
-  "slides-extended"
-=======
-  "obsidian-style-settings"
->>>>>>> ubuntu
+  "obsidian-admonition"
 ]

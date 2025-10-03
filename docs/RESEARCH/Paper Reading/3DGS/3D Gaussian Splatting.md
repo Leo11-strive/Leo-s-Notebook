@@ -81,5 +81,50 @@
 - “After optimization warm-up (see Sec. 7.1), we densify every 100 iterations and remove any Gaussians that are essentially transparent, i.e., with α less than a threshold εα” (Kerbl et al., 2023, p. 5) "adaptive control of gaussians"
 - “Densify Gaussians with an average magnitude of view-space position gradients above a threshold τpos, which we set to 0.0002 in our tests” (Kerbl et al., 2023, p. 5)
 - 小高斯（高斯不足）：“by simply creating a copy of the same size, and moving it in the direction of the positional gradient” (Kerbl et al., 2023, p. 5)
-- “We replace such Gaussians by two new ones, and divide their scale by a factor of φ = 1.6 which we determined experimentally. We also initialize their position by using the original 3D Gaussian as a PDF for sampling.” (Kerbl et al., 2023, p. 5) 用旧高斯本身当作 3D 概率密度函数（PDF）去**采样两个位置**$\mu_1,\mu_2 \sim \mathcal N(\mu, \Sigma)$ ,- 把每个新高斯的**标准差**按因子 $\phi=1.6$ 缩小 $\quad \Sigma=R\,\mathrm{diag}(\lambda_1,\lambda_2,\lambda_3)\,R^\top \ \Rightarrow\ \Sigma’ = R\,\mathrm{diag}\!\Big(\tfrac{\lambda_1}{\phi^2},\tfrac{\lambda_2}{\phi^2},\tfrac{\lambda_3}{\phi^2}\Big)\,R^\top$
-* 
+- “We replace such Gaussians by two new ones, and divide their scale by a factor of φ = 1.6 which we determined experimentally. We also initialize their position by using the original 3 D Gaussian as a PDF for sampling.” (Kerbl et al., 2023, p. 5) 用旧高斯本身当作 3 D 概率密度函数（PDF）去**采样两个位置**$\mu_1,\mu_2 \sim \mathcal N(\mu, \Sigma)$ ,- 把每个新高斯的**标准差**按因子缩小 $\quad \Sigma=R\,\mathrm{diag}(\lambda_1,\lambda_2,\lambda_3)\,R^\top \ \Rightarrow\ \Sigma’ = R\,\mathrm{diag}\!\Big(\tfrac{\lambda_1}{\phi^2},\tfrac{\lambda_2}{\phi^2},\tfrac{\lambda_3}{\phi^2}\Big)\,R^\top$
+- **Floaters** 指的是场景中出现的“漂浮伪影” —— 一些点 / 高斯分布**没有正确贴合到真实表面**，而是漂浮在离相机很近或场景空洞的位置。
+![[image-78.png]]
+
+- “our case this may result in an unjustified increase in the Gaussian density.” (Kerbl et al., 2023, p. 5)
+-  set the α value close to zero every N = 3000 iterations
+- “The optimization then increases the α for the Gaussians where this is needed while allowing our culling approach to remove Gaussians with α less than εα as described above.” (Kerbl et al., 2023, p. 6)
+- “design a tile-based rasterizer for Gaussian splats inspired by recent software rasterization approaches [Lassner and Zollhofer 2021] to pre-sort primitives for an entire image at a time, avoiding the expense of sorting per pixel that hindered previous α-blending solutions” (Kerbl et al., 2023, p. 6)
+- “Start by splitting the screen into 16×16 tiles” (Kerbl et al., 2023, p. 6)
+- 在渲染之前，分成 $16*16$ 的瓦片，把每个 3D 高斯当作一个三维椭球，检查它的**99% 置信区间**（后面解释）是否与相机视锥体相交；若完全不相交，就直接丢弃。
+- “use a guard band to trivially reject Gaussians at extreme positions (i.e., those with means close to the near plane and far outside the view frustum),” (Kerbl et al., 2023, p. 6)
+- 把属于多个 tile 的 gaussian 分成多个实例，只要这些实例记录其连接的具体高斯即可，然后做高地位排序（tile 在高位）
+-  “sort Gaussians based on these keys using a single fast GPU Radix sort [Merrill and Grimshaw 2010].” (Kerbl et al., 2023, p. 6)
+- “hese approximations become negligible as splats approach the size of individual pixels.” (Kerbl et al., 2023, p. 6)
+- “we launch one thread block for each tile. Each block first collaboratively loads packets of Gaussians into shared memory and then, for a given pixel, accumulates color and α values by traversing the lists front-to-back, thus maximizing the gain in parallelism both for data loading/sharing and processing” (Kerbl et al., 2023, p. 6)
+- “do not limit the number of blended primitives that receive gradient updates.” (Kerbl et al., 2023, p. 6)
+- 图形学中，颜色表示亮度
+- “To avoid the implied dynamic memory management overhead, we instead choose to traverse the pertile lists again; we can reuse the sorted array of Gaussians and tile ranges from the forward pass. To facilitate gradient computation, we now traverse them back-to-front.” (Kerbl et al., 2023, p. 6)
+- “Specifically, we start the optimization using 4 times smaller image resolution and we upsample twice after 250 and 500 iterations.” (Kerbl et al., 2023, p. 8)
+- “one band of the SH after every 1000 iterations until all 4 bands of SH are represented.” (Kerbl et al., 2023, p. 8)， to overcome the sensitivity of SH coeffients on angular information（先抓住低频）
+
+
+## Limitations
+* “In regions where the scene is not well observed we have artifacts” (Kerbl et al., 2023, p. 10)
+* “our method can create elongated artifacts or “splotchy” Gaussians” (Kerbl et al., 2023, p. 10)
+* “One reason for these popping artifacts is the trivial rejection of Gaussians via a guard band in the rasterizer.” (Kerbl et al., 2023, p. 10)
+* “Another factor is our simple visibility algorithm, which can lead to Gaussians suddenly switching depth/blending order.” (Kerbl et al., 2023, p. 10)（tile by tile）
+* floaters, regularization
+* approaches, our memory consumption is significantly higher  than NeRF-based solutions
+
+## Details of Implementation
+![[image-122.png]]
+
+* “We assign a key for each splats instance with up to 64 bits where the lower 32 bits encode its projected depth and the higher bits encode the index of the overlapped tile.” (Kerbl et al., 2023, p. 13)
+![[image-123.png]]
+* 透明度梯度递归向后
+* 前向后向更新有 bound。保持梯度稳定
+
+
+
+
+
+
+
+
+
+

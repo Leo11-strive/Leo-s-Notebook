@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "5094c2e91073cd72",
+        "id": "00982cbc84b016a1",
         "type": "tabs",
         "children": [
           {
-            "id": "656ad0716df3d198",
+            "id": "c231c2f8ad2b91f4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "3D Gaussian Splatting"
             }
           }
         ]
@@ -40,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c1410209a3e9108e",
@@ -156,20 +161,42 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "markdown-importer:Open format converter": false,
-      "remotely-save:Remotely Save": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:创建新数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "slides-extended:Show slide preview": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "656ad0716df3d198",
+  "active": "c231c2f8ad2b91f4",
   "lastOpenFiles": [
+    "OPERATING SYSTEM/Chapter Three Processes.md",
+    "image-152.png",
+    "image-151.png",
+    "image-150.png",
+    "image-149.png",
+    "OPERATING SYSTEM/Chapter Two Operating System Structures.md",
+    "image-148.png",
+    "image-147.png",
+    "OPERATING SYSTEM/Chapter One Introduction.md",
+    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
+    "image-146.png",
+    "image-145.png",
+    "image-144.png",
+    "image-143.png",
+    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
+    "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
+    "COMPUTER VISION/Chapter Three Image Processing.md",
+    "COMPUTER VISION/Chapter Two Image Formation.md",
+    "COMPUTING THEORY/Class Three.md",
+    "COMPUTING THEORY",
+    "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
     "_debug_remotely_save/sync_plans_hist_exported_on_1756814808388.md",
     "_debug_remotely_save",
     "ZJU CS COURSES/COMPUTING THEORY/index.md",
@@ -184,37 +211,16 @@
     "Qwen.md",
     "OS_LAB_REPORT/Lab0.md",
     "OS_LAB_REPORT",
-    "演讲稿v2.md",
-    "未命名.base",
-    "未命名 3.base",
-    "未命名 2.base",
-    "未命名 1.base",
-    "trial.md",
-    "image-9.png",
-    "image-8.png",
-    "image-77.png",
-    "image-76.png",
-    "image-75.png",
-    "image-74.png",
-    "image-73.png",
-    "image-72.png",
-    "image-71.png",
-    "image-70.png",
-    "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
-    "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
-    "OPERATING SYSTEM/Chapter Two Operating System Structures.md",
-    "OPERATING SYSTEM/Chapter One Introduction.md",
-    "COMPUTER VISION/Chapter Two Image Formation.md",
-    "COMPUTER VISION/Chapter One Linear Algebra.md",
-    "COMPUTER NETWORK/Chapter 1 Introduction.md",
     "BS/CS571 Web Dev Basics 1.md",
-    "self_learning/index.md",
-    "RESEARCH/Untitled.md",
-    "ZJU CS COURSES/ALGORITHM IN GAMES/Chapter_Five.md",
-    "index.md",
-    "ZJU CS COURSES/ADS/Chapter_Fifteen.md",
-    "ZJU CS COURSES/ADS/Chapter_Eleven.md",
-    "ZJU CS COURSES/ADS/Chapter_Eight.md",
+    "BS",
+    "BS/CS571 Web Basics One.md",
+    "BS",
+    "未命名 3.base",
+    "COMPUTER NETWORK/Chapter 1 Introduction.md",
+    "COMPUTER VISION/Chapter One Linear Algebra.md",
+    "ZJU CS COURSES/ADS/Chapter_Twelve.md",
+    "trial.md",
+    "演讲稿v2.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
