@@ -76,4 +76,10 @@
 * fork (): create child process
 ![[image-153.png]]
 * pid 为 0：子进程
-  
+* ps 命令查看所有进程，or top
+> `ps -f -u shou`
+* `wait()` 等待子进程结束
+
+## Process Termination
+* 进程结束之后，操作系统会回收进程资源
+![[image-154.png]]

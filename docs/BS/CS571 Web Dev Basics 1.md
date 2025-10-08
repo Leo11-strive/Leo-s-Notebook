@@ -49,4 +49,27 @@
 ### CSS Cascading 
 ![[image-76.png]]
 * you can change the web page html in browsers, yet it is only a preview
-* 
+* `F12`,  right click, check the element
+
+## JavaScript
+* `console.log("Hello world")`
+![[image-155.png]]
+
+* `var`: not used much now
+![[image-156.png]]
+* `let`, `const` is the same as normal language variables，`const` cannot be change
+* no explicit variable type
+* `typeof`: returns the variable type
+![[image-157.png]]
+
+* strong and weak comparison
+![[image-158.png]]
+* `1==="1"`:wrong
+* `1=="1"`:true
+* `js object`: an executable form of `json` (more like an intuition?)
+* arrays may have different type versions in js
+![[image-159.png]]
+
+
+![[image-160.png]]
+
