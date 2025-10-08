@@ -72,4 +72,8 @@
 * start a creation from a creation
 * 父进程，子进程
 * a tree of processers
+* scheduler（CPU） 只会从 ready queue 中选择运行的进程
+* fork (): create child process
+![[image-153.png]]
+* pid 为 0：子进程
   
