@@ -74,6 +74,7 @@
 * a tree of processers
 * scheduler（CPU） 只会从 ready queue 中选择运行的进程
 * fork (): create child process
+* **exec** system call used after a **fork** to replace the process’ memory space with a new program
 ![[image-153.png]]
 * pid 为 0：子进程
 * ps 命令查看所有进程，or top
@@ -83,3 +84,59 @@
 ## Process Termination
 * 进程结束之后，操作系统会回收进程资源
 ![[image-154.png]]
+
+* fork () 之后所有的父子进程都在 ready queue 中
+* 在 fork（）的过程中，parent 在 waiting 状态，等待创建子进程完毕
+
+## Cooperating Processes
+![[image-163.png]]
+
+### Producer-Consumer Problem
+* 信息的生产方和消费方
+> 即使时互换信息，互为生产者与消费者
+> *unbounded buffer*: no practical limit in the size of the buffer (think of it a bounded buffer with large buffer)
+> *bounded buffer*: fixed buffer size, producer must wait if buffer is full
+* shared data
+![[image-164.png]]
+* intuition
+> In: producer input pointer
+> Out: consumer output pointer
+![[image-165.png]]
+
+![[image-166.png]]
+
+* `wsl`：的系统进程是 6962
+* 程序在 shell 中执行时，如果没有父进程，就会被挂在系统进程中
+
+## Interprocess Communication
+* Two models for IPC: *message passing* and *shared memory*
+> Shared memory: 都当成自己的，都在内存中，立马就能看到改变，加读写锁
+> 消息传递：管道，socket，好处是实现简单，但是复制内容有 overhead
+![[image-167.png]]
+
+
+* communication link：
+![[image-168.png]]
+
+* questions
+![[image-169.png]]
+### Direct Communication
+* name each other explicit
+![[image-170.png]]
+* one pair, automatically established
+![[image-171.png]]
+
+### Indirect Communication
+* use ports
+![[image-172.png]]
+
+* create, send/recv, destroy mailboxes instead of PID
+
+* Mailbox sharing is good (multiple process use one mailbox), yet who gets the message?
+![[image-173.png]]
+
+### Synchronization
+* 同步
+![[image-174.png]]
+* sender 和 receiver 到底需不需要等待
+![[image-175.png]]
