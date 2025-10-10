@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BS/CS571 Web Dev Basics 2.md",
+                "file": "演讲稿v2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CS571 Web Dev Basics 2"
+              "title": "演讲稿v2"
+            }
+          },
+          {
+            "id": "a7326e79207baa63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OS_LAB_REPORT/Lab1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lab1"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -95,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BS/CS571 Web Dev Basics 2.md",
+                "file": "OS_LAB_REPORT/Lab1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CS571 Web Dev Basics 2"
+              "title": "Backlinks for Lab1"
             }
           },
           {
@@ -174,21 +189,29 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "b753a5a34208685f",
+  "active": "a7326e79207baa63",
   "lastOpenFiles": [
-    "image-162.png",
-    "image-161.png",
-    "BS/CS571 Web Dev Basics 1.md",
+    "image-180.png",
+    "image-179.png",
+    "image-178.png",
+    "image-177.png",
+    "image-176.png",
+    "image-175.png",
+    "image-174.png",
+    "image-173.png",
+    "image-172.png",
+    "image-171.png",
+    "image-170.png",
+    "Mermaid Render.md",
+    "OS_LAB_REPORT/Lab1.md",
+    "演讲稿v2.md",
+    "未命名 3.base",
+    "未命名 2.base",
+    "未命名 1.base",
+    "未命名.base",
     "BS/CS571 Web Dev Basics 2.md",
-    "image-160.png",
-    "image-159.png",
-    "image-158.png",
-    "image-157.png",
-    "image-156.png",
-    "image-155.png",
+    "BS/CS571 Web Dev Basics 1.md",
     "OPERATING SYSTEM/Chapter Three Processes.md",
-    "image-154.png",
-    "image-153.png",
     "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
     "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
     "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
@@ -198,7 +221,6 @@
     "COMPUTER VISION/Chapter One Linear Algebra.md",
     "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree GS.md",
     "RESEARCH/Paper Reading/Large Scale Reconstruction",
-    "image-152.png",
     "OPERATING SYSTEM/Chapter Two Operating System Structures.md",
     "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
     "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
@@ -214,14 +236,7 @@
     "SELF LEARNING/index.md",
     "SELF LEARNING",
     "RESEARCH/VOLUME RENDERING/NeRF.md",
-    "RESEARCH/VOLUME RENDERING",
     "Qwen.md",
-    "OS_LAB_REPORT/Lab0.md",
-    "OS_LAB_REPORT",
-    "BS",
-    "BS/CS571 Web Basics One.md",
-    "BS",
-    "COMPUTER NETWORK/Chapter 1 Introduction.md",
     "未命名.canvas",
     "未命名 1.canvas"
   ]
