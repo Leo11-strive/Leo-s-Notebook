@@ -13,11 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "演讲稿v2.md",
+=======
+                "file": "OPERATING SYSTEM/Chapter Four Threads.md",
+>>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "演讲稿v2"
             }
           },
@@ -33,6 +38,9 @@
               },
               "icon": "lucide-file",
               "title": "Lab1"
+=======
+              "title": "Chapter Four Threads"
+>>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
             }
           }
         ],
@@ -59,7 +67,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -176,21 +184,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:创建新数据库": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "slides-extended:Show slide preview": false,
       "remotely-save:Remotely Save": false
     }
   },
   "active": "a7326e79207baa63",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "image-180.png",
     "image-179.png",
     "image-178.png",
@@ -212,6 +221,22 @@
     "BS/CS571 Web Dev Basics 2.md",
     "BS/CS571 Web Dev Basics 1.md",
     "OPERATING SYSTEM/Chapter Three Processes.md",
+=======
+    "OPERATING SYSTEM/Chapter Three Processes.md",
+    "OPERATING SYSTEM/Chapter Four Threads.md",
+    "image-175.png",
+    "image-174.png",
+    "image-173.png",
+    "image-172.png",
+    "image-171.png",
+    "image-170.png",
+    "image-169.png",
+    "image-168.png",
+    "image-167.png",
+    "image-166.png",
+    "BS/CS571 Web Dev Basics 2.md",
+    "BS/CS571 Web Dev Basics 1.md",
+>>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
     "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
     "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
     "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",

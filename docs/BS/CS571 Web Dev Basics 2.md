@@ -14,3 +14,7 @@
   **阻塞式（blocking）**
 ![[image-162.png]]
 
+* use the console, it is an interpreter of JS
+* when it comes to debugging:
+> Use console log statement
+* 
