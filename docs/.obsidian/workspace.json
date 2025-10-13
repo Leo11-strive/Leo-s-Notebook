@@ -1,33 +1,14 @@
 {
   "main": {
-    "id": "2404e7ff839f0bc2",
+    "id": "8366bd5e2fa08ddc",
     "type": "split",
     "children": [
       {
-        "id": "076744934e4c0005",
+        "id": "12f43613f5efce9e",
         "type": "tabs",
         "children": [
           {
-            "id": "b753a5a34208685f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-<<<<<<< HEAD
-                "file": "演讲稿v2.md",
-=======
-                "file": "OPERATING SYSTEM/Chapter Four Threads.md",
->>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "演讲稿v2"
-            }
-          },
-          {
-            "id": "a7326e79207baa63",
+            "id": "50dc2bc711029ee1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -38,27 +19,23 @@
               },
               "icon": "lucide-file",
               "title": "Lab1"
-=======
-              "title": "Chapter Four Threads"
->>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "1eb86e2f4b966835",
+    "id": "1ad75892b105f09b",
     "type": "split",
     "children": [
       {
-        "id": "6645151141ceea31",
+        "id": "3a59b56014be6711",
         "type": "tabs",
         "children": [
           {
-            "id": "810893512d27b62b",
+            "id": "cf6f1c50a67cdcb7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -67,11 +44,11 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
-            "id": "836988291b1cc7f3",
+            "id": "17bb11868b3fadb4",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -84,36 +61,35 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜索"
+              "title": "Search"
             }
           },
           {
-            "id": "2c0ecd21865e9074",
+            "id": "1ad2b5e18efb5674",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "书签"
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "c1410209a3e9108e",
+    "id": "dd075aff39dad8cf",
     "type": "split",
     "children": [
       {
-        "id": "6571895967cc6342",
+        "id": "fe6e8f81c7736480",
         "type": "tabs",
         "children": [
           {
-            "id": "cfce06b149141b9c",
+            "id": "05c49124a9bb2ed6",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -132,21 +108,21 @@
             }
           },
           {
-            "id": "6b6af3c628895a97",
+            "id": "1d4fc49ab1ad2c6b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "OS_LAB_REPORT/Lab1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links from Lab1"
             }
           },
           {
-            "id": "dfe10e367c3afe96",
+            "id": "2e4183c307fce349",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -161,18 +137,18 @@
             }
           },
           {
-            "id": "9960939c2656baad",
+            "id": "c3af8b4e5c363d1a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "OS_LAB_REPORT/Lab1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline of Lab1"
             }
           }
         ]
@@ -184,85 +160,21 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "bases:创建新数据库": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "bases:Create new base": false,
       "slides-extended:Show slide preview": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "a7326e79207baa63",
+  "active": "50dc2bc711029ee1",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "image-180.png",
-    "image-179.png",
-    "image-178.png",
-    "image-177.png",
-    "image-176.png",
-    "image-175.png",
-    "image-174.png",
-    "image-173.png",
-    "image-172.png",
-    "image-171.png",
-    "image-170.png",
-    "Mermaid Render.md",
-    "OS_LAB_REPORT/Lab1.md",
-    "演讲稿v2.md",
-    "未命名 3.base",
-    "未命名 2.base",
-    "未命名 1.base",
-    "未命名.base",
-    "BS/CS571 Web Dev Basics 2.md",
-    "BS/CS571 Web Dev Basics 1.md",
-    "OPERATING SYSTEM/Chapter Three Processes.md",
-=======
-    "OPERATING SYSTEM/Chapter Three Processes.md",
-    "OPERATING SYSTEM/Chapter Four Threads.md",
-    "image-175.png",
-    "image-174.png",
-    "image-173.png",
-    "image-172.png",
-    "image-171.png",
-    "image-170.png",
-    "image-169.png",
-    "image-168.png",
-    "image-167.png",
-    "image-166.png",
-    "BS/CS571 Web Dev Basics 2.md",
-    "BS/CS571 Web Dev Basics 1.md",
->>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
-    "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
-    "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
-    "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
-    "OPERATING SYSTEM/Chapter One Introduction.md",
-    "COMPUTER VISION/Chapter Two Image Formation.md",
-    "COMPUTER VISION/Chapter Three Image Processing.md",
-    "COMPUTER VISION/Chapter One Linear Algebra.md",
-    "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree GS.md",
-    "RESEARCH/Paper Reading/Large Scale Reconstruction",
-    "OPERATING SYSTEM/Chapter Two Operating System Structures.md",
-    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
-    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
-    "COMPUTING THEORY/Class Three.md",
-    "COMPUTING THEORY",
-    "_debug_remotely_save/sync_plans_hist_exported_on_1756814808388.md",
-    "_debug_remotely_save",
-    "ZJU CS COURSES/COMPUTING THEORY/index.md",
-    "ZJU CS COURSES/COMPUTING THEORY/Intro.md",
-    "ZJU CS COURSES/COMPUTING THEORY",
-    "ZJU CS COURSES/COMPUTER THEORY/index.md",
-    "ZJU CS COURSES/COMPUTER THEORY",
-    "SELF LEARNING/index.md",
-    "SELF LEARNING",
-    "RESEARCH/VOLUME RENDERING/NeRF.md",
-    "Qwen.md",
-    "未命名.canvas",
-    "未命名 1.canvas"
+    "OPERATING SYSTEM/Chapter Two Operating System Structures.md"
   ]
 }
