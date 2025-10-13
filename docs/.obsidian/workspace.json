@@ -1,64 +1,41 @@
 {
   "main": {
-    "id": "2404e7ff839f0bc2",
+    "id": "b82bca84be4b8603",
     "type": "split",
     "children": [
       {
-        "id": "076744934e4c0005",
+        "id": "89dfb299b737d062",
         "type": "tabs",
         "children": [
           {
-            "id": "b753a5a34208685f",
+            "id": "4a012e0d79dc31a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "演讲稿v2.md",
-=======
-                "file": "OPERATING SYSTEM/Chapter Four Threads.md",
->>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
+                "file": "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "演讲稿v2"
-            }
-          },
-          {
-            "id": "a7326e79207baa63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OS_LAB_REPORT/Lab1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lab1"
-=======
-              "title": "Chapter Four Threads"
->>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
+              "title": "Chapter Four Model Fitting and Optimization"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "1eb86e2f4b966835",
+    "id": "9c1caa9aec027077",
     "type": "split",
     "children": [
       {
-        "id": "6645151141ceea31",
+        "id": "e64775c54b4473ec",
         "type": "tabs",
         "children": [
           {
-            "id": "810893512d27b62b",
+            "id": "ec06ed25a837ed4b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -71,7 +48,7 @@
             }
           },
           {
-            "id": "836988291b1cc7f3",
+            "id": "5cd4027d17219e54",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -88,7 +65,7 @@
             }
           },
           {
-            "id": "2c0ecd21865e9074",
+            "id": "1470a52d352d2d41",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -101,24 +78,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 300,
     "collapsed": true
   },
   "right": {
-    "id": "c1410209a3e9108e",
+    "id": "dc0a9845318e9b67",
     "type": "split",
     "children": [
       {
-        "id": "6571895967cc6342",
+        "id": "ec1ca20b391b8c19",
         "type": "tabs",
         "children": [
           {
-            "id": "cfce06b149141b9c",
+            "id": "3fabd167c1ff5c01",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS_LAB_REPORT/Lab1.md",
+                "file": "BS/CS571 Web Dev Basics 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,25 +105,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Lab1"
+              "title": "CS571 Web Dev Basics 2 的反向链接列表"
             }
           },
           {
-            "id": "6b6af3c628895a97",
+            "id": "abe4c67dd487e20d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "BS/CS571 Web Dev Basics 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "CS571 Web Dev Basics 2 的出链列表"
             }
           },
           {
-            "id": "dfe10e367c3afe96",
+            "id": "de5a15d90148c8e9",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -157,22 +134,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "标签"
             }
           },
           {
-            "id": "9960939c2656baad",
+            "id": "60ea6354ae0b09d9",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "BS/CS571 Web Dev Basics 2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "CS571 Web Dev Basics 2 的大纲"
             }
           }
         ]
@@ -192,77 +169,29 @@
       "command-palette:打开命令面板": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "bases:创建新数据库": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "slides-extended:Show slide preview": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "a7326e79207baa63",
+  "active": "4a012e0d79dc31a5",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "image-180.png",
-    "image-179.png",
-    "image-178.png",
-    "image-177.png",
-    "image-176.png",
-    "image-175.png",
-    "image-174.png",
-    "image-173.png",
-    "image-172.png",
-    "image-171.png",
-    "image-170.png",
-    "Mermaid Render.md",
-    "OS_LAB_REPORT/Lab1.md",
-    "演讲稿v2.md",
-    "未命名 3.base",
-    "未命名 2.base",
-    "未命名 1.base",
-    "未命名.base",
-    "BS/CS571 Web Dev Basics 2.md",
-    "BS/CS571 Web Dev Basics 1.md",
-    "OPERATING SYSTEM/Chapter Three Processes.md",
-=======
-    "OPERATING SYSTEM/Chapter Three Processes.md",
-    "OPERATING SYSTEM/Chapter Four Threads.md",
-    "image-175.png",
-    "image-174.png",
-    "image-173.png",
-    "image-172.png",
-    "image-171.png",
-    "image-170.png",
-    "image-169.png",
-    "image-168.png",
-    "image-167.png",
-    "image-166.png",
-    "BS/CS571 Web Dev Basics 2.md",
-    "BS/CS571 Web Dev Basics 1.md",
->>>>>>> 9396c05dc276b90085e719b7e9ffc2d1f0452ddd
-    "RESEARCH/Paper Reading/Volume Rendering/NeRF.md",
-    "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
-    "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
-    "OPERATING SYSTEM/Chapter One Introduction.md",
-    "COMPUTER VISION/Chapter Two Image Formation.md",
+    "image-219.png",
+    "image-218.png",
+    "image-217.png",
+    "image-216.png",
+    "image-215.png",
+    "image-214.png",
+    "image-213.png",
+    "image-212.png",
+    "image-211.png",
+    "image-210.png",
+    "image-209.png",
     "COMPUTER VISION/Chapter Three Image Processing.md",
-    "COMPUTER VISION/Chapter One Linear Algebra.md",
-    "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree GS.md",
-    "RESEARCH/Paper Reading/Large Scale Reconstruction",
-    "OPERATING SYSTEM/Chapter Two Operating System Structures.md",
+    "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
+    "BS/CS571 Web Dev Basics 2.md",
     "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
     "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
-    "COMPUTING THEORY/Class Three.md",
-    "COMPUTING THEORY",
-    "_debug_remotely_save/sync_plans_hist_exported_on_1756814808388.md",
-    "_debug_remotely_save",
-    "ZJU CS COURSES/COMPUTING THEORY/index.md",
-    "ZJU CS COURSES/COMPUTING THEORY/Intro.md",
-    "ZJU CS COURSES/COMPUTING THEORY",
-    "ZJU CS COURSES/COMPUTER THEORY/index.md",
-    "ZJU CS COURSES/COMPUTER THEORY",
-    "SELF LEARNING/index.md",
-    "SELF LEARNING",
-    "RESEARCH/VOLUME RENDERING/NeRF.md",
-    "Qwen.md",
-    "未命名.canvas",
-    "未命名 1.canvas"
+    "OS_LAB_REPORT/Lab1.md"
   ]
 }
