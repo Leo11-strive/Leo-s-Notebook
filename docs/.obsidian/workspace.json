@@ -1,52 +1,24 @@
 {
   "main": {
-<<<<<<< HEAD
-    "id": "8366bd5e2fa08ddc",
+    "id": "f989806b05b329e8",
     "type": "split",
     "children": [
       {
-        "id": "12f43613f5efce9e",
+        "id": "0debbaeb5824e35c",
         "type": "tabs",
         "children": [
           {
-            "id": "50dc2bc711029ee1",
-=======
-    "id": "b82bca84be4b8603",
-    "type": "split",
-    "children": [
-      {
-        "id": "89dfb299b737d062",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4a012e0d79dc31a5",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "048977f6147f6fe8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
-=======
-<<<<<<< HEAD
-                "file": "OS_LAB_REPORT/Lab1.md",
-=======
-                "file": "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
->>>>>>> refs/remotes/origin/master
+                "file": "OPERATING SYSTEM/Chapter Four Threads.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "3D Gaussian Splatting"
-=======
-<<<<<<< HEAD
-              "title": "Lab1"
-=======
-              "title": "Chapter Four Model Fitting and Optimization"
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
->>>>>>> refs/remotes/origin/master
+              "title": "Chapter Four Threads"
             }
           }
         ]
@@ -55,27 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-<<<<<<< HEAD
-    "id": "1ad75892b105f09b",
+    "id": "1be242199296d210",
     "type": "split",
     "children": [
       {
-        "id": "3a59b56014be6711",
+        "id": "cd1085b9e6b0b808",
         "type": "tabs",
         "children": [
           {
-            "id": "cf6f1c50a67cdcb7",
-=======
-    "id": "9c1caa9aec027077",
-    "type": "split",
-    "children": [
-      {
-        "id": "e64775c54b4473ec",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ec06ed25a837ed4b",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "9dc07caf5aa183e7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -84,15 +44,11 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "17bb11868b3fadb4",
-=======
-            "id": "5cd4027d17219e54",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "ef49674ab88c7275",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -105,64 +61,41 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "1ad2b5e18efb5674",
-=======
-            "id": "1470a52d352d2d41",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "72efc59c10da2a9f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-<<<<<<< HEAD
-    "width": 211.50260543823242
-=======
-<<<<<<< HEAD
-    "width": 300
-  },
-  "right": {
-    "id": "dd075aff39dad8cf",
-    "type": "split",
-    "children": [
-      {
-        "id": "fe6e8f81c7736480",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "05c49124a9bb2ed6",
-=======
     "width": 300,
     "collapsed": true
->>>>>>> refs/remotes/origin/master
   },
   "right": {
-    "id": "dc0a9845318e9b67",
+    "id": "d7f2b7964b200351",
     "type": "split",
     "children": [
       {
-        "id": "ec1ca20b391b8c19",
+        "id": "1363a3bc0e459366",
         "type": "tabs",
         "children": [
           {
-            "id": "3fabd167c1ff5c01",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "b15e584d43ec8b72",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BS/CS571 Web Dev Basics 2.md",
+                "file": "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,41 +105,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "CS571 Web Dev Basics 2 的反向链接列表"
+              "title": "Chapter 3 The Data Link Layer 的反向链接列表"
             }
           },
           {
-<<<<<<< HEAD
-            "id": "1d4fc49ab1ad2c6b",
-=======
-            "id": "abe4c67dd487e20d",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "245f303863c38d39",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "OS_LAB_REPORT/Lab1.md",
-=======
-                "file": "BS/CS571 Web Dev Basics 2.md",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+                "file": "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-<<<<<<< HEAD
-              "title": "Outgoing links from Lab1"
+              "title": "Chapter 3 The Data Link Layer 的出链列表"
             }
           },
           {
-            "id": "2e4183c307fce349",
-=======
-              "title": "CS571 Web Dev Basics 2 的出链列表"
-            }
-          },
-          {
-            "id": "de5a15d90148c8e9",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "a357afee90694d02",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -221,30 +138,18 @@
             }
           },
           {
-<<<<<<< HEAD
-            "id": "c3af8b4e5c363d1a",
-=======
-            "id": "60ea6354ae0b09d9",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+            "id": "9eeef306d813f052",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "OS_LAB_REPORT/Lab1.md",
-=======
-                "file": "BS/CS571 Web Dev Basics 2.md",
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+                "file": "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-<<<<<<< HEAD
-              "title": "Outline of Lab1"
-=======
-              "title": "CS571 Web Dev Basics 2 的大纲"
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+              "title": "Chapter 3 The Data Link Layer 的大纲"
             }
           }
         ]
@@ -256,24 +161,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-<<<<<<< HEAD
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "bases:Create new base": false,
-      "slides-extended:Show slide preview": false,
-      "remotely-save:Remotely Save": false,
-      "obsidian-excalidraw-plugin:New drawing": false
-    }
-  },
-  "active": "50dc2bc711029ee1",
-  "lastOpenFiles": [
-    "OPERATING SYSTEM/Chapter Two Operating System Structures.md"
-=======
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -287,24 +174,21 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "4a012e0d79dc31a5",
+  "active": "048977f6147f6fe8",
   "lastOpenFiles": [
-    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
+    "OPERATING SYSTEM/Chapter Three Processes.md",
+    "image-255.png",
+    "image-254.png",
+    "image-253.png",
+    "image-252.png",
+    "image-251.png",
+    "image-250.png",
+    "image-249.png",
+    "image-248.png",
+    "image-247.png",
+    "image-246.png",
+    "OPERATING SYSTEM/Chapter Four Threads.md",
     "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
-    "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
-    "image-219.png",
-    "image-218.png",
-    "image-217.png",
-    "image-216.png",
-    "image-215.png",
-    "image-214.png",
-    "image-213.png",
-    "image-212.png",
-    "image-211.png",
-    "image-210.png",
-    "COMPUTER VISION/Chapter Three Image Processing.md",
-    "BS/CS571 Web Dev Basics 2.md",
-    "OS_LAB_REPORT/Lab1.md"
->>>>>>> 584771553f8e0fd5f6014c63e5c895525e22f9de
+    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md"
   ]
 }
