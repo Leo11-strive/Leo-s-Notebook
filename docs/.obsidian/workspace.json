@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
+                "file": "RESEARCH/Paper Reading/3DGS/3D Gaussian Splatting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter Four Model Fitting and Optimization"
+              "title": "3D Gaussian Splatting"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 211.50260543823242
   },
   "right": {
     "id": "dc0a9845318e9b67",
@@ -176,6 +175,9 @@
   },
   "active": "4a012e0d79dc31a5",
   "lastOpenFiles": [
+    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
+    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
+    "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
     "image-219.png",
     "image-218.png",
     "image-217.png",
@@ -186,12 +188,8 @@
     "image-212.png",
     "image-211.png",
     "image-210.png",
-    "image-209.png",
     "COMPUTER VISION/Chapter Three Image Processing.md",
-    "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
     "BS/CS571 Web Dev Basics 2.md",
-    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
-    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md",
     "OS_LAB_REPORT/Lab1.md"
   ]
 }
