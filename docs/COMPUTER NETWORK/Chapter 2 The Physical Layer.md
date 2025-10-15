@@ -85,6 +85,7 @@
 ## The Max. Data Rate of a Channel
 * ![[image-82.png]]
 * V：每个符号可判的**离散电平**
+* 要 encode 0，1 信号，n 个信号，必须至少有 $2^n$ 个不一样的 symbol encode
 * Shannon：
 * ![[image-83.png]]
 
@@ -113,14 +114,14 @@
 * 星座图
 > 每个点的坐标就是发射信号在 I-Q 分解下的幅度。
 
-> - **I 分量**：cos(ωt) 方向上的投影
-  
-> - **Q 分量**：sin(ωt) 方向上的投影
+> 振幅由到原点的距离决定，相位通过夹角
+
+> 存在上界，因为信道的 noisy 属性，信号失真（symbol 过于密集）
 
 
 ## Multiplexing
 * 如何复用？
-> 频分复用（分频带）
+> 频分复用（分频带），但是需要 guard band 夹在中间，有频宽的浪费
 * 时分复用
 > 分时间轴
 * OFDM
@@ -135,15 +136,18 @@
 
 
 ## PSTN: 公用交换电话网络
+![[image-234.png]]
 * structure of the telephone system
 ![[image-126.png]]
 * the local loop: modems, ADSL, and Fiber
-> Modems: 调制解调器
+> Modems: 调制解调器（电脑数字信号与模拟信号的转换）
+> Codec：模拟信号与 PCM 脉冲数字信号的转换
 * trunks and multiplexing
 * switching
 * connected to a local network, and connected to the outer net
 * the biggest drawback: low bandwidth
 ![[image-127.png]]
+![[image-220.png]]
 * local can be seen as the LAN
 * trunks: 核心主干网络
 ![[image-128.png]]
@@ -162,7 +166,7 @@
 * codec: decode, high sampling, good modulation
 * > PCM: Pulse Code Modulation: use the pulse in the signal (信号中的闪现)
 ![[image-134.png]]
-* T 1 carrier: 非常高的数据率, 多层复用
+* T 1 carrier: 非常高的数据率, 多层复用（时分复用，TDM）
 * SONET/SDH：同步光纤网络
 ![[image-135.png]]
 * 互联网的 switching，
@@ -170,8 +174,7 @@
 
 ![[image-136.png]]
 
-
-
+![[image-235.png]]
 ## Cellular Networks
 * 蜂窝网络：中心相当于基站
 

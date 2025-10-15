@@ -1,5 +1,6 @@
 {
   "main": {
+<<<<<<< HEAD
     "id": "3de5ceeaff609fcb",
     "type": "split",
     "children": [
@@ -9,16 +10,35 @@
         "children": [
           {
             "id": "fb8fc2a7b6a3683b",
+=======
+    "id": "f989806b05b329e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "0debbaeb5824e35c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "048977f6147f6fe8",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
+=======
+                "file": "OPERATING SYSTEM/Chapter Four Threads.md",
+>>>>>>> refs/remotes/origin/master
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
+<<<<<<< HEAD
               "title": "Octree-GS"
+=======
+              "title": "Chapter Four Threads"
+>>>>>>> refs/remotes/origin/master
             }
           }
         ]
@@ -27,6 +47,7 @@
     "direction": "vertical"
   },
   "left": {
+<<<<<<< HEAD
     "id": "1db6834ed149ff77",
     "type": "split",
     "children": [
@@ -36,6 +57,17 @@
         "children": [
           {
             "id": "b89ab838ec2ab663",
+=======
+    "id": "1be242199296d210",
+    "type": "split",
+    "children": [
+      {
+        "id": "cd1085b9e6b0b808",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9dc07caf5aa183e7",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,11 +76,15 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
+<<<<<<< HEAD
             "id": "0bb070e00ece0f20",
+=======
+            "id": "ef49674ab88c7275",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,17 +97,21 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           },
           {
+<<<<<<< HEAD
             "id": "0b93d404590da11e",
+=======
+            "id": "72efc59c10da2a9f",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           }
         ]
@@ -82,6 +122,7 @@
     "collapsed": true
   },
   "right": {
+<<<<<<< HEAD
     "id": "81f634047ed2554e",
     "type": "split",
     "children": [
@@ -91,11 +132,26 @@
         "children": [
           {
             "id": "a5a61d2d2158d56b",
+=======
+    "id": "d7f2b7964b200351",
+    "type": "split",
+    "children": [
+      {
+        "id": "1363a3bc0e459366",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b15e584d43ec8b72",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
+=======
+                "file": "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
+>>>>>>> refs/remotes/origin/master
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,25 +161,45 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
+<<<<<<< HEAD
               "title": "Backlinks for Octree-GS"
             }
           },
           {
             "id": "cb77daa5df46c59f",
+=======
+              "title": "Chapter 3 The Data Link Layer 的反向链接列表"
+            }
+          },
+          {
+            "id": "245f303863c38d39",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
+=======
+                "file": "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
+>>>>>>> refs/remotes/origin/master
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
+<<<<<<< HEAD
               "title": "Outgoing links from Octree-GS"
             }
           },
           {
             "id": "d689276d28c04c47",
+=======
+              "title": "Chapter 3 The Data Link Layer 的出链列表"
+            }
+          },
+          {
+            "id": "a357afee90694d02",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,18 +214,30 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "4b7ffcad36246f93",
+=======
+            "id": "9eeef306d813f052",
+>>>>>>> refs/remotes/origin/master
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
+=======
+                "file": "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
+>>>>>>> refs/remotes/origin/master
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
+<<<<<<< HEAD
               "title": "Outline of Octree-GS"
+=======
+              "title": "Chapter 3 The Data Link Layer 的大纲"
+>>>>>>> refs/remotes/origin/master
             }
           }
         ]
@@ -161,6 +249,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+<<<<<<< HEAD
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -176,4 +265,37 @@
   },
   "active": "fb8fc2a7b6a3683b",
   "lastOpenFiles": []
+=======
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:创建新数据库": false,
+      "slides-extended:Show slide preview": false,
+      "remotely-save:Remotely Save": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
+    }
+  },
+  "active": "048977f6147f6fe8",
+  "lastOpenFiles": [
+    "image-275.png",
+    "image-274.png",
+    "image-273.png",
+    "image-272.png",
+    "image-271.png",
+    "image-270.png",
+    "image-269.png",
+    "image-268.png",
+    "image-267.png",
+    "image-266.png",
+    "image-265.png",
+    "OPERATING SYSTEM/Chapter Three Processes.md",
+    "OPERATING SYSTEM/Chapter Four Threads.md",
+    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
+    "COMPUTER NETWORK/Chapter 2 The Physical Layer.md"
+  ]
+>>>>>>> refs/remotes/origin/master
 }

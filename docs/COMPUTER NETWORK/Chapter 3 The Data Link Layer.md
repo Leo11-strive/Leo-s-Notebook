@@ -68,7 +68,78 @@
 
 ![[image-182.png]]
 
+* Hamming Code 可以实现，就是上面提到的那个 lower bound
 * block codes: 原来的数据流，分成 block，block 的 data bits 计算出对应的 r check bit
+* **systematic code**: the m data bits are sent directly, along with the check bits
+* linear code : the r check bits are computed as a linear function of the m data bits
+* **code rate**, or simply rate, is the fraction of the codeword that carries information that is not redundant. 有用的占比
+
+### Hamming Code
+* 2 的倍数位置为 check，data 就是其他的
+* Each check bit forces the parity of some collection of bits, including itself, to be even (or odd)
+* 一个 bit 可以被多个 check bit 检查
+![[image-221.png]]
+* 对其做类似二进制的拆分
+* 所有出错的 check bit 之和就是错误的 bit（只有一位错误的情况，因为，如果是比这个大的 bit 出的错的话，一定还有一个 invalid check bit，矛盾）
+![[image-222.png]]
+
+
+### Convolutional Code
+* An encoder processes a sequence of input bits and generates a sequence of output bits.
+* The output depends on the current and previous input bits.
+* characterized by coding rate and constraint length
+* previous input bits is called **constraint length**.
+* add all memorized bits and mod 2
+![[image-236.png]]
+
+
+### Reed Solomon Codes
+![[image-223.png]]
+* why we can know the error position?
+> Physical layer information, you can know the incorrect bits referencing 星座图（intuition)
+![[image-237.png]]
+
+### LDPC
+* 用一小部分的输入位决定的，linear block code
+*  practical for large block sizes and have excellent error-correction abilities that outperform many other codes (including the ones we have looked at) in practice.
+
+
+## Correction
+![[image-224.png]]
+* less expensive
+* 有些时候重新传输会比 correction 更优秀
+
+![[image-225.png]]
+![[image-226.png]]
+* 一列一列传输，会更容易 detect
+
+### Checksum
+![[image-227.png]]
+![[image-228.png]]
+
+* 用**一补码加法（one’s‐complement addition）把要校验的比特流分成**16 位字**相加，再对结果**按位取反**作为 checksum。
+![[image-238.png]]
+
+### CRC
+
+* 可以用来纠错，但是我们这里考虑检查错误
+![[image-229.png]]
+* 看成 polynomial
+![[image-239.png]]
+* 
+
+![[image-230.png]]
+![[image-231.png]]
+![[image-232.png]]
+
+
+
+![[image-233.png]]
+* G (x) 的选择很重要
+![[image-240.png]]
+![[image-241.png]]
+
+
 
 
 
