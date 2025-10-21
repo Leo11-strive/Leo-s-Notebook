@@ -139,8 +139,43 @@
 ![[image-240.png]]
 ![[image-241.png]]
 
+## ELEMENTARY DATA LINK PROTOCOLS
+* 链路层向网络层提供服务
+![[image-357.png]]
+* 先把 packet 变成 frame，传输这个数据包到另一个 link layer
+
+![[image-358.png]]
+
+![[image-359.png]]
+
+![[image-360.png]]
+
+![[image-361.png]]
+* 上述是接口
+
+![[image-362.png]]
+
+
+* 一个完美的状态
+![[image-363.png]]
 
 
 
+* Simplex：error free channel assumption
+* No flow control
+
+### Protocal 2
+* A simplex stop-and-wait protocol
+* The communication channel is assumed to **be error free**.
+* The sender is always ready. The receiver is NOT always ready or the receiver has limited buffer space.
+![[image-364.png]]
+![[image-365.png]]
+
+![[image-366.png]]
+![[image-367.png]]
+* flow control: stop-and-wait
 
 
+### Protocal 3
+* add "The communication channel is NOT free of errors."
+* 
