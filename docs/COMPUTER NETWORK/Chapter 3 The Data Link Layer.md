@@ -139,7 +139,7 @@
 ![[image-240.png]]
 ![[image-241.png]]
 
-## ELEMENTARY DATA LINK PROTOCOLS
+## Elementary data link protocols
 * 链路层向网络层提供服务
 ![[image-357.png]]
 * 先把 packet 变成 frame，传输这个数据包到另一个 link layer
@@ -178,4 +178,78 @@
 
 ### Protocal 3
 * add "The communication channel is NOT free of errors."
-* 
+* Protocols in which the sender waits for a positive acknowledgement before advancing to the next data item are often called PAR (Positive Acknowledgement with Retransmission) or **ARQ** (Automatic Repeat reQuest)
+![[image-368.png]]
+![[image-369.png]]
+![[image-370.png]]
+![[image-371.png]]
+* ACK 丢包，那么这样的重新传输不需要被上传到 network 层，所以需要 sequence number
+![[image-372.png]]
+
+### Protocal 4
+![[image-373.png]]
+![[image-374.png]]
+
+![[image-375.png]]
+![[image-376.png]]
+
+![[image-377.png]]
+
+### Sliding Window
+* RTT：往返时延：$T_{prop}/T_{frame}$
+* BD: bandwidth delay product: 在传播时延内，信道中“正在传输但尚未到达”的数据量BD（比特）=B×Tprop​ 
+![[image-384.png]]
+* ***N = 发送窗口大小（window size）**，也就是**允许在未被确认（unACKed）状态下“在路上”的数据帧个数**。
+* Window = Set of sequence numbers permitted to send/receive
+![[image-378.png]]
+
+* Unprocessed frames: frames that are received but not deliver to the network layer and their acks are not sent yet.
+* sender 发送的和准备发送的加起来没有 ack 的最多有一个 boundery，就是 sliding window
+* receiver 没有 ack 的和没有处理的也有一个 boundery
+
+
+
+## Protocol 5
+![[image-379.png]]
+* receiver 的 sliding window 是 1
+* 一旦出错，整个扔掉，直到错误的重新传输
+![[image-380.png]]
+* 序号到 5 的话，最多传 5 个包，0 就是新的，5 就是重新传递（需要有序号作为区分）
+
+![[image-381.png]]
+**cumulative acknowledgement**
+* Sometimes, ACK number means the next expected frame to receive. So if a ACK number _n_ arrives, it means _n_ − 1, _n_ − 2, … are correctly received while _n_ is the next expected frame to receive.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Example data link protocols
+* Packet over SONET
+* PPP 对 packet 进行封装
+![[image-382.png]]
+* A standard protocol called **PPP (Point to** **Point Protocol)** is used to send packets over the links, including the SONET fiber optic links and ADSL links !
+LCP 管理链路（建立连接） 
+NCP 管理网络层参数。
+![[image-383.png]]
+
+![[image-385.png]]
+* LCP && NCP
+![[image-386.png]]
+
+![[image-387.png]]
+
+
+### PPP ADSL
+![[image-397.png]]
+
+* payload 包含 PPP 信息
+
