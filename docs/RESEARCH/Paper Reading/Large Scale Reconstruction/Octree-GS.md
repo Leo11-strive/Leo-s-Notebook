@@ -4,3 +4,7 @@
 ## Introduction
 * A key drawback of 3D-GS is the misalignment between the distribution of 3D Gaussians and the actual scene structure
 * Yet, their drawback is every object detail is rendered, regardless of distance, leading to redundant computations and inconsistent rendering speeds
+![[image-398.png]]
+* 3 DGS:
+> This limitation hampers its practicality in speed-demanding applications, such as gaming in open-world environments and other immersive experiences, particularly for large indoor and outdoor scenes with computation-restricted devices.
+* 
