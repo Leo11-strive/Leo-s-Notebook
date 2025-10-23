@@ -95,3 +95,55 @@
 ![[image-395.png]]
 * 快速开始运行
 ![[image-396.png]]
+
+* sweet spot：时间长度要比 context switch 时间长很多
+* 要保证在这个时间片里面 CPU burst 要完成
+* no starvation
+* SJF turnaround time faster than RR
+
+## Multilevel queue
+* 把一个队列分成多个队列
+* 分别调度
+* 前端，后端（分离）
+> 前段有大量的交互（RR），而后端会有 batch 大量处理，长时间运行，要有最高的资源利用率（FCFS）
+![[image-399.png]]
+* 本身 queue 与 queue 之间也要进行调度
+![[image-401.png]]
+* 但是问题是，它的调度比较静态（队列之间没有交换），进程的 CPU consume 会发生变化
+
+## Multilevel feedback queue
+* A process can move between the various queues; aging can be implemented this way
+![[image-402.png]]
+![[image-403.png]]
+* 多级反馈队列
+![[image-404.png]]
+
+* 也有可能 starve，长进程
+
+## Multiple-processor scheduling
+* 应该让进程在哪个处理器上跑？
+* 我们需要让所有的 CPU 忙起来吗？
+* 处理器之间的信息交流？
+![[image-405.png]]
+* 进程亲和度，一个进程尽量在一个 processor 上跑，以提高缓存命中率
+* load balancing，每个 CPU 的 workload 差不多
+
+## Real-Time scheduling
+![[image-406.png]]
+* 评价标准是可预测性（可以预测结束时间），可靠性（正确执行）
+* 最早截止时间优先
+* 最低松弛度优先
+![[image-407.png]]
+* Rate Monotonic Scheduling（速率单调调度）
+* 是一种**实时调度算法（Real-Time Scheduling Algorithm）**，专门用于周期性任务（periodic tasks）的场景。
+* 每个任务的优先级一开始就根据它的周期（period）决定了，运行过程中不会改变。
+* 基于任务的周期来分配优先级，周期越短的任务优先级越高
+* 抢占式
+
+
+## Thread Scheduling
+![[image-408.png]]
+* 由**用户态线程库**决定：在**同一进程内部**，哪些用户线程（U-threads）能被放到**可用的 LWP**（LightWeight Process，内核线程/可调度实体）上运行。
+* 由**内核调度器**决定：在全系统范围，哪个内核线程（K-thread/LWP)拿到某个 CPU 的下一次时间片。
+
+

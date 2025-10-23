@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS_LAB_REPORT/Lab3.md",
+                "file": "OPERATING SYSTEM/Chapter Six Process Synchronization.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab3"
+              "title": "Chapter Six Process Synchronization"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -161,35 +161,37 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "markdown-importer:Open format converter": false,
-      "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:创建新数据库": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "slides-extended:Show slide preview": false,
       "remotely-save:Remotely Save": false
     }
   },
   "active": "4735d05d29892ac9",
   "lastOpenFiles": [
-    "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
-    "OS_LAB_REPORT/Lab3.md",
-    "image-398.png",
-    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
-    "image-397.png",
+    "image-413.png",
+    "image-412.png",
+    "image-411.png",
+    "image-410.png",
+    "image-409.png",
     "OPERATING SYSTEM/Chapter Five CPU Scheduling.md",
-    "image-396.png",
-    "image-395.png",
-    "image-394.png",
-    "image-393.png",
-    "image-392.png",
-    "image-391.png",
-    "image-390.png",
-    "image-389.png",
+    "OPERATING SYSTEM/Chapter Six Process Synchronization.md",
+    "image-408.png",
+    "image-407.png",
+    "image-406.png",
+    "image-405.png",
+    "image-404.png",
+    "image-403.png",
+    "OS_LAB_REPORT/Lab3.md",
+    "RESEARCH/Paper Reading/Large Scale Reconstruction/Octree-GS.md",
+    "COMPUTER NETWORK/Chapter 3 The Data Link Layer.md",
     "COMPUTER VISION/Chapter Five Image Matching and Motion Estimation.md",
     "COMPUTER VISION/Chapter Four Model Fitting and Optimization.md",
     "COMPUTER VISION/Chapter Three Image Processing.md",
