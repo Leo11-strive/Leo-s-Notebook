@@ -287,4 +287,25 @@ Test passed!
 * 在 RV64 中一共有 32 个通用寄存器，为什么 `__switch_to` 中只保存了 14 个？
 > 因为我们在 trap 进入的时候已经保存了所有的寄存器，因此，我们的__switch_to 的目的就是跳转到那个我们接下来要运行的进程的 trap 恢复部分，因此只要 store 和 load 当前 switch 函数的环境即可
 * 阅读并理解 `arch/riscv/kernel/mm.c` 代码，尝试说明 `mm_init` 函数都做了什么，以及在 `kalloc` 和 `kfree` 的时候内存是如何被管理的
-> 
+> `kalloc`: 内存分成一个一个 run 快，使用 memset 分配地址，然后空的 freelist 指向下一个没有分配地址的 run
+> `kfree`: 就是分配一个新的地址，然后把 freelist 指过去
+> `mm_init`: 就是通过 `kfree` 不断创建一个 page 的小 block，通过预设一段内存，然后把这些内存分成一个 page 一个 page，用指针连接
+
+* 当线程第一次调用时，其 `ra` 所代表的返回点是 `__dummy`，那么在之后的线程调用中 `__switch_to` 中，`ra` 保存/恢复的函数返回点是什么呢？请同学用 gdb 尝试追踪一次完整的线程切换流程，并关注每一次 `ra` 的变换（需要截图）。
+![[image-414.png]]
+![[image-415.png]]
+> 在 make run 命令下，第一轮所有的都是__dummy，因为每次调度都是选一个新的, 这个时候保存的 return address，就是 do timer那里的地址
+
+![[image-416.png]]
+> 这个时候 return address 就和之前 store 的一样了。因为我们要继续的是一个运行过了的进程，进入过中断的进程。而它是在__switch_to中断保存, 所以是 do timer的地址
+
+* 请尝试分析并画图说明 kernel 运行到输出第两次 `switch to [PID ...` 的时候内存中存在的全部函数帧栈布局。
+> 因为中断 switch之后，sp 会发生变化，因此每一个进程的 page 中的 sp 都会储存一个原始函数 dummy，trap 调用，一个 trap handler 调用，一个do timer 调用
+> 具体而言 
+![[image-417.png]]
+
+
+## 总结
+* 非常清晰的，非常让人收益匪浅的一个 lab，代码量不大，但是思考的地方很多，对线程/进程的 switch 有了真正的概念
+* 我在做的时候第一个是遇到了一个 unsigned int 和 int 比较的问题，一个是我把 main 中的 test 给删除了，然后会不断的 exception，是因为 head. S 没有代码运行了
+* 使用了 ai 补写，搜索知识，和思考题最后一道的图的绘制
