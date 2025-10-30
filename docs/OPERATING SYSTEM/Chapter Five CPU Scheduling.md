@@ -97,7 +97,7 @@
 ![[image-396.png]]
 
 * sweet spot：时间长度要比 context switch 时间长很多
-* 要保证在这个时间片里面 CPU burst 要完成
+* 要保证在这个时间片里面进程的CPU burst 要完成大多数
 * no starvation
 * SJF turnaround time faster than RR
 
