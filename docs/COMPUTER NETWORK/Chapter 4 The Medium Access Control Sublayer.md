@@ -105,16 +105,44 @@
 
 ## Ethernet
 * classic ethernet
-> 经典以太网，Mac 协议，总线
+> 经典以太网，Mac 协议，总线（基于总线，会 broadcast）
+![[image-596.png]]
+* 这个简写，代表“10”速率，10 Gbps
 * 交换机的话，没有 collision，不是总线
+* 调制解调，数模转换
+![[image-608.png]]
+* With –1 volts for a 0 bit, with 1 volts for a 1 bit A receiver may sample the signal at a slightly different frequency than the sender used to generate it can be out of synchronization.
 
+* sender 和 receiver 的时钟不同
+![[image-597.png]]
+* 可以使用曼彻斯特编码
+![[image-598.png]]
 
+* mac sublayer protocal
+* type 步骤：
+> 可以区分 length 或者 type
+* preamble: 用来区分是开头还是结束
+![[image-599.png]]
 
+* Preamble: 8 bytes, containing the bit pattern 10101010, used for synchronization
+![[image-600.png]]
 
+![[image-601.png]]
+* 数据帧发送完之前，一定能判定
+* The **Binary Exponential Backoff Algorithm**
+![[image-602.png]]
 
+![[image-603.png]]
+* 交换机
+> outputs frames to the ports for which those frames are destined. None of the other ports even knows the frame exists.
 
+![[image-604.png]]
 
+![[image-605.png]]
+* DSSS
+![[image-606.png]]
 
+![[image-607.png]]
 
 
 
@@ -174,6 +202,13 @@
 
 
 
-## Collision-Free protocals
+
+
+
+
+
+
+
+
 
 

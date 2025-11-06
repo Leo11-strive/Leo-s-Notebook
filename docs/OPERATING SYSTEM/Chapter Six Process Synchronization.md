@@ -69,3 +69,60 @@
 ![[image-527.png]]
 
 ![[image-528.png]]
+
+![[image-609.png]]
+
+* for 语句来检查所有的进程，是否有在取号，如果有，等待
+* 筛选循环直到进程完成临界区访问
+
+
+## Synchronization Hardware
+![[image-611.png]]
+
+### Disable interrupts
+* 直接关闭中断
+![[image-612.png]]
+
+![[image-613.png]]
+
+![[image-614.png]]
+* 如果都是 true，循环
+* 如果是 false，自己设置成 true，然后开始运行
+* 不满足 bounded waiting
+
+## Swap instruction
+![[image-615.png]]
+
+![[image-616.png]]
+
+![[image-617.png]]
+
+## CAS
+![[image-618.png]]
+
+![[image-619.png]]
+
+![[image-620.png]]
+
+![[image-621.png]]
+## Mutex Locks
+![[image-622.png]]
+
+![[image-623.png]]
+* 阻塞唤醒方式
+* 自旋锁：自己检查
+> 短临界区域，只要让他不断检查即可
+> 无上下文切换，不需要调度器
+
+
+![[image-624.png]]
+
+## Semaphore
+![[image-625.png]]
+
+![[image-626.png]]
+
+![[image-627.png]]
+* 有序操作
+
+![[image-628.png]]

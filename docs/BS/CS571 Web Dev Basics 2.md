@@ -18,7 +18,10 @@
 * when it comes to debugging:
 > Use console log statement
 * can add breakpoints in browsers
+![[image-540.png]]
+![[image-539.png]]
 
+* `<script src="index.js" defer></script>`: defer is to load the js file in the end
 ### JavaScript Request
 * `asynchronous http requests`:
   *  `fetch`
@@ -39,6 +42,10 @@ fetch(url)
 //fetch会返回一个promise对象，这个promise对象会在异步成功之后生成response对象，而.then会被获取这个response对象（then是promise对象的一个方法），.*then永远返回一个新的promise对象*
 
 ```
+![[image-541.png]]
+
+* call back functions
+> Pass function to functions
 
 * how to add html?
 > InnerHTML: not save
@@ -46,4 +53,5 @@ fetch(url)
 ![[image-185.png]]
 * need to check whether the data is here
 ![[image-184.png]]
+
 
