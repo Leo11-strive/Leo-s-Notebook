@@ -22,7 +22,7 @@ $(shell rm *.o 2>/dev/null)
 
 # Clean up object files
 ```
-* `lib/Makefile` makefile 子程序编写，把所有的 `.c` 文件编译成 `.o`
+* `lib/Makefile` makefile 子程序编写，把所有的 `.c` 文件编译成 `.o` 
 #### 编写 head.S
 * 为第一个 C 函数设置程序栈（这里会有一个 timer 函数的 call 和 start kernel 的 call），只需要给 sp 寄存器赋予 stack 开始时的地址即可，这一部分的代码如下：
 ```RV64
