@@ -434,3 +434,58 @@ Step 5：Sender 后续发包（继续经过 home agent + 隧道）
 > 关注端口号，如果给 TCP 端口号的 bit 是 16 bit，那么一个 NAT 就可以映射 2^16 个
 * NAT 能“藏”多少主机，本质上是被它能用来区分不同连接的端口数限制的。
 * 端到端的过程结束了
+* 无连接到面向连接
+> 端口号码的限制
+* 需要 IP 以上的帮助
+* NAT 无法支持端到端新协议
+* P 2 P：bittorrent 强调端到端
+![[image-898.png]]
+
+* 加入一个桥，中间服务器，skype
+* 接下来提高 IP 地址的长度
+* TCP/IP 最开始没有什么安全性
+* 后面 ssl，https 开始出现
+
+## IPV 6
+* 已提出就已经开始考虑安全性了
+![[image-899.png]]
+
+![[image-900.png]]
+
+
+![[image-901.png]]
+* **Source address and destination address:** each 16 bytes long.
+* **Checksum**: removed entirely to reduce processing time at each hop
+* Hop by hop：逐跳进行
+![[image-902.png]]
+* IPv 6 的新的数据结构
+![[image-903.png]]
+* "Next Header 只在**单个数据包内**串联头部"
+* The routing header
+> **The routing header** lists one or more routers that must be visited on the way to the destination.
+
+![[image-904.png]]
+
+### IPv6 notations
+* 分成 8 个 4 位的 16 进制数
+![[image-905.png]]
+* 前面的 0 可以省略
+* Second, one or more groups of 16 zero bits can be replaced by a pair of colons
+* IPv4 addresses can be written as a pair of colons and an old dotted decimal number
+* 大的数据包意味着冲突的增多
+* 检测可以在传输层进行
+* ICMP 协议：ping 命令，传输层协议
+> 主机不可达，TTL 为 0
+* **traceroute**：ICMP，但是 A 先发送 ICMP，TTL 设置为 1，做了一次传输之后，会返回 ICMP false，第一个路由器，那么第二个路由器把 TTL 设置为 2...
+* ARP
+> IP 地址找 Mac 地址，在链路层中，一个局域网内，得到 destination 的 mac 地址，所以 IP 层输出一个数据帧广播，包含想要发送的目的路由器的信息（IP 地址），然后获得这这个信息的所有路由器会检查这个信息是否是自己的，如果是，返回自己的 mac 信息
+* 如果 ARP 跨路由器，跨局域网
+> 把 mac 地址先设置为中转路由器的信息
+* DHCP server
+> 新的机器进来，host broadcasts “DHCP **discover**” 放入 mac 地址，DHCP server responds with “DHCP **offer**”，分配 ip 地址，这个 response 是广播的，host requests IP address 广播，DHCP server sends address: “DHCP **ack**”
+* 网络中可能有多个 DHCP 服务器，第三步告诉所有 DHCP 选择的分配信息
+* MPLS：
+![[image-906.png]]
+
+![[image-907.png]]
+

@@ -207,3 +207,30 @@
 ![[image-894.png]]
 * **Segment-table base register (STBR)** points to the segment table’s location in memory*
 * **Segment-table length register (STLR)** indicates number of segments used by a program;
+* 多级页表的优点在于可以在需要的时候再进行映射，从而提高内存使用效率
+![[image-908.png]] 
+
+
+* protection
+> 保护信息，可读，可写的信息位
+
+* hardware
+![[image-909.png]]
+* 先比较 limit，是否是合法的 segment，然后再继续
+
+## The intel pentium
+* 首先先分段
+* 然后每段需要进行分页
+![[image-910.png]]
+* 线形地址：还是是一个中间地址
+![[image-911.png]]
+* 被区分成 local 和 global
+* global 部分负责内核，进程交换
+* local 部分独立
+![[image-912.png]]
+
+* 线形地址到物理地址
+![[image-913.png]]
+
+![[image-914.png]]
+
