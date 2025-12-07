@@ -10,5 +10,6 @@
   "custom-font-loader",
   "better-export-pdf",
   "obsidian-banners",
-  "obsidian-admonition"
+  "obsidian-admonition",
+  "obsidian-latex-suite"
 ]

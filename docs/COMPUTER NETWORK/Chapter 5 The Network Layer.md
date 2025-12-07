@@ -489,3 +489,6 @@ Step 5：Sender 后续发包（继续经过 home agent + 隧道）
 
 ![[image-907.png]]
 
+## OSPF
+![[image-971.png]]
+

@@ -1,7 +1,7 @@
 {
   "font_folder": ".obsidian/fonts/",
   "font": "LXGWWenKaiMono-Regular.ttf",
-  "force_mode": false,
+  "force_mode": true,
   "custom_css_mode": false,
   "custom_css": ""
 }
