@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "6c53e16fb20c83f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e37cba47443736e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f856c8c1a18a531",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "93d5107910bbda27",
+    "type": "split",
+    "children": [
+      {
+        "id": "7cddfa4254bb8f82",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38eee3e999c06401",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "6fc60c631bde0500",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "1cdbc5a1ad42c9b8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "1a77521ead4099eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "4394e514dcabca70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ebd196eb0af87c0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "OPERATING SYSTEM/Chapter Nine Virtual Memory.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Chapter Nine Virtual Memory"
+            }
+          },
+          {
+            "id": "0b2850b3bb8e8e99",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "OPERATING SYSTEM/Chapter Nine Virtual Memory.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Chapter Nine Virtual Memory"
+            }
+          },
+          {
+            "id": "aa378b87bf68a1c0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "81fd7c4f6f26994b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "OPERATING SYSTEM/Chapter Five CPU Scheduling.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Chapter Five CPU Scheduling 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "bases:创建新数据库": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "slides-extended:Show slide preview": false,
+      "remotely-save:Remotely Save": false
+    }
+  },
+  "active": "38eee3e999c06401",
+  "lastOpenFiles": [
+    "image-1053.png",
+    "image-1056.png",
+    "COMPUTER NETWORK/Chapter 6 Transport Layer.md",
+    "image-1076.png",
+    "image-1075.png",
+    "image-1074.png",
+    "image-1073.png",
+    "image-1072.png",
+    "image-1071.png",
+    "image-1070.png",
+    "image-1069.png",
+    "image-1068.png",
+    "OPERATING SYSTEM/Chapter Nine Virtual Memory.md",
+    "OPERATING SYSTEM/Chapter Six Process Synchronization.md",
+    "OPERATING SYSTEM/Chapter Seven Deadlocks.md",
+    "OPERATING SYSTEM/Chapter Eight Main Memory.md",
+    "COMPUTER NETWORK/Chapter 5 The Network Layer.md",
+    "COMPUTER VISION/Chapter Eleven Deep Learning for 3D Reconstrcution.md",
+    "COMPUTER VISION/Chapter Ten Recognition.md",
+    "COMPUTER VISION/Chapter Eight Depth estimation and 3D reconstruction.md",
+    "OS_LAB_REPORT/Lab4.md",
+    "OS_LAB_REPORT/Lab3.md",
+    "COMPUTING THEORY/Chapter Two Regular Language and Finite Automata.md",
+    "COMPUTING THEORY",
+    "未命名 1.canvas",
+    "未命名.canvas",
+    "材料.md",
+    "未命名 3.base",
+    "RESEARCH/Paper Reading/Pose Optimization/A Construct-Optimize Approach to Sparse View Synthesis without Camera Pose.md",
+    "COMPUTER VISION/Chapter Three Image Processing.md",
+    "COMPUTER VISION/Chapter Two Image Formation.md",
+    "COMPUTER VISION/Chapter Seven Structure from Motion.md",
+    "COMPUTER VISION/Chapter One Linear Algebra.md",
+    "COMPUTER VISION/Chapter Five Image Matching and Motion Estimation.md",
+    "RESEARCH/Paper Reading/Pose Optimization",
+    "OS_LAB_REPORT/Homework 1.md",
+    "BS/CS571 Web Dev 1.md",
+    "未命名/宪法民主演讲稿2.md",
+    "OS_LAB_REPORT/Lab2.md",
+    "OS_LAB_REPORT/Lab1.md",
+    "OPERATING SYSTEM/Chapter One Introduction.md",
+    "未命名 1.base",
+    "未命名.base",
+    "DEEP LEARNING/CS231n",
+    "DEEP LEARNING/CS182",
+    "DEEP LEARNING"
+  ]
+}
