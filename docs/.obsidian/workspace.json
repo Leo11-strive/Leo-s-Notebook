@@ -11,10 +11,14 @@
             "id": "6f856c8c1a18a531",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "COMPUTER VISION/Chapter Twelve Computational Photography.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Chapter Twelve Computational Photography"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a77521ead4099eb",
@@ -169,27 +174,28 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "38eee3e999c06401",
+  "active": "6f856c8c1a18a531",
   "lastOpenFiles": [
-    "image-1053.png",
-    "image-1056.png",
+    "image-1100.png",
+    "image-1099.png",
+    "image-1098.png",
+    "image-1097.png",
+    "image-1096.png",
+    "image-1095.png",
+    "image-1094.png",
+    "image-1093.png",
+    "image-1092.png",
+    "image-1091.png",
+    "image-1090.png",
+    "COMPUTER VISION/Chapter Eleven Deep Learning for 3D Reconstrcution.md",
+    "COMPUTER VISION/Chapter Twelve Computational Photography.md",
+    "COMPUTER VISION/Chapter Ten Recognition.md",
     "COMPUTER NETWORK/Chapter 6 Transport Layer.md",
-    "image-1076.png",
-    "image-1075.png",
-    "image-1074.png",
-    "image-1073.png",
-    "image-1072.png",
-    "image-1071.png",
-    "image-1070.png",
-    "image-1069.png",
-    "image-1068.png",
     "OPERATING SYSTEM/Chapter Nine Virtual Memory.md",
     "OPERATING SYSTEM/Chapter Six Process Synchronization.md",
     "OPERATING SYSTEM/Chapter Seven Deadlocks.md",
     "OPERATING SYSTEM/Chapter Eight Main Memory.md",
     "COMPUTER NETWORK/Chapter 5 The Network Layer.md",
-    "COMPUTER VISION/Chapter Eleven Deep Learning for 3D Reconstrcution.md",
-    "COMPUTER VISION/Chapter Ten Recognition.md",
     "COMPUTER VISION/Chapter Eight Depth estimation and 3D reconstruction.md",
     "OS_LAB_REPORT/Lab4.md",
     "OS_LAB_REPORT/Lab3.md",
@@ -211,7 +217,6 @@
     "未命名/宪法民主演讲稿2.md",
     "OS_LAB_REPORT/Lab2.md",
     "OS_LAB_REPORT/Lab1.md",
-    "OPERATING SYSTEM/Chapter One Introduction.md",
     "未命名 1.base",
     "未命名.base",
     "DEEP LEARNING/CS231n",
