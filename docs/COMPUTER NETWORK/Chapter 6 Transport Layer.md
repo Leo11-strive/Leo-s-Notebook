@@ -240,3 +240,11 @@
 ![[image-1076.png]]
 * persistence timer：主动发送询问包的 buffer 剩下多少，防止 deadlock
 * keepalive：是否存活
+
+![[image-1139.png]]
+
+![[image-1140.png]]
+
+* AIMD = Additive Increase, Multiplicative Decrease（加性增大、乘性减小）
+
+

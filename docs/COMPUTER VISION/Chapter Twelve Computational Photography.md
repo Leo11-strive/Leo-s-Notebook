@@ -101,6 +101,21 @@
 ![[image-1100.png]]
 
 * 约束就是已经刷了的颜色不可以改变
+* 图像上色
+> 使用深度学习
+![[image-1128.png]]
+
+![[image-1129.png]]
+* 可以使用这个 loss 吗？
+> Reconstruction loss：因为存在很多奇异性的数据；而且 loss 小不代表真实
+* GAN
+> 对抗生成网络
+> 学习 classifier 和 generator，有时候很难收敛
+![[image-1130.png]]
+
+![[image-1131.png]]
+
+![[image-1132.png]]
 
 
 
